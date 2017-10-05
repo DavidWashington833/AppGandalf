@@ -6,10 +6,10 @@
     android:id="@+id/activity_crie_sua_conta"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="5dp"
-    android:paddingLeft="5dp"
-    android:paddingRight="5dp"
-    android:paddingTop="5dp"
+    android:paddingBottom="10dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp"
     tools:context="com.example.davidwfsilva.pi_4_appmobile.CrieSuaConta">
 
     <EditText
@@ -39,7 +39,11 @@
         android:layout_marginTop="@dimen/respiro_topo"
         android:id="@+id/etConfirmarSenha"
         android:hint="Confirme sua Senha" />
-
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/respiro_topo"
+        android:background="#cccccc"/>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -97,5 +101,14 @@
         android:layout_marginTop="@dimen/respiro_topo"
         android:id="@+id/etData"
         android:hint="Data de Nascimento" />
+
+    <Button
+        android:text="Criar Conta"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:id="@+id/btnCriarConta"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/colorPrimaryText"
+        android:layout_alignParentBottom="true"/>
 
 </LinearLayout>
