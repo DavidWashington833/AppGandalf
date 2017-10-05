@@ -1,0 +1,191 @@
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/categorias"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="5dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="5dp"
+    tools:context="com.example.davidwfsilva.pi_4_appmobile.Categorias">
+
+
+    <TextView
+        android:id="@+id/nomeCategoria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nome da Categoria"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="18sp"
+        android:layout_marginTop="@dimen/respiro_topo"/>
+
+    <TextView
+        android:id="@+id/descricaoCategoria2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Descrição da Categoria"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:textSize="14sp"
+        android:layout_marginBottom="@dimen/respiro_topo"/>
+
+    <View android:background="#ccc"
+        android:layout_width = "match_parent"
+        android:layout_height="1dp"/>
+
+    <TextView
+        android:id="@+id/nomeCategoria3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nome da Categoria"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="18sp"
+        android:layout_marginTop="@dimen/respiro_topo"/>
+
+    <TextView
+        android:id="@+id/descricaoCategoria4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Descrição da Categoria"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:textSize="14sp"
+        android:layout_marginBottom="@dimen/respiro_topo"/>
+
+    <View android:background="#ccc"
+        android:layout_width = "match_parent"
+        android:layout_height="1dp"/>
+
+    <TextView
+        android:id="@+id/nomeCategoria5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nome da Categoria"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="18sp"
+        android:layout_marginTop="@dimen/respiro_topo"/>
+
+    <TextView
+        android:id="@+id/descricaoCategoria6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Descrição da Categoria"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:textSize="14sp"
+        android:layout_marginBottom="@dimen/respiro_topo"/>
+
+    <View android:background="#ccc"
+        android:layout_width = "match_parent"
+        android:layout_height="1dp"/>
+
+    <TextView
+        android:id="@+id/nomeCategoria7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nome da Categoria"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="18sp"
+        android:layout_marginTop="@dimen/respiro_topo"/>
+
+    <TextView
+        android:id="@+id/descricaoCategoria8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Descrição da Categoria"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:textSize="14sp"
+        android:layout_marginBottom="@dimen/respiro_topo"/>
+
+    <View android:background="#ccc"
+        android:layout_width = "match_parent"
+        android:layout_height="1dp"/>
+
+    <TextView
+        android:id="@+id/nomeCategoria9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nome da Categoria"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="18sp"
+        android:layout_marginTop="@dimen/respiro_topo"/>
+
+    <TextView
+        android:id="@+id/descricaoCategoria10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Descrição da Categoria"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:textSize="14sp"
+        android:layout_marginBottom="@dimen/respiro_topo"/>
+
+    <View android:background="#ccc"
+        android:layout_width = "match_parent"
+        android:layout_height="1dp"/>
+
+    <TextView
+        android:id="@+id/nomeCategoria11"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nome da Categoria"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="18sp"
+        android:layout_marginTop="@dimen/respiro_topo"/>
+
+    <TextView
+        android:id="@+id/descricaoCategoria12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Descrição da Categoria"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:textSize="14sp"
+        android:layout_marginBottom="@dimen/respiro_topo"/>
+
+    <View android:background="#ccc"
+        android:layout_width = "match_parent"
+        android:layout_height="1dp"/>
+
+    <TextView
+        android:id="@+id/nomeCategoria13"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nome da Categoria"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="18sp"
+        android:layout_marginTop="@dimen/respiro_topo"/>
+
+    <TextView
+        android:id="@+id/descricaoCategoria14"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Descrição da Categoria"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:textSize="14sp"
+        android:layout_marginBottom="@dimen/respiro_topo"/>
+
+    <View android:background="#ccc"
+        android:layout_width = "match_parent"
+        android:layout_height="1dp"/>
+
+    <TextView
+        android:id="@+id/nomeCategoria15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nome da Categoria"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="18sp"
+        android:layout_marginTop="@dimen/respiro_topo"/>
+
+    <TextView
+        android:id="@+id/descricaoCategoria16"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Descrição da Categoria"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:textSize="14sp"
+        android:layout_marginBottom="@dimen/respiro_topo"/>
+
+    <View android:background="#ccc"
+        android:layout_width = "match_parent"
+        android:layout_height="1dp"/>
+
+</LinearLayout>
