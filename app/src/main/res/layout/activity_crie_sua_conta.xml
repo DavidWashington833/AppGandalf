@@ -45,12 +45,12 @@
         android:layout_marginTop="@dimen/respiro_topo"
         android:background="#cccccc"/>
     <EditText
+        android:id="@+id/etNomeCompleto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
         android:layout_marginTop="@dimen/respiro_topo"
-        android:id="@+id/etNomeCompleto"
-        android:hint="Nome Completo" />
+        android:hint="Nome Completo"
+        android:inputType="textPersonName" />
 
     <RadioGroup
         android:layout_width="match_parent"
