@@ -1,4 +1,4 @@
-package com.example.davidwfsilva.pi_4_appmobile;
+package com.example.david.gandalf;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.davidwfsilva.pi_4_appmobile", appContext.getPackageName());
+        assertEquals("com.example.david.gandalf", appContext.getPackageName());
     }
 }

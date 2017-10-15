@@ -1,4 +1,4 @@
-package com.example.davidwfsilva.pi_4_appmobile;
+package com.example.david.gandalf;
 
 import org.junit.Test;
 
