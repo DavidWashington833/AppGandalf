@@ -13,4 +13,11 @@
     android:layout_marginBottom="@dimen/activity_vertical_margin"
     tools:context="com.example.david.gandalf.MainActivity">
 
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:name="com.example.david.gandalf.FragmentCategoria"
+        android:id="@+id/fragment"
+        tools:layout="@layout/list_categoria"/>
+
 </LinearLayout>
