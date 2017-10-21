@@ -15,9 +15,9 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        bt_rsenha = (Button) findViewById(R.id.bt_rsenha);
-        bt_login = (Button) findViewById(R.id.bt_login);
-        bt_cc = (Button) findViewById(R.id.bt_cc);
+        //bt_rsenha = (Button) findViewById(R.id.bt_rsenha);
+        //bt_login = (Button) findViewById(R.id.bt_login);
+       //bt_cc = (Button) findViewById(R.id.bt_cc);
 
 
 //        View.OnClickListener Listenner_bt_cc = new View.OnClickListener() {

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/menu_loja"
+            android:checked="false"
+            android:icon="@android:drawable/ic_search_category_default"
+            android:title="Loja" />
+
+        <item
+            android:id="@+id/menu_pedidos"
+            android:checked="false"
+            android:icon="@android:drawable/ic_menu_agenda"
+            android:title="Meus Pedidos" />
+
+        <item
+            android:id="@+id/menu_qrcode"
+            android:checked="false"
+            android:icon="@android:drawable/ic_menu_camera"
+            android:title="Ler QR Code" />
+
+        <item
+            android:id="@+id/menu_atendimento"
+            android:checked="false"
+            android:icon="@android:drawable/ic_menu_call"
+            android:title="Atendimento" />
+    </group>
+</menu>
