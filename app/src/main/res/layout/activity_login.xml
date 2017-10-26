@@ -43,7 +43,11 @@
         android:height="50dp"
         android:layout_alignTop="@+id/bt_login"
         android:layout_toStartOf="@+id/bt_login"
-        android:layout_marginEnd="27dp" />
+        android:layout_marginEnd="27dp"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/buttonshape"
+
+        />
 
     <Button
         android:text="Criar Minha Conta"
@@ -52,7 +56,11 @@
         android:id="@+id/bt_cc"
         android:layout_marginTop="29dp"
         android:layout_below="@+id/bt_rsenha"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textColor="#FFFFFF"
+        android:textSize="13sp"
+        android:background="@drawable/buttonshape"
+        />
 
     <Button
         android:text="Fazer Login"
@@ -64,7 +72,11 @@
         android:layout_marginTop="50dp"
         android:layout_marginEnd="18dp"
         android:layout_below="@+id/et_senha"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/buttonshape"
+
+        />
 
     <TextView
         android:text="Logo"
@@ -73,14 +85,21 @@
         android:id="@+id/textView"
         android:textSize="70sp"
         android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/bt_cc" />
+        android:layout_alignStart="@+id/bt_cc"
+
+
+
+        />
 
     <Button
         android:id="@+id/bt_vsenha"
-        android:layout_width="wrap_content"
+        android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:text="ver senha"
         android:layout_alignTop="@+id/et_senha"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/ic_visible"
+
+        />
 
 </RelativeLayout>
