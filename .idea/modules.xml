@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/PI-4-AppMobile_v2.iml" filepath="$PROJECT_DIR$/PI-4-AppMobile_v2.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/PI-4-AppMobile.iml" filepath="$PROJECT_DIR$/PI-4-AppMobile.iml" />
+      <module fileurl="file://C:\Users\geoinformacao\Desktop\PI-4-AppMobile\PI-4-AppMobile.iml" filepath="C:\Users\geoinformacao\Desktop\PI-4-AppMobile\PI-4-AppMobile.iml" />
+>>>>>>> d77086a28f264d76422e6763e7bed37b4fae2cd6
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Users\geoinformacao\Desktop\PI-4-AppMobile\app\app.iml" filepath="C:\Users\geoinformacao\Desktop\PI-4-AppMobile\app\app.iml" />
     </modules>
   </component>
 </project>
