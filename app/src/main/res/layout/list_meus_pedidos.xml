@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:cardUseCompatPadding="true"
+    app:cardElevation="5dp">
+        <!--<LinearLayout android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:orientation="vertical"-->
+            <!--android:padding="6dp">-->
+
+                <!--<ImageView-->
+                    <!--android:id="@+id/image1"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="80dp"-->
+                    <!--android:layout_marginBottom="5dp"-->
+                    <!--android:contentDescription="@string/" -->
+                    <!--android:scaleType="centerCrop"-->
+                    <!--android:src="@drawable/logo" />-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/n_pedido"-->
+                    <!--style="?android:textAppearanceLarge"-->
+                    <!--android:layout_width="360dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginBottom="5dp"-->
+                    <!--android:elevation="1dp"-->
+                    <!--tools:text="Numero do Pedido" />-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/numero"-->
+                    <!--style="?android:textAppearanceMedium"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginBottom="5dp" />-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/status_pedido"-->
+                    <!--style="?android:textAppearanceLarge"-->
+                    <!--android:layout_width="360dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginBottom="5dp"-->
+                    <!--android:elevation="1dp"-->
+                    <!--android:text="@string/status_do_pedido" />-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/status"-->
+                    <!--style="?android:textAppearanceMedium"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content" />-->
+        <!--</LinearLayout>-->
+
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="6dp">
+                <ImageView
+                android:id="@+id/image1"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginBottom="5dp"
+                android:contentDescription="@string/todo"
+                android:scaleType="centerCrop"
+                android:src="@drawable/logo" />
+                <TextView
+                    style="?android:textAppearanceLarge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/titulo"/>
+                <TextView
+                    style="?android:textAppearanceMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/mensagem"/>
+        </LinearLayout>
+
+</android.support.v7.widget.CardView>
