@@ -38,5 +38,9 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
+
+    public LoginHelper getHelper() {
+        return helper;
+    }
 }
 
