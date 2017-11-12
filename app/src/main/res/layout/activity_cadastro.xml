@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    android:orientation="vertical"
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,82 +7,101 @@
     android:layout_height="match_parent"
     tools:context="com.example.david.gandalf.CadastroActivity">
 
-
-    <EditText
-        android:id="@+id/main_nome"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Nome Completo"
-        android:inputType="textPersonName" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textEmailAddress"
-        android:id="@+id/main_email"
-        android:hint="E-mail" />
+        <TextView
+            android:text="Nome Completo"
+            style="@style/Label" />
+        <EditText
+            android:id="@+id/main_nome"
+            android:hint="Digite seu Nome Completo aqui"
+            android:inputType="textPersonName"
+            style="@style/TextView" />
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:id="@+id/main_senha"
-        android:hint="Senha" />
+        <TextView
+            android:text="E-mail"
+            style="@style/Label" />
+        <EditText
+            android:id="@+id/main_email"
+            android:hint="exemplo@dominioex.com.br"
+            android:inputType="textEmailAddress"
+            style="@style/TextView" />
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:id="@+id/main_senha_confirme"
-        android:hint="Confirme sua Senha" />
+        <TextView
+            android:text="Senha"
+            style="@style/Label" />
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:id="@+id/main_cpf"
-        android:hint="CPF" />
+        <EditText
+            android:id="@+id/main_senha"
+            style="@style/TextView"
+            android:hint="Digite uma senha segura"
+            android:inputType="textPassword" />
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="date"
-        android:id="@+id/main_nascimento"
-        android:hint="Data de Nascimento" />
+        <TextView
+            android:text="Confirme sua Senha"
+            style="@style/Label" />
+        <EditText
+            android:id="@+id/main_senha_confirme"
+            android:inputType="textPassword"
+            android:hint="Repita a senha para não ter erro"
+            style="@style/TextView"/>
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:id="@+id/main_celular"
-        android:hint="Celular" />
+        <TextView
+            android:text="CPF"
+            style="@style/Label" />
+        <EditText
+            android:id="@+id/main_cpf"
+            android:inputType="number"
+            android:hint="000.000.000-00"
+            style="@style/TextView"/>
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:id="@+id/main_tel_residencial"
-        android:hint="Telefone residencial" />
+        <TextView
+            android:text="Data de Nascimento"
+            style="@style/Label" />
+        <EditText
+            android:id="@+id/main_nascimento"
+            android:inputType="date"
+            android:hint="DD/MM/AA"
+            style="@style/TextView"/>
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:id="@+id/main_tel_comercial"
-        android:hint="Telefone Comercial" />
+        <TextView
+            android:text="Celular"
+            style="@style/Label" />
+        <EditText
+            android:id="@+id/main_celular"
+            android:inputType="number"
+            android:hint="(XX) 0000-0000"
+            style="@style/TextView"/>
 
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="newslatter"/>
+        <TextView
+            android:text="Telefone Residencial"
+            style="@style/Label" />
+        <EditText
+            android:id="@+id/main_tel_residencial"
+            android:inputType="number"
+            android:hint="(XX) 0000-0000"
+            style="@style/TextView" />
 
-    <Button
-        android:text="Criar Conta"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/main_btn"
-        android:background="@color/colorPrimary"
-        android:textColor="@color/colorPrimaryText"
-        android:layout_alignParentBottom="true" />
+        <TextView
+            android:text="Telefone Comercial"
+            style="@style/Label" />
+        <EditText
+            android:id="@+id/main_tel_comercial"
+            android:inputType="number"
+            android:hint="(XX) 0000-0000"
+            style="@style/TextView" />
 
-</LinearLayout>
+        <CheckBox
+            android:text="Fique por dentro das nossas novidades! Clique aqui para se inscriver em nossa newsletter e receber promoções exclusivas!"
+            style="@style/Opts"/>
+
+        <Button
+            android:id="@+id/main_btn"
+            android:text="Criar Conta"
+            style="@style/Buttons" />
+    </LinearLayout>
+
+</ScrollView>
