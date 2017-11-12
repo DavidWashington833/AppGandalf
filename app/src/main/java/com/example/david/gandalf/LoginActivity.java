@@ -1,5 +1,6 @@
 package com.example.david.gandalf;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -14,6 +15,7 @@ public class LoginActivity extends AppCompatActivity {
     private ImageView visualizar;
     private LoginHelper helper;
     private Button login;
+    private Button criarConta;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +24,8 @@ public class LoginActivity extends AppCompatActivity {
 
         login = (Button) findViewById(R.id.login_logar);
         visualizar = (ImageView) findViewById(R.id.login_visualizar_senha);
+        criarConta = (Button) findViewById(R.id.login_criar_conta);
+
         helper = new LoginHelper(this);
 
         visualizar.setOnClickListener(new View.OnClickListener() {
@@ -34,7 +38,15 @@ public class LoginActivity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                new EnviaLoginTask(LoginActivity.this).execute();
+            new EnviaLoginTask(LoginActivity.this).execute();
+            }
+        });
+
+        criarConta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginActivity.this, CadastroActivity.class);
+                startActivity(intent);
             }
         });
     }

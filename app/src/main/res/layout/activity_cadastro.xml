@@ -10,7 +10,7 @@
 
 
     <EditText
-        android:id="@+id/main_nome"
+        android:id="@+id/cadastro_nome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Nome Completo"
@@ -20,56 +20,56 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textEmailAddress"
-        android:id="@+id/main_email"
+        android:id="@+id/cadastro_email"
         android:hint="E-mail" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
-        android:id="@+id/main_senha"
+        android:id="@+id/cadastro_senha"
         android:hint="Senha" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
-        android:id="@+id/main_senha_confirme"
+        android:id="@+id/cadastro_senha_confirme"
         android:hint="Confirme sua Senha" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="number"
-        android:id="@+id/main_cpf"
+        android:id="@+id/cadastro_cpf"
         android:hint="CPF" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="date"
-        android:id="@+id/main_nascimento"
+        android:id="@+id/cadastro_nascimento"
         android:hint="Data de Nascimento" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="number"
-        android:id="@+id/main_celular"
+        android:id="@+id/cadastro_celular"
         android:hint="Celular" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="number"
-        android:id="@+id/main_tel_residencial"
+        android:id="@+id/cadastro_tel_residencial"
         android:hint="Telefone residencial" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="number"
-        android:id="@+id/main_tel_comercial"
+        android:id="@+id/cadastro_tel_comercial"
         android:hint="Telefone Comercial" />
 
     <CheckBox
