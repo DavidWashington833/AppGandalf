@@ -9,7 +9,6 @@ import java.io.Serializable;
 public class Categoria implements Serializable {
     private int idCategoria;
     private String nomeCategoria;
-    private String descCategoria;
 
     public int getIdCategoria() {
         return idCategoria;
@@ -27,11 +26,4 @@ public class Categoria implements Serializable {
         this.nomeCategoria = nomeCategoria;
     }
 
-    public String getDescCategoria() {
-        return descCategoria;
-    }
-
-    public void setDescCategoria(String descCategoria) {
-        this.descCategoria = descCategoria;
-    }
 }
