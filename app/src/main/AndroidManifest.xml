@@ -18,7 +18,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".CadastroActivity" />
-        <activity android:name=".LoginActivity" />
+        <activity android:name=".LoginActivity" >
+
+        </activity>
         <activity android:name=".MeusPedidos" />
     </application>
 
