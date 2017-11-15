@@ -3,10 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AppGandalf.iml" filepath="$PROJECT_DIR$/AppGandalf.iml" />
-      <module fileurl="file://C:\Users\Igor Ramos\Documents\ProjetoIntegrador\AppGandalf\PI-4-AppMobile.iml" filepath="C:\Users\Igor Ramos\Documents\ProjetoIntegrador\AppGandalf\PI-4-AppMobile.iml" />
-      <module fileurl="file://C:\Users\felip\Desktop\PI-4-AppMobile\PI-4-AppMobile.iml" filepath="C:\Users\felip\Desktop\PI-4-AppMobile\PI-4-AppMobile.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://C:\Users\Igor Ramos\Documents\ProjetoIntegrador\AppGandalf\app\app.iml" filepath="C:\Users\Igor Ramos\Documents\ProjetoIntegrador\AppGandalf\app\app.iml" />
     </modules>
   </component>
 </project>
