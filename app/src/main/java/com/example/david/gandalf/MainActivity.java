@@ -43,6 +43,12 @@ public class MainActivity extends AppCompatActivity {
                             return true;
                         }
 
+                        if (menuItem.getItemId() == R.id.menu_qrcode) {
+                            Intent newAct = new Intent(MainActivity.this, QRCodeActivity.class);
+                            startActivity(newAct);
+                            return true;
+                        }
+
                         return false;
                     }
                 });
