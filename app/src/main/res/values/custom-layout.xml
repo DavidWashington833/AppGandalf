@@ -86,4 +86,9 @@
         <item name="android:textSize">18dp</item>
         <item name="android:typeface">sans</item>
     </style>
+
+    <style name="BgPermissoes" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:windowBackground">@drawable/PICTURE_NAME</item>
+    </style>
 </resources>
