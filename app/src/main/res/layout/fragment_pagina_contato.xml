@@ -1,0 +1,67 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.david.gandalf.PaginaContato">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0"
+        android:gravity="center_horizontal|top"
+        android:orientation="vertical">
+
+        <TextView
+            android:text="Contato"
+            style="@style/TextDestaque"
+            android:gravity="left" />
+        <TextView
+            android:text="Entre em contato com nossa equipe preenchendo os campos abaixo"
+            style="@style/TextApoio"
+            android:gravity="left"
+            android:layout_marginTop="0dp" />
+
+        <TextView
+            android:text="Nome"
+            style="@style/Label"
+            android:layout_marginTop="24dp" />
+        <EditText
+            android:id="@+id/main_tel_comercial"
+            android:inputType="text"
+            android:hint="Digite seu nome aqui"
+            style="@style/TextView" />
+
+        <TextView
+            android:text="E-mail"
+            style="@style/Label" />
+        <EditText
+            android:id="@+id/main_tel_comercial"
+            android:inputType="textEmailAddress"
+            android:hint="Digite seu e-mail aqui"
+            style="@style/TextView" />
+
+        <TextView
+            android:text="Mensagem"
+            style="@style/Label" />
+        <EditText
+            android:id="@+id/main_tel_comercial"
+            android:inputType="text"
+            android:hint="Deixe sua mensagem"
+            style="@style/TextView" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center|bottom"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/button2"
+                style="@style/Buttons"
+                android:text="Enviar Mensagem" />
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>
