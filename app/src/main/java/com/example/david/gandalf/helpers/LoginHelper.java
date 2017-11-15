@@ -6,6 +6,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 
 import com.example.david.gandalf.LoginActivity;
+import com.example.david.gandalf.LoginFragment;
 import com.example.david.gandalf.R;
 import com.example.david.gandalf.models.Login;
 
@@ -17,13 +18,13 @@ public class LoginHelper {
     private final EditText email;
     private final EditText senha;
     private final ImageView visualizar;
-    private LoginActivity activity;
+    private LoginFragment activity;
 
-    public LoginHelper(LoginActivity activity) {
+    public LoginHelper(LoginFragment activity) {
         this.activity = activity;
-        email = (EditText) activity.findViewById(R.id.login_email);
-        senha = (EditText) activity.findViewById(R.id.login_senha);
-        visualizar = (ImageView) activity.findViewById(R.id.login_visualizar_senha);
+        email = (EditText) activity.getView().findViewById(R.id.login_email);
+        senha = (EditText) activity.getView().findViewById(R.id.login_senha);
+        visualizar = (ImageView) activity.getView().findViewById(R.id.login_visualizar_senha);
     }
 
     public void alternaSenha() {

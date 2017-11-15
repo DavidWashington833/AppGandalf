@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
+
 import android.widget.ImageView;
 
 import com.example.david.gandalf.helpers.LoginHelper;
@@ -26,7 +26,7 @@ public class LoginActivity extends AppCompatActivity {
         visualizar = (ImageView) findViewById(R.id.login_visualizar_senha);
         criarConta = (Button) findViewById(R.id.login_criar_conta);
 
-        helper = new LoginHelper(this);
+        //helper = new LoginHelper();
 
         visualizar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,7 +38,7 @@ public class LoginActivity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-            new EnviaLoginTask(LoginActivity.this).execute();
+            //new EnviaLoginTask(LoginActivity.this).execute();
             }
         });
 
