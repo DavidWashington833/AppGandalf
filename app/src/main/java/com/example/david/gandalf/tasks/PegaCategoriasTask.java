@@ -40,8 +40,8 @@ public class PegaCategoriasTask extends AsyncTask<Void, Void, String> {
     protected void onPostExecute(String resposta) {
 
         String categorias[] = {resposta};
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(context.getActivity(), android.R.layout.simple_list_item_1, categorias);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(context.getContext(), android.R.layout.simple_list_item_1, categorias);
 
-        setListAdapter(adapter);
+        Toast.makeText(context.getContext(), resposta, Toast.LENGTH_LONG).show();
     }
 }

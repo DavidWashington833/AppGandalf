@@ -9,7 +9,6 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 
 import com.example.david.gandalf.helpers.CategoriaHelper;
-import com.example.david.gandalf.tasks.EnviaLoginTask;
 import com.example.david.gandalf.tasks.PegaCategoriasTask;
 
 import org.json.JSONArray;
@@ -29,14 +28,14 @@ public class FragmentCategoria extends ListFragment {
     WebClient web = new WebClient();
 
 
-    //String categorias[] = {"Teste 1", "Teste 2", "Teste 3", "Teste 4", "Teste 5", "Teste 6", "Teste 7", "Teste 8", "Teste 9", "Teste 10"};
+    String categorias[] = {"Teste 1", "Teste 2", "Teste 3", "Teste 4", "Teste 5", "Teste 6", "Teste 7", "Teste 8", "Teste 9", "Teste 10"};
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
+        new PegaCategoriasTask(FragmentCategoria.this).execute();
 
         View view = inflater.inflate(R.layout.list_categoria, container, false);
-
         return view;
     }
 
