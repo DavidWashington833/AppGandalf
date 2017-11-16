@@ -27,6 +27,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".CadastroPt2Activity" />
+        <activity android:name=".CadastroPt3Activity"></activity>
     </application>
 
 </manifest>

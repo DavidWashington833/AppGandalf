@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/backgroundpt1"
     tools:context="com.example.david.gandalf.PaginaContato">
 
     <LinearLayout
@@ -23,8 +24,7 @@
 
         <TextView
             android:text="Nome"
-            style="@style/Label"
-            android:layout_marginTop="24dp" />
+            style="@style/Label" />
         <EditText
             android:id="@+id/main_tel_comercial"
             android:inputType="text"
