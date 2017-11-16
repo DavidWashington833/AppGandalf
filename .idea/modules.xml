@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://C:\Users\igorr\Desktop\GandalfApp\AppGandalf.iml" filepath="C:\Users\igorr\Desktop\GandalfApp\AppGandalf.iml" />
       <module fileurl="file://$PROJECT_DIR$/GandalfApp.iml" filepath="$PROJECT_DIR$/GandalfApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://C:\Users\igorr\Desktop\GandalfApp\app\app.iml" filepath="C:\Users\igorr\Desktop\GandalfApp\app\app.iml" />
     </modules>
   </component>

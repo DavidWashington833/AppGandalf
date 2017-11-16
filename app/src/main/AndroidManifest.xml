@@ -21,13 +21,10 @@
         </activity>
         <activity android:name=".CadastroActivity" />
         <activity android:name=".LoginActivity" />
-<<<<<<< HEAD
         <activity android:name=".QRCodeActivity"></activity>
-=======
         <activity android:name=".MeusPedidos" />
         <activity android:name=".CadastroPt2Activity" />
         <activity android:name=".CadastroPt3Activity"></activity>
->>>>>>> 12695a94a9ea50d5a2de64e11288449dfaf6cfec
     </application>
 
 </manifest>
