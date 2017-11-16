@@ -80,7 +80,7 @@ public class PrincipalFragment extends Fragment {
                 return new FragmentCategoria();
             }
             if (position == 2) {
-                return new FragmentCategoria();
+                return new PaginaCarrinho();
             }
             return null;
         }

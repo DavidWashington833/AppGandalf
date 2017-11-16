@@ -13,18 +13,24 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+
             </intent-filter>
         </activity>
-        <activity android:name=".CadastroActivity" />
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".QRCodeActivity"></activity>
-        <activity android:name=".MeusPedidos" />
-        <activity android:name=".CadastroPt2Activity" />
-        <activity android:name=".CadastroPt3Activity"></activity>
+        <activity android:name=".CadastroActivity"
+            android:parentActivityName=".LoginActivity"/>
+        <activity android:name=".LoginActivity"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".QRCodeActivity"
+            android:parentActivityName=".MainActivity"></activity>
+        <activity android:name=".CadastroPt2Activity"
+            android:parentActivityName=".CadastroActivity"/>
+        <activity android:name=".CadastroPt3Activity"
+            android:parentActivityName=".CadastroPt2Activity"></activity>
     </application>
 
 </manifest>

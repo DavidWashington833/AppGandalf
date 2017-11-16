@@ -38,13 +38,11 @@ public class MeusPedidosFragment extends Fragment {
 
     private void addItem(String textoDoTitulo, String textoDaMensagem) {
 
-//        CardView cardView = (CardView) LayoutInflater.from(this).inflate(R.layout.fragment_meus_pedidos, mensagens, false);
-//        ImageView imagem1 = (ImageView) cardView.findViewById(R.id.image1);
-//        TextView titulo = (TextView) cardView.findViewById(R.id.titulo);
-//        TextView mensagem = (TextView) cardView.findViewById(R.id.mensagem);
-//        titulo.setText(textoDoTitulo);
-//        mensagem.setText(textoDaMensagem);
-//        mensagens.addView(cardView);
+        CardView cardView = (CardView) LayoutInflater.from(getActivity()).inflate(R.layout.cardview_pagina_carrinho, mensagens, false);
+        ImageView imagem1 = (ImageView) cardView.findViewById(R.id.imagemProd);
+        TextView titulo = (TextView) cardView.findViewById(R.id.txtNomeProd);
+        titulo.setText(textoDoTitulo);
+        mensagens.addView(cardView);
 
     }
 

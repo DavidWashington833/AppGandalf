@@ -15,8 +15,9 @@
         android:padding="6dp">
 
         <ImageView
+            android:id="@+id/imagemProd"
             android:layout_width="160dp"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent" />
 
         <LinearLayout
             android:layout_width="match_parent"
