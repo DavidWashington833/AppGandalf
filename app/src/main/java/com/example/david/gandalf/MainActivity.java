@@ -54,7 +54,6 @@ public class MainActivity extends AppCompatActivity {
         drawerLayout.setDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();
 
-
         PrincipalFragment newFragment = new PrincipalFragment();
         //PaginaCarrinho newFragment = new PaginaCarrinho();
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
@@ -62,8 +61,6 @@ public class MainActivity extends AppCompatActivity {
         transaction.replace(R.id.frame_principal, newFragment);
         transaction.addToBackStack(null);
         transaction.commit();
-
-
     }
 
     @Override
@@ -73,7 +70,5 @@ public class MainActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-
-
 
 }
