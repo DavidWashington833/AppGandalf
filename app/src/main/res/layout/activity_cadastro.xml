@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/backgroundpt3"
     tools:context="com.example.david.gandalf.CadastroActivity">
 
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:gravity="center|top"
         android:orientation="vertical">
 
         <EditText
@@ -70,6 +74,16 @@
             android:hint="Telefone Comercial" />
 
         <TextView
+            style="@style/TextDestaque"
+            android:gravity="left"
+            android:text="Olá jovem cavaleiro!" />
+        <TextView
+            android:text="Deseja se juntar a nós? Primeiro, conte-nos um pouco sobre você."
+            style="@style/TextApoio"
+            android:gravity="left"
+            android:layout_marginTop="0dp" />
+
+        <TextView
             android:text="Nome Completo"
             style="@style/Label" />
         <EditText
@@ -77,43 +91,6 @@
             android:hint="Digite seu Nome Completo aqui"
             android:inputType="textPersonName"
             style="@style/TextView" />
-
-        <TextView
-            android:text="E-mail"
-            style="@style/Label" />
-        <EditText
-            android:id="@+id/main_email"
-            android:hint="exemplo@dominioex.com.br"
-            android:inputType="textEmailAddress"
-            style="@style/TextView" />
-
-        <TextView
-            android:text="Senha"
-            style="@style/Label" />
-
-        <EditText
-            android:id="@+id/main_senha"
-            style="@style/TextView"
-            android:hint="Digite uma senha segura"
-            android:inputType="textPassword" />
-
-        <TextView
-            android:text="Confirme sua Senha"
-            style="@style/Label" />
-        <EditText
-            android:id="@+id/main_senha_confirme"
-            android:inputType="textPassword"
-            android:hint="Repita a senha para não ter erro"
-            style="@style/TextView"/>
-
-        <TextView
-            android:text="CPF"
-            style="@style/Label" />
-        <EditText
-            android:id="@+id/main_cpf"
-            android:inputType="number"
-            android:hint="000.000.000-00"
-            style="@style/TextView"/>
 
         <TextView
             android:text="Data de Nascimento"
@@ -125,40 +102,25 @@
             style="@style/TextView"/>
 
         <TextView
-            android:text="Celular"
+            android:text="CPF"
             style="@style/Label" />
         <EditText
-            android:id="@+id/main_celular"
+            android:id="@+id/main_cpf"
             android:inputType="number"
-            android:hint="(XX) 0000-0000"
+            android:hint="000.000.000-00"
             style="@style/TextView"/>
+        </LinearLayout>
 
-        <TextView
-            android:text="Telefone Residencial"
-            style="@style/Label" />
-        <EditText
-            android:id="@+id/main_tel_residencial"
-            android:inputType="number"
-            android:hint="(XX) 0000-0000"
-            style="@style/TextView" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:gravity="center|bottom"
+            android:orientation="vertical">
+            <Button
+                android:id="@+id/main_btn"
+                android:text="Próxima Etapa"
+                style="@style/Buttons" />
+        </LinearLayout>
 
-        <TextView
-            android:text="Telefone Comercial"
-            style="@style/Label" />
-        <EditText
-            android:id="@+id/main_tel_comercial"
-            android:inputType="number"
-            android:hint="(XX) 0000-0000"
-            style="@style/TextView" />
-
-        <CheckBox
-            android:text="Fique por dentro das nossas novidades! Clique aqui para se inscriver em nossa newsletter e receber promoções exclusivas!"
-            style="@style/Opts"/>
-
-        <Button
-            android:id="@+id/main_btn"
-            android:text="Criar Conta"
-            style="@style/Buttons" />
-    </LinearLayout>
-
-</ScrollView>
+</LinearLayout>

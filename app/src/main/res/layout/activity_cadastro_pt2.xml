@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/backgroundpt2"
+    tools:context="com.example.david.gandalf.CadastroPt2Activity">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:gravity="center|top"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/TextDestaque"
+            android:gravity="left"
+            android:text="Precisamos do seu contato" />
+
+        <TextView
+            style="@style/TextApoio"
+            android:layout_marginTop="0dp"
+            android:gravity="left"
+            android:text="Agora que sabemos quem você é, mostre-nos como podemos entrar em contato" />
+
+        <TextView
+            android:text="Celular"
+            style="@style/Label" />
+        <EditText
+            android:id="@+id/main_celular"
+            android:inputType="number"
+            android:hint="(XX) 0000-0000"
+            style="@style/TextView"/>
+
+        <TextView
+            android:text="Telefone Residencial"
+            style="@style/Label" />
+        <EditText
+            android:id="@+id/main_tel_residencial"
+            android:inputType="number"
+            android:hint="(XX) 0000-0000"
+            style="@style/TextView" />
+
+        <TextView
+            android:text="Telefone Comercial"
+            style="@style/Label" />
+        <EditText
+            android:id="@+id/main_tel_comercial"
+            android:inputType="number"
+            android:hint="(XX) 0000-0000"
+            style="@style/TextView" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:gravity="center|bottom"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/main_btn"
+            android:text="Próxima Etapa"
+            style="@style/Buttons" />
+    </LinearLayout>
+</LinearLayout>

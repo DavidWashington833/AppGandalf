@@ -20,6 +20,8 @@
         <activity android:name=".CadastroActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".MeusPedidos" />
+        <activity android:name=".CadastroPt2Activity" />
+        <activity android:name=".CadastroPt3Activity"></activity>
     </application>
 
 </manifest>
