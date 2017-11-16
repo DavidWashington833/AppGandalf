@@ -9,69 +9,12 @@
     android:background="@drawable/backgroundpt3"
     tools:context="com.example.david.gandalf.CadastroActivity">
 
-
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0"
         android:gravity="center|top"
         android:orientation="vertical">
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textEmailAddress"
-            android:id="@+id/cadastro_email"
-            android:hint="E-mail" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textPassword"
-            android:id="@+id/cadastro_senha"
-            android:hint="Senha" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textPassword"
-            android:id="@+id/cadastro_senha_confirme"
-            android:hint="Confirme sua Senha" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:id="@+id/cadastro_cpf"
-            android:hint="CPF" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="date"
-            android:id="@+id/cadastro_nascimento"
-            android:hint="Data de Nascimento" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:id="@+id/cadastro_celular"
-            android:hint="Celular" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:id="@+id/cadastro_tel_residencial"
-            android:hint="Telefone residencial" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:id="@+id/cadastro_tel_comercial"
-            android:hint="Telefone Comercial" />
 
         <TextView
             style="@style/TextDestaque"
@@ -109,18 +52,18 @@
             android:inputType="number"
             android:hint="000.000.000-00"
             style="@style/TextView"/>
-        </LinearLayout>
+    </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dip"
-            android:layout_weight="1"
-            android:gravity="center|bottom"
-            android:orientation="vertical">
-            <Button
-                android:id="@+id/main_btn"
-                android:text="Próxima Etapa"
-                style="@style/Buttons" />
-        </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:gravity="center|bottom"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/main_btn"
+            android:text="Próxima Etapa"
+            style="@style/Buttons" />
+    </LinearLayout>
 
 </LinearLayout>
