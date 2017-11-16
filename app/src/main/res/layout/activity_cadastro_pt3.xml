@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/backgroundpt1"
+    tools:context="com.example.david.gandalf.CadastroPt3Activity">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:gravity="center|top"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/TextDestaque"
+            android:gravity="left"
+            android:text="Etapa Final!" />
+
+        <TextView
+            style="@style/TextApoio"
+            android:layout_marginTop="0dp"
+            android:gravity="left"
+            android:text="Seja bem vindo à sociedade 8Nome! Só falta você escolher seu usuário e senha para se juntar à nós!" />
+
+        <TextView
+            style="@style/Label"
+            android:text="E-mail" />
+
+        <EditText
+            android:id="@+id/main_email"
+            style="@style/TextView"
+            android:hint="exemplo@dominioex.com.br"
+            android:inputType="textEmailAddress" />
+
+        <TextView
+            style="@style/Label"
+            android:text="Senha" />
+
+        <EditText
+            android:id="@+id/main_senha"
+            style="@style/TextView"
+            android:hint="Digite uma senha segura"
+            android:inputType="textPassword" />
+
+        <TextView
+            style="@style/Label"
+            android:text="Confirme sua Senha" />
+
+        <EditText
+            android:id="@+id/main_senha_confirme"
+            style="@style/TextView"
+            android:hint="Repita a senha para não ter erro"
+            android:inputType="textPassword" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:gravity="center|bottom"
+        android:orientation="vertical">
+
+        <CheckBox
+            style="@style/Opts"
+            android:textColor="#FFFFFF"
+            android:buttonTint="#FFFFFF"
+            android:text="Deseja ficar por dentro das nossas novidades?! Clique aqui para se inscriver em nossa newsletter e receber promoções exclusivas!" />
+
+        <Button
+            android:id="@+id/main_btn"
+            style="@style/Buttons"
+            android:text="Criar Conta" />
+    </LinearLayout>
+</LinearLayout>
