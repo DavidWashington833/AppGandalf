@@ -87,8 +87,6 @@ public class MainActivity extends AppCompatActivity {
         transaction.replace(R.id.frame_principal, newFragment);
         transaction.addToBackStack(null);
         transaction.commit();
-
-
     }
 
     @Override
@@ -98,6 +96,7 @@ public class MainActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
 
     public void chamaFragment(Fragment fragment){
         String backStateName = fragment.getClass().getName();
@@ -114,7 +113,5 @@ public class MainActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.actionbar, menu);
         return super.onCreateOptionsMenu(menu);
     }
-
-
 
 }

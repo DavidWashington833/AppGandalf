@@ -3,18 +3,25 @@ package com.example.david.gandalf.models;
 import java.io.Serializable;
 
 /**
- * Created by Igor Ramos on 15/11/2017.
+
+ * Created by Gabriel_Montibeller on 15/11/2017.
  */
 
 public class Categoria implements Serializable {
-    private int idCategoria;
+    private String idCategoria;
     private String nomeCategoria;
 
-    public int getIdCategoria() {
+    @Override
+    public String toString() {
+        return getNomeCategoria();
+    }
+
+    public String getIdCategoria() {
         return idCategoria;
     }
 
-    public void setIdCategoria(int idCategoria) {
+    public void setIdCategoria(String idCategoria) {
+
         this.idCategoria = idCategoria;
     }
 

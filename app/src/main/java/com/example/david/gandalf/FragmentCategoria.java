@@ -8,29 +8,37 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 
+import com.example.david.gandalf.helpers.CategoriaHelper;
+import com.example.david.gandalf.tasks.PegaCategoriasTask;
+
+import org.json.JSONArray;
+import org.json.JSONStringer;
+
+
 /**
  * Created by igorr on 18/10/2017.
  */
 
+
+
 public class FragmentCategoria extends ListFragment {
 
-    String categorias[] = {"Teste 1", "Teste 2", "Teste 3", "Teste 4", "Teste 5", "Teste 6", "Teste 7", "Teste 8", "Teste 9", "Teste 10"};
+    private CategoriaHelper helper;
+
+    WebClient web = new WebClient();
+
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-
-
         View view = inflater.inflate(R.layout.list_categoria, container, false);
-
+        new PegaCategoriasTask(FragmentCategoria.this, container).execute();
         return view;
     }
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, categorias);
-
-        setListAdapter(adapter);
     }
+
 }
