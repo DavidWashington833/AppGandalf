@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         //PrincipalFragment newFragment = new PrincipalFragment();
-        PaginaCarrinho newFragment = new PaginaCarrinho();
+        ProdutoFragment newFragment = new ProdutoFragment();
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 
         transaction.replace(R.id.frame_principal, newFragment);
