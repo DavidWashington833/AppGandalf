@@ -17,7 +17,7 @@ import com.example.david.gandalf.tasks.PegaProdutosTask;
  */
 public class ProdutoFragment extends Fragment {
 
-    private ImageView imgP;
+    public ImageView imgP;
     public TextView nomeP, codP, precoP,descP;
     public String nome;
 
@@ -35,7 +35,7 @@ public class ProdutoFragment extends Fragment {
         codP = (TextView) view.findViewById(R.id.codigoProduto);
         precoP = (TextView) view.findViewById(R.id.precoProduto);
         descP = (TextView) view.findViewById(R.id.descProduto);
-
+        imgP = (ImageView) view.findViewById(R.id.imgProduto);
 
 
         //nomeP.setText("bla");
