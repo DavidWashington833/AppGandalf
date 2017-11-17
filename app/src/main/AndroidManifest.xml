@@ -21,6 +21,7 @@
 
             </intent-filter>
         </activity>
+
         <activity android:name=".CadastroActivity"
             android:parentActivityName=".LoginActivity"/>
         <activity android:name=".LoginActivity"
@@ -31,6 +32,7 @@
             android:parentActivityName=".CadastroActivity"/>
         <activity android:name=".CadastroPt3Activity"
             android:parentActivityName=".CadastroPt2Activity"></activity>
+
     </application>
 
 </manifest>
