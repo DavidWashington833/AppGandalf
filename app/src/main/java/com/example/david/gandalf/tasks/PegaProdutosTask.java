@@ -36,7 +36,7 @@ public class PegaProdutosTask extends AsyncTask<Void, Void, String> {
     @Override
     protected String doInBackground(Void... params) {
         WebClient client = new WebClient();
-        String resposta = client.get("http://gandalf.azurewebsites.net/gandalf/rest/produto/2");
+        String resposta = client.get("http://gandalf.azurewebsites.net/gandalf/rest/produto/3");
         return resposta;
     }
 
@@ -60,11 +60,13 @@ public class PegaProdutosTask extends AsyncTask<Void, Void, String> {
             TextView nomeP = (TextView) context.getActivity().findViewById(R.id.nomeProduto);
             TextView codP = (TextView) context.getActivity().findViewById(R.id.codigoProduto);
             TextView precoP = (TextView) context.getActivity().findViewById(R.id.precoProduto);
+            TextView descP = (TextView) context.getActivity().findViewById(R.id.descProduto);
 
 
             nomeP.setText(c.getNomeProduto());
             codP.setText(c.getIdProduto());
             precoP.setText(c.getPrecProduto());
+            descP.setText(c.getDescProduto());
 
 
 
