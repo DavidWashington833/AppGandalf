@@ -1,20 +1,13 @@
 package com.example.david.gandalf.tasks;
 
 import android.app.ProgressDialog;
-import android.content.Context;
-import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.AsyncTask;
-import android.widget.Toast;
 
 import com.example.david.gandalf.LoginActivity;
-import com.example.david.gandalf.MainActivity;
 import com.example.david.gandalf.WebClient;
 import com.example.david.gandalf.models.Cliente;
 import com.example.david.gandalf.models.Login;
 import com.google.gson.Gson;
-
-import java.util.ArrayList;
 
 /**
  * Created by Silva on 04/11/2017.
@@ -30,7 +23,7 @@ public class EnviaLoginTask extends AsyncTask<Void, Void, String> {
 
     @Override
     protected void onPreExecute() {
-        dialog = ProgressDialog.show(context, "Aguarde", "Buscando cliente...", true, true);
+        //dialog = ProgressDialog.show(context, "Aguarde", "Buscando cliente...", true, true);
     }
 
     @Override
@@ -49,15 +42,15 @@ public class EnviaLoginTask extends AsyncTask<Void, Void, String> {
         if (!resposta.equals("null")) {
             Cliente cliente = new Gson().fromJson(resposta, Cliente.class);
 
-            SharedPreferences preferences = context.getSharedPreferences("login", 0);
-            SharedPreferences.Editor editor = preferences.edit();
-            editor.putInt("idCliente", cliente.getIdCliente());
-            editor.commit();
+            //SharedPreferences preferences = context.getSharedPreferences("login", 0);
+            //SharedPreferences.Editor editor = preferences.edit();
+            //editor.putInt("idCliente", cliente.getIdCliente());
+            //editor.commit();
 
             feadback = "Usuario " + cliente.getNomeCompletoCliente() + " logado!";
-            context.finish();
+            //context.finish();
         }
 
-        Toast.makeText(context, feadback, Toast.LENGTH_LONG).show();
+        //Toast.makeText(context, feadback, Toast.LENGTH_LONG).show();
     }
 }

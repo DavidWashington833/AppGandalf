@@ -4,10 +4,13 @@ package com.example.david.gandalf;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
 import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity {
@@ -15,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
     private NavigationView navigationView;
     private DrawerLayout drawerLayout;
     private ActionBarDrawerToggle actionBarDrawerToggle;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
                 new NavigationView.OnNavigationItemSelectedListener() {
                     @Override
                     public boolean onNavigationItemSelected(MenuItem menuItem) {
+
+
                         if (menuItem.isChecked()) {
                             menuItem.setChecked(false);
                         }
@@ -43,6 +50,16 @@ public class MainActivity extends AppCompatActivity {
                             return true;
                         }
 
+                        if (menuItem.getItemId() == R.id.menu_qrcode) {
+                            Intent newAct = new Intent(MainActivity.this, QRCodeActivity.class);
+                            startActivity(newAct);
+                            return true;
+                        }
+
+                        if (menuItem.getItemId() == R.id.menu_pedidos) {
+                            chamaFragment(new MeusPedidosFragment());
+                        }
+
                         return false;
                     }
                 });
@@ -53,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
                 };
         drawerLayout.setDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();
+
 
         PrincipalFragment newFragment = new PrincipalFragment();
         //PaginaCarrinho newFragment = new PaginaCarrinho();
@@ -69,6 +87,23 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+
+    public void chamaFragment(Fragment fragment){
+        String backStateName = fragment.getClass().getName();
+        FragmentManager manager = getSupportFragmentManager();
+        manager.popBackStackImmediate(backStateName, FragmentManager.POP_BACK_STACK_INCLUSIVE);
+        FragmentTransaction transaction = manager.beginTransaction();
+        transaction.replace(R.id.frame_principal, fragment);
+        transaction.addToBackStack(backStateName);
+        transaction.commit();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu)  {
+        getMenuInflater().inflate(R.menu.actionbar, menu);
+        return super.onCreateOptionsMenu(menu);
     }
 
 }

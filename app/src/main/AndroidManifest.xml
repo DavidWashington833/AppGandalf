@@ -3,25 +3,36 @@
     package="com.example.david.gandalf">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/iconapp"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
+
             </intent-filter>
         </activity>
-        <activity android:name=".CadastroActivity" />
-        <activity android:name=".LoginActivity" >
 
-        </activity>
-        <activity android:name=".MeusPedidos" />
+        <activity android:name=".CadastroActivity"
+            android:parentActivityName=".LoginActivity"/>
+        <activity android:name=".LoginActivity"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".QRCodeActivity"
+            android:parentActivityName=".MainActivity"></activity>
+        <activity android:name=".CadastroPt2Activity"
+            android:parentActivityName=".CadastroActivity"/>
+        <activity android:name=".CadastroPt3Activity"
+            android:parentActivityName=".CadastroPt2Activity"></activity>
+
     </application>
 
 </manifest>

@@ -3,6 +3,7 @@ package com.example.david.gandalf.models;
 import java.io.Serializable;
 
 /**
+
  * Created by Gabriel_Montibeller on 15/11/2017.
  */
 
@@ -20,6 +21,7 @@ public class Categoria implements Serializable {
     }
 
     public void setIdCategoria(String idCategoria) {
+
         this.idCategoria = idCategoria;
     }
 
@@ -30,4 +32,5 @@ public class Categoria implements Serializable {
     public void setNomeCategoria(String nomeCategoria) {
         this.nomeCategoria = nomeCategoria;
     }
+
 }
