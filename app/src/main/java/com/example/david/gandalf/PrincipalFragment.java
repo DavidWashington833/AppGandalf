@@ -1,10 +1,8 @@
 package com.example.david.gandalf;
 
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
@@ -74,7 +72,7 @@ public class PrincipalFragment extends Fragment {
         @Override
         public Fragment getItem(int position) {
             if (position == 0) {
-                return new FragmentCategoria();
+                return new CategoriaFragment();
             }
             if (position == 1) {
                 return new ProdutoFragment();
