@@ -77,7 +77,7 @@ public class PrincipalFragment extends Fragment {
                 return new FragmentCategoria();
             }
             if (position == 1) {
-                return new ProdutoFragment();
+                return new LojaFragment();
             }
             if (position == 2) {
                 return new PaginaCarrinho();
