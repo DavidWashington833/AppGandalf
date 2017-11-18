@@ -6,7 +6,14 @@ import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import com.example.david.gandalf.tasks.PegaProdutosCategoriaTask;
+import android.widget.ArrayAdapter;
+
+import com.example.david.gandalf.helpers.CategoriaHelper;
+import com.example.david.gandalf.tasks.PegaCategoriasTask;
+
+import org.json.JSONArray;
+import org.json.JSONStringer;
+
 
 /**
  * Created by igorr on 18/10/2017.
@@ -16,10 +23,16 @@ import com.example.david.gandalf.tasks.PegaProdutosCategoriaTask;
 
 public class FragmentCategoria extends ListFragment {
 
+    private CategoriaHelper helper;
+
+    WebClient web = new WebClient();
+
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.list_categoria, container, false);
-        new PegaProdutosCategoriaTask(FragmentCategoria.this, container).execute();
+        new PegaCategoriasTask(FragmentCategoria.this, container).execute();
         return view;
     }
 
