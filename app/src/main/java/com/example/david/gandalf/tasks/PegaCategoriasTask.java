@@ -47,8 +47,6 @@ public class PegaCategoriasTask extends AsyncTask<Void, Void, String> {
 
     @Override
     protected void onPostExecute(String resposta) {
-
-
         Categoria[] categorias = new Gson().fromJson(resposta, Categoria[].class);
 
         final ArrayAdapter<Categoria> adapter = new ArrayAdapter<Categoria>(context.getContext(), android.R.layout.simple_list_item_1, categorias);
@@ -67,7 +65,5 @@ public class PegaCategoriasTask extends AsyncTask<Void, Void, String> {
         }
 
         context.setListAdapter(adapter);
-
-
     }
 }
