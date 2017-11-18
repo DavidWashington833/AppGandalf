@@ -85,4 +85,5 @@ public class LojaTask extends AsyncTask<Void, Void, String> {
 //        mensagens.addView(cardView);
 
     }
-}
+
+    }
