@@ -1,28 +1,22 @@
 package com.example.david.gandalf.models;
 
-import java.io.Serializable;
-
 /**
- * Created by Igor Ramos on 15/11/2017.
+ * Created by fernando.hyamamoto on 16/11/2017.
  */
 
-public class Produto implements Serializable {
-    private int idProduto;
+public class Produto {
+    private String idProduto;
     private String nomeProduto;
-    private String descProduto;
     private String precProduto;
     private String descontoPromocao;
-    private int idCategoria;
-    private String ativoProduto;
-    private int idUsuario;
     private String qtdMinEstoque;
-    private long imagem;
+    private String imagem;
 
-    public int getIdProduto() {
+    public String getIdProduto() {
         return idProduto;
     }
 
-    public void setIdProduto(int idProduto) {
+    public void setIdProduto(String idProduto) {
         this.idProduto = idProduto;
     }
 
@@ -32,14 +26,6 @@ public class Produto implements Serializable {
 
     public void setNomeProduto(String nomeProduto) {
         this.nomeProduto = nomeProduto;
-    }
-
-    public String getDescProduto() {
-        return descProduto;
-    }
-
-    public void setDescProduto(String descProduto) {
-        this.descProduto = descProduto;
     }
 
     public String getPrecProduto() {
@@ -58,30 +44,6 @@ public class Produto implements Serializable {
         this.descontoPromocao = descontoPromocao;
     }
 
-    public int getIdCategoria() {
-        return idCategoria;
-    }
-
-    public void setIdCategoria(int idCategoria) {
-        this.idCategoria = idCategoria;
-    }
-
-    public String getAtivoProduto() {
-        return ativoProduto;
-    }
-
-    public void setAtivoProduto(String ativoProduto) {
-        this.ativoProduto = ativoProduto;
-    }
-
-    public int getIdUsuario() {
-        return idUsuario;
-    }
-
-    public void setIdUsuario(int idUsuario) {
-        this.idUsuario = idUsuario;
-    }
-
     public String getQtdMinEstoque() {
         return qtdMinEstoque;
     }
@@ -90,11 +52,11 @@ public class Produto implements Serializable {
         this.qtdMinEstoque = qtdMinEstoque;
     }
 
-    public long getImagem() {
+    public String getImagem() {
         return imagem;
     }
 
-    public void setImagem(long imagem) {
+    public void setImagem(String imagem) {
         this.imagem = imagem;
     }
 }
