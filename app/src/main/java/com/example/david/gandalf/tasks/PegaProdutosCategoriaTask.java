@@ -13,8 +13,12 @@ import android.widget.Toast;
 import com.example.david.gandalf.CategoriaFragment;
 import com.example.david.gandalf.R;
 import com.example.david.gandalf.WebClient;
+import com.example.david.gandalf.adapter.ProdutoAdapter;
 import com.example.david.gandalf.models.ItemsCategoria;
+import com.example.david.gandalf.models.Produto;
 import com.google.gson.Gson;
+
+import java.util.Arrays;
 
 /**
  * Created by Gabriel_Montibeller on 18/11/2017.
@@ -46,28 +50,13 @@ public class PegaProdutosCategoriaTask extends AsyncTask<Void, Void, String> {
     @Override
     protected void onPostExecute(String resposta) {
 
+        if (!resposta.equals("null")) {
+            Produto[] produtos = new Gson().fromJson(resposta, Produto[].class);
+            ProdutoAdapter adapter = new ProdutoAdapter(context.getContext(), Arrays.asList(produtos));
+            final ListView listView = (ListView) context.getActivity().findViewById(android.R.id.list);
 
-        ItemsCategoria[] item = new Gson().fromJson(resposta, ItemsCategoria[].class);
-
-        final ArrayAdapter<ItemsCategoria> adapter = new ArrayAdapter<ItemsCategoria>(context.getContext(), android.R.layout.simple_list_item_1, item);
-
-        final ListView listView = (ListView) context.getActivity().findViewById(android.R.id.list);
-
-        if (listView != null) {
-            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                @Override
-                public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                    ItemsCategoria c = adapter.getItem(i);
-                    EditText id = (EditText)context.getActivity().findViewById(R.id.hiddenIdCat);
-
-                    Toast t = Toast.makeText(context.getActivity(), c.getNomeProduto(), Toast.LENGTH_LONG);
-                    t.show();
-                }
-            });
+            listView.setAdapter(adapter);
         }
-
-        context.setListAdapter(adapter);
-
 
     }
 }

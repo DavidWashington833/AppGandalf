@@ -22,7 +22,7 @@ public class CategoriaFragment extends ListFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.list_categoria, container, false);
-        new PegaProdutosCategoriaTask(CategoriaFragment.this, container).execute();
+        new PegaCategoriasTask(CategoriaFragment.this, container).execute();
         return view;
     }
 
