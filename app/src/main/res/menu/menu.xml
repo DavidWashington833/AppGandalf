@@ -22,12 +22,6 @@
             android:icon="@drawable/iconpedidos"
             android:title="Meus Pedidos" />
 
-        <item
-            android:id="@+id/menu_favoritos"
-            android:checked="false"
-            android:icon="@drawable/iconcoracao"
-            android:title="Meus Favoritos" />
-            />
     </group>
 
     <group
@@ -44,12 +38,6 @@
             android:checked="false"
             android:icon="@drawable/iconleitorqr"
             android:title="Leitor de QR Code" />
-
-        <item
-            android:id="@+id/menu_buscar"
-            android:checked="false"
-            android:icon="@drawable/iconbusca"
-            android:title="Buscar" />
 
         <item
             android:id="@+id/menu_contato"
