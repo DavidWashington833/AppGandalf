@@ -29,7 +29,6 @@ public class ProdutoFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_produto, container, false);
-
         new PegaProdutosTask(ProdutoFragment.this).execute();
 
         nomeP = (TextView) view.findViewById(R.id.nomeProduto);

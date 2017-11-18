@@ -2,7 +2,6 @@ package com.example.david.gandalf.tasks;
 
 import android.app.ProgressDialog;
 import android.graphics.BitmapFactory;
-import android.media.Image;
 import android.os.AsyncTask;
 import android.support.v7.widget.CardView;
 import android.util.Base64;
@@ -10,7 +9,7 @@ import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
+import com.example.david.gandalf.CustomAdapter;
 
 import com.example.david.gandalf.LojaFragment;
 import com.example.david.gandalf.R;
@@ -24,7 +23,6 @@ import com.google.gson.Gson;
 
 public class LojaTask extends AsyncTask<Void, Void, String> {
     private LojaFragment context;
-    private ProgressDialog dialog;
     private ViewGroup mensagens;
 
     public LojaTask(LojaFragment context) {
@@ -39,7 +37,7 @@ public class LojaTask extends AsyncTask<Void, Void, String> {
     @Override
     protected String doInBackground(Void... params) {
         WebClient client = new WebClient();
-        String resposta = client.get("http://gandalf.azurewebsites.net/gandalf/rest/produto/1");
+        String resposta = client.get("http://gandalf.azurewebsites.net/gandalf/rest/produto/");
         return resposta;
     }
 
@@ -48,7 +46,6 @@ public class LojaTask extends AsyncTask<Void, Void, String> {
 
         if (!resposta.equals("null")) {
 
-            addItem(resposta);
         }
 
 
@@ -59,6 +56,7 @@ public class LojaTask extends AsyncTask<Void, Void, String> {
         CardView cardView = (CardView) LayoutInflater.from(context.getActivity()).inflate(R.layout.cardview_pagina_carrinho, mensagens, false);
 
         Produto p = new Gson().fromJson(resposta, Produto.class);
+
 
         TextView nomeP = (TextView) context.getActivity().findViewById(R.id.txtNomeProd);
         TextView precoP = (TextView) context.getActivity().findViewById(R.id.txtPreco);
