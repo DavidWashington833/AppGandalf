@@ -6,14 +6,12 @@ import java.io.Serializable;
  * Created by Gabriel_Montibeller on 18/11/2017.
  */
 
-public class ItemsCategoria implements Serializable {
+public class Busca implements Serializable {
     private String idProduto;
     private String nomeProduto;
     private String precProduto;
     private String descontoPromocao;
     private String qtdMinEstoque;
-    private String imagem;
-    private String descProduto;
 
     public String getIdProduto() {
         return idProduto;
@@ -63,11 +61,5 @@ public class ItemsCategoria implements Serializable {
         this.imagem = imagem;
     }
 
-    public String getDescProduto() {
-        return descProduto;
-    }
-
-    public void setDescProduto(String descProduto) {
-        this.descProduto = descProduto;
-    }
+    private String imagem;
 }

@@ -1,22 +1,19 @@
 package com.example.david.gandalf.tasks;
 
-import android.app.ProgressDialog;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.example.david.gandalf.FragmentCategoria;
-import com.example.david.gandalf.LoginActivity;
+import com.example.david.gandalf.CategoriaFragment;
 import com.example.david.gandalf.R;
 import com.example.david.gandalf.WebClient;
 import com.example.david.gandalf.models.Categoria;
-import com.example.david.gandalf.models.Cliente;
-import com.example.david.gandalf.models.Login;
 import com.google.gson.Gson;
 
 /**
@@ -24,10 +21,10 @@ import com.google.gson.Gson;
  */
 
 public class PegaCategoriasTask extends AsyncTask<Void, Void, String> {
-    private FragmentCategoria context;
+    private CategoriaFragment context;
     private ViewGroup container;
 
-    public PegaCategoriasTask(FragmentCategoria context, ViewGroup container) {
+    public PegaCategoriasTask(CategoriaFragment context, ViewGroup container) {
         this.context = context;
         this.container = container;
     }
@@ -60,7 +57,12 @@ public class PegaCategoriasTask extends AsyncTask<Void, Void, String> {
                 @Override
                 public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                     Categoria c = adapter.getItem(i);
-                    Toast t = Toast.makeText(context.getActivity(), c.getIdCategoria(), Toast.LENGTH_SHORT);
+
+                    EditText id = (EditText)context.getActivity().findViewById(R.id.hiddenIdCat);
+                    id.setText(c.getIdCategoria().toString());
+
+
+                    Toast t = Toast.makeText(context.getActivity(), id.toString() , Toast.LENGTH_LONG);
                     t.show();
                 }
             });

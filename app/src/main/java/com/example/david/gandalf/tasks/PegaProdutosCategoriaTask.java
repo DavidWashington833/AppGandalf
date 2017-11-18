@@ -1,16 +1,18 @@
 package com.example.david.gandalf.tasks;
 
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.example.david.gandalf.FragmentCategoria;
+import com.example.david.gandalf.CategoriaFragment;
+import com.example.david.gandalf.R;
 import com.example.david.gandalf.WebClient;
-import com.example.david.gandalf.models.Categoria;
 import com.example.david.gandalf.models.ItemsCategoria;
 import com.google.gson.Gson;
 
@@ -20,14 +22,13 @@ import com.google.gson.Gson;
 
 
 public class PegaProdutosCategoriaTask extends AsyncTask<Void, Void, String> {
-    private FragmentCategoria context;
+    private CategoriaFragment context;
     private ViewGroup container;
 
-    public PegaProdutosCategoriaTask(FragmentCategoria context, ViewGroup container) {
+    public PegaProdutosCategoriaTask(CategoriaFragment context, ViewGroup container) {
         this.context = context;
         this.container = container;
     }
-
     @Override
     protected void onPreExecute() {
 
@@ -36,8 +37,8 @@ public class PegaProdutosCategoriaTask extends AsyncTask<Void, Void, String> {
     @Override
     protected String doInBackground(Void... params) {
         WebClient client = new WebClient();
-        int id = 2;
-        String resposta = client.get("http://gandalf.azurewebsites.net/gandalf/rest/produto/categoria/" + id);
+        EditText id = (EditText)context.getActivity().findViewById(R.id.hiddenIdCat);
+        String resposta = client.get("http://gandalf.azurewebsites.net/gandalf/rest/produto/categoria/" + id.getText().toString() );
 
         return resposta;
     }
@@ -57,7 +58,9 @@ public class PegaProdutosCategoriaTask extends AsyncTask<Void, Void, String> {
                 @Override
                 public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                     ItemsCategoria c = adapter.getItem(i);
-                    Toast t = Toast.makeText(context.getActivity(), c.getNomeProduto().toString(), Toast.LENGTH_SHORT);
+                    EditText id = (EditText)context.getActivity().findViewById(R.id.hiddenIdCat);
+
+                    Toast t = Toast.makeText(context.getActivity(), c.getNomeProduto(), Toast.LENGTH_LONG);
                     t.show();
                 }
             });

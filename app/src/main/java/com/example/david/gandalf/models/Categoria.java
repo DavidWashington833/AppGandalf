@@ -11,6 +11,7 @@ public class Categoria implements Serializable {
     private String idCategoria;
     private String nomeCategoria;
 
+
     @Override
     public String toString() {
         return getNomeCategoria();
