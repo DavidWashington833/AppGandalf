@@ -6,8 +6,8 @@ import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 
-import com.example.david.gandalf.helpers.CategoriaHelper;
 import com.example.david.gandalf.tasks.PegaCategoriasTask;
 import com.example.david.gandalf.tasks.PegaProdutosCategoriaTask;
 
@@ -16,16 +16,16 @@ import com.example.david.gandalf.tasks.PegaProdutosCategoriaTask;
  */
 
 public class CategoriaFragment extends ListFragment {
+    EditText reclicado;
 
-    private CategoriaHelper helper;
-
-    WebClient web = new WebClient();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
         View view = inflater.inflate(R.layout.list_categoria, container, false);
+        reclicado = (EditText) view.findViewById(R.id.hiddenReclicado);
         new PegaCategoriasTask(CategoriaFragment.this, container).execute();
-        new PegaProdutosCategoriaTask(CategoriaFragment.this, container).execute();
+
         return view;
     }
 
