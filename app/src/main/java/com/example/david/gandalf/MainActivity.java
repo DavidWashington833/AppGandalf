@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
                         }
 
                         if (menuItem.getItemId() == R.id.menu_carrinho) {
-                            chamaFragment(new PaginaCarrinho());
+                            chamaFragment(new CarrinhoFragment());
                         }
 
                         return false;
