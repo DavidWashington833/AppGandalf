@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:gravity="center"
     android:background="@drawable/backgroundlogin"
     tools:context="com.example.david.gandalf.LoginActivity">
 
@@ -46,43 +47,30 @@
             android:src="@drawable/iconolho" />
     </LinearLayout>
 
+    <Button
+        android:id="@+id/login_logar"
+        style="@style/Buttons"
+        android:text="Entrar" />
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dip"
-        android:layout_weight="1"
-        android:gravity="center|bottom"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
 
         <Button
-            android:id="@+id/login_logar"
-            style="@style/Buttons"
-            android:text="Fazer Login" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
+            android:id="@+id/login_criar_conta"
+            style="@style/ButtonsNullPrimario"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal">
+            android:text="Criar Minha Conta" />
 
-            <Button
-                android:id="@+id/login_criar_conta"
-                style="@style/ButtonsNull"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="10dp"
-                android:background="@android:color/transparent"
-                android:text="Criar Minha Conta"
-                android:textColor="#00bcd4" />
-
-            <Button
-                android:id="@+id/login_recupear_senha"
-                style="@style/ButtonsNull"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:text="Recuperar Senha"
-                android:textColor="#FFFFFF" />
-        </LinearLayout>
+        <Button
+            android:id="@+id/login_recupear_senha"
+            style="@style/ButtonsNullSecundario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recuperar Senha" />
     </LinearLayout>
 
 </LinearLayout>
