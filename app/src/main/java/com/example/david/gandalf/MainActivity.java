@@ -40,6 +40,13 @@ public class MainActivity extends AppCompatActivity {
                             menuItem.setChecked(true);
                         }
                         drawerLayout.closeDrawers();
+
+//                        if (menuItem.getItemId() == R.id.menu_loja) {
+//                            Intent newAct = new Intent(MainActivity.this, PrincipalFragment.class);
+//                            startActivity(newAct);
+//                            return true;
+//                        }
+
                         if (menuItem.getItemId() == R.id.menu_login) {
                             Intent newAct = new Intent(MainActivity.this, LoginActivity.class);
                             startActivity(newAct);
@@ -55,10 +62,10 @@ public class MainActivity extends AppCompatActivity {
                         if (menuItem.getItemId() == R.id.menu_pedidos) {
                             chamaFragment(new MeusPedidosFragment());
                         }
-                        /*
+
                         if (menuItem.getItemId() == R.id.menu_contato) {
-                            chamaFragment(new PaginaContato());
-                        }*/
+                            chamaFragment(new ContatoFragment());
+                        }
 
                         if (menuItem.getItemId() == R.id.menu_carrinho) {
                             chamaFragment(new PaginaCarrinho());
@@ -78,6 +85,7 @@ public class MainActivity extends AppCompatActivity {
 
         PrincipalFragment newFragment = new PrincipalFragment();
         //PaginaCarrinho newFragment = new PaginaCarrinho();
+        //ProdutoUnicoFragment newFragment = new ProdutoUnicoFragment();
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 
         transaction.replace(R.id.frame_principal, newFragment);
@@ -92,7 +100,6 @@ public class MainActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-
 
     public void chamaFragment(Fragment fragment){
         String backStateName = fragment.getClass().getName();

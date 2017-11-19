@@ -1,33 +1,17 @@
 package com.example.david.gandalf.tasks;
 
 import android.app.ProgressDialog;
-import android.content.SharedPreferences;
-import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
-import android.util.Base64;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.TextView;
-import android.widget.Toast;
 
-import com.example.david.gandalf.LoginActivity;
 import com.example.david.gandalf.ProdutoFragment;
 import com.example.david.gandalf.R;
 import com.example.david.gandalf.WebClient;
 import com.example.david.gandalf.adapter.ProdutoAdapter;
-import com.example.david.gandalf.models.Categoria;
-import com.example.david.gandalf.models.Cliente;
-import com.example.david.gandalf.models.Login;
 import com.example.david.gandalf.models.Produto;
 import com.google.gson.Gson;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
-import java.util.List;
 
 /**
  * Created by fernando.hyamamoto on 16/11/2017.

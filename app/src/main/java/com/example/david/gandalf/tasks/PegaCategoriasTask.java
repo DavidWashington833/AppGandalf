@@ -59,7 +59,9 @@ public class PegaCategoriasTask extends AsyncTask<Void, Void, String> {
                     EditText id = (EditText)context.getActivity().findViewById(R.id.hiddenIdCat);
                     id.setText(c.getIdCategoria().toString());
 
-                    new PegaProdutosCategoriaTask(context, container).execute();
+                    EditText reclicado = (EditText)context.getActivity().findViewById(R.id.hiddenReclicado);
+                    reclicado.setText("1");
+
                     //Toast t = Toast.makeText(context.getActivity(), id.toString() , Toast.LENGTH_LONG);
                    // t.show();
                 }
