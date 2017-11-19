@@ -1,20 +1,14 @@
 package com.example.david.gandalf.tasks;
 
-import android.content.SharedPreferences;
 import android.os.AsyncTask;
-import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.example.david.gandalf.CategoriaFragment;
 import com.example.david.gandalf.R;
 import com.example.david.gandalf.WebClient;
 import com.example.david.gandalf.adapter.ProdutoAdapter;
-import com.example.david.gandalf.models.ItemsCategoria;
 import com.example.david.gandalf.models.Produto;
 import com.google.gson.Gson;
 

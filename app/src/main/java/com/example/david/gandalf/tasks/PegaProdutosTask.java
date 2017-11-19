@@ -19,7 +19,6 @@ import java.util.Arrays;
 
 public class PegaProdutosTask extends AsyncTask<Void, Void, String> {
     private ProdutoFragment context;
-    private ProgressDialog dialog;
 
     public PegaProdutosTask(ProdutoFragment context) {
         this.context = context;
