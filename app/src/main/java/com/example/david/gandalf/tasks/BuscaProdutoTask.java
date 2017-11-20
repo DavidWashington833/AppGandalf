@@ -37,9 +37,15 @@ public class BuscaProdutoTask extends AsyncTask<Void, Void, String> {
 
     @Override
     protected String doInBackground(Void... params) {
+        String resposta;
         WebClient client = new WebClient();
+<<<<<<< HEAD
         final EditText Teste = (EditText) context.getActivity().findViewById(R.id.txtBusca);
         String resposta = client.get("http://gandalf.azurewebsites.net/gandalf/rest/produto/like/" + Teste.getText().toString());
+=======
+        EditText editText = (EditText) context.getActivity().findViewById(R.id.txtBuscaProduto);
+        resposta = client.get("http://gandalf.azurewebsites.net/gandalf/rest/produto/like/" + recebendoValor(editText));
+>>>>>>> branchIgorv3
         return resposta;
     }
 
@@ -47,8 +53,16 @@ public class BuscaProdutoTask extends AsyncTask<Void, Void, String> {
     protected void onPostExecute(final String resposta) {
 
         if (!resposta.equals("null")) {
+            Produto[] produtos = new Gson().fromJson(resposta, Produto[].class);
+            ProdutoAdapter adapter = new ProdutoAdapter(context.getContext(), Arrays.asList(produtos));
+            final ListView listView = (ListView) context.getActivity().findViewById(R.id.list_produto);
+            listView.setAdapter(adapter);
+        }
+    }
 
+    public String recebendoValor(EditText editText){
 
+<<<<<<< HEAD
             final EditText Teste = (EditText) context.getActivity().findViewById(R.id.txtBusca);
 
             Toast t = Toast.makeText(context.getActivity(), Teste.getText().toString() , Toast.LENGTH_LONG);
@@ -60,6 +74,11 @@ public class BuscaProdutoTask extends AsyncTask<Void, Void, String> {
 
             listView.setAdapter(adapter);
         }
+=======
+        String valor = editText.getText().toString();
+
+        return valor;
+>>>>>>> branchIgorv3
     }
 
 }

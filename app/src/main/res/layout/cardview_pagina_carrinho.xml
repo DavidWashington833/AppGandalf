@@ -27,7 +27,7 @@
             android:paddingRight="7dp">
             <TextView
                 android:id="@+id/txtNomeProd"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Nome do Produto" />

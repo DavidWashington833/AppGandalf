@@ -1,0 +1,75 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/backgroundpt2"
+    tools:context="com.example.david.gandalf.EditarContatoFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:gravity="center|top"
+            android:background="@color/backgroundMascara"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/TextDestaque"
+                android:gravity="left"
+                android:text="Informações de Contato" />
+
+            <TextView
+                style="@style/TextApoio"
+                android:layout_marginTop="0dp"
+                android:gravity="left"
+                android:text="Faça as alterações que deseja nos campos abaixo e clique em 'Confirmar Alterações' para salvá-las!" />
+
+            <TextView
+                style="@style/Label"
+                android:text="Celular" />
+
+            <EditText
+                android:id="@+id/main_celular"
+                style="@style/TextView"
+                android:hint="(XX) 0000-0000"
+                android:inputType="number" />
+
+            <TextView
+                style="@style/Label"
+                android:text="Telefone Residencial" />
+
+            <EditText
+                android:id="@+id/main_tel_residencial"
+                style="@style/TextView"
+                android:hint="(XX) 0000-0000"
+                android:inputType="number" />
+
+            <TextView
+                style="@style/Label"
+                android:text="Telefone Comercial" />
+
+            <EditText
+                android:id="@+id/main_tel_comercial"
+                style="@style/TextView"
+                android:hint="(XX) 0000-0000"
+                android:inputType="number" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:gravity="center|bottom"
+            android:background="@color/backgroundMascara"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/main_btn"
+                style="@style/Buttons"
+                android:text="Confirmar Alterações" />
+        </LinearLayout>
+
+</LinearLayout>

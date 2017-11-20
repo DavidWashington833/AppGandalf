@@ -1,0 +1,209 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/backgroundpt3"
+    tools:context="com.example.david.gandalf.MinhaContaFragment">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:background="@color/backgroundMascara"
+                android:gravity="top|right"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    style="@style/BgTitulo"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        style="@style/TextTitulo"
+                        android:text="Informações Básicas" />
+                </LinearLayout>
+
+                <TextView
+                    style="@style/Label"
+                    android:layout_marginBottom="0dp"
+                    android:text="Nome Completo" />
+
+                <TextView
+                    style="@style/TextInfos"
+                    android:text="Felipe A. Miconi" />
+
+                <TextView
+                    style="@style/Label"
+                    android:layout_marginBottom="0dp"
+                    android:text="Data de Nascimento" />
+
+                <TextView
+                    style="@style/TextInfos"
+                    android:text="15/01/1997" />
+
+                <TextView
+                    style="@style/Label"
+                    android:layout_marginBottom="0dp"
+                    android:text="CPF" />
+
+                <TextView
+                    style="@style/TextInfos"
+                    android:text="466.854.508-27" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:background="@color/backgroundMascara"
+                android:gravity="center|top"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    style="@style/BgTitulo"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        style="@style/TextTitulo"
+                        android:text="Informações de Contato" />
+                    <Button
+                        style="@style/ButtonsEdit"
+                        android:text="Editar" />
+                </LinearLayout>
+
+                <TextView
+                    style="@style/Label"
+                    android:layout_marginBottom="0dp"
+                    android:text="Celular" />
+
+                <TextView
+                    style="@style/TextInfos"
+                    android:text="(11) 98271-8271" />
+
+                <TextView
+                    style="@style/Label"
+                    android:layout_marginBottom="0dp"
+                    android:text="Telefone Residencial" />
+
+                <TextView
+                    style="@style/TextInfos"
+                    android:text="(11) 3683-3683" />
+
+                <TextView
+                    style="@style/Label"
+                    android:layout_marginBottom="0dp"
+                    android:text="Telefone Comercial" />
+
+                <TextView
+                    style="@style/TextInfos"
+                    android:text="(11) 3686-3686" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:background="@color/backgroundMascara"
+                android:gravity="center|top"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    style="@style/BgTitulo"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        style="@style/TextTitulo"
+                        android:text="Endereço Principal" />
+                    <Button
+                        style="@style/ButtonsEdit"
+                        android:text="Editar" />
+                </LinearLayout>
+
+                <TextView
+                    style="@style/Label"
+                    android:layout_marginBottom="0dp"
+                    android:text="Endereço" />
+                <TextView
+                    style="@style/TextInfos"
+                    android:text="Rua de Exemplo, 00" />
+
+                <TextView
+                    style="@style/Label"
+                    android:layout_marginBottom="0dp"
+                    android:text="Bairro / Cidade" />
+                <TextView
+                    style="@style/TextInfos"
+                    android:text="Bairro, Cidade" />
+
+                <TextView
+                    style="@style/Label"
+                    android:layout_marginBottom="0dp"
+                    android:text="CEP" />
+                <TextView
+                    style="@style/TextInfos"
+                    android:text="0621-210" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:background="@color/backgroundMascara"
+                android:gravity="center|top"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    style="@style/BgTitulo"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        style="@style/TextTitulo"
+                        android:text="Endereço Secundário" />
+                    <Button
+                        style="@style/ButtonsEdit"
+                        android:text="Editar" />
+                </LinearLayout>
+
+                <TextView
+                    style="@style/Label"
+                    android:layout_marginBottom="0dp"
+                    android:text="Endereço" />
+                <TextView
+                    style="@style/TextInfos"
+                    android:text="Rua de Exemplo, 00" />
+
+                <TextView
+                    style="@style/Label"
+                    android:layout_marginBottom="0dp"
+                    android:text="Bairro / Cidade" />
+                <TextView
+                    style="@style/TextInfos"
+                    android:text="Bairro, Cidade" />
+
+                <TextView
+                    style="@style/Label"
+                    android:layout_marginBottom="0dp"
+                    android:text="CEP" />
+                <TextView
+                    style="@style/TextInfos"
+                    android:text="0621-210" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
