@@ -23,10 +23,7 @@ import org.w3c.dom.Text;
  */
 public class BuscaProdutoFragment extends Fragment {
 
-    public ListView listView;
-    public EditText txtBusca;
-    public Button btnBusca;
-
+    EditText Busca;
 
     public BuscaProdutoFragment() {
         // Required empty public constructor
@@ -38,11 +35,10 @@ public class BuscaProdutoFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_busca_produto, container, false);
-        new BuscaProdutoTask(BuscaProdutoFragment.this).execute();
 
-        listView = (ListView) view.findViewById(R.id.list_produto);
-        txtBusca = (EditText) view.findViewById(R.id.txtBusca);
-        btnBusca = (Button) view.findViewById(R.id.btnBusca);
+        Busca = (EditText) view.findViewById(R.id.txtBuscaProd);
+
+        new BuscaProdutoTask(BuscaProdutoFragment.this).execute();
 
         return view;
     }

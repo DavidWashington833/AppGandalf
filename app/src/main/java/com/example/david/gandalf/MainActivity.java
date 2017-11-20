@@ -87,10 +87,10 @@ public class MainActivity extends AppCompatActivity {
         actionBarDrawerToggle.syncState();
 
 
-        PrincipalFragment newFragment = new PrincipalFragment();
+        //PrincipalFragment newFragment = new PrincipalFragment();
         //PaginaCarrinho newFragment = new PaginaCarrinho();
         //ProdutoUnicoFragment newFragment = new ProdutoUnicoFragment();
-        //BuscaProdutoFragment newFragment = new BuscaProdutoFragment();
+        BuscaProdutoFragment newFragment = new BuscaProdutoFragment();
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 
         transaction.replace(R.id.frame_principal, newFragment);

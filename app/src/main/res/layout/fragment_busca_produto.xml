@@ -5,20 +5,20 @@
     tools:context="com.example.david.gandalf.BuscaProdutoFragment">
 
     <EditText
-        android:id="@+id/txtBusca"
+        android:id="@+id/txtBuscaProd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:ems="10"
-        android:text=""
+        android:text="lum"
         />
 
     <Button
         android:id="@+id/btnBusca"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/txtBusca"
-        android:layout_alignBottom="@+id/txtBusca"
+        android:layout_alignBaseline="@+id/txtBuscaProd"
+        android:layout_alignBottom="@+id/txtBuscaProd"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="23dp"
         android:layout_weight="1"
