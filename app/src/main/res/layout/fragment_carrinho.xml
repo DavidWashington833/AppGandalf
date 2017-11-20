@@ -44,7 +44,7 @@
                 android:id="@+id/txtPrecoFinal"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:textSize="35dp"
+                android:textSize="36dp"
                 android:textColor="#00bcd4"
                 android:text="R$1000,00"
                 android:gravity="center|right"

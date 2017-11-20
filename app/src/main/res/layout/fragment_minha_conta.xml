@@ -32,9 +32,6 @@
                     <TextView
                         style="@style/TextTitulo"
                         android:text="Informações Básicas" />
-                    <Button
-                        style="@style/ButtonsEdit"
-                        android:text="Editar" />
                 </LinearLayout>
 
                 <TextView
