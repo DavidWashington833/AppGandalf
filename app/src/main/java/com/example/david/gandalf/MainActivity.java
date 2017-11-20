@@ -41,11 +41,11 @@ public class MainActivity extends AppCompatActivity {
                         }
                         drawerLayout.closeDrawers();
 
-//                        if (menuItem.getItemId() == R.id.menu_loja) {
-//                            Intent newAct = new Intent(MainActivity.this, PrincipalFragment.class);
-//                            startActivity(newAct);
-//                            return true;
-//                        }
+                        if (menuItem.getItemId() == R.id.menu_loja) {
+                            Intent newAct = new Intent(MainActivity.this, MainActivity.class);
+                            startActivity(newAct);
+                            return true;
+                        }
 
                         if (menuItem.getItemId() == R.id.menu_login) {
                             Intent newAct = new Intent(MainActivity.this, LoginActivity.class);
@@ -87,15 +87,12 @@ public class MainActivity extends AppCompatActivity {
         actionBarDrawerToggle.syncState();
 
 
-        //PrincipalFragment newFragment = new PrincipalFragment();
-        //PaginaCarrinho newFragment = new PaginaCarrinho();
-<<<<<<< HEAD
-        //ProdutoUnicoFragment newFragment = new ProdutoUnicoFragment();
-        BuscaProdutoFragment newFragment = new BuscaProdutoFragment();
-=======
-        ProdutoUnicoFragment newFragment = new ProdutoUnicoFragment();
-        //BuscaProdutoFragment newFragment = new BuscaProdutoFragment();
->>>>>>> ba85f640e021a8cc79d741bc5f159360d6fa3a70
+        PrincipalFragment newFragment = new PrincipalFragment();
+//        PaginaCarrinho newFragment = new PaginaCarrinho();
+//        ProdutoUnicoFragment newFragment = new ProdutoUnicoFragment();
+//        BuscaProdutoFragment newFragment = new BuscaProdutoFragment();
+//        ProdutoUnicoFragment newFragment = new ProdutoUnicoFragment();
+//        BuscaProdutoFragment newFragment = new BuscaProdutoFragment();
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 
         transaction.replace(R.id.frame_principal, newFragment);

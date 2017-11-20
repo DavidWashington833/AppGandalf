@@ -1,7 +1,6 @@
 package com.example.david.gandalf.adapter;
 
 import android.content.Context;
-import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.util.Base64;
 import android.view.LayoutInflater;
@@ -52,7 +51,7 @@ public class ProdutoAdapter extends BaseAdapter {
 
         View view = convertView;
         if (view == null) {
-            view = inflater.inflate(R.layout.cardview_pagina_carrinho, parent, false);
+            view = inflater.inflate(R.layout.cardview_produtos, parent, false);
         }
 
         TextView campoNome = (TextView) view.findViewById(R.id.txtNomeProd);
