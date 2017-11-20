@@ -56,21 +56,25 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp">
 
         <Button
             android:id="@+id/login_criar_conta"
             style="@style/ButtonsNullPrimario"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Criar Minha Conta" />
+            android:text="Criar Minha Conta"
+            android:textSize="15dp" />
 
         <Button
             android:id="@+id/login_recupear_senha"
             style="@style/ButtonsNullSecundario"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Recuperar Senha" />
+            android:text="Recuperar Senha"
+            android:textSize="14dp" />
     </LinearLayout>
 
 </LinearLayout>
