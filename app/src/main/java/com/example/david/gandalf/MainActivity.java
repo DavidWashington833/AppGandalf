@@ -67,6 +67,10 @@ public class MainActivity extends AppCompatActivity {
                             chamaFragment(new ContatoFragment());
                         }
 
+                        if (menuItem.getItemId() == R.id.menu_sobre) {
+                            chamaFragment(new SobreNosFragment());
+                        }
+
                         if (menuItem.getItemId() == R.id.menu_carrinho) {
                             chamaFragment(new CarrinhoFragment());
                         }
