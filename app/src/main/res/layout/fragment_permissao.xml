@@ -3,23 +3,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backgroundpt1"
-    tools:context="com.example.david.gandalf.PaginaCarrinhoVazio">
+    android:background="@drawable/backgroundpermissao"
+    tools:context="com.example.david.gandalf.PermissaoFragment">
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="match_parent"
         android:layout_weight="0"
-        android:gravity="center_horizontal|center"
+        android:gravity="top|center"
         android:orientation="vertical">
 
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/iconwarning"
+            android:layout_marginTop="12dp"/>
 
         <TextView
             style="@style/TextDestaque"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:text="Ops! Parece que você não tem itens adicionados em seu carrinho." />
+            android:text="Ops! Não conseguimos te identificar jovem cavalheiro!"
+            android:textColor="@color/colorPrimaryText" />
 
 
         <TextView
@@ -27,21 +34,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:text="Clique no botão abaixo para voltar à loja" />
+            android:text="Mostre-nos quem você é para poder ter acesso à esta página"
+            android:textColor="@color/colorPrimaryText" />
 
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center|bottom"
-            android:orientation="vertical">
-
-            <Button
-                android:id="@+id/button2"
-                style="@style/Buttons"
-                android:text="Voltar à Loja" />
-        </LinearLayout>
+        <Button
+            android:id="@+id/button2"
+            style="@style/Buttons"
+            android:layout_width="150dp"
+            android:text="Fazer Login" />
     </LinearLayout>
 
 </FrameLayout>

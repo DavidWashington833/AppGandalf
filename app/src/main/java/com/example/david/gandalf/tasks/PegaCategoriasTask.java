@@ -54,17 +54,21 @@ public class PegaCategoriasTask extends AsyncTask<Void, Void, String> {
             listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                    Categoria c = adapter.getItem(i);
 
-                    EditText id = (EditText)context.getActivity().findViewById(R.id.hiddenIdCat);
-                    id.setText(c.getIdCategoria().toString());
+                    EditText reclicado = (EditText) context.getActivity().findViewById(R.id.hiddenReclicado);
+                    reclicado.setText("0");
 
-                    EditText reclicado = (EditText)context.getActivity().findViewById(R.id.hiddenReclicado);
-                    reclicado.setText("1");
 
                     //Toast t = Toast.makeText(context.getActivity(), id.toString() , Toast.LENGTH_LONG);
                    // t.show();
-                }
+
+                    Categoria c = adapter.getItem(i);
+
+                    EditText id = (EditText) context.getActivity().findViewById(R.id.hiddenIdCat);
+                    id.setText(c.getIdCategoria().toString());
+                    new PegaProdutosCategoriaTask(context, container).execute();
+            }
+
             });
         }
 

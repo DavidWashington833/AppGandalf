@@ -43,7 +43,7 @@
                 android:text="R$00,00" />
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/btnComprarProd"
                 android:layout_height="50dp"
                 android:text="Comprar"
                 style="@style/Buttons" />

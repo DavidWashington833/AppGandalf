@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.david.gandalf">
+    package="com.example.david.gandalf"
+    android:screenOrientation="portrait">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CAMERA" />
@@ -12,7 +13,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity" android:screenOrientation="portrait">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,15 +24,15 @@
         </activity>
 
         <activity android:name=".CadastroActivity"
-            android:parentActivityName=".LoginActivity"/>
+            android:parentActivityName=".LoginActivity" android:screenOrientation="portrait"/>
         <activity android:name=".LoginActivity"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity" android:screenOrientation="portrait"/>
         <activity android:name=".QRCodeActivity"
-            android:parentActivityName=".MainActivity"></activity>
+            android:parentActivityName=".MainActivity" android:screenOrientation="portrait"></activity>
         <activity android:name=".CadastroPt2Activity"
             android:parentActivityName=".CadastroActivity"/>
         <activity android:name=".CadastroPt3Activity"
-            android:parentActivityName=".CadastroPt2Activity"></activity>
+            android:parentActivityName=".CadastroPt2Activity" android:screenOrientation="portrait"></activity>
 
     </application>
 
