@@ -56,7 +56,6 @@ public class BuscaProdutoTask extends AsyncTask<Void, Void, String> {
             context.btnBusca.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    context.txtBusca.getText().toString();
                     Produto[] produtos = new Gson().fromJson(resposta, Produto[].class);
                     ProdutoAdapter adapter = new ProdutoAdapter(context.getContext(), Arrays.asList(produtos));
                     final ListView listView = (ListView) context.getActivity().findViewById(R.id.list_produto);

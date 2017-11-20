@@ -1,9 +1,7 @@
 package com.example.david.gandalf.tasks;
 
-import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.widget.ListView;
-
 import com.example.david.gandalf.ProdutoFragment;
 import com.example.david.gandalf.R;
 import com.example.david.gandalf.WebClient;
@@ -37,13 +35,17 @@ public class PegaProdutosTask extends AsyncTask<Void, Void, String> {
     }
 
     @Override
-    protected void onPostExecute(String resposta) {
+    protected void onPostExecute(final String resposta) {
         if (!resposta.equals("null")) {
             Produto[] produtos = new Gson().fromJson(resposta, Produto[].class);
             ProdutoAdapter adapter = new ProdutoAdapter(context.getContext(), Arrays.asList(produtos));
             final ListView listView = (ListView) context.getActivity().findViewById(R.id.list_produto);
 
             listView.setAdapter(adapter);
+
+
         }
+
+
     }
 }
