@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+android:background="@drawable/backgroundtermos"
+    tools:context="com.example.david.gandalf.TermosServicosFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroundMascara">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:gravity="center|top"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/TextDestaque"
+                    android:gravity="left"
+                    android:text="Termos de Serviços" />
+                <TextView
+                    android:text="Olá Jovem cavaleiro! Para embarcar em nossa jornada e utilizar nosso app, é necessário concordar com nossos termos de serviços. Leia-o abaixo e clique no botão de sua escolha!"
+                    style="@style/TextApoio"
+                    android:gravity="left"
+                    android:layout_marginTop="0dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/TextApoio"
+                    android:layout_marginBottom="0dp"
+                    android:gravity="left"
+                    android:text="1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin magna sem, vehicula ac sem at, condimentum porta turpis. Proin eget mauris pulvinar, dignissim ipsum condimentum, cursus libero."
+                    android:textSize="16dp" />
+
+                <TextView
+                    style="@style/TextApoio"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginTop="0dp"
+                    android:gravity="left"
+                    android:text="2. Praesent semper auctor condimentum. Sed malesuada lectus ligula, nec efficitur ligula volutpat sit amet. Maecenas blandit placerat nisi id rutrum. Duis leo quam, dapibus sed mattis eget, faucibus sed arcu. Maecenas consectetur tristique egestas. Mauris arcu turpis, faucibus at sollicitudin eget, consequat ac arcu."
+                    android:textSize="16dp" />
+
+                <TextView
+                    style="@style/TextApoio"
+                    android:layout_marginTop="0dp"
+                    android:gravity="left"
+                    android:text="3. Fusce pretium eleifend augue, eget feugiat ligula porta mollis. Aenean egestas quam elit, vitae lacinia mauris interdum eu. Vestibulum dictum est at nulla hendrerit, sit amet hendrerit risus varius. Vivamus pulvinar magna odio, ac pulvinar erat fermentum quis."
+                    android:textSize="16dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:gravity="center|bottom"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/main_btn"
+                    style="@style/Buttons"
+                    android:layout_width="171dp"
+                    android:layout_marginRight="12dp"
+                    android:text="Eu Concordo" />
+
+                <Button
+                    android:id="@+id/main_btn"
+                    style="@style/ButtonsNullSecundario"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:padding="16dp"
+                    android:text="Não Concordo" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
