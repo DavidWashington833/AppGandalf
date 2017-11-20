@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+android:background="@drawable/backgroundanel"
+    tools:context="com.example.david.gandalf.SobreNosFragment">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroundMascara">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:gravity="center|top"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/TextDestaque"
+                    android:gravity="left"
+                    android:text="Sobre Nós" />
+                <TextView
+                    android:text="Olá Jovem cavaleiro! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin magna sem, vehicula ac sem at, condimentum porta turpis. Proin eget mauris pulvinar, dignissim ipsum condimentum, cursus libero."
+                    style="@style/TextApoio"
+                    android:gravity="left"
+                    android:layout_marginTop="0dp" />
+                <TextView
+                    android:text="Praesent semper auctor condimentum. Sed malesuada lectus ligula, nec efficitur ligula volutpat sit amet. Maecenas blandit placerat nisi id rutrum. Duis leo quam, dapibus sed mattis eget, faucibus sed arcu. Maecenas consectetur tristique egestas. Mauris arcu turpis, faucibus at sollicitudin eget, consequat ac arcu."
+                    style="@style/TextApoio"
+                    android:gravity="left"
+                    android:layout_marginTop="0dp" />
+                <TextView
+                    android:text="Fusce pretium eleifend augue, eget feugiat ligula porta mollis. Aenean egestas quam elit, vitae lacinia mauris interdum eu. Vestibulum dictum est at nulla hendrerit, sit amet hendrerit risus varius. Vivamus pulvinar magna odio, ac pulvinar erat fermentum quis."
+                    style="@style/TextApoio"
+                    android:gravity="left"
+                    android:layout_marginTop="0dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
