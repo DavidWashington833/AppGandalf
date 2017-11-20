@@ -36,9 +36,9 @@ public class BuscaProdutoFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_busca_produto, container, false);
 
-        Busca = (EditText) view.findViewById(R.id.txtBuscaProd);
+        Busca = (EditText) view.findViewById(R.id.txtBusca);
 
-        new BuscaProdutoTask(BuscaProdutoFragment.this).execute();
+        new BuscaProdutoTask(BuscaProdutoFragment.this.getContext()).execute();
 
         return view;
     }

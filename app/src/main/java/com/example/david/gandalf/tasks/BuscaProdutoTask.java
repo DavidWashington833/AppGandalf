@@ -2,8 +2,11 @@ package com.example.david.gandalf.tasks;
 
 import android.os.AsyncTask;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.example.david.gandalf.BuscaProdutoFragment;
 import com.example.david.gandalf.R;
@@ -19,22 +22,24 @@ import java.util.Arrays;
  */
 
 public class BuscaProdutoTask extends AsyncTask<Void, Void, String> {
-
     private BuscaProdutoFragment context;
+    private ViewGroup container;
 
-    public BuscaProdutoTask(BuscaProdutoFragment context) {
+
+    public BuscaProdutoTask(BuscaProdutoFragment context, ViewGroup container) {
         this.context = context;
+        this.container = container;
     }
 
     @Override
     protected void onPreExecute() {
-
     }
 
     @Override
     protected String doInBackground(Void... params) {
         WebClient client = new WebClient();
-        String resposta = client.get("http://gandalf.azurewebsites.net/gandalf/rest/produto/like/lum");
+        final EditText Teste = (EditText) context.getActivity().findViewById(R.id.txtBusca);
+        String resposta = client.get("http://gandalf.azurewebsites.net/gandalf/rest/produto/like/" + Teste.getText().toString());
         return resposta;
     }
 
@@ -44,18 +49,16 @@ public class BuscaProdutoTask extends AsyncTask<Void, Void, String> {
         if (!resposta.equals("null")) {
 
 
-            Button btnBusca = (Button) context.getActivity().findViewById(R.id.btnBusca);
+            final EditText Teste = (EditText) context.getActivity().findViewById(R.id.txtBusca);
 
-            btnBusca.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Produto[] produtos = new Gson().fromJson(resposta, Produto[].class);
-                    ProdutoAdapter adapter = new ProdutoAdapter(context.getContext(), Arrays.asList(produtos));
-                    final ListView listView = (ListView) context.getActivity().findViewById(R.id.list_produto);
-                    listView.setAdapter(adapter);
-                }
-            });
+            Toast t = Toast.makeText(context.getActivity(), Teste.getText().toString() , Toast.LENGTH_LONG);
+            t.show();
 
+            Produto[] produtos = new Gson().fromJson(resposta, Produto[].class);
+            ProdutoAdapter adapter = new ProdutoAdapter(context.getContext(), Arrays.asList(produtos));
+            final ListView listView = (ListView) context.getActivity().findViewById(android.R.id.list);
+
+            listView.setAdapter(adapter);
         }
     }
 
