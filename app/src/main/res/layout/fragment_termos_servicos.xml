@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+android:background="@drawable/backgroundtermos"
+    tools:context="com.example.david.gandalf.TermosServicosFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroundMascara">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:gravity="center|top"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/TextDestaque"
+                    android:gravity="left"
+                    android:text="Termos de Serviços" />
+                <TextView
+                    android:text="Olá Jovem cavaleiro! Para embarcar em nossa jornada e utilizar nosso app, é necessário concordar com nossos termos de serviços. Leia-o abaixo e clique no botão de sua escolha!"
+                    style="@style/TextApoio"
+                    android:gravity="left"
+                    android:layout_marginTop="0dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/TextApoio"
+                    android:layout_marginBottom="0dp"
+                    android:gravity="left"
+                    android:text="Estes termos e condições gerais de uso e de compra e venda aplicam-se aos serviços prestados pela pessoa jurídica GANDALF STORE S/A, devidamente registrada sob o CNPJ n. 12.345.678/0001-44, com sede em:
+Avenida Engenheiro Eusébio Stevaux, 823 - Santo Amaro, São Paulo - SP CEP: 04696-000 por meio do aplicativo GANDALF STORE.
+"
+                    android:textSize="16dp" />
+
+                <TextView
+                    style="@style/TextApoio"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginTop="0dp"
+                    android:gravity="left"
+                    android:text="1. DO OBJETO aplicativo GANDALF STORE caracteriza-se pela prestação dos seguintes serviços, incluindo a venda à distância e por meio eletrônico de produtos e de serviços:
+disponibilização de ferramenta de busca para localização de produtos na loja Gandalf Store, compartilhamento de ofertas e produtos, compra de produtos, cadastro na loja, verificar pedidos e editar informações da conta de usuário."
+                    android:textSize="16dp" />
+
+                <TextView
+                    style="@style/TextApoio"
+                    android:layout_marginTop="0dp"
+                    android:gravity="left"
+                    android:text="2. DA ACEITAÇÃO DOS TERMOS E CONDIÇÕES GERAIS DE USO E DE COMPRA E VENDA
+Todos aqueles que desejarem ter acesso aos serviços ofertados através do aplicativo GANDALF STORE deverão, primeiramente, se informar sobre as regras que compõem o presente instrumento, as quais ficarão disponíveis para pronta e ampla consulta, em link direto no próprio aplicativo.
+Ao utilizar o aplicativo GANDALF STORE, o usuário aceita integralmente as presentes normas e compromete-se a observá-las, sob risco de aplicação das penalidades cabíveis. Antes de iniciar qualquer navegação no aplicativo, o usuário deverá cientificar-se de eventuais modificações ou atualizações ocorridas neste termos.
+Caso não concorde com quaisquer das regras aqui descritas, o usuário deve, imediatamente, abster-se de utilizar o serviço. Se for de seu interesse, poderá, ainda, entrar em contato com o serviço de atendimento ao cliente, para apresentar-lhe as suas ressalvas."
+                    android:textSize="16dp" />
+
+                <TextView
+                    style="@style/TextApoio"
+                    android:layout_marginTop="0dp"
+                    android:gravity="left"
+                    android:text="3. DA NAVEGAÇÃO
+O editor do aplicativo GANDALF STORE se compromete a utilizar todas as soluções técnicas à sua disposição para permitir o acesso ao serviço 24 (vinte e quatro) horas por dia, 7 (sete) dias por semana. Entretanto, ele poderá, a qualquer momento, interromper, limitar ou suspender o acesso ao aplicativo ou a algumas de suas páginas, a fim de realizar atualizações, modificações de conteúdo ou qualquer outra ação julgada necessária para o seu bom funcionamento.
+Os presentes termos e condições gerais de uso e de compra e venda se aplicam a todas as extensões do aplicativo GANDALF STORE em redes sociais ou em comunidades, tanto as já existentes, quanto aquelas ainda a serem implementadas."
+                    android:textSize="16dp" />
+
+                <TextView
+                    style="@style/TextApoio"
+                    android:layout_marginTop="0dp"
+                    android:gravity="left"
+                    android:text="4. DA GESTÃO DO APLICATIVO
+Para a boa gestão, o editor do aplicativo GANDALF STORE poderá, a qualquer momento:
+a) suspender, interromper ou limitar o acesso a todo ou a parte do aplicativo a uma categoria específica de internautas;
+b) remover toda informação que possa perturbar o funcionamento do aplicativo ou que esteja em conflito com normas de Direito brasileiro ou de Direito internacional;
+c) suspender o aplicativo, a fim de realizar atualizações e modificações."
+                    android:textSize="16dp" />
+
+                <TextView
+                    style="@style/TextApoio"
+                    android:layout_marginTop="0dp"
+                    android:gravity="left"
+                    android:text="5. DO CADASTRO
+Os serviços disponibilizados no aplicativo GANDALF STORE apenas poderão ser acessados por pessoas plenamente capazes, conforme o Direito brasileiro. Todos aqueles que não possuírem plena capacidade civil - menores de 18 anos não emancipados, pródigos, ébrios habituais ou viciados em tóxicos e pessoas que não puderem exprimir sua vontade, por motivo transitório ou permanente - deverão ser devidamente assistidos por seus representantes legais, que se responsabilizarão pelo cumprimento das presentes regras.
+Ao usuário, será permitido manter apenas uma conta junto ao aplicativo GANDALF STORE. Contas duplicadas serão automaticamente desativadas pelo editor do aplicativo, sem prejuízo de demais penalidades cabíveis.
+Para o devido cadastramento junto ao serviço, o usuário deverá fornecer integralmente os dados requeridos. Todas as informações fornecidas pelo usuário devem ser precisas, verdadeiras e atualizadas. Em qualquer caso, o usuário responderá, em âmbito cível e criminal, pela veracidade, exatidão e autenticidade dos dados informados.
+O usuário deverá fornecer um endereço de e-mail válido, através do qual o aplicativo realizará todos os contatos necessários. Todas as comunicações enviadas para o referido endereço serão consideradas lidas pelo usuário, que se compromete, assim, a consultar regularmente suas mensagens recebidas e a respondê-las em prazo razoável.
+Após a confirmação de seu cadastro, o usuário possuirá um login (apelido) e uma senha pessoais, que deverão ser por ele utilizados para o acesso a sua conta no aplicativo GANDALF STORE. Estes dados de conexão não poderão ser informados pelo usuário a terceiros, sendo de sua inteira responsabilidade o uso que deles seja feito. O usuário compromete-se a comunicar imediatamente ao editor do aplicativo quaisquer atividades suspeitas ou inesperadas em sua conta.
+Não será permitido ceder, vender, alugar ou transferir, de qualquer forma, a conta.
+Será automaticamente descadastrado o usuário que descumprir quaisquer das normas contidas no presente instrumento, sendo-lhe vedado realizar nova inscrição no aplicativo.
+O usuário poderá, a qualquer tempo e sem necessidade de justificação, requerer o cancelamento de seu cadastro junto ao aplicativo GANDALF STORE. O seu descadastramento será realizado o mais rapidamente possível, desde que não sejam verificados débitos em aberto.
+"
+                    android:textSize="16dp" />
+
+                <TextView
+                    style="@style/TextApoio"
+                    android:layout_marginTop="0dp"
+                    android:gravity="left"
+                    android:text="6. DAS RESPONSABILIDADES
+O editor se responsabilizará pelos defeitos ou vícios encontrados nos serviços prestados pelo aplicativo GANDALF STORE, desde que tenha lhes dado causa. Defeitos ou vícios técnicos ou operacionais originados no próprio sistema do usuário não serão de responsabilidade do editor.
+O editor responsabiliza-se apenas pelas informações que foram por ele diretamente divulgadas. Quaisquer informações incluídas pelos usuários, tais como em comentários e em perfis pessoais, serão de inteira responsabilidade dos próprios.
+O usuário é responsável, ainda:
+a) pela correta utilização do aplicativo e de seus serviços, prezando pela boa convivência, pelo respeito e pela cordialidade no relacionamento com os demais usuários;
+b) pelo cumprimento das regras contidas neste instrumento, bem como normas de Direito nacional e de Direito internacional;
+c) pela proteção dos dados de acesso à sua conta (login e senha).
+O editor não será responsável:
+a) pelas características intrínsecas da internet, principalmente relativas à confiabilidade e à procedência das informações circulando nesta rede;
+b) pelos conteúdos ou atividades ilícitas praticadas através de seu aplicativo."
+                    android:textSize="16dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:gravity="center|bottom"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/main_btn"
+                    style="@style/Buttons"
+                    android:layout_width="171dp"
+                    android:layout_marginRight="12dp"
+                    android:text="Eu Concordo" />
+
+                <Button
+                    android:id="@+id/main_btn"
+                    style="@style/ButtonsNullSecundario"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:padding="16dp"
+                    android:text="Não Concordo" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

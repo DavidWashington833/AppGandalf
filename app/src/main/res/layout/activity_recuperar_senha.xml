@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/backgroundpermissao"
+    tools:context="com.example.david.gandalf.RecuperarSenhaActivity">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:gravity="center|top"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/TextDestaque"
+            android:gravity="left"
+            android:text="Redefinir Senha" />
+
+        <TextView
+            style="@style/TextApoio"
+            android:layout_marginTop="0dp"
+            android:gravity="left"
+            android:text="Opa! Parece que você se esqueceu da senha de acesso. Digite seu e-mail abaixo para que possamos reenviar sua senha." />
+
+        <TextView
+            style="@style/Label"
+            android:text="E-mail" />
+
+        <EditText
+            android:id="@+id/main_email"
+            style="@style/TextView"
+            android:hint="exemplo@dominioex.com.br"
+            android:inputType="textEmailAddress" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:gravity="center|bottom"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/main_btn"
+            style="@style/Buttons"
+            android:text="Rederinir Senha" />
+    </LinearLayout>
+</LinearLayout>

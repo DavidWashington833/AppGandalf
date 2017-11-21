@@ -2,6 +2,7 @@ package com.example.david.gandalf.tasks;
 
 import android.os.AsyncTask;
 
+import com.example.david.gandalf.MeusPedidosFragment;
 import com.example.david.gandalf.WebClient;
 
 /**
@@ -9,6 +10,12 @@ import com.example.david.gandalf.WebClient;
  */
 
 public class MeusPedidosTask extends AsyncTask<Void, Void, String> {
+
+    private MeusPedidosFragment context;
+
+    public MeusPedidosTask(MeusPedidosFragment context) {
+        this.context = context;
+    }
 
     @Override
     protected void onPreExecute() {
@@ -18,7 +25,7 @@ public class MeusPedidosTask extends AsyncTask<Void, Void, String> {
     @Override
     protected String doInBackground(Void... voids) {
         WebClient client = new WebClient();
-        String resposta = client.get("");
+        String resposta = client.get("http://gandalf.azurewebsites.net/gandalf/rest/pedido/cliente/43");
 
         return resposta;
     }

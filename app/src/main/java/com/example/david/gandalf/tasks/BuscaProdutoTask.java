@@ -1,12 +1,14 @@
 package com.example.david.gandalf.tasks;
 
 import android.os.AsyncTask;
+<<<<<<< HEAD
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+=======
+>>>>>>> branchIgorv3
 import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.example.david.gandalf.BuscaProdutoFragment;
 import com.example.david.gandalf.R;

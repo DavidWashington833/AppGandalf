@@ -22,26 +22,38 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".CadastroActivity"
             android:parentActivityName=".LoginActivity"
             android:screenOrientation="portrait" />
+
         <activity
             android:name=".LoginActivity"
             android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait" />
+
         <activity
             android:name=".QRCodeActivity"
             android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait" />
+
         <activity
             android:name=".CadastroPt2Activity"
             android:parentActivityName=".CadastroActivity" />
+
         <activity
             android:name=".CadastroPt3Activity"
             android:parentActivityName=".CadastroPt2Activity"
             android:screenOrientation="portrait" />
-        <activity android:name=".CadastroPt4Activity"></activity>
+
+        <activity android:name=".CadastroPt4Activity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".RecuperarSenhaActivity"
+            android:parentActivityName=".LoginActivity"
+            android:screenOrientation="portrait"
+            ></activity>
     </application>
 
 </manifest>
