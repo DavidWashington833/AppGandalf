@@ -9,6 +9,10 @@ import com.example.david.gandalf.CategoriaFragment;
 import com.example.david.gandalf.R;
 import com.example.david.gandalf.WebClient;
 import com.example.david.gandalf.adapter.ProdutoAdapter;
+<<<<<<< HEAD
+=======
+import com.example.david.gandalf.models.ItemsCategoria;
+>>>>>>> 5521df4b0c016b5e5f70c214df1c177317953af6
 import com.example.david.gandalf.models.Produto;
 import com.google.gson.Gson;
 
