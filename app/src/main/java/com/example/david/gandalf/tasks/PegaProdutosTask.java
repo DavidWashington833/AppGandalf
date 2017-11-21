@@ -22,11 +22,17 @@ import java.util.Arrays;
  */
 
 public class PegaProdutosTask extends AsyncTask<Void, Void, String> {
+    private String id;
     private ProdutoFragment context;
 
     public PegaProdutosTask(ProdutoFragment context) {
         this.context = context;
-}
+    }
+
+    public PegaProdutosTask(ProdutoFragment context, String id) {
+        this.context = context;
+        this.id = id;
+    }
 
 
     @Override
@@ -47,20 +53,6 @@ public class PegaProdutosTask extends AsyncTask<Void, Void, String> {
             Produto[] produtos = new Gson().fromJson(resposta, Produto[].class);
             final ProdutoAdapter adapter = new ProdutoAdapter(context.getContext(), Arrays.asList(produtos));
             final ListView listView = (ListView) context.getActivity().findViewById(R.id.list_produto);
-
-            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                @Override
-                public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-
-                    EditText reclicado = (EditText) context.getActivity().findViewById(R.id.hiddenIdProd);
-                    reclicado.setText("0");
-
-                    Produto p = (Produto) adapter.getItem(i);
-
-                    EditText id = (EditText) context.getActivity().findViewById(R.id.hiddenIdProd);
-                    id.setText(p.getIdProduto().toString());
-                }
-            });
 
             listView.setAdapter(adapter);
         }

@@ -1,6 +1,7 @@
 package com.example.david.gandalf;
 
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -22,9 +23,16 @@ public class ProdutoUnicoFragment extends Fragment {
     public ImageView imgP;
     public TextView nomeP, codP, precoP,descP;
     EditText hiddenId;
+    String id;
 
     public ProdutoUnicoFragment() {
         // Required empty public constructor
+    }
+
+    @SuppressLint("ValidFragment")
+    public ProdutoUnicoFragment(String id) {
+        // Required empty public constructor
+        this.id = id;
     }
 
     @Override
@@ -39,7 +47,8 @@ public class ProdutoUnicoFragment extends Fragment {
         imgP = (ImageView) view.findViewById(R.id.imgProduto);
         hiddenId = (EditText) view.findViewById(R.id.hiddenIdProd);
 
-        new PegaProdutoUnicoTask(ProdutoUnicoFragment.this).execute();
+
+        new PegaProdutoUnicoTask(ProdutoUnicoFragment.this, id).execute();
 
         return view;
     }
