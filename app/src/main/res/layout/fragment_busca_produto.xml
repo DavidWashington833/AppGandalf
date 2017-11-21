@@ -4,24 +4,11 @@
     android:layout_height="match_parent"
     tools:context="com.example.david.gandalf.BuscaProdutoFragment">
 
-<<<<<<< HEAD
-    <EditText
-        android:id="@+id/txtBusca"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:ems="10"
-        android:text="lum"
-        android:inputType="textPersonName"
-        />
-=======
->>>>>>> branchIgorv3
 
     <Button
         android:id="@+id/btnBusca"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-<<<<<<< HEAD
         android:layout_alignBaseline="@+id/txtBusca"
         android:layout_alignBottom="@+id/txtBusca"
 =======
