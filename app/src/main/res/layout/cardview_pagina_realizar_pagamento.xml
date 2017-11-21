@@ -1,0 +1,147 @@
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    android:orientation="vertical"
+    app:cardElevation="5dp"
+    app:cardUseCompatPadding="true">
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Realizar Pagamento"
+        android:textAlignment="center"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="1dp"
+        android:orientation="horizontal"
+        android:padding="6dp">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="361dp"
+            android:layout_height="218dp"
+            android:layout_marginTop="50dp"
+            android:background="#DCDCDC">
+
+            <EditText
+                android:id="@+id/card01"
+                android:layout_width="60dp"
+                android:layout_height="42dp"
+                android:ems="10"
+                android:hint="0000"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="58dp" />
+
+            <EditText
+                android:id="@+id/card02"
+                android:layout_width="60dp"
+                android:layout_height="42dp"
+                android:ems="10"
+                android:hint="0000"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                tools:layout_editor_absoluteX="102dp"
+                tools:layout_editor_absoluteY="58dp" />
+
+            <EditText
+                android:id="@+id/card03"
+                android:layout_width="60dp"
+                android:layout_height="42dp"
+                android:ems="10"
+                android:hint="0000"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                tools:layout_editor_absoluteX="194dp"
+                tools:layout_editor_absoluteY="58dp" />
+
+            <EditText
+                android:id="@+id/card04"
+                android:layout_width="60dp"
+                android:layout_height="42dp"
+                android:ems="10"
+                android:hint="0000"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                tools:layout_editor_absoluteX="278dp"
+                tools:layout_editor_absoluteY="58dp" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="48dp"
+                android:layout_height="37dp"
+                android:text="VENC"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="106dp" />
+
+            <EditText
+                android:id="@+id/et_data"
+                android:layout_width="99dp"
+                android:layout_height="37dp"
+                android:ems="10"
+                android:hint="00/00"
+                android:inputType="date"
+                android:selectAllOnFocus="false"
+                android:textAlignment="center"
+                android:textSize="15sp"
+                tools:layout_editor_absoluteX="63dp"
+                tools:layout_editor_absoluteY="106dp" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="44dp"
+                android:layout_height="36dp"
+                android:text="CVV"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="194dp"
+                tools:layout_editor_absoluteY="106dp" />
+
+            <EditText
+                android:id="@+id/et_cvv"
+                android:layout_width="102dp"
+                android:layout_height="36dp"
+                android:ems="10"
+                android:hint="000"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                tools:layout_editor_absoluteX="236dp"
+                tools:layout_editor_absoluteY="106dp" />
+
+            <EditText
+                android:id="@+id/et_nome"
+                android:layout_width="322dp"
+                android:layout_height="54dp"
+                android:ems="10"
+                android:hint="Nome  do Titular"
+                android:inputType="textPersonName"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="15dp"
+                tools:layout_editor_absoluteY="148dp" />
+
+            <ImageView
+                android:id="@+id/img_bandeiraCard"
+                android:layout_width="75dp"
+                android:layout_height="33dp"
+                app:srcCompat="@drawable/psts_background_tab"
+                tools:layout_editor_absoluteX="263dp"
+                tools:layout_editor_absoluteY="16dp" />
+
+        </android.support.constraint.ConstraintLayout>
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
