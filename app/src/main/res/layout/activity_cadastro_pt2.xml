@@ -86,7 +86,7 @@
         android:gravity="center|bottom"
         android:orientation="vertical">
         <Button
-            android:id="@+id/main_btn"
+            android:id="@+id/cadastro_proximo_pt2"
             android:text="Próxima Etapa"
             style="@style/Buttons" />
     </LinearLayout>
