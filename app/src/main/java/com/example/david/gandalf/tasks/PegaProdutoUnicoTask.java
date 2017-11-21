@@ -13,6 +13,8 @@ import com.example.david.gandalf.WebClient;
 import com.example.david.gandalf.models.Produto;
 import com.google.gson.Gson;
 
+import org.w3c.dom.Text;
+
 
 public class PegaProdutoUnicoTask extends AsyncTask<Void, Void, String> {
     private ProdutoUnicoFragment context;
@@ -24,14 +26,15 @@ public class PegaProdutoUnicoTask extends AsyncTask<Void, Void, String> {
 
     @Override
     protected void onPreExecute() {
+
     }
 
     @Override
     protected String doInBackground(Void... params) {
 
         WebClient client = new WebClient();
-        TextView codP = (TextView) context.getActivity().findViewById(R.id.codigoProduto);
-        String resposta = client.get("http://gandalf.azurewebsites.net/gandalf/rest/produto/" + codP.getText().toString());
+        TextView cod = (TextView) context.getActivity().findViewById(R.id.codigoProduto);
+        String resposta = client.get("http://gandalf.azurewebsites.net/gandalf/rest/produto/" + cod.getText().toString());
         return resposta;
     }
 
@@ -45,14 +48,12 @@ public class PegaProdutoUnicoTask extends AsyncTask<Void, Void, String> {
             TextView codP = (TextView) context.getActivity().findViewById(R.id.codigoProduto);
             TextView precoP = (TextView) context.getActivity().findViewById(R.id.precoProduto);
             ImageView imgP = (ImageView) context.getActivity().findViewById(R.id.imgProduto);
-//            EditText hiddenId = (EditText) context.getActivity().findViewById(R.id.hiddenIdProd);
 
             nomeP.setText(p.getNomeProduto());
             codP.setText(p.getIdProduto());
             precoP.setText(p.getPrecProduto());
             byte[] imageAsBytes = Base64.decode(p.getImagem().getBytes(), Base64.DEFAULT);
             imgP.setImageBitmap(BitmapFactory.decodeByteArray(imageAsBytes, 0, imageAsBytes.length));
-//            hiddenId.setText(p.getIdProduto());
         }
     }
 }

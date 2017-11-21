@@ -8,14 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.FrameLayout;
-import android.widget.ListView;
-import android.widget.TextView;
 
 import com.example.david.gandalf.tasks.BuscaProdutoTask;
-import com.example.david.gandalf.tasks.PegaProdutosTask;
-
-import org.w3c.dom.Text;
 
 
 /**

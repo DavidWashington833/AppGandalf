@@ -18,7 +18,6 @@ import android.widget.Toast;
 
 import com.example.david.gandalf.MainActivity;
 import com.example.david.gandalf.ProdutoUnicoFragment;
-import com.example.david.gandalf.QRCodeActivity;
 import com.example.david.gandalf.R;
 import com.example.david.gandalf.models.Produto;
 
@@ -72,6 +71,7 @@ public class ProdutoAdapter extends BaseAdapter {
 
         TextView campoPreco = (TextView) view.findViewById(R.id.txtPreco);
         campoPreco.setText(produto.getPrecProduto());
+
 
         ImageView campoImg = (ImageView) view.findViewById(R.id.imagemProd);
         String imagem = produto.getImagem();
