@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-android:orientation="vertical"
-android:layout_width="match_parent"
-android:layout_height="match_parent">
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <EditText
         android:visibility="gone"
@@ -21,14 +21,10 @@ android:layout_height="match_parent">
         android:ems="10"
         android:inputType="textPersonName"
         android:text="0" />
-<<<<<<< HEAD
-
-=======
->>>>>>> 5521df4b0c016b5e5f70c214df1c177317953af6
     <ListView
-    android:id="@android:id/list"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
 
-</ListView>
+    </ListView>
 </LinearLayout>
