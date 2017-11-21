@@ -1,11 +1,8 @@
 package com.example.david.gandalf.tasks;
 
 import android.os.AsyncTask;
-import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.example.david.gandalf.BuscaProdutoFragment;
 import com.example.david.gandalf.R;

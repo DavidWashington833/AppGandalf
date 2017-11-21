@@ -14,6 +14,15 @@
         android:orientation="horizontal"
         android:padding="6dp">
 
+        <EditText
+            android:visibility="gone"
+            android:id="@+id/hiddenIdProd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="1" />
+
         <ImageView
             android:id="@+id/imagemProd"
             android:layout_width="160dp"
@@ -45,7 +54,7 @@
             <Button
                 android:id="@+id/btnComprarProd"
                 android:layout_height="50dp"
-                android:text="Comprar"
+                android:text="Detalhes"
                 style="@style/Buttons" />
         </LinearLayout>
 
