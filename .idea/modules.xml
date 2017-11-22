@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/AppGandalf.iml" filepath="$PROJECT_DIR$/AppGandalf.iml" />
+      <module fileurl="file://C:\Users\gabriel.elmontibelle\Desktop\GandalfApp\GandalfApp\AppGandalf.iml" filepath="C:\Users\gabriel.elmontibelle\Desktop\GandalfApp\GandalfApp\AppGandalf.iml" />
       <module fileurl="file://C:\Users\Igor Ramos\Documents\ProjetoIntegrador\GandalfApp\AppGandalf.iml" filepath="C:\Users\Igor Ramos\Documents\ProjetoIntegrador\GandalfApp\AppGandalf.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GandalfApp.iml" filepath="$PROJECT_DIR$/GandalfApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://C:\Users\igorr\Desktop\GandalfApp\app\app.iml" filepath="C:\Users\igorr\Desktop\GandalfApp\app\app.iml" />
     </modules>
