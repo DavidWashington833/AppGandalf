@@ -1,5 +1,6 @@
 package com.example.david.gandalf.tasks;
 
+import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.view.ViewGroup;
 import android.widget.EditText;
@@ -22,6 +23,7 @@ import java.util.Arrays;
 public class PegaProdutosCategoriaTask extends AsyncTask<Void, Void, String> {
     private CategoriaFragment context;
     private ViewGroup container;
+    private ProgressDialog dialog;
 
     public PegaProdutosCategoriaTask(CategoriaFragment context, ViewGroup container) {
         this.context = context;
@@ -29,7 +31,7 @@ public class PegaProdutosCategoriaTask extends AsyncTask<Void, Void, String> {
     }
     @Override
     protected void onPreExecute() {
-
+        dialog = ProgressDialog.show(context.getContext(), "Aguarde", "Carregando Produtos...", true, true);
     }
 
     @Override
@@ -37,6 +39,7 @@ public class PegaProdutosCategoriaTask extends AsyncTask<Void, Void, String> {
         WebClient client = new WebClient();
         EditText id = (EditText) context.getActivity().findViewById(R.id.hiddenIdCat);
         String resposta = client.get("http://gandalf.azurewebsites.net/gandalf/rest/produto/categoria/" + id.getText().toString());
+        dialog.dismiss();
 
         return resposta;
     }
