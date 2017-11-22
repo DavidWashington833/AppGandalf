@@ -6,12 +6,11 @@ xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
 android:orientation="vertical"
-android:background="@drawable/backgroundmapa"
+android:background="@drawable/backgroundpt1"
     tools:context="com.example.david.gandalf.SobreNosFragment">
     <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/backgroundMascara">
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -22,28 +21,204 @@ android:background="@drawable/backgroundmapa"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0"
-                android:gravity="center|top"
+                android:background="@color/backgroundMascara"
+                android:gravity="top|right"
                 android:orientation="vertical">
 
+                <LinearLayout
+                    style="@style/BgTitulo"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_weight="0.1"
+                        android:src="@drawable/iconarco" />
+
+                    <TextView
+                        style="@style/TextTitulo"
+                        android:layout_width="319dp"
+                        android:layout_marginTop="3dp"
+                        android:text="Bruno Nunes" />
+                </LinearLayout>
+
                 <TextView
-                    style="@style/TextDestaque"
-                    android:gravity="left"
-                    android:text="Sobre Nós" />
+                    style="@style/TextInfos"
+                    android:text="O arqueiro do grupo, aquela coisa de sempre – fica de longe, é preciso, ágil e sempre parece ter a resposta na ponta da língua, acima de tudo, sabe o que está fazendo." />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:background="@color/backgroundMascara"
+                android:gravity="top|right"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    style="@style/BgTitulo"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_weight="0.1"
+                        android:src="@drawable/iconelfo" />
+
+                    <TextView
+                        style="@style/TextTitulo"
+                        android:layout_width="319dp"
+                        android:layout_marginTop="3dp"
+                        android:text="David Washington" />
+                </LinearLayout>
+
                 <TextView
-                    android:text="Olá Jovem cavaleiro! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin magna sem, vehicula ac sem at, condimentum porta turpis. Proin eget mauris pulvinar, dignissim ipsum condimentum, cursus libero."
-                    style="@style/TextApoio"
-                    android:gravity="left"
-                    android:layout_marginTop="0dp" />
+                    style="@style/TextInfos"
+                    android:text="O elfo-anão mais habilidoso do grupo. Seus hobbies incluem se aprimorar seus ensinamentos nas mais obscuras linguagens de programação do reino, além de noites incessantes regadas a metal e code in the dark!" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:background="@color/backgroundMascara"
+                android:gravity="top|right"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    style="@style/BgTitulo"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_weight="0.1"
+                        android:src="@drawable/iconespadas" />
+
+                    <TextView
+                        style="@style/TextTitulo"
+                        android:layout_width="319dp"
+                        android:layout_marginTop="3dp"
+                        android:text="Felipe Miconi" />
+                </LinearLayout>
+
                 <TextView
-                    android:text="Praesent semper auctor condimentum. Sed malesuada lectus ligula, nec efficitur ligula volutpat sit amet. Maecenas blandit placerat nisi id rutrum. Duis leo quam, dapibus sed mattis eget, faucibus sed arcu. Maecenas consectetur tristique egestas. Mauris arcu turpis, faucibus at sollicitudin eget, consequat ac arcu."
-                    style="@style/TextApoio"
-                    android:gravity="left"
-                    android:layout_marginTop="0dp" />
+                    style="@style/TextInfos"
+                    android:text="Um cavaleiro que tem mais afinidade com o arco, a natureza, as pinturas, a música, o sol, as miçangas e as artes humanas do que com a arte do código e da espada, mas nunca recusa um desafio." />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:background="@color/backgroundMascara"
+                android:gravity="top|right"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    style="@style/BgTitulo"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_weight="0.1"
+                        android:src="@drawable/iconcentauro" />
+
+                    <TextView
+                        style="@style/TextTitulo"
+                        android:layout_width="319dp"
+                        android:layout_marginTop="3dp"
+                        android:text="Fernando Hideki" />
+                </LinearLayout>
+
                 <TextView
-                    android:text="Fusce pretium eleifend augue, eget feugiat ligula porta mollis. Aenean egestas quam elit, vitae lacinia mauris interdum eu. Vestibulum dictum est at nulla hendrerit, sit amet hendrerit risus varius. Vivamus pulvinar magna odio, ac pulvinar erat fermentum quis."
-                    style="@style/TextApoio"
-                    android:gravity="left"
-                    android:layout_marginTop="0dp" />
+                    style="@style/TextInfos"
+                    android:text="Um centauro ladino, seguindo seu próprio código de honra. Seus hobbies incluem, dormir, frequentar cantinas e eventualmente dar rage no Word of Warcraft." />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:background="@color/backgroundMascara"
+                android:gravity="top|right"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    style="@style/BgTitulo"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_weight="0.1"
+                        android:src="@drawable/iconbanjo" />
+
+                    <TextView
+                        style="@style/TextTitulo"
+                        android:layout_width="319dp"
+                        android:layout_marginTop="3dp"
+                        android:text="Gabriel Montibeller" />
+                </LinearLayout>
+
+                <TextView
+                    style="@style/TextInfos"
+                    android:text="As madeixas douradas galanteadoras estão entre suas principais armas, além de um lute que ele não faz ideia de como tocar e uma flauta que irrita a todos. No geral, está sempre trabalhando para que todos estejam bem e trabalhando em equipe." />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:background="@color/backgroundMascara"
+                android:gravity="top|right"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    style="@style/BgTitulo"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_weight="0.1"
+                        android:src="@drawable/iconmago" />
+
+                    <TextView
+                        style="@style/TextTitulo"
+                        android:layout_width="319dp"
+                        android:layout_marginTop="3dp"
+                        android:text="Igor Ramos" />
+                </LinearLayout>
+
+                <TextView
+                    style="@style/TextInfos"
+                    android:text="Um mago que se aventurou longe demais no reino das rosquinhas, ficando obcecado por elas e esquecendo todo o conhecimento arcano, mesmo assim ainda é capaz de magicas incríveis." />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
