@@ -30,7 +30,7 @@
             android:text="Nome Completo"
             style="@style/Label" />
         <EditText
-            android:id="@+id/main_nome"
+            android:id="@+id/cadastro_nome"
             android:hint="Digite seu Nome Completo aqui"
             android:inputType="textPersonName"
             style="@style/TextView" />
@@ -39,7 +39,7 @@
             android:text="Data de Nascimento"
             style="@style/Label" />
         <EditText
-            android:id="@+id/main_nascimento"
+            android:id="@+id/cadastro_nascimento"
             android:inputType="date"
             android:hint="DD/MM/AA"
             style="@style/TextView"/>
@@ -48,7 +48,7 @@
             android:text="CPF"
             style="@style/Label" />
         <EditText
-            android:id="@+id/main_cpf"
+            android:id="@+id/cadastro_cpf"
             android:inputType="number"
             android:hint="000.000.000-00"
             style="@style/TextView"/>

@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/backgroundmapa"
-    tools:context="com.example.david.gandalf.CadastroPt2Activity">
+    tools:context="com.example.david.gandalf.CadastroActivity">
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -31,7 +31,7 @@
             android:text="CEP"
             style="@style/Label" />
         <EditText
-            android:id="@+id/cep"
+            android:id="@+id/cadastro_cep"
             android:inputType="text"
             android:hint="00000-000"
             style="@style/TextView" />
@@ -47,32 +47,24 @@
             android:orientation="horizontal">
 
             <EditText
-                android:id="@+id/rua"
+                android:id="@+id/cadastro_endereco"
                 style="@style/TextView"
                 android:layout_width="255dp"
                 android:hint="Rua de Exemplo"
                 android:inputType="text" />
             <EditText
-                android:id="@+id/numero"
+                android:id="@+id/cadastro_numero"
                 android:inputType="text"
                 android:hint="Nº"
                 style="@style/TextView"/>
         </LinearLayout>
 
-        <TextView
-            android:text="Bairro"
-            style="@style/Label" />
-        <EditText
-            android:id="@+id/bairro"
-            android:inputType="text"
-            android:hint="Bairro dos Elfos"
-            style="@style/TextView" />
 
         <TextView
             android:text="Cidade"
             style="@style/Label" />
         <EditText
-            android:id="@+id/cidade"
+            android:id="@+id/cadastro_cidade"
             android:inputType="text"
             android:hint="Cidade Nórdica"
             style="@style/TextView" />

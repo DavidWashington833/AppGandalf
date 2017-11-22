@@ -13,14 +13,19 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.david.gandalf.helpers.CadastroHelper;
+import com.example.david.gandalf.models.Cliente;
+import com.example.david.gandalf.models.Endereco;
 
 public class CadastroActivity extends AppCompatActivity {
 
-    private Button btnNext1;
-    private Button btnNext2;
-    private Button btnNext3;
-    private Button btnNext4;
     private CadastroHelper helper;
+    private Cliente cliente;
+    private Endereco endereco;
+
+    public CadastroActivity() {
+        this.endereco = new Endereco();
+        this.cliente = new Cliente();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,37 +37,21 @@ public class CadastroActivity extends AppCompatActivity {
 
         helper = new CadastroHelper(this);
         helper.chamaFragment(new CadastroPt1Fragment());
+    }
 
-//        btnNext1 = (Button) findViewById(R.id.cadastro_proximo_pt1);
-//        btnNext2 = (Button) findViewById(R.id.cadastro_proximo_pt2);
-//        btnNext3 = (Button) findViewById(R.id.cadastro_proximo_pt3);
-//        btnNext4 = (Button) findViewById(R.id.cadastro_proximo_pt4);
+    public Cliente getCliente() {
+        return cliente;
+    }
 
-//        btnNext1.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                chamaFragment(new CadastroPt2Fragment());
-//            }
-//        });
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
 
-//        btnNext2.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                chamaFragment(new CadastroPt3Fragment());
-//            }
-//        });
-//
-//        btnNext3.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                chamaFragment(new CadastroPt4Fragment());
-//            }
-//        });
-//
-//        btnNext4.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//            }
-//        });
+    public Endereco getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
     }
 }
