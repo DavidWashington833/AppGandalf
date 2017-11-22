@@ -12,12 +12,15 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.david.gandalf.helpers.CadastroHelper;
+
 public class CadastroActivity extends AppCompatActivity {
 
     private Button btnNext1;
     private Button btnNext2;
     private Button btnNext3;
     private Button btnNext4;
+    private CadastroHelper helper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,19 +30,20 @@ public class CadastroActivity extends AppCompatActivity {
         ActionBar ab = getSupportActionBar();
         ab.setDisplayHomeAsUpEnabled(true);
 
-        chamaFragment(new CadastroPt1Fragment());
+        helper = new CadastroHelper(this);
+        helper.chamaFragment(new CadastroPt1Fragment());
 
-        btnNext1 = (Button) findViewById(R.id.cadastro_proximo_pt1);
+//        btnNext1 = (Button) findViewById(R.id.cadastro_proximo_pt1);
 //        btnNext2 = (Button) findViewById(R.id.cadastro_proximo_pt2);
 //        btnNext3 = (Button) findViewById(R.id.cadastro_proximo_pt3);
 //        btnNext4 = (Button) findViewById(R.id.cadastro_proximo_pt4);
 
-        btnNext1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                chamaFragment(new CadastroPt2Fragment());
-            }
-        });
+//        btnNext1.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                chamaFragment(new CadastroPt2Fragment());
+//            }
+//        });
 
 //        btnNext2.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -60,15 +64,5 @@ public class CadastroActivity extends AppCompatActivity {
 //            public void onClick(View view) {
 //            }
 //        });
-    }
-
-    public void chamaFragment(Fragment fragment){
-        String backStateName = fragment.getClass().getName();
-        FragmentManager manager = getSupportFragmentManager();
-        manager.popBackStackImmediate(backStateName, FragmentManager.POP_BACK_STACK_INCLUSIVE);
-        FragmentTransaction transaction = manager.beginTransaction();
-        transaction.replace(R.id.cadastro_frame, fragment);
-        transaction.addToBackStack(backStateName);
-        transaction.commit();
     }
 }
