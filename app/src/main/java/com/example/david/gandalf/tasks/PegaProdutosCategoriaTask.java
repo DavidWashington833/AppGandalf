@@ -35,7 +35,7 @@ public class PegaProdutosCategoriaTask extends AsyncTask<Void, Void, String> {
     @Override
     protected String doInBackground(Void... params) {
         WebClient client = new WebClient();
-        EditText id = (EditText)context.getActivity().findViewById(R.id.hiddenIdCat);
+        EditText id = (EditText) context.getActivity().findViewById(R.id.hiddenIdCat);
         String resposta = client.get("http://gandalf.azurewebsites.net/gandalf/rest/produto/categoria/" + id.getText().toString());
 
         return resposta;

@@ -8,14 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.FrameLayout;
-import android.widget.ListView;
-import android.widget.TextView;
 
 import com.example.david.gandalf.tasks.BuscaProdutoTask;
-import com.example.david.gandalf.tasks.PegaProdutosTask;
-
-import org.w3c.dom.Text;
 
 
 /**
@@ -23,10 +17,8 @@ import org.w3c.dom.Text;
  */
 public class BuscaProdutoFragment extends Fragment {
 
-    public ListView listView;
-    public EditText txtBusca;
-    public Button btnBusca;
-
+    EditText txtBusca;
+    Button btnBusca;
 
     public BuscaProdutoFragment() {
         // Required empty public constructor
@@ -38,11 +30,16 @@ public class BuscaProdutoFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_busca_produto, container, false);
-        new BuscaProdutoTask(BuscaProdutoFragment.this).execute();
 
-        listView = (ListView) view.findViewById(R.id.list_produto);
-        txtBusca = (EditText) view.findViewById(R.id.txtBusca);
+        txtBusca = (EditText) view.findViewById(R.id.txtBuscaProduto);
         btnBusca = (Button) view.findViewById(R.id.btnBusca);
+
+        btnBusca.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                new BuscaProdutoTask(BuscaProdutoFragment.this).execute();
+            }
+        });
 
         return view;
     }

@@ -10,15 +10,14 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.david.gandalf.tasks.BuscaProdutoTask;
+import com.example.david.gandalf.tasks.MeusPedidosTask;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class MeusPedidosFragment extends Fragment {
-
-    private ViewGroup mensagens;
-
 
     public MeusPedidosFragment() {
         // Required empty public constructor
@@ -30,20 +29,9 @@ public class MeusPedidosFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_meus_pedidos, container, false);
-        mensagens = (ViewGroup) view.findViewById(R.id.container);
-        addItem("Título 1", "Exemplo de mensagem.");
+        new MeusPedidosTask(MeusPedidosFragment.this).execute();
 
         return view;
-    }
-
-    private void addItem(String textoDoTitulo, String textoDaMensagem) {
-
-        CardView cardView = (CardView) LayoutInflater.from(getActivity()).inflate(R.layout.cardview_pagina_carrinho, mensagens, false);
-        ImageView imagem1 = (ImageView) cardView.findViewById(R.id.imagemProd);
-        TextView titulo = (TextView) cardView.findViewById(R.id.txtNomeProd);
-        titulo.setText(textoDoTitulo);
-        mensagens.addView(cardView);
-
     }
 
 }
