@@ -25,6 +25,7 @@ public class CadastroActivity extends AppCompatActivity {
     public CadastroActivity() {
         this.endereco = new Endereco();
         this.cliente = new Cliente();
+        this.helper = new CadastroHelper(this);
     }
 
     @Override
@@ -37,6 +38,14 @@ public class CadastroActivity extends AppCompatActivity {
 
         helper = new CadastroHelper(this);
         helper.chamaFragment(new CadastroPt1Fragment());
+    }
+
+    public CadastroHelper getHelper() {
+        return helper;
+    }
+
+    public void setHelper(CadastroHelper helper) {
+        this.helper = helper;
     }
 
     public Cliente getCliente() {

@@ -15,6 +15,8 @@ import android.widget.Toast;
 import com.example.david.gandalf.helpers.CadastroHelper;
 import com.example.david.gandalf.models.Cliente;
 import com.example.david.gandalf.models.Endereco;
+import com.example.david.gandalf.tasks.EnviarUsuarioTask;
+import com.google.gson.Gson;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -40,7 +42,7 @@ public class CadastroPt4Fragment extends Fragment {
         btnNext = (Button) getActivity().findViewById(R.id.cadastro_proximo_pt4);
         campEmail = (EditText) getActivity().findViewById(R.id.cadastro_email);
         campSenha = (EditText) getActivity().findViewById(R.id.cadastro_senha);
-        campSenhaConfirm = (EditText) getActivity().findViewById(R.id.main_senha_confirme);
+        campSenhaConfirm = (EditText) getActivity().findViewById(R.id.cadastro_confirmar_senha);
 
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,7 +54,7 @@ public class CadastroPt4Fragment extends Fragment {
                 cliente.setEmailCliente(campEmail.getText().toString());
                 cliente.setSenhaCliente(campSenha.getText().toString());
 
-                Toast.makeText(getContext(), cadastroActivity.getCliente().getNomeCompletoCliente(), Toast.LENGTH_LONG).show();
+                new EnviarUsuarioTask((CadastroActivity) getActivity()).execute();
             }
         });
         super.onActivityCreated(savedInstanceState);
