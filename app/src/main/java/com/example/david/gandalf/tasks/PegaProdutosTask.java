@@ -1,5 +1,6 @@
 package com.example.david.gandalf.tasks;
 
+import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,6 +25,7 @@ import java.util.Arrays;
 public class PegaProdutosTask extends AsyncTask<Void, Void, String> {
     private String id;
     private ProdutoFragment context;
+    private ProgressDialog dialog;
 
     public PegaProdutosTask(ProdutoFragment context) {
         this.context = context;
@@ -37,6 +39,7 @@ public class PegaProdutosTask extends AsyncTask<Void, Void, String> {
 
     @Override
     protected void onPreExecute() {
+        dialog = ProgressDialog.show(context.getContext(), "Aguarde", "Carregando Produtos...", true, true);
 
     }
 
@@ -44,6 +47,7 @@ public class PegaProdutosTask extends AsyncTask<Void, Void, String> {
     protected String doInBackground(Void... params) {
         WebClient client = new WebClient();
         String resposta = client.get("http://gandalf.azurewebsites.net/gandalf/rest/produto/");
+        dialog.dismiss();
         return resposta;
     }
 

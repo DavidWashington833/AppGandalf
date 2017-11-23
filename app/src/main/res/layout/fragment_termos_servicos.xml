@@ -62,7 +62,6 @@ disponibilização de ferramenta de busca para localização de produtos na loja
 
                 <TextView
                     style="@style/TextApoio"
-                    android:layout_marginTop="0dp"
                     android:gravity="left"
                     android:text="2. DA ACEITAÇÃO DOS TERMOS E CONDIÇÕES GERAIS DE USO E DE COMPRA E VENDA
 Todos aqueles que desejarem ter acesso aos serviços ofertados através do aplicativo GANDALF STORE deverão, primeiramente, se informar sobre as regras que compõem o presente instrumento, as quais ficarão disponíveis para pronta e ampla consulta, em link direto no próprio aplicativo.
@@ -92,6 +91,7 @@ c) suspender o aplicativo, a fim de realizar atualizações e modificações."
 
                 <TextView
                     style="@style/TextApoio"
+                    android:layout_marginBottom="0dp"
                     android:layout_marginTop="0dp"
                     android:gravity="left"
                     android:text="5. DO CADASTRO

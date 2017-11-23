@@ -1,5 +1,6 @@
 package com.example.david.gandalf.tasks;
 
+import android.app.ProgressDialog;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.util.Base64;
@@ -18,6 +19,7 @@ import org.w3c.dom.Text;
 
 public class PegaProdutoUnicoTask extends AsyncTask<Void, Void, String> {
     private ProdutoUnicoFragment context;
+    private ProgressDialog dialog;
     private String id;
 
     public PegaProdutoUnicoTask(ProdutoUnicoFragment context) {
@@ -31,7 +33,7 @@ public class PegaProdutoUnicoTask extends AsyncTask<Void, Void, String> {
 
     @Override
     protected void onPreExecute() {
-
+        dialog = ProgressDialog.show(context.getContext(), "Aguarde", "Carregando Produto...", true, true);
     }
 
     @Override
@@ -39,6 +41,7 @@ public class PegaProdutoUnicoTask extends AsyncTask<Void, Void, String> {
 
         WebClient client = new WebClient();
         String resposta = client.get("http://gandalf.azurewebsites.net/gandalf/rest/produto/" + id);
+        dialog.dismiss();
         return resposta;
     }
 

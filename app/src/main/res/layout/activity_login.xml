@@ -5,76 +5,82 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
     android:background="@drawable/backgroundlogin"
     tools:context="com.example.david.gandalf.LoginActivity">
 
-    <ImageView
-        android:layout_width="fill_parent"
-        android:layout_height="250dp"
-        android:layout_weight="0"
-        android:gravity="center"
-        android:src="@drawable/logo" />
-
-    <EditText
-        android:id="@+id/login_email"
-        style="@style/TextView"
-        android:hint="E-mail"
-        android:inputType="textEmailAddress" />
-
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0"
-        android:gravity="center"
-        android:orientation="horizontal">
-
-        <EditText
-            android:id="@+id/login_senha"
-            style="@style/TextView"
-            android:layout_width="0dp"
-            android:layout_weight="0.9"
-            android:hint="Senha"
-            android:inputType="textPassword" />
-
-        <ImageView
-            android:id="@+id/login_visualizar_senha"
-            android:layout_width="0dp"
-            android:layout_height="36dp"
-            android:layout_marginRight="12dp"
-            android:layout_weight="0.1"
-            android:src="@drawable/iconolho" />
-    </LinearLayout>
-
-    <Button
-        android:id="@+id/login_logar"
-        style="@style/Buttons"
-        android:text="Entrar" />
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:gravity="center"
-        android:orientation="horizontal"
-        android:paddingLeft="12dp"
-        android:paddingRight="12dp">
+        android:background="@color/backgroundMascara"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="250dp"
+            android:layout_weight="0"
+            android:gravity="center"
+            android:src="@drawable/logo" />
+
+        <EditText
+            android:id="@+id/login_email"
+            style="@style/TextView"
+            android:hint="E-mail"
+            android:inputType="textEmailAddress" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/login_senha"
+                style="@style/TextView"
+                android:layout_width="0dp"
+                android:layout_weight="0.9"
+                android:hint="Senha"
+                android:inputType="textPassword" />
+
+            <ImageView
+                android:id="@+id/login_visualizar_senha"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_marginRight="12dp"
+                android:layout_weight="0.1"
+                android:src="@drawable/iconolho" />
+        </LinearLayout>
 
         <Button
-            android:id="@+id/login_criar_conta"
-            style="@style/ButtonsNullPrimario"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Criar Minha Conta"
-            android:textSize="15dp" />
+            android:id="@+id/login_logar"
+            style="@style/Buttons"
+            android:text="Entrar" />
 
-        <Button
-            android:id="@+id/login_recuperar_senha"
-            style="@style/ButtonsNullSecundario"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Recuperar Senha"
-            android:textSize="14dp" />
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp">
+
+            <Button
+                android:id="@+id/login_criar_conta"
+                style="@style/ButtonsNullPrimario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Criar Minha Conta"
+                android:textSize="15dp" />
+
+            <Button
+                android:id="@+id/login_recuperar_senha"
+                style="@style/ButtonsNullSecundario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Recuperar Senha"
+                android:textSize="14dp" />
+        </LinearLayout>
     </LinearLayout>
 
 </LinearLayout>
