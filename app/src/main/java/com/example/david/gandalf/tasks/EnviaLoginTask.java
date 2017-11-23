@@ -25,7 +25,7 @@ public class EnviaLoginTask extends AsyncTask<Void, Void, String> {
 
     @Override
     protected void onPreExecute() {
-        dialog = ProgressDialog.show(context, "Aguarde", "Buscando cliente...", true, true);
+        dialog = ProgressDialog.show(context, "Aguarde", "Carregando dados...", true, true);
     }
 
     @Override

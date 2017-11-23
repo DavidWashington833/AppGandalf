@@ -25,7 +25,7 @@ public class CarrinhoSingletonHelper {
         return produto;
     }
 
-    public void setProduto(List<Produto> produto) {
+    public void clearProduto(List<Produto> produto) {
         this.produto = produto;
     }
 
