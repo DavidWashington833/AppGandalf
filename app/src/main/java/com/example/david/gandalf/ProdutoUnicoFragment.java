@@ -49,11 +49,10 @@ public class ProdutoUnicoFragment extends Fragment {
         comprar.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
-//                Toast.makeText(getContext(), produtoP.getNomeProduto(), Toast.LENGTH_LONG).show();
                 CarrinhoSingletonHelper.getInstance().pushProduto(produtoP);
-//                Toast t = Toast.makeText(getContext(),"Produto adicionado ao carrinho!",Toast.LENGTH_LONG);
-                String res = new Gson().toJson(CarrinhoSingletonHelper.getInstance().getProduto());
-                Toast t = Toast.makeText(getContext(), res, Toast.LENGTH_LONG);
+                Toast t = Toast.makeText(getContext(),"Produto adicionado ao carrinho!",Toast.LENGTH_LONG);
+//                String res = new Gson().toJson(CarrinhoSingletonHelper.getInstance().getProduto());
+//                Toast t = Toast.makeText(getContext(), res, Toast.LENGTH_LONG);
                 t.show();
 
             }
