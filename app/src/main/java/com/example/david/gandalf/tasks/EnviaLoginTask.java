@@ -1,20 +1,15 @@
 package com.example.david.gandalf.tasks;
 
 import android.app.ProgressDialog;
-import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.widget.Toast;
 
 import com.example.david.gandalf.LoginActivity;
-import com.example.david.gandalf.MainActivity;
 import com.example.david.gandalf.WebClient;
 import com.example.david.gandalf.models.Cliente;
 import com.example.david.gandalf.models.Login;
 import com.google.gson.Gson;
-
-import java.util.ArrayList;
 
 /**
  * Created by Silva on 04/11/2017.

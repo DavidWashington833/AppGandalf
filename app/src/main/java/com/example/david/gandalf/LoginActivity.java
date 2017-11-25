@@ -1,11 +1,12 @@
 package com.example.david.gandalf;
 
 import android.content.Intent;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
+
 import android.widget.ImageView;
 
 import com.example.david.gandalf.helpers.LoginHelper;
@@ -16,6 +17,7 @@ public class LoginActivity extends AppCompatActivity {
     private LoginHelper helper;
     private Button login;
     private Button criarConta;
+    private Button recuperarSenha;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,8 +27,12 @@ public class LoginActivity extends AppCompatActivity {
         login = (Button) findViewById(R.id.login_logar);
         visualizar = (ImageView) findViewById(R.id.login_visualizar_senha);
         criarConta = (Button) findViewById(R.id.login_criar_conta);
+        recuperarSenha = (Button) findViewById(R.id.login_recuperar_senha);
 
         helper = new LoginHelper(this);
+
+        ActionBar ab = getSupportActionBar();
+        ab.setDisplayHomeAsUpEnabled(true);
 
         visualizar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,7 +44,7 @@ public class LoginActivity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-            new EnviaLoginTask(LoginActivity.this).execute();
+                new EnviaLoginTask(LoginActivity.this).execute();
             }
         });
 
@@ -49,10 +55,19 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        recuperarSenha.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginActivity.this, RecuperarSenhaActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     public LoginHelper getHelper() {
         return helper;
     }
 }
+
 

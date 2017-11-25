@@ -1,0 +1,48 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundpermissao"
+    tools:context="com.example.david.gandalf.PermissaoFragment">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0"
+        android:gravity="top|center"
+        android:background="@color/backgroundMascara"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/iconwarning"
+            android:layout_marginTop="12dp"/>
+
+        <TextView
+            style="@style/TextDestaque"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Ops! Não conseguimos te identificar jovem cavaleiro!"
+            android:textColor="@color/colorPrimaryText" />
+
+
+        <TextView
+            style="@style/TextApoio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Mostre-nos quem você é para poder ter acesso à esta página"
+            android:textColor="@color/colorPrimaryText" />
+
+        <Button
+            android:id="@+id/button2"
+            style="@style/Buttons"
+            android:layout_width="150dp"
+            android:text="Fazer Login" />
+    </LinearLayout>
+
+</FrameLayout>

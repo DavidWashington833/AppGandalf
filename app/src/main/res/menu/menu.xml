@@ -1,34 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <group android:checkableBehavior="single">
+    <group
+        android:id="@+id/group_links"
+        android:checkableBehavior="single">
 
-        <item
-            android:id="@+id/menu_login"
-            android:checked="false"
-            android:icon="@android:drawable/ic_secure"
-            android:title="Login" />
         <item
             android:id="@+id/menu_loja"
             android:checked="false"
-            android:icon="@android:drawable/ic_search_category_default"
-            android:title="Loja" />
+            android:icon="@drawable/iconloja"
+            android:title="Ir para a Loja" />
+
+        <item
+            android:id="@+id/menu_carrinho"
+            android:checked="false"
+            android:icon="@drawable/iconcarrinho"
+            android:title="Meu Carrinho" />
 
         <item
             android:id="@+id/menu_pedidos"
             android:checked="false"
-            android:icon="@android:drawable/ic_menu_agenda"
+            android:icon="@drawable/iconpedidos"
             android:title="Meus Pedidos" />
+
+    </group>
+
+    <group
+        android:id="@+id/group_actions"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/menu_login"
+            android:checked="false"
+            android:icon="@drawable/iconlogin"
+            android:title="Fazer Login" />
 
         <item
             android:id="@+id/menu_qrcode"
             android:checked="false"
-            android:icon="@android:drawable/ic_menu_camera"
-            android:title="Ler QR Code" />
+            android:icon="@drawable/iconleitorqr"
+            android:title="Leitor de QR Code" />
 
         <item
-            android:id="@+id/menu_atendimento"
+            android:id="@+id/menu_contato"
             android:checked="false"
-            android:icon="@android:drawable/ic_menu_call"
-            android:title="Atendimento" />
+            android:icon="@drawable/iconcontato"
+            android:title="Contato" />
+
+        <item
+            android:id="@+id/menu_sobre"
+            android:checked="false"
+            android:icon="@drawable/iconsobre"
+            android:title="Sobre Nós" />
     </group>
 </menu>

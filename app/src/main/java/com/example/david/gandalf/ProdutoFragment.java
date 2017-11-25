@@ -6,9 +6,18 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+<<<<<<< HEAD
 import android.widget.ImageView;
 import android.widget.TextView;
 
+=======
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.example.david.gandalf.tasks.PegaProdutoUnicoTask;
+>>>>>>> origin/branchIgorv3
 import com.example.david.gandalf.tasks.PegaProdutosTask;
 
 
@@ -17,15 +26,20 @@ import com.example.david.gandalf.tasks.PegaProdutosTask;
  */
 public class ProdutoFragment extends Fragment {
 
+<<<<<<< HEAD
     public ImageView imgP;
     public TextView nomeP, codP, precoP,descP;
     public String nome;
+=======
+    EditText hiddenId;
+>>>>>>> origin/branchIgorv3
 
     public ProdutoFragment() {
         // Required empty public constructor
     }
 
     @Override
+<<<<<<< HEAD
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_produto, container, false);
@@ -49,3 +63,16 @@ public class ProdutoFragment extends Fragment {
     }
 
 }
+=======
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_produto, container, false);
+
+        hiddenId = (EditText) view.findViewById(R.id.hiddenIdProd);
+
+        new PegaProdutosTask(ProdutoFragment.this).execute();
+
+        return view;
+    }
+
+}
+>>>>>>> origin/branchIgorv3

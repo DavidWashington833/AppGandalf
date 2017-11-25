@@ -1,89 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-    android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/backgroundpt3"
     tools:context="com.example.david.gandalf.CadastroActivity">
 
-
-    <EditText
-        android:id="@+id/cadastro_nome"
+    <FrameLayout
+        android:id="@+id/cadastro_frame"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Nome Completo"
-        android:inputType="textPersonName" />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textEmailAddress"
-        android:id="@+id/cadastro_email"
-        android:hint="E-mail" />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:id="@+id/cadastro_senha"
-        android:hint="Senha" />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:id="@+id/cadastro_senha_confirme"
-        android:hint="Confirme sua Senha" />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:id="@+id/cadastro_cpf"
-        android:hint="CPF" />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="date"
-        android:id="@+id/cadastro_nascimento"
-        android:hint="Data de Nascimento" />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:id="@+id/cadastro_celular"
-        android:hint="Celular" />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:id="@+id/cadastro_tel_residencial"
-        android:hint="Telefone residencial" />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:id="@+id/cadastro_tel_comercial"
-        android:hint="Telefone Comercial" />
-
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="newslatter"/>
-
-    <Button
-        android:text="Criar Conta"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/main_btn"
-        android:background="@color/colorPrimary"
-        android:textColor="@color/colorPrimaryText"
-        android:layout_alignParentBottom="true" />
+        android:layout_height="match_parent"
+        android:name="com.example.david.gandalf.PrincipalFragment">
+    </FrameLayout>
 
 </LinearLayout>

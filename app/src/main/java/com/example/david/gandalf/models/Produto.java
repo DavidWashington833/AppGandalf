@@ -68,4 +68,8 @@ public class Produto {
     public void setImagem(String imagem) {
         this.imagem = imagem;
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/branchIgorv3
