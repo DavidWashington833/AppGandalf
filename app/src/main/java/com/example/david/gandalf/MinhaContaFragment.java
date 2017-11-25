@@ -24,15 +24,12 @@ public class MinhaContaFragment extends Fragment {
 
     private MinhaContaHelper helper;
 
-
     public MinhaContaFragment() {
         this.helper = new MinhaContaHelper(this);
     }
 
-
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         this.helper = new MinhaContaHelper(this);
         CarrinhoSingletonHelper carrinho = CarrinhoSingletonHelper.getInstance();
         SharedPreferences preferences = getContext().getApplicationContext().getSharedPreferences("login", 0);

@@ -39,7 +39,7 @@ public class PegaProdutosCategoriaTask extends AsyncTask<Void, Void, String> {
     }
     @Override
     protected void onPreExecute() {
-        dialog = ProgressDialog.show(context.getContext(), "Aguarde", "Carregando Produtos...", true, true);
+        dialog = ProgressDialog.show(context.getContext(), "Aguarde", "Carregando Produtos...", true, false);
     }
 
     @Override

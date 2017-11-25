@@ -65,6 +65,10 @@ public class MainActivity extends AppCompatActivity {
                             chamaFragment(new MeusPedidosFragment());
                         }
 
+                        if (menuItem.getItemId() == R.id.minha_conta) {
+                            chamaFragment(new MinhaContaFragment());
+                        }
+
                         if (menuItem.getItemId() == R.id.menu_contato) {
                             chamaFragment(new ContatoFragment());
                         }
@@ -94,11 +98,6 @@ public class MainActivity extends AppCompatActivity {
 
 
         PrincipalFragment newFragment = new PrincipalFragment();
-//        PaginaCarrinho newFragment = new PaginaCarrinho();
-//        ProdutoUnicoFragment newFragment = new ProdutoUnicoFragment();
-//        BuscaProdutoFragment newFragment = new BuscaProdutoFragment();
-//        ProdutoUnicoFragment newFragment = new ProdutoUnicoFragment();
-//        BuscaProdutoFragment newFragment = new BuscaProdutoFragment();
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 
         transaction.replace(R.id.frame_principal, newFragment);
@@ -119,8 +118,6 @@ public class MainActivity extends AppCompatActivity {
         if(requestCode == 1){
             if(resultCode == RESULT_OK){
                 idProduto = data.getStringExtra("idProduto");
-                //chamaFragment(new ProdutoUnicoFragment(idProduto));
-
             }
         }
     }
