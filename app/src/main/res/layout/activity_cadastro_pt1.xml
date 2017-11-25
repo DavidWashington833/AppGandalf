@@ -45,8 +45,7 @@
             android:id="@+id/cadastro_nascimento"
             android:inputType="date"
             style="@style/TextView"
-            android:hint="DD/MM/AA"
-            android:inputType="date" />
+            android:hint="DD/MM/AA"/>
 
         <TextView
             style="@style/Label"
@@ -56,8 +55,7 @@
             android:id="@+id/cadastro_cpf"
             android:inputType="number"
             style="@style/TextView"
-            android:hint="000.000.000-00"
-            android:inputType="number" />
+            android:hint="000.000.000-00"/>
     </LinearLayout>
 
     <LinearLayout
