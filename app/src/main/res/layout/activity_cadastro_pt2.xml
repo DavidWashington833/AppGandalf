@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/backgroundmapa"
+<<<<<<< HEAD
     tools:context="com.example.david.gandalf.CadastroActivity">
 
         <LinearLayout
@@ -39,11 +40,25 @@
             <TextView
                 android:text="Endereço"
                 style="@style/Label" />
+=======
+    tools:context="com.example.david.gandalf.CadastroPt2Activity">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+>>>>>>> testeFelipe2
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0"
                 android:gravity="center|top"
+<<<<<<< HEAD
                 android:orientation="horizontal">
 
                 <EditText
@@ -122,4 +137,122 @@
                 style="@style/Buttons" />
         </LinearLayout>
 
+=======
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/TextDestaque"
+                    android:gravity="left"
+                    android:text="Em qual planice você mora?" />
+
+                <TextView
+                    style="@style/TextApoio"
+                    android:layout_marginTop="0dp"
+                    android:gravity="left"
+                    android:text="Agora que sabemos quem você é,nos mostre no mapa qual é seu endereço" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:gravity="left|top"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/Label"
+                        android:layout_width="256dp"
+                        android:layout_height="wrap_content"
+                        android:text="País" />
+                    <TextView
+                        android:text="UF"
+                        style="@style/Label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:gravity="left|top"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/cep"
+                        style="@style/TextView"
+                        android:layout_width="255dp"
+                        android:hint="Digite seu país aqui"
+                        android:inputType="text" />
+                    <EditText
+                        android:id="@+id/cep"
+                        android:inputType="text"
+                        android:hint="UF"
+                        style="@style/TextView" />
+                </LinearLayout>
+
+                <TextView
+                    android:text="CEP"
+                    style="@style/Label" />
+                <EditText
+                    android:id="@+id/cep"
+                    android:inputType="text"
+                    android:hint="00000-000"
+                    style="@style/TextView" />
+
+                <TextView
+                    android:text="Endereço"
+                    style="@style/Label" />
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:gravity="center|top"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/rua"
+                        style="@style/TextView"
+                        android:layout_width="255dp"
+                        android:hint="Rua de Exemplo"
+                        android:inputType="text" />
+                    <EditText
+                        android:id="@+id/numero"
+                        android:inputType="text"
+                        android:hint="Nº"
+                        style="@style/TextView"/>
+                </LinearLayout>
+
+                <TextView
+                    android:text="Complemento"
+                    style="@style/Label" />
+                <EditText
+                    android:id="@+id/cep"
+                    android:inputType="text"
+                    android:hint="Caso tenha complemento, digite aqui"
+                    style="@style/TextView" />
+
+                <TextView
+                    android:text="Cidade"
+                    style="@style/Label" />
+                <EditText
+                    android:id="@+id/cidade"
+                    android:inputType="text"
+                    android:hint="Digite sua cidade aqui"
+                    style="@style/TextView" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:gravity="center|bottom"
+                android:orientation="vertical">
+                <Button
+                    android:id="@+id/cadastro_proximo_pt2"
+                    android:text="Próxima Etapa"
+                    style="@style/Buttons" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+>>>>>>> testeFelipe2
 </LinearLayout>
