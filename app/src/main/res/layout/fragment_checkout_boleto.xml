@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+android:background="@drawable/backgroundpt3"
+    tools:context="com.example.david.gandalf.CheckoutBoletoFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/backgroundMascara">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:gravity="center|top"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/TextDestaque"
+                android:gravity="left"
+                android:text="Checkout com Boleto" />
+
+            <TextView
+                style="@style/TextApoio"
+                android:layout_marginTop="0dp"
+                android:gravity="left"
+                android:text="Para finalizar sua compra, por favor, digite o CPF que deseja colocar no boleto" />
+
+            <TextView
+                style="@style/Label"
+                android:text="CPF" />
+
+            <EditText
+                style="@style/TextView"
+                android:hint="000.000.000-00"
+                android:inputType="number" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:gravity="center|bottom"
+            android:orientation="vertical">
+
+            <Button
+                style="@style/Buttons"
+                android:text="Finalizar Compra" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

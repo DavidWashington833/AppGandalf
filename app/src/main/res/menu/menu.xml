@@ -44,5 +44,11 @@
             android:checked="false"
             android:icon="@drawable/iconcontato"
             android:title="Contato" />
+
+        <item
+            android:id="@+id/menu_sobre"
+            android:checked="false"
+            android:icon="@drawable/iconsobre"
+            android:title="Sobre Nós" />
     </group>
 </menu>

@@ -1,5 +1,6 @@
 package com.example.david.gandalf.tasks;
 
+import android.app.ProgressDialog;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.util.Base64;
@@ -10,12 +11,14 @@ import android.widget.TextView;
 import com.example.david.gandalf.ProdutoUnicoFragment;
 import com.example.david.gandalf.R;
 import com.example.david.gandalf.WebClient;
+import com.example.david.gandalf.helpers.CarrinhoSingletonHelper;
 import com.example.david.gandalf.models.Produto;
 import com.google.gson.Gson;
 
 
 public class PegaProdutoUnicoTask extends AsyncTask<Void, Void, String> {
     private ProdutoUnicoFragment context;
+    private ProgressDialog dialog;
 
     public PegaProdutoUnicoTask(ProdutoUnicoFragment context) {
         this.context = context;
@@ -24,6 +27,7 @@ public class PegaProdutoUnicoTask extends AsyncTask<Void, Void, String> {
 
     @Override
     protected void onPreExecute() {
+        dialog = ProgressDialog.show(context.getContext(), "Aguarde", "Buscando cliente...", true, true);
     }
 
     @Override
@@ -38,6 +42,7 @@ public class PegaProdutoUnicoTask extends AsyncTask<Void, Void, String> {
     @Override
     protected void onPostExecute(String resposta) {
 
+        dialog.dismiss();
         if (!resposta.equals("null")) {
             Produto p = new Gson().fromJson(resposta, Produto.class);
 
@@ -45,7 +50,12 @@ public class PegaProdutoUnicoTask extends AsyncTask<Void, Void, String> {
             TextView codP = (TextView) context.getActivity().findViewById(R.id.codigoProduto);
             TextView precoP = (TextView) context.getActivity().findViewById(R.id.precoProduto);
             ImageView imgP = (ImageView) context.getActivity().findViewById(R.id.imgProduto);
+<<<<<<< HEAD
 //            EditText hiddenId = (EditText) context.getActivity().findViewById(R.id.hiddenIdProd);
+=======
+
+            context.produtoP = p;
+>>>>>>> origin/CabeloTesteCarrinho
 
             nomeP.setText(p.getNomeProduto());
             codP.setText(p.getIdProduto());
