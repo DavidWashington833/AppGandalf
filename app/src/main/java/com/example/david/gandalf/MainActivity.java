@@ -64,6 +64,10 @@ public class MainActivity extends AppCompatActivity {
                             chamaFragment(new MinhaContaFragment());
                         }
 
+                        if (menuItem.getItemId() == R.id.minha_conta) {
+                            chamaFragment(new MinhaContaFragment());
+                        }
+
                         if (menuItem.getItemId() == R.id.menu_contato) {
                             chamaFragment(new ContatoFragment());
                         }
@@ -93,11 +97,6 @@ public class MainActivity extends AppCompatActivity {
 
 
         PrincipalFragment newFragment = new PrincipalFragment();
-//        PaginaCarrinho newFragment = new PaginaCarrinho();
-//        ProdutoUnicoFragment newFragment = new ProdutoUnicoFragment();
-//        BuscaProdutoFragment newFragment = new BuscaProdutoFragment();
-//        ProdutoUnicoFragment newFragment = new ProdutoUnicoFragment();
-//        BuscaProdutoFragment newFragment = new BuscaProdutoFragment();
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 
         transaction.replace(R.id.frame_principal, newFragment);
@@ -113,6 +112,28 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+<<<<<<< HEAD
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if(requestCode == 1){
+            if(resultCode == RESULT_OK){
+                idProduto = data.getStringExtra("idProduto");
+            }
+        }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (idProduto != null) {
+            chamaFragment(new ProdutoUnicoFragment(idProduto));
+            idProduto = null;
+        }
+
+    }
+
+=======
+>>>>>>> parent of fa0baef... Merge pull request #4 from DavidWashington833/branchIgorv3
     public void chamaFragment(Fragment fragment){
         String backStateName = fragment.getClass().getName();
         FragmentManager manager = getSupportFragmentManager();

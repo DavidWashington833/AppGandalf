@@ -21,6 +21,8 @@ import com.example.david.gandalf.tasks.PegaClienteTask;
  */
 public class MinhaContaFragment extends Fragment {
 
+    private MinhaContaHelper helper;
+
     private Cliente cliente;
     private Endereco endereco;
 
@@ -41,11 +43,9 @@ public class MinhaContaFragment extends Fragment {
     private EditText campEmail;
     private EditText campSenha;
 
-
     public MinhaContaFragment() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
