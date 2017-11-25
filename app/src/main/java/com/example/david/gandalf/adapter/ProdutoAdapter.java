@@ -108,7 +108,7 @@ public class ProdutoAdapter extends BaseAdapter {
         FragmentManager manager = ((MainActivity)context).getSupportFragmentManager();
         manager.popBackStackImmediate(backStateName, FragmentManager.POP_BACK_STACK_INCLUSIVE);
         FragmentTransaction transaction = manager.beginTransaction();
-        transaction.replace(R.id.frame_principal, fragment);
+        transaction.add(R.id.frame_principal, fragment);
         transaction.addToBackStack(backStateName);
         transaction.commit();
     }

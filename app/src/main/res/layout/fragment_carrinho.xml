@@ -14,17 +14,17 @@
         android:background="@color/backgroundMascara"
         android:orientation="vertical">
 
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="top">
-
             <LinearLayout
                 android:id="@+id/container"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"></LinearLayout>
-        </ScrollView>
+                android:orientation="vertical">
+
+                <ListView
+                    android:id="@+id/list_produto_carrinho"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
