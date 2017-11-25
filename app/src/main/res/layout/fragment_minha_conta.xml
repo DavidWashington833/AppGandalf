@@ -40,6 +40,7 @@
                     android:text="Nome Completo" />
 
                 <TextView
+                    android:id="@+id/txtNomeCompleto"
                     style="@style/TextInfos"
                     android:text="Felipe A. Miconi" />
 
@@ -49,6 +50,7 @@
                     android:text="Data de Nascimento" />
 
                 <TextView
+                    android:id="@+id/txtDataNascimento"
                     style="@style/TextInfos"
                     android:text="15/01/1997" />
 
@@ -58,6 +60,7 @@
                     android:text="CPF" />
 
                 <TextView
+                    android:id="@+id/txtCPF"
                     style="@style/TextInfos"
                     android:text="466.854.508-27" />
             </LinearLayout>
@@ -79,6 +82,7 @@
                         style="@style/TextTitulo"
                         android:text="Informações de Contato" />
                     <Button
+                        android:id="@+id/btnEditarContato"
                         style="@style/ButtonsEdit"
                         android:text="Editar" />
                 </LinearLayout>
@@ -89,6 +93,7 @@
                     android:text="Celular" />
 
                 <TextView
+                    android:id="@+id/txtTelefoneCelular"
                     style="@style/TextInfos"
                     android:text="(11) 98271-8271" />
 
@@ -98,6 +103,7 @@
                     android:text="Telefone Residencial" />
 
                 <TextView
+                    android:id="@+id/txtTelefoneResidencial"
                     style="@style/TextInfos"
                     android:text="(11) 3683-3683" />
 
@@ -107,6 +113,7 @@
                     android:text="Telefone Comercial" />
 
                 <TextView
+                    android:id="@+id/txtTelefoneComercial"
                     style="@style/TextInfos"
                     android:text="(11) 3686-3686" />
             </LinearLayout>
@@ -137,6 +144,7 @@
                     android:layout_marginBottom="0dp"
                     android:text="Endereço" />
                 <TextView
+                    android:id="@+id/txtRua"
                     style="@style/TextInfos"
                     android:text="Rua de Exemplo, 00" />
 
@@ -145,6 +153,7 @@
                     android:layout_marginBottom="0dp"
                     android:text="Bairro / Cidade" />
                 <TextView
+                    android:id="@+id/txtCidade"
                     style="@style/TextInfos"
                     android:text="Bairro, Cidade" />
 
@@ -153,6 +162,7 @@
                     android:layout_marginBottom="0dp"
                     android:text="CEP" />
                 <TextView
+                    android:id="@+id/txtCEP"
                     style="@style/TextInfos"
                     android:text="0621-210" />
             </LinearLayout>
