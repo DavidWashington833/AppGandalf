@@ -7,7 +7,7 @@ android:layout_width="match_parent"
 android:layout_height="match_parent"
 android:orientation="vertical"
 android:background="@drawable/backgroundpt1"
-tools:context="com.example.david.gandalf.CadastroPt4Activity">
+tools:context="com.example.david.gandalf.CadastroActivity">
 
 <LinearLayout
     android:layout_width="fill_parent"
@@ -32,7 +32,7 @@ tools:context="com.example.david.gandalf.CadastroPt4Activity">
         android:text="E-mail" />
 
     <EditText
-        android:id="@+id/main_email"
+        android:id="@+id/cadastro_email"
         style="@style/TextView"
         android:hint="exemplo@dominioex.com.br"
         android:inputType="textEmailAddress" />
@@ -42,7 +42,7 @@ tools:context="com.example.david.gandalf.CadastroPt4Activity">
         android:text="Senha" />
 
     <EditText
-        android:id="@+id/main_senha"
+        android:id="@+id/cadastro_senha"
         style="@style/TextView"
         android:hint="Digite uma senha segura"
         android:inputType="textPassword" />
@@ -52,7 +52,7 @@ tools:context="com.example.david.gandalf.CadastroPt4Activity">
         android:text="Confirme sua Senha" />
 
     <EditText
-        android:id="@+id/main_senha_confirme"
+        android:id="@+id/cadastro_confirmar_senha"
         style="@style/TextView"
         android:hint="Repita a senha para não ter erro"
         android:inputType="textPassword" />
@@ -66,6 +66,7 @@ tools:context="com.example.david.gandalf.CadastroPt4Activity">
     android:orientation="vertical">
 
     <CheckBox
+        android:id="@+id/cadastro_newslatter"
         style="@style/Opts"
         android:textColor="#FFFFFF"
         android:buttonTint="#FFFFFF"
