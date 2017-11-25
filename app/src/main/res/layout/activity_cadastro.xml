@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/backgroundpt3"
-    tools:context="com.example.david.gandalf.CadastroActivity">
+    tools:context="com.storegandalf.david.gandalf.CadastroActivity">
 
     <FrameLayout
         android:id="@+id/cadastro_frame"

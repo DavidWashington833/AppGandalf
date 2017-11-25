@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/backgroundpt1"
-    tools:context="com.example.david.gandalf.ContatoFragment">
+    tools:context="com.storegandalf.david.gandalf.ContatoFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -35,7 +35,7 @@
             android:text="E-mail"
             style="@style/Label" />
         <EditText
-            android:id="@+id/main_tel_comercial"
+
             android:inputType="textEmailAddress"
             android:hint="Digite seu e-mail aqui"
             style="@style/TextView" />
@@ -44,7 +44,7 @@
             android:text="Mensagem"
             style="@style/Label" />
         <EditText
-            android:id="@+id/main_tel_comercial"
+
             android:inputType="text"
             android:hint="Deixe sua mensagem"
             style="@style/TextView" />

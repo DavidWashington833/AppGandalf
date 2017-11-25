@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.david.gandalf"
+    package="com.storegandalf.david.gandalf"
     android:screenOrientation="portrait">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name="com.storegandalf.david.gandalf.MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,25 +24,25 @@
         </activity>
 
         <activity
-            android:name=".CadastroActivity"
-            android:parentActivityName=".LoginActivity"
+            android:name="com.storegandalf.david.gandalf.CadastroActivity"
+            android:parentActivityName="com.storegandalf.david.gandalf.LoginActivity"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".LoginActivity"
-            android:parentActivityName=".MainActivity"
+            android:name="com.storegandalf.david.gandalf.LoginActivity"
+            android:parentActivityName="com.storegandalf.david.gandalf.MainActivity"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".QRCodeActivity"
-            android:parentActivityName=".MainActivity"
+            android:name="com.storegandalf.david.gandalf.QRCodeActivity"
+            android:parentActivityName="com.storegandalf.david.gandalf.MainActivity"
             android:screenOrientation="portrait" >
 
         </activity>
 
         <activity
             android:name=".CadastroPt2Activity"
-            android:parentActivityName=".CadastroActivity" />
+            android:parentActivityName="com.storegandalf.david.gandalf.CadastroActivity" />
 
         <activity
             android:name=".CadastroPt3Activity"
@@ -52,8 +52,8 @@
         <activity android:name=".CadastroPt4Activity"
             android:screenOrientation="portrait"/>
 
-        <activity android:name=".RecuperarSenhaActivity"
-            android:parentActivityName=".LoginActivity"
+        <activity android:name="com.storegandalf.david.gandalf.RecuperarSenhaActivity"
+            android:parentActivityName="com.storegandalf.david.gandalf.LoginActivity"
             android:screenOrientation="portrait"
             ></activity>
     </application>

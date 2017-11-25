@@ -5,18 +5,18 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/backgroundpt3"
-    tools:context="com.example.david.gandalf.PrincipalFragment">
+    tools:context="com.storegandalf.david.gandalf.PrincipalFragment">
 
     <com.astuetz.PagerSlidingTabStrip
         android:id="@+id/tabs"
         android:layout_width="match_parent"
         android:layout_height="70dp"
-        android:background="#AA000000"
+        android:background="#B4FFFFFF"
 
         android:textAlignment="center"
-        app:pstsDividerColor="@color/colorPrimaryText"
-        app:pstsIndicatorColor="@color/colorPrimaryText"
-        app:pstsTabTextColor="@color/colorPrimaryText">
+        app:pstsDividerColor="@color/colorTextDark"
+        app:pstsIndicatorColor="@color/colorTextDark"
+        app:pstsTabTextColor="@color/colorTextDark">
 
     </com.astuetz.PagerSlidingTabStrip>
 

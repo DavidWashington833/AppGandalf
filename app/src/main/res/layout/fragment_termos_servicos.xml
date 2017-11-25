@@ -7,7 +7,7 @@ android:layout_width="match_parent"
 android:layout_height="match_parent"
 android:orientation="vertical"
 android:background="@drawable/backgroundtermos"
-    tools:context="com.example.david.gandalf.TermosServicosFragment">
+    tools:context="com.storegandalf.david.gandalf.TermosServicosFragment">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -133,14 +133,14 @@ b) pelos conteúdos ou atividades ilícitas praticadas através de seu aplicativ
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/main_btn"
+                    android:id="@+id/btn_concordo"
                     style="@style/Buttons"
-                    android:layout_width="171dp"
+                    android:layout_width="wrap_content"
                     android:layout_marginRight="12dp"
                     android:text="Eu Concordo" />
 
                 <Button
-                    android:id="@+id/main_btn"
+                    android:id="@+id/btn_nao_concordo"
                     style="@style/ButtonsNullSecundario"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

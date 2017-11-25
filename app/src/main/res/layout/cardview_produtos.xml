@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="160dp"
     android:orientation="vertical"
-    app:cardBackgroundColor="#AA000000"
+    app:cardBackgroundColor="#B4FFFFFF"
     app:cardElevation="5dp"
     app:cardUseCompatPadding="true">
 
@@ -42,30 +42,31 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Nome do Produto"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
-                android:textColor="#FFFFFF" />
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:digits="0123456789."
                     android:paddingBottom="12dp"
                     android:paddingTop="12dp"
                     android:text="R$"
-                    android:digits="0123456789."
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
                     android:textColor="#00bcd4" />
+
                 <TextView
                     android:id="@+id/txtPreco"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:digits="0123456789."
                     android:paddingBottom="12dp"
                     android:paddingTop="12dp"
                     android:text="00,00"
-                    android:digits="0123456789."
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
                     android:textColor="#00bcd4" />
             </LinearLayout>
