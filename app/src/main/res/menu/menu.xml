@@ -34,6 +34,12 @@
             android:title="Fazer Login" />
 
         <item
+            android:id="@+id/menu_minhaconta"
+            android:checked="false"
+            android:icon="@drawable/iconlogin"
+            android:title="Minha Conta" />
+
+        <item
             android:id="@+id/menu_qrcode"
             android:checked="false"
             android:icon="@drawable/iconleitorqr"

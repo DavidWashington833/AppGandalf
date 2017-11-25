@@ -26,32 +26,31 @@ public class MinhaContaHelper {
 
 
     public MinhaContaHelper(MinhaContaFragment context) {
-//        this.context = context;
-//        Activity v = context.getActivity();
+        this.context = context;
+        Activity v = context.getActivity();
+        nomeCompleto = (TextView) v.findViewById(R.id.minha_conta_nome);
+        cpfcliente = (TextView) v.findViewById(R.id.minha_conta_cpf);
+        telComercialCliente = (TextView) v.findViewById(R.id.minha_conta_comercial);
+        telResidencialCliente = (TextView) v.findViewById(R.id.minha_conta_residencial);
+        dtNascCliente = (TextView) v.findViewById(R.id.minha_conta_nascimento);
+    }
+
+    public void inputText(Cliente cliente, MinhaContaFragment context) {
+        this.context = context;
+        Activity v = this.context.getActivity();
 //        nomeCompleto = (TextView) v.findViewById(R.id.txtNomeCompleto);
 //        cpfcliente = (TextView) v.findViewById(R.id.txtCPF);
 //        celularCliente = (TextView) v.findViewById(R.id.txtTelefoneCelular);
 //        telComercialCliente = (TextView) v.findViewById(R.id.txtTelefoneComercial);
 //        telResidencialCliente = (TextView) v.findViewById(R.id.txtTelefoneResidencial);
 //        dtNascCliente = (TextView) v.findViewById(R.id.txtDataNascimento);
-    }
-
-    public void inputText(Cliente cliente, MinhaContaFragment context) {
-        this.context = context;
-        Activity v = this.context.getActivity();
-        nomeCompleto = (TextView) v.findViewById(R.id.txtNomeCompleto);
-        cpfcliente = (TextView) v.findViewById(R.id.txtCPF);
-        celularCliente = (TextView) v.findViewById(R.id.txtTelefoneCelular);
-        telComercialCliente = (TextView) v.findViewById(R.id.txtTelefoneComercial);
-        telResidencialCliente = (TextView) v.findViewById(R.id.txtTelefoneResidencial);
-        dtNascCliente = (TextView) v.findViewById(R.id.txtDataNascimento);
-
-        nomeCompleto.setText(cliente.getNomeCompletoCliente());
-        cpfcliente.setText(cliente.getNomeCompletoCliente());
-        celularCliente.setText(cliente.getNomeCompletoCliente());
-        telComercialCliente.setText(cliente.getNomeCompletoCliente());
-        telResidencialCliente.setText(cliente.getNomeCompletoCliente());
-        dtNascCliente.setText(cliente.getNomeCompletoCliente());
+//
+//        nomeCompleto.setText(cliente.getNomeCompletoCliente());
+//        cpfcliente.setText(cliente.getNomeCompletoCliente());
+//        celularCliente.setText(cliente.getNomeCompletoCliente());
+//        telComercialCliente.setText(cliente.getNomeCompletoCliente());
+//        telResidencialCliente.setText(cliente.getNomeCompletoCliente());
+//        dtNascCliente.setText(cliente.getNomeCompletoCliente());
     }
 
     public TextView getNomeCompleto() {

@@ -55,6 +55,11 @@ public class MainActivity extends AppCompatActivity {
                             return true;
                         }
 
+                        if (menuItem.getItemId() == R.id.menu_minhaconta) {
+                            chamaFragment(new MinhaContaFragment());
+                            return true;
+                        }
+
                         if (menuItem.getItemId() == R.id.menu_qrcode) {
                             Intent newAct = new Intent(MainActivity.this, QRCodeActivity.class);
                             startActivityForResult(newAct, 1);

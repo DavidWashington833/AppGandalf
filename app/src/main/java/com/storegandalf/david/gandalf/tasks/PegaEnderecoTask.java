@@ -1,9 +1,12 @@
 package com.storegandalf.david.gandalf.tasks;
 
+import android.app.ProgressDialog;
 import android.os.AsyncTask;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.storegandalf.david.gandalf.EditarEnderecoFragment;
+import com.storegandalf.david.gandalf.MinhaContaFragment;
 import com.storegandalf.david.gandalf.R;
 import com.storegandalf.david.gandalf.WebClient;
 import com.storegandalf.david.gandalf.models.Endereco;
@@ -15,23 +18,26 @@ import java.util.List;
 
 
 public class PegaEnderecoTask extends AsyncTask<Void, Void, String> {
-
-    private EditarEnderecoFragment context;
+    private MinhaContaFragment context;
+    private ProgressDialog dialog;
     private String id;
-    private Type listType = new TypeToken<List<Endereco>>(){}.getType();
 
+    public PegaEnderecoTask(MinhaContaFragment context) {
+        this.context = context;
+    }
 
-    public PegaEnderecoTask(EditarEnderecoFragment context, String id) {
+    public PegaEnderecoTask(MinhaContaFragment context, String id) {
         this.context = context;
         this.id = id;
     }
 
     @Override
     protected void onPreExecute() {
+        dialog = ProgressDialog.show(context.getContext(), "Aguarde", "Buscando dados...", true, false);
     }
 
     @Override
-    protected String doInBackground(Void... voids) {
+    protected String doInBackground(Void... params) {
         WebClient client = new WebClient();
         String resposta = client.get("http://gandalf.azurewebsites.net/gandalf/rest/endereco/cliente/" + id);
         return resposta;
@@ -39,22 +45,29 @@ public class PegaEnderecoTask extends AsyncTask<Void, Void, String> {
 
     @Override
     protected void onPostExecute(String resposta) {
+        dialog.dismiss();
 
         if (!resposta.equals("null")) {
-            List<Endereco> lista = new Gson().fromJson(resposta, listType);
+            Endereco[] enderecos = new Gson().fromJson(resposta, Endereco[].class);
+            Endereco endereco = enderecos[0];
 
-            //Log.i("TESTE", "onPostExecute: "+ lista.get(0).getNomeEndereco());
+            EditText campCep = (EditText) context.getActivity().findViewById(R.id.minha_conta_cep);
+            EditText campEndereco = (EditText) context.getActivity().findViewById(R.id.minha_conta_endereco);
+            EditText campNumero = (EditText) context.getActivity().findViewById(R.id.minha_conta_numero);
+            EditText campCidade = (EditText) context.getActivity().findViewById(R.id.minha_conta_cidade);
+            EditText campLogradouro = (EditText) context.getActivity().findViewById(R.id.minha_conta_logradouro);
+            EditText campComplemento = (EditText) context.getActivity().findViewById(R.id.minha_conta_complemento);
+            EditText campPais = (EditText) context.getActivity().findViewById(R.id.minha_conta_pais);
+            EditText campUF = (EditText) context.getActivity().findViewById(R.id.minha_conta_uf);
 
-            TextView cep = (TextView) context.getActivity().findViewById(R.id.cep);
-            TextView rua = (TextView) context.getActivity().findViewById(R.id.rua);
-            TextView numero = (TextView) context.getActivity().findViewById(R.id.numero);
-            TextView cidade = (TextView) context.getActivity().findViewById(R.id.cidade);
-
-            cep.setText(lista.get(0).getCEPEndereco());
-            rua.setText(lista.get(0).getNomeEndereco());
-            numero.setText(lista.get(0).getNumeroEndereco());
-            cidade.setText(lista.get(0).getCidadeEndereco());
-
+            campCep.setText(endereco.getCEPEndereco());
+            campEndereco.setText(endereco.getNomeEndereco());
+            campNumero.setText(endereco.getNumeroEndereco());
+            campCidade.setText(endereco.getCidadeEndereco());
+            campLogradouro.setText(endereco.getLogradouroEndereco());
+            campComplemento.setText(endereco.getComplementoEndereco());
+            campPais.setText(endereco.getPaisEndereco());
+            campUF.setText(endereco.getUFEndereco());
         }
     }
 }
