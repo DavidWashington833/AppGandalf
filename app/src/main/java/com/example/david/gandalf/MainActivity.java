@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setHomeButtonEnabled(true);
 
         navigationView = (NavigationView) findViewById(R.id.navigation_view);
-
+        drawerLayout = (DrawerLayout) findViewById(R.id.drawer);
         navigationView.setNavigationItemSelectedListener(
                 new NavigationView.OnNavigationItemSelectedListener() {
                     @Override
@@ -75,20 +75,24 @@ public class MainActivity extends AppCompatActivity {
                             chamaFragment(new CarrinhoFragment());
                         }
 
+                        if(menuItem.getItemId() == R.id.menu_buscar) {
+                           chamaFragment(new BuscaProdutoFragment());
+                        }
+
                         if(menuItem.getItemId() == R.id.action_busca) {
                             chamaFragment(new BuscaProdutoFragment());
                         }
-
                         return false;
                     }
                 });
-        drawerLayout = (DrawerLayout) findViewById(R.id.drawer);
+
         actionBarDrawerToggle =
                 new ActionBarDrawerToggle(this, drawerLayout,
                         R.string.openDrawer, R.string.closeDrawer) {
                 };
         drawerLayout.setDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();
+
 
 
         PrincipalFragment newFragment = new PrincipalFragment();
