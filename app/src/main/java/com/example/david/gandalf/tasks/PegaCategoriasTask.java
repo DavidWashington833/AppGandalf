@@ -31,12 +31,7 @@ public class PegaCategoriasTask extends AsyncTask<Void, Void, String> {
 
     @Override
     protected void onPreExecute() {
-<<<<<<< HEAD
         dialog = ProgressDialog.show(context.getContext(), "Tenha calma, cavaleiro...", "Carregando Categorias...", true, false);
-=======
-        dialog = ProgressDialog.show(context.getContext(), "Aguarde", "Carregando Categorias...", true, true);
->>>>>>> parent of fa0baef... Merge pull request #4 from DavidWashington833/branchIgorv3
-
     }
 
     @Override

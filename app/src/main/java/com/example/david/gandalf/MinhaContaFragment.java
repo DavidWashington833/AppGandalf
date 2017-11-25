@@ -1,6 +1,7 @@
 package com.example.david.gandalf;
 
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -11,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.example.david.gandalf.helpers.MinhaContaHelper;
 import com.example.david.gandalf.models.Cliente;
 import com.example.david.gandalf.models.Endereco;
 import com.example.david.gandalf.tasks.PegaClienteTask;
@@ -58,10 +60,11 @@ public class MinhaContaFragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
 
         SharedPreferences preferences = getActivity().getSharedPreferences("login", 0);
-        String id  = preferences.getString("idCliente", "0");
+        int id  = preferences.getInt("idCliente", 0);
+        String idString = String.valueOf(id);
 
-        if (!id.equals("0")) {
-            new PegaClienteTask(this, "5").execute();
+        if (!idString.equals("0")) {
+            new PegaClienteTask(this, idString).execute();
         }
 
         Button btn = (Button) getActivity().findViewById(R.id.minha_conta_editar);

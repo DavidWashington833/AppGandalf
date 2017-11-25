@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     private NavigationView navigationView;
     private DrawerLayout drawerLayout;
     private ActionBarDrawerToggle actionBarDrawerToggle;
+    private String idProduto;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -112,7 +113,6 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-<<<<<<< HEAD
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if(requestCode == 1){
@@ -132,8 +132,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-=======
->>>>>>> parent of fa0baef... Merge pull request #4 from DavidWashington833/branchIgorv3
     public void chamaFragment(Fragment fragment){
         String backStateName = fragment.getClass().getName();
         FragmentManager manager = getSupportFragmentManager();
