@@ -67,8 +67,9 @@ public class PegaCategoriasTask extends AsyncTask<Void, Void, String> {
                     EditText id = (EditText) context.getActivity().findViewById(R.id.hiddenIdCat);
                     id.setText(c.getIdCategoria().toString());
 
-                    Intent intent = new Intent(context.getActivity(), ProdutosCategoriaFragment.class);
-                    context.startActivity(intent);
+                    String idProduto = id.getText().toString();
+
+                    chamaFragment(new ProdutosCategoriaFragment(idProduto));
 
 //                    new PegaProdutosCategoriaTask(context, container).execute();
                 }
@@ -76,5 +77,15 @@ public class PegaCategoriasTask extends AsyncTask<Void, Void, String> {
         }
 
         context.setListAdapter(adapter);
+    }
+
+    public void chamaFragment(Fragment fragment){
+        String backStateName = fragment.getClass().getName();
+        FragmentManager manager = context.getActivity().getSupportFragmentManager();
+        manager.popBackStackImmediate(backStateName, FragmentManager.POP_BACK_STACK_INCLUSIVE);
+        FragmentTransaction transaction = manager.beginTransaction();
+        transaction.replace(R.id.frame_principal, fragment);
+        transaction.addToBackStack(backStateName);
+        transaction.commit();
     }
 }
