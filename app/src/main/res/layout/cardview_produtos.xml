@@ -52,6 +52,7 @@
                 android:paddingBottom="12dp"
                 android:paddingTop="12dp"
                 android:text="R$00,00"
+                android:digits="0123456789."
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
                 android:textColor="#00bcd4" />
 
