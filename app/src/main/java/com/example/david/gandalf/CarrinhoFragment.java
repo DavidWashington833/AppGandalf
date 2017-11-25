@@ -35,14 +35,10 @@ public class CarrinhoFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         Object resposta = CarrinhoSingletonHelper.getInstance().getProduto();
-        Produto[] produtos = new Gson().fromJson(resposta, Produto[].class);
-        CarrinhoAdapter adapter = new CarrinhoAdapter(this.getContext(), Arrays.asList(produtos));
-        final ListView listView = (ListView) this.getActivity().findViewById(android.R.id.list);
 //        Produto[] produtos = new Gson().fromJson(resposta, Produto[].class);
 //        CarrinhoAdapter adapter = new CarrinhoAdapter(this.getContext(), Arrays.asList(produtos));
 //        final ListView listView = (ListView) this.getActivity().findViewById(android.R.id.list);
 
-        listView.setAdapter(adapter);
 //        listView.setAdapter(adapter);
         return inflater.inflate(R.layout.fragment_carrinho, container, false);
 

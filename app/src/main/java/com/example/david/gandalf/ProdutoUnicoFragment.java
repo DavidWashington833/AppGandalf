@@ -6,11 +6,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-<<<<<<< HEAD
 import android.widget.EditText;
-=======
 import android.widget.Button;
->>>>>>> origin/CabeloTesteCarrinho
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -29,12 +26,8 @@ public class ProdutoUnicoFragment extends Fragment {
 
     public ImageView imgP;
     public TextView nomeP, codP, precoP,descP;
-<<<<<<< HEAD
-    EditText hiddenId;
-=======
     public Button comprar;
     public Produto produtoP;
->>>>>>> origin/CabeloTesteCarrinho
 
     public ProdutoUnicoFragment() {
         // Required empty public constructor
@@ -50,10 +43,8 @@ public class ProdutoUnicoFragment extends Fragment {
         precoP = (TextView) view.findViewById(R.id.precoProduto);
         descP = (TextView) view.findViewById(R.id.descProduto);
         imgP = (ImageView) view.findViewById(R.id.imgProduto);
-<<<<<<< HEAD
 
         new PegaProdutoUnicoTask(ProdutoUnicoFragment.this).execute();
-=======
         comprar = (Button) view.findViewById(R.id.btnComprar);
 
 
@@ -68,8 +59,6 @@ public class ProdutoUnicoFragment extends Fragment {
 
             }
         });
-
->>>>>>> origin/CabeloTesteCarrinho
 
         return view;
     }
