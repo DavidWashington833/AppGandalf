@@ -40,6 +40,7 @@ public class CarrinhoFragment extends Fragment {
         final ListView listView = (ListView) this.getActivity().findViewById(android.R.id.list);
 
         listView.setAdapter(adapter);
+//        listView.setAdapter(adapter);
         return inflater.inflate(R.layout.fragment_carrinho, container, false);
 
     }
