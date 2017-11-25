@@ -3,18 +3,12 @@ package com.storegandalf.david.gandalf.tasks;
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.widget.EditText;
-import android.widget.TextView;
 
-import com.storegandalf.david.gandalf.EditarEnderecoFragment;
+import com.google.gson.Gson;
 import com.storegandalf.david.gandalf.MinhaContaFragment;
 import com.storegandalf.david.gandalf.R;
 import com.storegandalf.david.gandalf.WebClient;
 import com.storegandalf.david.gandalf.models.Endereco;
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
-
-import java.lang.reflect.Type;
-import java.util.List;
 
 
 public class PegaEnderecoTask extends AsyncTask<Void, Void, String> {

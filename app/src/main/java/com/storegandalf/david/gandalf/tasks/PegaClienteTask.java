@@ -9,7 +9,6 @@ import com.storegandalf.david.gandalf.MinhaContaFragment;
 import com.storegandalf.david.gandalf.R;
 import com.storegandalf.david.gandalf.WebClient;
 import com.storegandalf.david.gandalf.models.Cliente;
-import com.storegandalf.david.gandalf.tasks.PegaEnderecoTask;
 
 public class PegaClienteTask extends AsyncTask<Void, Void, String> {
     private MinhaContaFragment context;
