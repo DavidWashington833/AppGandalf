@@ -16,6 +16,8 @@ import com.google.gson.Gson;
 
 import org.w3c.dom.Text;
 
+import java.text.DecimalFormat;
+
 
 public class PegaProdutoUnicoTask extends AsyncTask<Void, Void, String> {
     private ProdutoUnicoFragment context;
@@ -33,7 +35,7 @@ public class PegaProdutoUnicoTask extends AsyncTask<Void, Void, String> {
 
     @Override
     protected void onPreExecute() {
-        dialog = ProgressDialog.show(context.getContext(), "Aguarde", "Carregando Produto...", true, true);
+        dialog = ProgressDialog.show(context.getContext(), "My Precious! *-*", "Carregando Produto...", true, true);
     }
 
     @Override
@@ -51,6 +53,8 @@ public class PegaProdutoUnicoTask extends AsyncTask<Void, Void, String> {
         if (!resposta.equals("null")) {
             Produto p = new Gson().fromJson(resposta, Produto.class);
 
+            DecimalFormat format = new DecimalFormat("###,###,###,###,##0.00");
+
             TextView nomeP = (TextView) context.getActivity().findViewById(R.id.nomeProduto);
             TextView codP = (TextView) context.getActivity().findViewById(R.id.codigoProduto);
             TextView precoP = (TextView) context.getActivity().findViewById(R.id.precoProduto);
@@ -59,7 +63,11 @@ public class PegaProdutoUnicoTask extends AsyncTask<Void, Void, String> {
 
             nomeP.setText(p.getNomeProduto());
             codP.setText(p.getIdProduto());
-            precoP.setText(p.getPrecProduto());
+
+            String preco = p.getPrecProduto();
+            Double preco2 = Double.parseDouble(preco);
+            format.format(preco2);
+            precoP.setText(preco2.toString() + "0");
             descP.setText(p.getDescProduto());
             byte[] imageAsBytes = Base64.decode(p.getImagem().getBytes(), Base64.DEFAULT);
             imgP.setImageBitmap(BitmapFactory.decodeByteArray(imageAsBytes, 0, imageAsBytes.length));

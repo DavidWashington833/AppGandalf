@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     private NavigationView navigationView;
     private DrawerLayout drawerLayout;
     private ActionBarDrawerToggle actionBarDrawerToggle;
+    private String idProduto;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
 
                         if (menuItem.getItemId() == R.id.menu_qrcode) {
                             Intent newAct = new Intent(MainActivity.this, QRCodeActivity.class);
-                            startActivity(newAct);
+                            startActivityForResult(newAct,1);
                             return true;
                         }
 
@@ -76,8 +77,8 @@ public class MainActivity extends AppCompatActivity {
                             chamaFragment(new CarrinhoFragment());
                         }
 
-                        if(menuItem.getItemId() == R.id.action_busca) {
-                            chamaFragment(new BuscaProdutoFragment());
+                        if(menuItem.getItemId() == R.id.action_carrinho) {
+                            chamaFragment(new CarrinhoFragment());
                         }
 
                         return false;
@@ -111,6 +112,27 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if(requestCode == 1){
+            if(resultCode == RESULT_OK){
+                idProduto = data.getStringExtra("idProduto");
+                //chamaFragment(new ProdutoUnicoFragment(idProduto));
+
+            }
+        }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (idProduto != null) {
+            chamaFragment(new ProdutoUnicoFragment(idProduto));
+            idProduto = null;
+        }
+
     }
 
     public void chamaFragment(Fragment fragment){

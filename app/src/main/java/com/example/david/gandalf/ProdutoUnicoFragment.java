@@ -2,6 +2,7 @@ package com.example.david.gandalf;
 
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -12,8 +13,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.david.gandalf.tasks.PegaProdutoUnicoTask;
-import com.example.david.gandalf.tasks.PegaProdutosTask;
-
 
 /**
  * A simple {@link Fragment} subclass.
@@ -47,8 +46,14 @@ public class ProdutoUnicoFragment extends Fragment {
         imgP = (ImageView) view.findViewById(R.id.imgProduto);
         hiddenId = (EditText) view.findViewById(R.id.hiddenIdProd);
 
+        Intent intent = getActivity().getIntent();
+        String t = intent.getStringExtra("idProduto");
 
-        new PegaProdutoUnicoTask(ProdutoUnicoFragment.this, id).execute();
+        if(t != null) {
+            new PegaProdutoUnicoTask(ProdutoUnicoFragment.this, t).execute();
+        } else {
+            new PegaProdutoUnicoTask(ProdutoUnicoFragment.this, id).execute();
+        }
 
         return view;
     }

@@ -29,7 +29,7 @@ public class BuscaProdutoTask extends AsyncTask<Void, Void, String> {
 
     @Override
     protected void onPreExecute() {
-        dialog = ProgressDialog.show(context.getContext(), "Aguarde", "Buscando Produto...", true, true);
+        dialog = ProgressDialog.show(context.getContext(), "Abrindo o Baú", "Buscando Produto...", true, true);
 
     }
 
