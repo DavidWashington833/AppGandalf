@@ -2,6 +2,9 @@ package com.example.david.gandalf.adapter;
 
 import android.content.Context;
 import android.graphics.BitmapFactory;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.util.Base64;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +13,9 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.david.gandalf.MainActivity;
+import com.example.david.gandalf.ProdutoUnicoFragment;
+import com.example.david.gandalf.CarrinhoFragment;
 import com.example.david.gandalf.R;
 import com.example.david.gandalf.models.Produto;
 
@@ -45,7 +51,8 @@ public class CarrinhoAdapter  extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        Produto produto = produtos.get(position);
+
+        final Produto produto = produtos.get(position);
 
         LayoutInflater inflater = LayoutInflater.from(context);
 
@@ -54,13 +61,13 @@ public class CarrinhoAdapter  extends BaseAdapter {
             view = inflater.inflate(R.layout.cardview_pedidos_carrinho, parent, false);
         }
 
-        TextView campoNome = (TextView) view.findViewById(R.id.txtNomeProd);
+        TextView campoNome = (TextView) view.findViewById(R.id.txtNomeProdCart);
         campoNome.setText(produto.getNomeProduto());
 
-        TextView campoPreco = (TextView) view.findViewById(R.id.txtPreco);
+        TextView campoPreco = (TextView) view.findViewById(R.id.txtPrecoCart);
         campoPreco.setText(produto.getPrecProduto());
 
-        ImageView campoImg = (ImageView) view.findViewById(R.id.imagemProd);
+        ImageView campoImg = (ImageView) view.findViewById(R.id.imagemProdCart);
         String imagem = produto.getImagem();
         if (imagem != null) {
             byte[] imageAsBytes = Base64.decode(imagem.getBytes(), Base64.DEFAULT);
