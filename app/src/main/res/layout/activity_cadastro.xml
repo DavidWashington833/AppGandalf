@@ -9,11 +9,16 @@
     android:background="@drawable/backgroundpt3"
     tools:context="com.example.david.gandalf.CadastroActivity">
 
-    <FrameLayout
-        android:id="@+id/cadastro_frame"
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:name="com.example.david.gandalf.PrincipalFragment">
-    </FrameLayout>
+        android:layout_height="match_parent">
+        <FrameLayout
+            android:id="@+id/cadastro_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:name="com.example.david.gandalf.PrincipalFragment">
+        </FrameLayout>
+    </ScrollView>
 
 </LinearLayout>

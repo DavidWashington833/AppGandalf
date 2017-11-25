@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.david.gandalf.helpers.CadastroHelper;
+import com.example.david.gandalf.models.Cliente;
 import com.example.david.gandalf.tasks.PegaCategoriasTask;
 
 /**
@@ -20,6 +21,9 @@ import com.example.david.gandalf.tasks.PegaCategoriasTask;
 public class CadastroPt1Fragment extends Fragment {
 
     private Button btnNext1;
+    private EditText campNome;
+    private EditText campNascimento;
+    private EditText campCPF;
 
     public CadastroPt1Fragment() {
     }
@@ -32,10 +36,20 @@ public class CadastroPt1Fragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         btnNext1 = (Button) getActivity().findViewById(R.id.cadastro_proximo_pt1);
+        campNome = (EditText) getActivity().findViewById(R.id.cadastro_nome);
+        campNascimento = (EditText) getActivity().findViewById(R.id.cadastro_nascimento);
+        campCPF = (EditText) getActivity().findViewById(R.id.cadastro_cpf);
 
         btnNext1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                CadastroActivity cadastroActivity = (CadastroActivity) getActivity();
+                Cliente cliente = cadastroActivity.getCliente();
+
+                cliente.setNomeCompletoCliente(campNome.getText().toString());
+                cliente.setDtNascCliente(campNascimento.getText().toString());
+                cliente.setCpfCliente(campCPF.getText().toString());
+                
                 new CadastroHelper((CadastroActivity) getActivity()).chamaFragment(new CadastroPt2Fragment());
             }
         });
