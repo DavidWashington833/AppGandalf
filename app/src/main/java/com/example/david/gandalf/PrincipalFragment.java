@@ -58,12 +58,15 @@ public class PrincipalFragment extends Fragment {
             if (position == 1) {
                 return "Loja";
             }
+            if (position == 2) {
+                return "Carrinho";
+            }
             return "";
         }
 
         @Override
         public int getCount() {
-            return 2;
+            return 3;
         }
 
         @Override
@@ -74,7 +77,9 @@ public class PrincipalFragment extends Fragment {
             if (position == 1) {
                 return new ProdutoFragment();
             }
-
+            if (position == 2) {
+                return new CarrinhoFragment();
+            }
             return null;
         }
     }

@@ -17,10 +17,22 @@
             android:title="Meu Carrinho" />
 
         <item
+            android:id="@+id/minha_conta"
+            android:checked="false"
+            android:icon="@drawable/iconpedidos"
+            android:title="Minha conta" />
+
+        <item
             android:id="@+id/menu_pedidos"
             android:checked="false"
             android:icon="@drawable/iconpedidos"
             android:title="Meus Pedidos" />
+
+        <item
+            android:id="@+id/menu_minha_conta"
+            android:checked="false"
+            android:icon="@drawable/iconpedidos"
+            android:title="Minha Conta" />
 
     </group>
 

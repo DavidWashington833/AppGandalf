@@ -1,11 +1,7 @@
 package com.example.david.gandalf.tasks;
 
 import android.app.ProgressDialog;
-import android.content.Intent;
 import android.os.AsyncTask;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -14,8 +10,6 @@ import android.widget.EditText;
 import android.widget.ListView;
 
 import com.example.david.gandalf.CategoriaFragment;
-import com.example.david.gandalf.MainActivity;
-import com.example.david.gandalf.ProdutosCategoriaFragment;
 import com.example.david.gandalf.R;
 import com.example.david.gandalf.WebClient;
 import com.example.david.gandalf.models.Categoria;
@@ -37,8 +31,7 @@ public class PegaCategoriasTask extends AsyncTask<Void, Void, String> {
 
     @Override
     protected void onPreExecute() {
-        dialog = ProgressDialog.show(context.getContext(), "Tenha calma, cavaleiro...", "Carregando Categorias...", true, true);
-
+        dialog = ProgressDialog.show(context.getContext(), "Tenha calma, cavaleiro...", "Carregando Categorias...", true, false);
     }
 
     @Override
@@ -62,30 +55,18 @@ public class PegaCategoriasTask extends AsyncTask<Void, Void, String> {
                 @Override
                 public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
+                    EditText reclicado = (EditText) context.getActivity().findViewById(R.id.hiddenReclicado);
+                    reclicado.setText("0");
+
                     Categoria c = adapter.getItem(i);
 
                     EditText id = (EditText) context.getActivity().findViewById(R.id.hiddenIdCat);
                     id.setText(c.getIdCategoria().toString());
-
-                    String idProduto = id.getText().toString();
-
-                    chamaFragment(new ProdutosCategoriaFragment(idProduto));
-
-//                    new PegaProdutosCategoriaTask(context, container).execute();
+                    new PegaProdutosCategoriaTask(context, container).execute();
                 }
             });
         }
 
         context.setListAdapter(adapter);
-    }
-
-    public void chamaFragment(Fragment fragment){
-        String backStateName = fragment.getClass().getName();
-        FragmentManager manager = context.getActivity().getSupportFragmentManager();
-        manager.popBackStackImmediate(backStateName, FragmentManager.POP_BACK_STACK_INCLUSIVE);
-        FragmentTransaction transaction = manager.beginTransaction();
-        transaction.replace(R.id.frame_principal, fragment);
-        transaction.addToBackStack(backStateName);
-        transaction.commit();
     }
 }
