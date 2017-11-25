@@ -16,191 +16,221 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0"
-                android:background="@color/backgroundMascara"
-                android:gravity="top|right"
-                android:orientation="vertical">
+                <TextView
+                    style="@style/TextDestaque"
+                    android:gravity="left"
+                    android:text="Olá jovem cavaleiro!" />
 
-                <LinearLayout
-                    style="@style/BgTitulo"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-                    <TextView
-                        style="@style/TextTitulo"
-                        android:text="Informações Básicas" />
-                </LinearLayout>
+                <TextView
+                    style="@style/TextApoio"
+                    android:layout_marginTop="0dp"
+                    android:gravity="left"
+                    android:text="Deseja se juntar a nós? Primeiro, conte-nos um pouco sobre você." />
 
                 <TextView
                     style="@style/Label"
-                    android:layout_marginBottom="0dp"
                     android:text="Nome Completo" />
 
-                <TextView
-                    style="@style/TextInfos"
-                    android:text="Felipe A. Miconi" />
+                <EditText
+                    android:id="@+id/minha_conta_nome"
+                    style="@style/TextView"
+                    android:hint="Digite seu Nome Completo aqui"
+                    android:inputType="textPersonName" />
 
                 <TextView
                     style="@style/Label"
-                    android:layout_marginBottom="0dp"
                     android:text="Data de Nascimento" />
 
-                <TextView
-                    style="@style/TextInfos"
-                    android:text="15/01/1997" />
+                <EditText
+
+                    android:id="@+id/minha_conta_nascimento"
+                    android:inputType="date"
+                    style="@style/TextView"
+                    android:hint="DD/MM/AA"/>
 
                 <TextView
                     style="@style/Label"
-                    android:layout_marginBottom="0dp"
                     android:text="CPF" />
 
-                <TextView
-                    style="@style/TextInfos"
-                    android:text="466.854.508-27" />
-            </LinearLayout>
+                <EditText
+                    android:id="@+id/minha_conta_cpf"
+                    android:inputType="number"
+                    style="@style/TextView"
+                    android:hint="000.000.000-00"/>
 
+            <TextView
+                style="@style/TextDestaque"
+                android:gravity="left"
+                android:text="Em qual planice você mora?" />
+
+            <TextView
+                style="@style/TextApoio"
+                android:layout_marginTop="0dp"
+                android:gravity="left"
+                android:text="Agora que sabemos quem você é,nos mostre no mapa qual é seu endereço" />
+
+            <TextView
+                android:text="CEP"
+                style="@style/Label" />
+            <EditText
+                android:id="@+id/minha_conta_cep"
+                android:inputType="text"
+                android:hint="00000-000"
+                style="@style/TextView" />
+
+            <TextView
+                android:text="Endereço"
+                style="@style/Label" />
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0"
-                android:background="@color/backgroundMascara"
                 android:gravity="center|top"
-                android:orientation="vertical">
+                android:orientation="horizontal">
 
-                <LinearLayout
-                    style="@style/BgTitulo"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-                    <TextView
-                        style="@style/TextTitulo"
-                        android:text="Informações de Contato" />
-                    <Button
-                        style="@style/ButtonsEdit"
-                        android:text="Editar" />
-                </LinearLayout>
-
-                <TextView
-                    style="@style/Label"
-                    android:layout_marginBottom="0dp"
-                    android:text="Celular" />
-
-                <TextView
-                    style="@style/TextInfos"
-                    android:text="(11) 98271-8271" />
-
-                <TextView
-                    style="@style/Label"
-                    android:layout_marginBottom="0dp"
-                    android:text="Telefone Residencial" />
-
-                <TextView
-                    style="@style/TextInfos"
-                    android:text="(11) 3683-3683" />
-
-                <TextView
-                    style="@style/Label"
-                    android:layout_marginBottom="0dp"
-                    android:text="Telefone Comercial" />
-
-                <TextView
-                    style="@style/TextInfos"
-                    android:text="(11) 3686-3686" />
+                <EditText
+                    android:id="@+id/minha_conta_endereco"
+                    style="@style/TextView"
+                    android:layout_width="255dp"
+                    android:hint="Rua de Exemplo"
+                    android:inputType="text" />
+                <EditText
+                    android:id="@+id/minha_conta_numero"
+                    android:inputType="text"
+                    android:hint="Nº"
+                    style="@style/TextView"/>
             </LinearLayout>
 
+
+            <TextView
+                android:text="Cidade"
+                style="@style/Label" />
+            <EditText
+                android:id="@+id/minha_conta_cidade"
+                android:inputType="text"
+                android:hint="Cidade Nórdica"
+                style="@style/TextView" />
+
+
+            <TextView
+                android:text="Logradouro"
+                style="@style/Label" />
+            <EditText
+                android:id="@+id/minha_conta_logradouro"
+                android:inputType="text"
+                android:hint="Logradouro"
+                style="@style/TextView" />
+
+
+            <TextView
+                android:text="Logradouro"
+                style="@style/Label" />
+            <EditText
+                android:id="@+id/minha_conta_complemento"
+                android:inputType="text"
+                android:hint="Complemento"
+                style="@style/TextView" />
+
+            <TextView
+                android:text="Logradouro"
+                style="@style/Label" />
+            <EditText
+                android:id="@+id/minha_conta_pais"
+                android:inputType="text"
+                android:hint="Pais"
+                style="@style/TextView" />
+
+
+            <TextView
+                android:text="UF"
+                style="@style/Label" />
+            <EditText
+                android:id="@+id/minha_conta_uf"
+                android:inputType="text"
+                android:hint="Pais"
+                style="@style/TextView" />
+
+            <TextView
+                style="@style/TextDestaque"
+                android:gravity="left"
+                android:text="Precisamos do seu contato" />
+
+            <TextView
+                style="@style/TextApoio"
+                android:layout_marginTop="0dp"
+                android:gravity="left"
+                android:text="Agora que sabemos um pouco sobre você, mostre-nos como entrar em contato" />
+
+            <TextView
+                android:text="Celular"
+                style="@style/Label" />
+            <EditText
+                android:id="@+id/minha_conta_celular"
+                android:inputType="number"
+                android:hint="(XX) 0000-0000"
+                style="@style/TextView"/>
+
+            <TextView
+                android:text="Telefone Residencial"
+                style="@style/Label" />
+            <EditText
+                android:id="@+id/minha_conta_residencial"
+                android:inputType="number"
+                android:hint="(XX) 0000-0000"
+                style="@style/TextView" />
+
+            <TextView
+                android:text="Telefone Comercial"
+                style="@style/Label" />
+            <EditText
+                android:id="@+id/minha_conta_comercial"
+                android:inputType="number"
+                android:hint="(XX) 0000-0000"
+                style="@style/TextView" />
+
+
+            <TextView
+                style="@style/TextDestaque"
+                android:gravity="left"
+                android:text="Etapa Final!" />
+
+            <TextView
+                style="@style/TextApoio"
+                android:layout_marginTop="0dp"
+                android:gravity="left"
+                android:text="Seja bem vindo à sociedade 8Nome! Só falta você escolher seu usuário e senha para se juntar à nós!" />
+
+            <TextView
+                style="@style/Label"
+                android:text="E-mail" />
+
+            <EditText
+                android:id="@+id/minha_conta_email"
+                style="@style/TextView"
+                android:hint="exemplo@dominioex.com.br"
+                android:inputType="textEmailAddress" />
+
+            <TextView
+                style="@style/Label"
+                android:text="Senha" />
+
+            <EditText
+                android:id="@+id/minha_conta_senha"
+                style="@style/TextView"
+                android:hint="Digite uma senha segura"
+                android:inputType="textPassword" />
+
             <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0"
-                android:background="@color/backgroundMascara"
-                android:gravity="center|top"
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:gravity="center|bottom"
                 android:orientation="vertical">
 
-                <LinearLayout
-                    style="@style/BgTitulo"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-                    <TextView
-                        style="@style/TextTitulo"
-                        android:text="Endereço Principal" />
-                    <Button
-                        style="@style/ButtonsEdit"
-                        android:text="Editar" />
-                </LinearLayout>
-
-                <TextView
-                    style="@style/Label"
-                    android:layout_marginBottom="0dp"
-                    android:text="Endereço" />
-                <TextView
-                    style="@style/TextInfos"
-                    android:text="Rua de Exemplo, 00" />
-
-                <TextView
-                    style="@style/Label"
-                    android:layout_marginBottom="0dp"
-                    android:text="Bairro / Cidade" />
-                <TextView
-                    style="@style/TextInfos"
-                    android:text="Bairro, Cidade" />
-
-                <TextView
-                    style="@style/Label"
-                    android:layout_marginBottom="0dp"
-                    android:text="CEP" />
-                <TextView
-                    style="@style/TextInfos"
-                    android:text="0621-210" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0"
-                android:background="@color/backgroundMascara"
-                android:gravity="center|top"
-                android:orientation="vertical">
-
-                <LinearLayout
-                    style="@style/BgTitulo"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-                    <TextView
-                        style="@style/TextTitulo"
-                        android:text="Endereço Secundário" />
-                    <Button
-                        style="@style/ButtonsEdit"
-                        android:text="Editar" />
-                </LinearLayout>
-
-                <TextView
-                    style="@style/Label"
-                    android:layout_marginBottom="0dp"
-                    android:text="Endereço" />
-                <TextView
-                    style="@style/TextInfos"
-                    android:text="Rua de Exemplo, 00" />
-
-                <TextView
-                    style="@style/Label"
-                    android:layout_marginBottom="0dp"
-                    android:text="Bairro / Cidade" />
-                <TextView
-                    style="@style/TextInfos"
-                    android:text="Bairro, Cidade" />
-
-                <TextView
-                    style="@style/Label"
-                    android:layout_marginBottom="0dp"
-                    android:text="CEP" />
-                <TextView
-                    style="@style/TextInfos"
-                    android:text="0621-210" />
+                <Button
+                    android:id="@+id/minha_conta_editar"
+                    style="@style/Buttons"
+                    android:text="Editar" />
             </LinearLayout>
         </LinearLayout>
 
