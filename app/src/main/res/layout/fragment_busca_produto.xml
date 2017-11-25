@@ -9,10 +9,6 @@
         android:id="@+id/btnBusca"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/txtBusca"
-        android:layout_alignBottom="@+id/txtBusca"
-=======
->>>>>>> branchIgorv3
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="23dp"
         android:layout_weight="1"

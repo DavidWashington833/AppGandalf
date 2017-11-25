@@ -1,12 +1,6 @@
 package com.example.david.gandalf.tasks;
 
 import android.os.AsyncTask;
-<<<<<<< HEAD
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Button;
-=======
->>>>>>> branchIgorv3
 import android.widget.EditText;
 import android.widget.ListView;
 
@@ -24,30 +18,24 @@ import java.util.Arrays;
  */
 
 public class BuscaProdutoTask extends AsyncTask<Void, Void, String> {
+
     private BuscaProdutoFragment context;
-    private ViewGroup container;
 
-
-    public BuscaProdutoTask(BuscaProdutoFragment context, ViewGroup container) {
+    public BuscaProdutoTask(BuscaProdutoFragment context) {
         this.context = context;
-        this.container = container;
     }
 
     @Override
     protected void onPreExecute() {
+
     }
 
     @Override
     protected String doInBackground(Void... params) {
         String resposta;
         WebClient client = new WebClient();
-<<<<<<< HEAD
-        final EditText Teste = (EditText) context.getActivity().findViewById(R.id.txtBusca);
-        String resposta = client.get("http://gandalf.azurewebsites.net/gandalf/rest/produto/like/" + Teste.getText().toString());
-=======
         EditText editText = (EditText) context.getActivity().findViewById(R.id.txtBuscaProduto);
         resposta = client.get("http://gandalf.azurewebsites.net/gandalf/rest/produto/like/" + recebendoValor(editText));
->>>>>>> branchIgorv3
         return resposta;
     }
 
@@ -64,23 +52,9 @@ public class BuscaProdutoTask extends AsyncTask<Void, Void, String> {
 
     public String recebendoValor(EditText editText){
 
-<<<<<<< HEAD
-            final EditText Teste = (EditText) context.getActivity().findViewById(R.id.txtBusca);
-
-            Toast t = Toast.makeText(context.getActivity(), Teste.getText().toString() , Toast.LENGTH_LONG);
-            t.show();
-
-            Produto[] produtos = new Gson().fromJson(resposta, Produto[].class);
-            ProdutoAdapter adapter = new ProdutoAdapter(context.getContext(), Arrays.asList(produtos));
-            final ListView listView = (ListView) context.getActivity().findViewById(android.R.id.list);
-
-            listView.setAdapter(adapter);
-        }
-=======
         String valor = editText.getText().toString();
 
         return valor;
->>>>>>> branchIgorv3
     }
 
 }

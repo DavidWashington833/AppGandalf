@@ -37,11 +37,6 @@ public class BuscaProdutoFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_busca_produto, container, false);
 
-<<<<<<< HEAD
-        Busca = (EditText) view.findViewById(R.id.txtBusca);
-
-        new BuscaProdutoTask(BuscaProdutoFragment.this.getContext()).execute();
-=======
         txtBusca = (EditText) view.findViewById(R.id.txtBuscaProduto);
         btnBusca = (Button) view.findViewById(R.id.btnBusca);
 
@@ -51,7 +46,6 @@ public class BuscaProdutoFragment extends Fragment {
                 new BuscaProdutoTask(BuscaProdutoFragment.this).execute();
             }
         });
->>>>>>> branchIgorv3
 
         return view;
     }
