@@ -14,9 +14,9 @@
         android:background="#B4FFFFFF"
 
         android:textAlignment="center"
-        app:pstsDividerColor="#000000"
-        app:pstsIndicatorColor="#000000"
-        app:pstsTabTextColor="#000000">
+        app:pstsDividerColor="@color/colorTextDark"
+        app:pstsIndicatorColor="@color/colorTextDark"
+        app:pstsTabTextColor="@color/colorTextDark">
 
     </com.astuetz.PagerSlidingTabStrip>
 
