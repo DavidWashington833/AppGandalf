@@ -60,8 +60,8 @@ public class MainActivity extends AppCompatActivity {
                             return true;
                         }
 
-                        if (menuItem.getItemId() == R.id.menu_pedidos) {
-                            chamaFragment(new MeusPedidosFragment());
+                        if (menuItem.getItemId() == R.id.menu_minha_conta) {
+                            chamaFragment(new MinhaContaFragment());
                         }
 
                         if (menuItem.getItemId() == R.id.menu_contato) {
