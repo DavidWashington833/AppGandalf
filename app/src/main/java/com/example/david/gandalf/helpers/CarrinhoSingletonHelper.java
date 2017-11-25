@@ -32,4 +32,13 @@ public class CarrinhoSingletonHelper {
     public void pushProduto(Produto produto) {
         this.produto.add(produto);
     }
+
+    public void removeProduto(Produto produto) {
+        for (int i = 0; i < this.produto.size(); i++){
+            if(produto.getIdProduto().equals(this.produto.get(i).getIdProduto())){
+                this.produto.remove(i);
+                break;
+            }
+        }
+    }
 }

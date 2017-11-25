@@ -18,6 +18,7 @@ import com.google.gson.JsonElement;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 
 /**
@@ -42,8 +43,9 @@ public class CarrinhoFragment extends Fragment {
 //                t.show();
             final Produto[] produtos = new Gson().fromJson(result, Produto[].class);
 
-
-            final CarrinhoAdapter adapter = new CarrinhoAdapter(this.getContext(), Arrays.asList(produtos));
+            List<Produto> plist = new ArrayList<Produto>();
+            plist.addAll(Arrays.asList(produtos));
+            final CarrinhoAdapter adapter = new CarrinhoAdapter(this.getContext(), plist);
             final ListView listView = (ListView) view.findViewById(R.id.list_produto_carrinho);
 
             listView.setAdapter(adapter);
