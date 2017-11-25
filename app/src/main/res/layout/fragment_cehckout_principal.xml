@@ -1,0 +1,136 @@
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+android:background="@drawable/backgroundcarrinhovazio"
+tools:context="com.example.david.gandalf.CehckoutPrincipalFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/backgroundMascara">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:gravity="top"
+            android:orientation="vertical">
+
+            <LinearLayout
+                style="@style/BgTitulo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/login_visualizar_senha"
+                    android:layout_width="10dp"
+                    android:layout_height="25dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_weight="0.1"
+                    android:src="@drawable/iconlocal" />
+                <TextView
+                    style="@style/TextTitulo"
+                    android:layout_width="201dp"
+                    android:text="Endereço" />
+                <Button
+                    style="@style/ButtonsEdit"
+                    android:text="Novo" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/Label"
+                android:layout_marginBottom="0dp"
+                android:text="Endereço" />
+            <TextView
+                style="@style/TextInfos"
+                android:text="Rua de Exemplo, 00" />
+
+            <TextView
+                style="@style/Label"
+                android:layout_marginBottom="0dp"
+                android:text="Bairro / Cidade" />
+            <TextView
+                style="@style/TextInfos"
+                android:text="Bairro, Cidade" />
+
+            <TextView
+                style="@style/Label"
+                android:layout_marginBottom="0dp"
+                android:text="CEP" />
+            <TextView
+                style="@style/TextInfos"
+                android:text="0621-210" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="bottom"
+            android:orientation="vertical">
+
+            <LinearLayout
+                style="@style/BgTitulo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_weight="0.1"
+                    android:src="@drawable/iconpgmt" />
+
+                <TextView
+                    style="@style/TextTitulo"
+                    android:layout_width="319dp"
+                    android:layout_marginTop="3dp"
+                    android:text="Formas de Pagamento" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <CheckBox
+                    style="@style/Opts"
+                    android:layout_width="153dp"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#FFFFFF"
+                    android:drawableLeft="@drawable/iconbarcode"
+                    android:drawablePadding="10dp"
+                    android:text="Boleto Bancário"
+                    android:textColor="#FFFFFF" />
+
+                <CheckBox
+                    style="@style/Opts"
+                    android:layout_width="157dp"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#FFFFFF"
+                    android:drawableLeft="@drawable/iconcard"
+                    android:drawablePadding="10dp"
+                    android:text="Cartão de Crédito"
+                    android:textColor="#FFFFFF" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:gravity="center|bottom"
+            android:orientation="vertical">
+            <Button
+                style="@style/Buttons"
+                android:text="Finalizar Compra" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
