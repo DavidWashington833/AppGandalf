@@ -8,11 +8,19 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.example.david.gandalf.helpers.CarrinhoSingletonHelper;
+import com.example.david.gandalf.models.Produto;
 import com.example.david.gandalf.tasks.PegaProdutoUnicoTask;
 import com.example.david.gandalf.tasks.PegaProdutosTask;
+
+import com.google.gson.Gson;
+import static android.content.Intent.getIntent;
+
 
 
 /**
@@ -22,6 +30,8 @@ public class ProdutoUnicoFragment extends Fragment {
 
     public ImageView imgP;
     public TextView nomeP, codP, precoP,descP;
+    public Button comprar;
+    public Produto produtoP;
     EditText hiddenId;
     String id;
 
@@ -45,6 +55,23 @@ public class ProdutoUnicoFragment extends Fragment {
         precoP = (TextView) view.findViewById(R.id.precoProduto);
         descP = (TextView) view.findViewById(R.id.descProduto);
         imgP = (ImageView) view.findViewById(R.id.imgProduto);
+        comprar = (Button) view.findViewById(R.id.btnComprar);
+
+
+//        new PegaProdutoUnicoTask(ProdutoUnicoFragment.this).execute();
+
+
+        comprar.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+
+                CarrinhoSingletonHelper.getInstance().pushProduto(produtoP);
+                Toast t = Toast.makeText(getContext(),"Produto adicionado ao carrinho!",Toast.LENGTH_LONG);
+//                String res = new Gson().toJson(CarrinhoSingletonHelper.getInstance().getProduto());
+//                Toast t = Toast.makeText(getContext(), res, Toast.LENGTH_LONG);
+                t.show();
+
+            }
+        });
         hiddenId = (EditText) view.findViewById(R.id.hiddenIdProd);
 
 

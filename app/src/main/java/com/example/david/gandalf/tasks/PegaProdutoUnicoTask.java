@@ -22,6 +22,7 @@ public class PegaProdutoUnicoTask extends AsyncTask<Void, Void, String> {
     private ProgressDialog dialog;
     private String id;
 
+
     public PegaProdutoUnicoTask(ProdutoUnicoFragment context) {
         this.context = context;
     }
@@ -57,6 +58,7 @@ public class PegaProdutoUnicoTask extends AsyncTask<Void, Void, String> {
             ImageView imgP = (ImageView) context.getActivity().findViewById(R.id.imgProduto);
             TextView descP = (TextView) context.getActivity().findViewById(R.id.descProduto);
 
+            context.produtoP = p;
             nomeP.setText(p.getNomeProduto());
             codP.setText(p.getIdProduto());
             precoP.setText(p.getPrecProduto());

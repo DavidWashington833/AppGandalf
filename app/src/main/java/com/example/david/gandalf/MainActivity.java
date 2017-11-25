@@ -85,6 +85,7 @@ public class MainActivity extends AppCompatActivity {
                             chamaFragment(new BuscaProdutoFragment());
                         }
 
+
                         return false;
                     }
                 });
@@ -110,6 +111,15 @@ public class MainActivity extends AppCompatActivity {
         if (actionBarDrawerToggle.onOptionsItemSelected(item)) {
             return true;
         }
+        else {
+            if(item.getItemId() == R.id.action_carrinho) {
+                chamaFragment(new CarrinhoFragment());
+            }
+
+            if(item.getItemId() == R.id.action_busca) {
+                chamaFragment(new BuscaProdutoFragment());
+            }
+        }
         return super.onOptionsItemSelected(item);
     }
 
@@ -125,10 +135,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+
         if (idProduto != null) {
             chamaFragment(new ProdutoUnicoFragment(idProduto));
             idProduto = null;
         }
+
+        chamaFragment(new PrincipalFragment());
 
     }
 

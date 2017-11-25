@@ -101,6 +101,16 @@
                     style="@style/TextView"/>
             </LinearLayout>
 
+                <TextView
+                    style="@style/Label"
+                    android:layout_marginBottom="0dp"
+                    android:text="CEP" />
+                <TextView
+                    android:id="@+id/txtCEP"
+                    style="@style/TextInfos"
+                    android:text="0621-210" />
+            </LinearLayout>
+=======
 
             <TextView
                 android:text="Cidade"

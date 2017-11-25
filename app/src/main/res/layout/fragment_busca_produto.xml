@@ -32,8 +32,7 @@
                 android:id="@+id/btnBusca"
                 style="@style/Buttons"
                 android:layout_height="66dp"
-                android:drawableStart="@drawable/iconbuscainvertlt"
-                android:drawableTint="@drawable/iconbuscainvert" />
+                android:drawableStart="@drawable/iconbuscainvertlt"/>
         </LinearLayout>
 
         <ScrollView
