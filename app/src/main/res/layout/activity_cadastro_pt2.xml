@@ -60,15 +60,6 @@
         </LinearLayout>
 
         <TextView
-            android:text="Bairro"
-            style="@style/Label" />
-        <EditText
-            android:id="@+id/bairro"
-            android:inputType="text"
-            android:hint="Bairro dos Elfos"
-            style="@style/TextView" />
-
-        <TextView
             android:text="Cidade"
             style="@style/Label" />
         <EditText

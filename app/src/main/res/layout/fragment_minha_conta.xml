@@ -143,14 +143,6 @@
                 <TextView
                     style="@style/Label"
                     android:layout_marginBottom="0dp"
-                    android:text="Bairro / Cidade" />
-                <TextView
-                    style="@style/TextInfos"
-                    android:text="Bairro, Cidade" />
-
-                <TextView
-                    style="@style/Label"
-                    android:layout_marginBottom="0dp"
                     android:text="CEP" />
                 <TextView
                     style="@style/TextInfos"
