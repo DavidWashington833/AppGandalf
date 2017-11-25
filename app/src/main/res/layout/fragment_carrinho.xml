@@ -8,6 +8,7 @@
     android:background="@drawable/backgroundcarrinhovazio"
     tools:context="com.example.david.gandalf.CarrinhoFragment">
 
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -23,7 +24,13 @@
                 android:id="@+id/container"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"></LinearLayout>
+                android:orientation="vertical">
+
+                <ListView
+                    android:id="@+id/list_produto_carrinho"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
         </ScrollView>
 
         <LinearLayout

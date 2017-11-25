@@ -8,7 +8,10 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.TextView;
+
 import com.example.david.gandalf.ProdutoFragment;
+import com.example.david.gandalf.ProdutoUnicoFragment;
 import com.example.david.gandalf.R;
 import com.example.david.gandalf.WebClient;
 import com.example.david.gandalf.adapter.ProdutoAdapter;
@@ -25,6 +28,7 @@ import java.util.Arrays;
 public class PegaProdutosTask extends AsyncTask<Void, Void, String> {
     private String id;
     private ProdutoFragment context;
+
     private ProgressDialog dialog;
 
     public PegaProdutosTask(ProdutoFragment context) {
@@ -54,7 +58,7 @@ public class PegaProdutosTask extends AsyncTask<Void, Void, String> {
     @Override
     protected void onPostExecute(final String resposta) {
         if (!resposta.equals("null")) {
-            Produto[] produtos = new Gson().fromJson(resposta, Produto[].class);
+            final Produto[] produtos = new Gson().fromJson(resposta, Produto[].class);
             final ProdutoAdapter adapter = new ProdutoAdapter(context.getContext(), Arrays.asList(produtos));
             final ListView listView = (ListView) context.getActivity().findViewById(R.id.list_produto);
 

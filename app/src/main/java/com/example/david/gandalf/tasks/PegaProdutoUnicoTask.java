@@ -11,6 +11,7 @@ import android.widget.TextView;
 import com.example.david.gandalf.ProdutoUnicoFragment;
 import com.example.david.gandalf.R;
 import com.example.david.gandalf.WebClient;
+import com.example.david.gandalf.helpers.CarrinhoSingletonHelper;
 import com.example.david.gandalf.models.Produto;
 import com.google.gson.Gson;
 
@@ -47,7 +48,9 @@ public class PegaProdutoUnicoTask extends AsyncTask<Void, Void, String> {
 
     @Override
     protected void onPostExecute(String resposta) {
+        dialog.dismiss();
         System.out.println(resposta);
+
         if (!resposta.equals("null")) {
             Produto p = new Gson().fromJson(resposta, Produto.class);
 
@@ -55,6 +58,8 @@ public class PegaProdutoUnicoTask extends AsyncTask<Void, Void, String> {
             TextView codP = (TextView) context.getActivity().findViewById(R.id.codigoProduto);
             TextView precoP = (TextView) context.getActivity().findViewById(R.id.precoProduto);
             ImageView imgP = (ImageView) context.getActivity().findViewById(R.id.imgProduto);
+
+            context.produtoP = p;
             TextView descP = (TextView) context.getActivity().findViewById(R.id.descProduto);
 
             nomeP.setText(p.getNomeProduto());
