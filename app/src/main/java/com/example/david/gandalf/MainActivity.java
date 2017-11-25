@@ -20,7 +20,6 @@ public class MainActivity extends AppCompatActivity {
     private NavigationView navigationView;
     private DrawerLayout drawerLayout;
     private ActionBarDrawerToggle actionBarDrawerToggle;
-    private String idProduto;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
 
                         if (menuItem.getItemId() == R.id.menu_qrcode) {
                             Intent newAct = new Intent(MainActivity.this, QRCodeActivity.class);
-                            startActivityForResult(newAct,1);
+                            startActivity(newAct);
                             return true;
                         }
 
@@ -81,8 +80,8 @@ public class MainActivity extends AppCompatActivity {
                             chamaFragment(new CarrinhoFragment());
                         }
 
-                        if(menuItem.getItemId() == R.id.action_carrinho) {
-                            chamaFragment(new CarrinhoFragment());
+                        if(menuItem.getItemId() == R.id.action_busca) {
+                            chamaFragment(new BuscaProdutoFragment());
                         }
 
                         return false;
@@ -113,6 +112,7 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+<<<<<<< HEAD
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if(requestCode == 1){
@@ -132,6 +132,8 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+=======
+>>>>>>> parent of fa0baef... Merge pull request #4 from DavidWashington833/branchIgorv3
     public void chamaFragment(Fragment fragment){
         String backStateName = fragment.getClass().getName();
         FragmentManager manager = getSupportFragmentManager();

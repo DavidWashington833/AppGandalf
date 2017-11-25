@@ -36,9 +36,7 @@
         <activity
             android:name=".QRCodeActivity"
             android:parentActivityName=".MainActivity"
-            android:screenOrientation="portrait" >
-
-        </activity>
+            android:screenOrientation="portrait" />
 
 
         <activity android:name=".RecuperarSenhaActivity"

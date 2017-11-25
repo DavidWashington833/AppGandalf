@@ -48,6 +48,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+<<<<<<< HEAD
                 android:orientation="horizontal">
                 <TextView
                     android:layout_width="wrap_content"
@@ -69,6 +70,13 @@
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
                     android:textColor="#00bcd4" />
             </LinearLayout>
+=======
+                android:paddingBottom="12dp"
+                android:paddingTop="12dp"
+                android:text="R$00,00"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textColor="#00bcd4" />
+>>>>>>> parent of fa0baef... Merge pull request #4 from DavidWashington833/branchIgorv3
 
             <Button
                 android:id="@+id/btnComprarProd"
