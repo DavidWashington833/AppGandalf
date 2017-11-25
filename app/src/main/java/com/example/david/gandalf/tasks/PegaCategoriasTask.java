@@ -1,5 +1,6 @@
 package com.example.david.gandalf.tasks;
 
+import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,6 +22,7 @@ import com.google.gson.Gson;
 public class PegaCategoriasTask extends AsyncTask<Void, Void, String> {
     private CategoriaFragment context;
     private ViewGroup container;
+    private ProgressDialog dialog;
 
     public PegaCategoriasTask(CategoriaFragment context, ViewGroup container) {
         this.context = context;
@@ -29,6 +31,7 @@ public class PegaCategoriasTask extends AsyncTask<Void, Void, String> {
 
     @Override
     protected void onPreExecute() {
+        dialog = ProgressDialog.show(context.getContext(), "Aguarde", "Carregando Categorias...", true, true);
 
     }
 
@@ -36,7 +39,7 @@ public class PegaCategoriasTask extends AsyncTask<Void, Void, String> {
     protected String doInBackground(Void... params) {
         WebClient client = new WebClient();
         String resposta = client.get("http://gandalf.azurewebsites.net/gandalf/rest/categoria/");
-
+        dialog.dismiss();
         return resposta;
     }
 

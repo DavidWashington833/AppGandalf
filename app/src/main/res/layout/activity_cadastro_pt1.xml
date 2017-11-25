@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
+    android:layout_height="match_parent"
     android:background="@drawable/backgroundpt3"
+    android:orientation="vertical"
     tools:context="com.example.david.gandalf.CadastroActivity">
 
     <LinearLayout
@@ -20,38 +19,45 @@
             style="@style/TextDestaque"
             android:gravity="left"
             android:text="Olá jovem cavaleiro!" />
-        <TextView
-            android:text="Deseja se juntar a nós? Primeiro, conte-nos um pouco sobre você."
-            style="@style/TextApoio"
-            android:gravity="left"
-            android:layout_marginTop="0dp" />
 
         <TextView
-            android:text="Nome Completo"
-            style="@style/Label" />
+            style="@style/TextApoio"
+            android:layout_marginTop="0dp"
+            android:gravity="left"
+            android:text="Deseja se juntar a nós? Primeiro, conte-nos um pouco sobre você." />
+
+        <TextView
+            style="@style/Label"
+            android:text="Nome Completo" />
+
         <EditText
             android:id="@+id/cadastro_nome"
+            style="@style/TextView"
             android:hint="Digite seu Nome Completo aqui"
-            android:inputType="textPersonName"
-            style="@style/TextView" />
+            android:inputType="textPersonName" />
 
         <TextView
-            android:text="Data de Nascimento"
-            style="@style/Label" />
+            style="@style/Label"
+            android:text="Data de Nascimento" />
+
         <EditText
+
             android:id="@+id/cadastro_nascimento"
             android:inputType="date"
+            style="@style/TextView"
             android:hint="DD/MM/AA"
-            style="@style/TextView"/>
+            android:inputType="date" />
 
         <TextView
-            android:text="CPF"
-            style="@style/Label" />
+            style="@style/Label"
+            android:text="CPF" />
+
         <EditText
             android:id="@+id/cadastro_cpf"
             android:inputType="number"
+            style="@style/TextView"
             android:hint="000.000.000-00"
-            style="@style/TextView"/>
+            android:inputType="number" />
     </LinearLayout>
 
     <LinearLayout
@@ -60,10 +66,11 @@
         android:layout_weight="1"
         android:gravity="center|bottom"
         android:orientation="vertical">
+
         <Button
             android:id="@+id/cadastro_proximo_pt1"
-            android:text="Próxima Etapa"
-            style="@style/Buttons" />
+            style="@style/Buttons"
+            android:text="Próxima Etapa" />
     </LinearLayout>
 
 </LinearLayout>
