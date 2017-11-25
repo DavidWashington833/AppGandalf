@@ -1,36 +1,55 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/backgroundcarrinhovazio"
     tools:context="com.example.david.gandalf.BuscaProdutoFragment">
 
-
-    <Button
-        android:id="@+id/btnBusca"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="23dp"
-        android:layout_weight="1"
-        android:text="GO" />
-
-    <ListView
-        android:id="@+id/list_produto"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/btnBusca"
-        android:layout_marginTop="29dp" />
+        android:background="@color/backgroundMascara"
+        android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/txtBuscaProduto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/list_produto"
-        android:layout_alignParentStart="true"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/txtBuscaProduto"
+                style="@style/TextView"
+                android:layout_width="272dp"
+                android:layout_height="73dp"
+                android:layout_marginLeft="0dp"
+                android:inputType="textPersonName" />
 
 
-</RelativeLayout>
+            <Button
+                android:id="@+id/btnBusca"
+                style="@style/Buttons"
+                android:layout_height="66dp"
+                android:drawableStart="@drawable/iconbuscainvertlt"
+                android:drawableTint="@drawable/iconbuscainvert" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <ListView
+                    android:id="@+id/list_produto"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+</LinearLayout>
