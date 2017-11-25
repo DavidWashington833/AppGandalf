@@ -1,6 +1,7 @@
 package com.example.david.gandalf;
 
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -55,7 +56,13 @@ public class MinhaContaFragment extends Fragment {
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        new PegaClienteTask(this, "5").execute();
+
+        SharedPreferences preferences = getActivity().getSharedPreferences("login", 0);
+        String id  = preferences.getString("idCliente", "0");
+
+        if (!id.equals("0")) {
+            new PegaClienteTask(this, "5").execute();
+        }
 
         Button btn = (Button) getActivity().findViewById(R.id.minha_conta_editar);
 
