@@ -41,7 +41,6 @@ public class PegaProdutoUnicoTask extends AsyncTask<Void, Void, String> {
 
     @Override
     protected void onPostExecute(String resposta) {
-
         dialog.dismiss();
         if (!resposta.equals("null")) {
             Produto p = new Gson().fromJson(resposta, Produto.class);
@@ -50,19 +49,14 @@ public class PegaProdutoUnicoTask extends AsyncTask<Void, Void, String> {
             TextView codP = (TextView) context.getActivity().findViewById(R.id.codigoProduto);
             TextView precoP = (TextView) context.getActivity().findViewById(R.id.precoProduto);
             ImageView imgP = (ImageView) context.getActivity().findViewById(R.id.imgProduto);
-<<<<<<< HEAD
-//            EditText hiddenId = (EditText) context.getActivity().findViewById(R.id.hiddenIdProd);
-=======
 
             context.produtoP = p;
->>>>>>> origin/CabeloTesteCarrinho
 
             nomeP.setText(p.getNomeProduto());
             codP.setText(p.getIdProduto());
             precoP.setText(p.getPrecProduto());
             byte[] imageAsBytes = Base64.decode(p.getImagem().getBytes(), Base64.DEFAULT);
             imgP.setImageBitmap(BitmapFactory.decodeByteArray(imageAsBytes, 0, imageAsBytes.length));
-//            hiddenId.setText(p.getIdProduto());
         }
     }
 }

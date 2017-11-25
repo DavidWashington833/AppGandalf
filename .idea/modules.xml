@@ -5,10 +5,6 @@
 <<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/AppGandalf.iml" filepath="$PROJECT_DIR$/AppGandalf.iml" />
 =======
-      <module fileurl="file://C:\Users\gabriel.elmontibelle\Desktop\GandalfApp\GandalfApp\AppGandalf.iml" filepath="C:\Users\gabriel.elmontibelle\Desktop\GandalfApp\GandalfApp\AppGandalf.iml" />
-      <module fileurl="file://C:\Users\Igor Ramos\Documents\ProjetoIntegrador\GandalfApp\AppGandalf.iml" filepath="C:\Users\Igor Ramos\Documents\ProjetoIntegrador\GandalfApp\AppGandalf.iml" />
-      <module fileurl="file://$PROJECT_DIR$/GandalfApp.iml" filepath="$PROJECT_DIR$/GandalfApp.iml" />
->>>>>>> origin/CabeloTesteCarrinho
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

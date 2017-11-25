@@ -44,6 +44,7 @@ public class Produto {
         this.descontoPromocao = descontoPromocao;
     }
 
+
     public String getQtdMinEstoque() {
         return qtdMinEstoque;
     }

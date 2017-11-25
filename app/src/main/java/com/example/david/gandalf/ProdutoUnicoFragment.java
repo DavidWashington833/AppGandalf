@@ -51,7 +51,6 @@ public class ProdutoUnicoFragment extends Fragment {
         descP = (TextView) view.findViewById(R.id.descProduto);
         imgP = (ImageView) view.findViewById(R.id.imgProduto);
 <<<<<<< HEAD
-//        hiddenId = (EditText) getActivity().findViewById(R.id.hiddenIdProd);
 
         new PegaProdutoUnicoTask(ProdutoUnicoFragment.this).execute();
 =======

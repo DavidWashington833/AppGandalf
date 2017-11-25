@@ -38,6 +38,9 @@ public class CarrinhoFragment extends Fragment {
         Produto[] produtos = new Gson().fromJson(resposta, Produto[].class);
         CarrinhoAdapter adapter = new CarrinhoAdapter(this.getContext(), Arrays.asList(produtos));
         final ListView listView = (ListView) this.getActivity().findViewById(android.R.id.list);
+//        Produto[] produtos = new Gson().fromJson(resposta, Produto[].class);
+//        CarrinhoAdapter adapter = new CarrinhoAdapter(this.getContext(), Arrays.asList(produtos));
+//        final ListView listView = (ListView) this.getActivity().findViewById(android.R.id.list);
 
         listView.setAdapter(adapter);
 //        listView.setAdapter(adapter);
