@@ -1,6 +1,7 @@
 package com.example.david.gandalf.tasks;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,8 @@ import android.widget.EditText;
 import android.widget.ListView;
 
 import com.example.david.gandalf.CategoriaFragment;
+import com.example.david.gandalf.MainActivity;
+import com.example.david.gandalf.QRCodeActivity;
 import com.example.david.gandalf.R;
 import com.example.david.gandalf.WebClient;
 import com.example.david.gandalf.models.Categoria;
@@ -31,7 +34,7 @@ public class PegaCategoriasTask extends AsyncTask<Void, Void, String> {
 
     @Override
     protected void onPreExecute() {
-        dialog = ProgressDialog.show(context.getContext(), "Aguarde", "Carregando Categorias...", true, true);
+        dialog = ProgressDialog.show(context.getContext(), "Tenha calma, cavaleiro...", "Carregando Categorias...", true, true);
 
     }
 
@@ -63,6 +66,7 @@ public class PegaCategoriasTask extends AsyncTask<Void, Void, String> {
 
                     EditText id = (EditText) context.getActivity().findViewById(R.id.hiddenIdCat);
                     id.setText(c.getIdCategoria().toString());
+
                     new PegaProdutosCategoriaTask(context, container).execute();
                 }
             });

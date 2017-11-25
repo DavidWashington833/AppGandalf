@@ -50,18 +50,17 @@ public class QRCodeActivity extends AppCompatActivity {
         scannerView.setResultHandler(new ZXingScannerView.ResultHandler() {
             @Override
             public void handleResult(com.google.zxing.Result result) {
-                final ZXingScannerView.ResultHandler rh = this;
+
                 String resultado = result.getText();
                 resultado = resultado.replace("G", "");
-//                new PegaProdutoUnicoTask(ProdutoUnicoFragment.class, resultado).execute();
                 Intent intent = new Intent(QRCodeActivity.this, MainActivity.class);
                 intent.putExtra("idProduto", resultado);
-                //startActivityForResult(intent, 1);
                 setResult(RESULT_OK,intent);
                 finish();
             }
 
         });
+
         scannerView.startCamera();
     }
 

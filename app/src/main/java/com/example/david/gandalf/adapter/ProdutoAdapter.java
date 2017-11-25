@@ -21,6 +21,7 @@ import com.example.david.gandalf.ProdutoUnicoFragment;
 import com.example.david.gandalf.R;
 import com.example.david.gandalf.models.Produto;
 
+import java.text.DecimalFormat;
 import java.util.List;
 
 /**
@@ -63,6 +64,8 @@ public class ProdutoAdapter extends BaseAdapter {
             view = inflater.inflate(R.layout.cardview_produtos, parent, false);
         }
 
+        DecimalFormat format = new DecimalFormat("###,###,###,###,##0.00");
+
         final EditText campoId = (EditText) view.findViewById(R.id.hiddenIdProd);
         campoId.setText(produto.getIdProduto());
 
@@ -70,7 +73,10 @@ public class ProdutoAdapter extends BaseAdapter {
         campoNome.setText(produto.getNomeProduto());
 
         TextView campoPreco = (TextView) view.findViewById(R.id.txtPreco);
-        campoPreco.setText(produto.getPrecProduto());
+        String preco = produto.getPrecProduto();
+        Double preco2 = Double.parseDouble(preco);
+        format.format(preco2);
+        campoPreco.setText(preco2.toString() + "0");
 
         ImageView campoImg = (ImageView) view.findViewById(R.id.imagemProd);
         String imagem = produto.getImagem();

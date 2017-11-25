@@ -14,9 +14,6 @@ import android.widget.TextView;
 
 import com.example.david.gandalf.tasks.PegaProdutoUnicoTask;
 
-import static android.content.Intent.getIntent;
-
-
 /**
  * A simple {@link Fragment} subclass.
  */
@@ -57,7 +54,6 @@ public class ProdutoUnicoFragment extends Fragment {
         } else {
             new PegaProdutoUnicoTask(ProdutoUnicoFragment.this, id).execute();
         }
-
 
         return view;
     }
