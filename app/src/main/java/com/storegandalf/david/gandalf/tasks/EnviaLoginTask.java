@@ -39,7 +39,7 @@ public class EnviaLoginTask extends AsyncTask<Void, Void, String> {
     @Override
     protected void onPostExecute(String resposta) {
         dialog.dismiss();
-        String feadback = "Email ou senha inválida!";
+        String feadback = "Seu e-mail ou senha está errado. Confere aí!";
 
         if (!resposta.equals("null")) {
             Cliente cliente = new Gson().fromJson(resposta, Cliente.class);
@@ -49,7 +49,7 @@ public class EnviaLoginTask extends AsyncTask<Void, Void, String> {
             editor.putInt("idCliente", cliente.getIdCliente());
             editor.commit();
 
-            feadback = "Usuario " + cliente.getNomeCompletoCliente() + " logado!";
+            feadback = "Seja bem-vindo, " + cliente.getNomeCompletoCliente() + "! Boas compras! :)";
             context.finish();
         }
 
