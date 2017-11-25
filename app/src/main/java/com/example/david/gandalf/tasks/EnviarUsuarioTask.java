@@ -44,6 +44,17 @@ public class EnviarUsuarioTask extends AsyncTask<Void, Void, String> {
     protected void onPostExecute(String resposta) {
         dialog.dismiss();
 
-        Toast.makeText(context, resposta, Toast.LENGTH_LONG).show();
+        if (!resposta.equals("null")) {
+            Cliente cliente = new Gson().fromJson(resposta, Cliente.class);
+
+            SharedPreferences preferences = context.getSharedPreferences("login", 0);
+            SharedPreferences.Editor editor = preferences.edit();
+            editor.putInt("idCliente", cliente.getIdCliente());
+            editor.commit();
+
+            context.getCliente().setIdCliente(cliente.getIdCliente());
+
+            new EnviaEnderecoTask(context, cliente.getIdCliente()).execute();
+        }
     }
 }

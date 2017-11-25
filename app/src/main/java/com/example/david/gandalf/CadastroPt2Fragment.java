@@ -25,6 +25,10 @@ public class CadastroPt2Fragment extends Fragment {
     private EditText campNumero;
     private EditText campBairro;
     private EditText campCidade;
+    private EditText campLogradouro;
+    private EditText campComplemento;
+    private EditText campPais;
+    private EditText campUF;
 
     public CadastroPt2Fragment() {
     }
@@ -41,20 +45,28 @@ public class CadastroPt2Fragment extends Fragment {
         campEndereco = (EditText) getActivity().findViewById(R.id.cadastro_endereco);
         campNumero = (EditText) getActivity().findViewById(R.id.cadastro_numero);
         campCidade = (EditText) getActivity().findViewById(R.id.cadastro_cidade);
+        campLogradouro = (EditText) getActivity().findViewById(R.id.cadastro_logradouro);
+        campComplemento = (EditText) getActivity().findViewById(R.id.cadastro_complemento);
+        campPais = (EditText) getActivity().findViewById(R.id.cadastro_pais);
+        campUF = (EditText) getActivity().findViewById(R.id.cadastro_uf);
 
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-            CadastroActivity cadastroActivity = (CadastroActivity) getActivity();
-            Cliente cliente = cadastroActivity.getCliente();
-            Endereco endereco = cadastroActivity.getEndereco();
+                CadastroActivity cadastroActivity = (CadastroActivity) getActivity();
+                Cliente cliente = cadastroActivity.getCliente();
+                Endereco endereco = cadastroActivity.getEndereco();
 
-            endereco.setCEPEndereco(campCep.getText().toString());
-            endereco.setNomeEndereco(campEndereco.getText().toString());
-            endereco.setNumeroEndereco(campNumero.getText().toString());
-            endereco.setCidadeEndereco(campCidade.getText().toString());
+                endereco.setCEPEndereco(campCep.getText().toString());
+                endereco.setNomeEndereco(campEndereco.getText().toString());
+                endereco.setNumeroEndereco(campNumero.getText().toString());
+                endereco.setCidadeEndereco(campCidade.getText().toString());
+                endereco.setLogradouroEndereco(campLogradouro.getText().toString());
+                endereco.setComplementoEndereco(campComplemento.getText().toString());
+                endereco.setPaisEndereco(campPais.getText().toString());
+                endereco.setUFEndereco(campUF.getText().toString());
 
-            new CadastroHelper((CadastroActivity) getActivity()).chamaFragment(new CadastroPt3Fragment());
+                new CadastroHelper((CadastroActivity) getActivity()).chamaFragment(new CadastroPt3Fragment());
             }
         });
         super.onActivityCreated(savedInstanceState);
