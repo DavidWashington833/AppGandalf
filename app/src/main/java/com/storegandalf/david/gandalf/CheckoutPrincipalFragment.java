@@ -11,10 +11,10 @@ import android.view.ViewGroup;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class CehckoutPrincipalFragment extends Fragment {
+public class CheckoutPrincipalFragment extends Fragment {
 
 
-    public CehckoutPrincipalFragment() {
+    public CheckoutPrincipalFragment() {
         // Required empty public constructor
     }
 
@@ -23,7 +23,7 @@ public class CehckoutPrincipalFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_cehckout_principal, container, false);
+        return inflater.inflate(R.layout.fragment_checkout_principal, container, false);
     }
 
 }
