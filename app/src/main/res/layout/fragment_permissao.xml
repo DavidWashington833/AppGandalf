@@ -11,6 +11,7 @@
         android:layout_height="match_parent"
         android:layout_weight="0"
         android:gravity="top|center"
+        android:background="@color/backgroundMascara"
         android:orientation="vertical">
 
         <ImageView

@@ -72,7 +72,7 @@ tools:context="com.example.david.gandalf.CadastroPt4Activity">
         android:text="Deseja ficar por dentro das nossas novidades?! Clique aqui para se inscriver em nossa newsletter e receber promoções exclusivas!" />
 
     <Button
-        android:id="@+id/main_btn"
+        android:id="@+id/cadastro_proximo_pt4"
         style="@style/Buttons"
         android:text="Criar Conta" />
 </LinearLayout>

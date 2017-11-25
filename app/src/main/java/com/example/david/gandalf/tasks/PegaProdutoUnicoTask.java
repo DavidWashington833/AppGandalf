@@ -15,33 +15,51 @@ import com.example.david.gandalf.helpers.CarrinhoSingletonHelper;
 import com.example.david.gandalf.models.Produto;
 import com.google.gson.Gson;
 
+import org.w3c.dom.Text;
+
 
 public class PegaProdutoUnicoTask extends AsyncTask<Void, Void, String> {
     private ProdutoUnicoFragment context;
     private ProgressDialog dialog;
+<<<<<<< HEAD
+=======
+    private String id;
+>>>>>>> branchIgorv3
 
     public PegaProdutoUnicoTask(ProdutoUnicoFragment context) {
         this.context = context;
     }
 
+    public PegaProdutoUnicoTask(ProdutoUnicoFragment context, String id) {
+        this.context = context;
+        this.id = id;
+    }
 
     @Override
     protected void onPreExecute() {
+<<<<<<< HEAD
         dialog = ProgressDialog.show(context.getContext(), "Aguarde", "Buscando cliente...", true, true);
+=======
+        dialog = ProgressDialog.show(context.getContext(), "Aguarde", "Carregando Produto...", true, true);
+>>>>>>> branchIgorv3
     }
 
     @Override
     protected String doInBackground(Void... params) {
 
         WebClient client = new WebClient();
-        TextView codP = (TextView) context.getActivity().findViewById(R.id.codigoProduto);
-        String resposta = client.get("http://gandalf.azurewebsites.net/gandalf/rest/produto/" + codP.getText().toString());
+        String resposta = client.get("http://gandalf.azurewebsites.net/gandalf/rest/produto/" + id);
+        dialog.dismiss();
         return resposta;
     }
 
     @Override
     protected void onPostExecute(String resposta) {
+<<<<<<< HEAD
         dialog.dismiss();
+=======
+        System.out.println(resposta);
+>>>>>>> branchIgorv3
         if (!resposta.equals("null")) {
             Produto p = new Gson().fromJson(resposta, Produto.class);
 
@@ -49,12 +67,17 @@ public class PegaProdutoUnicoTask extends AsyncTask<Void, Void, String> {
             TextView codP = (TextView) context.getActivity().findViewById(R.id.codigoProduto);
             TextView precoP = (TextView) context.getActivity().findViewById(R.id.precoProduto);
             ImageView imgP = (ImageView) context.getActivity().findViewById(R.id.imgProduto);
+<<<<<<< HEAD
 
             context.produtoP = p;
+=======
+            TextView descP = (TextView) context.getActivity().findViewById(R.id.descProduto);
+>>>>>>> branchIgorv3
 
             nomeP.setText(p.getNomeProduto());
             codP.setText(p.getIdProduto());
             precoP.setText(p.getPrecProduto());
+            descP.setText(p.getDescProduto());
             byte[] imageAsBytes = Base64.decode(p.getImagem().getBytes(), Base64.DEFAULT);
             imgP.setImageBitmap(BitmapFactory.decodeByteArray(imageAsBytes, 0, imageAsBytes.length));
         }

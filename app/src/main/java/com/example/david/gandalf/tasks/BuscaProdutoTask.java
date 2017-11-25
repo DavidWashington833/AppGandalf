@@ -1,5 +1,6 @@
 package com.example.david.gandalf.tasks;
 
+import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -20,6 +21,7 @@ import java.util.Arrays;
 public class BuscaProdutoTask extends AsyncTask<Void, Void, String> {
 
     private BuscaProdutoFragment context;
+    private ProgressDialog dialog;
 
     public BuscaProdutoTask(BuscaProdutoFragment context) {
         this.context = context;
@@ -27,6 +29,7 @@ public class BuscaProdutoTask extends AsyncTask<Void, Void, String> {
 
     @Override
     protected void onPreExecute() {
+        dialog = ProgressDialog.show(context.getContext(), "Aguarde", "Buscando Produto...", true, true);
 
     }
 
@@ -36,6 +39,7 @@ public class BuscaProdutoTask extends AsyncTask<Void, Void, String> {
         WebClient client = new WebClient();
         EditText editText = (EditText) context.getActivity().findViewById(R.id.txtBuscaProduto);
         resposta = client.get("http://gandalf.azurewebsites.net/gandalf/rest/produto/like/" + recebendoValor(editText));
+        dialog.dismiss();
         return resposta;
     }
 

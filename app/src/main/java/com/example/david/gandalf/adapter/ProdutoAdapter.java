@@ -18,7 +18,6 @@ import android.widget.Toast;
 
 import com.example.david.gandalf.MainActivity;
 import com.example.david.gandalf.ProdutoUnicoFragment;
-import com.example.david.gandalf.QRCodeActivity;
 import com.example.david.gandalf.R;
 import com.example.david.gandalf.models.Produto;
 
@@ -55,7 +54,7 @@ public class ProdutoAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        Produto produto = produtos.get(position);
+        final Produto produto = produtos.get(position);
 
         LayoutInflater inflater = LayoutInflater.from(context);
 
@@ -76,6 +75,9 @@ public class ProdutoAdapter extends BaseAdapter {
         ImageView campoImg = (ImageView) view.findViewById(R.id.imagemProd);
         String imagem = produto.getImagem();
 
+        EditText hiddenId = (EditText) view.findViewById(R.id.hiddenIdProd);
+        hiddenId.setText(produto.getIdProduto());
+
         if (imagem != null) {
             byte[] imageAsBytes = Base64.decode(imagem.getBytes(), Base64.DEFAULT);
             campoImg.setImageBitmap(BitmapFactory.decodeByteArray(imageAsBytes, 0, imageAsBytes.length));
@@ -86,8 +88,8 @@ public class ProdutoAdapter extends BaseAdapter {
         botaoDetalhes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                chamaFragment(new ProdutoUnicoFragment());
-                Toast.makeText(v.getContext(), campoId.getText().toString(), Toast.LENGTH_SHORT).show();
+                chamaFragment(new ProdutoUnicoFragment(campoId.getText().toString()));
+//                Toast.makeText(v.getContext(), campoId.getText().toString(), Toast.LENGTH_SHORT).show();
 
             }
         });

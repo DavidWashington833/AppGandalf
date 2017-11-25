@@ -5,8 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/backgroundcarrinhovazio"
     tools:context="com.example.david.gandalf.CarrinhoFragment">
 
+<<<<<<< HEAD
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -25,43 +27,65 @@
         </LinearLayout>
     </ScrollView>
 
+=======
+>>>>>>> branchIgorv3
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:gravity="center|bottom"
+        android:background="@color/backgroundMascara"
         android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top">
+
+            <LinearLayout
+                android:id="@+id/container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"></LinearLayout>
+        </ScrollView>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:orientation="horizontal">
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center|bottom"
+            android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/txtSubTotal"
-                android:layout_width="80dp"
-                android:layout_height="match_parent"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
-                android:text="Subtotal"
-                android:gravity="center|left"
-                android:layout_marginLeft="12dp"/>
-
-            <TextView
-                android:id="@+id/txtPrecoFinal"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:textSize="36dp"
-                android:textColor="#00bcd4"
-                android:text="R$1000,00"
-                android:gravity="center|right"
-                android:layout_marginRight="12dp"/>
-        </LinearLayout>
+                android:layout_height="70dp"
+                android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/btnFinalizarCompra"
-            android:layout_height="70dp"
-            android:text="Finalizar Compra"
-            style="@style/Buttons"/>
+                <TextView
+                    android:id="@+id/txtSubTotal"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="12dp"
+                    android:gravity="center|left"
+                    android:text="Subtotal"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/txtPrecoFinal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="36dp"
+                    android:textColor="#00bcd4"
+                    android:text="R$1000,00"
+                    android:gravity="center|right"
+                    android:layout_marginRight="12dp"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnFinalizarCompra"
+                android:layout_height="70dp"
+                android:text="Finalizar Compra"
+                style="@style/Buttons"/>
+        </LinearLayout>
     </LinearLayout>
 
 </LinearLayout>

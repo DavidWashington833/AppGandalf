@@ -1,5 +1,6 @@
 package com.example.david.gandalf.tasks;
 
+import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,17 +26,32 @@ import java.util.Arrays;
  */
 
 public class PegaProdutosTask extends AsyncTask<Void, Void, String> {
+    private String id;
     private ProdutoFragment context;
+<<<<<<< HEAD
 //    private ProdutoUnicoFragment teste;
 
     public PegaProdutosTask(ProdutoFragment context) {
         this.context = context;
 //        this.teste = teste;
 }
+=======
+    private ProgressDialog dialog;
+
+    public PegaProdutosTask(ProdutoFragment context) {
+        this.context = context;
+    }
+
+    public PegaProdutosTask(ProdutoFragment context, String id) {
+        this.context = context;
+        this.id = id;
+    }
+>>>>>>> branchIgorv3
 
 
     @Override
     protected void onPreExecute() {
+        dialog = ProgressDialog.show(context.getContext(), "Aguarde", "Carregando Produtos...", true, true);
 
     }
 
@@ -43,6 +59,7 @@ public class PegaProdutosTask extends AsyncTask<Void, Void, String> {
     protected String doInBackground(Void... params) {
         WebClient client = new WebClient();
         String resposta = client.get("http://gandalf.azurewebsites.net/gandalf/rest/produto/");
+        dialog.dismiss();
         return resposta;
     }
 
@@ -53,6 +70,7 @@ public class PegaProdutosTask extends AsyncTask<Void, Void, String> {
             final ProdutoAdapter adapter = new ProdutoAdapter(context.getContext(), Arrays.asList(produtos));
             final ListView listView = (ListView) context.getActivity().findViewById(R.id.list_produto);
 
+<<<<<<< HEAD
             listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
@@ -68,6 +86,8 @@ public class PegaProdutosTask extends AsyncTask<Void, Void, String> {
                 }
             });
 
+=======
+>>>>>>> branchIgorv3
             listView.setAdapter(adapter);
         }
     }

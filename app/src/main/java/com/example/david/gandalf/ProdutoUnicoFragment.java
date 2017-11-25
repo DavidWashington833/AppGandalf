@@ -1,6 +1,8 @@
 package com.example.david.gandalf;
 
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -15,8 +17,13 @@ import android.widget.Toast;
 import com.example.david.gandalf.helpers.CarrinhoSingletonHelper;
 import com.example.david.gandalf.models.Produto;
 import com.example.david.gandalf.tasks.PegaProdutoUnicoTask;
+<<<<<<< HEAD
 import com.example.david.gandalf.tasks.PegaProdutosTask;
 import com.google.gson.Gson;
+=======
+
+import static android.content.Intent.getIntent;
+>>>>>>> branchIgorv3
 
 
 /**
@@ -26,11 +33,22 @@ public class ProdutoUnicoFragment extends Fragment {
 
     public ImageView imgP;
     public TextView nomeP, codP, precoP,descP;
+<<<<<<< HEAD
     public Button comprar;
     public Produto produtoP;
+=======
+    EditText hiddenId;
+    String id;
+>>>>>>> branchIgorv3
 
     public ProdutoUnicoFragment() {
         // Required empty public constructor
+    }
+
+    @SuppressLint("ValidFragment")
+    public ProdutoUnicoFragment(String id) {
+        // Required empty public constructor
+        this.id = id;
     }
 
     @Override
@@ -43,6 +61,7 @@ public class ProdutoUnicoFragment extends Fragment {
         precoP = (TextView) view.findViewById(R.id.precoProduto);
         descP = (TextView) view.findViewById(R.id.descProduto);
         imgP = (ImageView) view.findViewById(R.id.imgProduto);
+<<<<<<< HEAD
 
         new PegaProdutoUnicoTask(ProdutoUnicoFragment.this).execute();
         comprar = (Button) view.findViewById(R.id.btnComprar);
@@ -59,6 +78,19 @@ public class ProdutoUnicoFragment extends Fragment {
 
             }
         });
+=======
+        hiddenId = (EditText) view.findViewById(R.id.hiddenIdProd);
+
+        Intent intent = getActivity().getIntent();
+        String t = intent.getStringExtra("idProduto");
+
+        if(t != null) {
+            new PegaProdutoUnicoTask(ProdutoUnicoFragment.this, t).execute();
+        } else {
+            new PegaProdutoUnicoTask(ProdutoUnicoFragment.this, id).execute();
+        }
+
+>>>>>>> branchIgorv3
 
         return view;
     }

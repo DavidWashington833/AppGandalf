@@ -11,6 +11,15 @@ public class Produto {
     private String descontoPromocao;
     private String qtdMinEstoque;
     private String imagem;
+    private String descProduto;
+
+    public String getDescProduto() {
+        return descProduto;
+    }
+
+    public void setDescProduto(String descProduto) {
+        this.descProduto = descProduto;
+    }
 
     public String getIdProduto() {
         return idProduto;
