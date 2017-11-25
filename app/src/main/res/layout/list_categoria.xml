@@ -21,10 +21,12 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="0" />
+
     <ListView
         android:id="@android:id/list"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_height="match_parent"
+        android:background="#AA000000">
 
     </ListView>
 </LinearLayout>

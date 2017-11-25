@@ -9,61 +9,11 @@
     android:background="@drawable/backgroundpt3"
     tools:context="com.example.david.gandalf.CadastroActivity">
 
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0"
-        android:gravity="center|top"
-        android:orientation="vertical">
-
-        <TextView
-            style="@style/TextDestaque"
-            android:gravity="left"
-            android:text="Olá jovem cavaleiro!" />
-        <TextView
-            android:text="Deseja se juntar a nós? Primeiro, conte-nos um pouco sobre você."
-            style="@style/TextApoio"
-            android:gravity="left"
-            android:layout_marginTop="0dp" />
-
-        <TextView
-            android:text="Nome Completo"
-            style="@style/Label" />
-        <EditText
-            android:id="@+id/main_nome"
-            android:hint="Digite seu Nome Completo aqui"
-            android:inputType="textPersonName"
-            style="@style/TextView" />
-
-        <TextView
-            android:text="Data de Nascimento"
-            style="@style/Label" />
-        <EditText
-            android:id="@+id/main_nascimento"
-            android:inputType="date"
-            android:hint="DD/MM/AA"
-            style="@style/TextView"/>
-
-        <TextView
-            android:text="CPF"
-            style="@style/Label" />
-        <EditText
-            android:id="@+id/main_cpf"
-            android:inputType="number"
-            android:hint="000.000.000-00"
-            style="@style/TextView"/>
-    </LinearLayout>
-
-    <LinearLayout
+    <FrameLayout
+        android:id="@+id/cadastro_frame"
         android:layout_width="match_parent"
-        android:layout_height="0dip"
-        android:layout_weight="1"
-        android:gravity="center|bottom"
-        android:orientation="vertical">
-        <Button
-            android:id="@+id/main_btn"
-            android:text="Próxima Etapa"
-            style="@style/Buttons" />
-    </LinearLayout>
+        android:layout_height="match_parent"
+        android:name="com.example.david.gandalf.PrincipalFragment">
+    </FrameLayout>
 
 </LinearLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundpt3"
+    android:orientation="vertical"
+    tools:context="com.example.david.gandalf.CadastroActivity">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:gravity="center|top"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/TextDestaque"
+            android:gravity="left"
+            android:text="Olá jovem cavaleiro!" />
+
+        <TextView
+            style="@style/TextApoio"
+            android:layout_marginTop="0dp"
+            android:gravity="left"
+            android:text="Deseja se juntar a nós? Primeiro, conte-nos um pouco sobre você." />
+
+        <TextView
+            style="@style/Label"
+            android:text="Nome Completo" />
+
+        <EditText
+            android:id="@+id/main_nome"
+            style="@style/TextView"
+            android:hint="Digite seu Nome Completo aqui"
+            android:inputType="textPersonName" />
+
+        <TextView
+            style="@style/Label"
+            android:text="Data de Nascimento" />
+
+        <EditText
+            android:id="@+id/main_nascimento"
+            style="@style/TextView"
+            android:hint="DD/MM/AA"
+            android:inputType="date" />
+
+        <TextView
+            style="@style/Label"
+            android:text="CPF" />
+
+        <EditText
+            android:id="@+id/main_cpf"
+            style="@style/TextView"
+            android:hint="000.000.000-00"
+            android:inputType="number" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:gravity="center|bottom"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/cadastro_proximo_pt1"
+            style="@style/Buttons"
+            android:text="Próxima Etapa" />
+    </LinearLayout>
+
+</LinearLayout>
