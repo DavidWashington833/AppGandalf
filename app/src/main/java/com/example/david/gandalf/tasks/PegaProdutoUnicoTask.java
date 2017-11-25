@@ -21,10 +21,7 @@ import org.w3c.dom.Text;
 public class PegaProdutoUnicoTask extends AsyncTask<Void, Void, String> {
     private ProdutoUnicoFragment context;
     private ProgressDialog dialog;
-<<<<<<< HEAD
-=======
     private String id;
->>>>>>> branchIgorv3
 
     public PegaProdutoUnicoTask(ProdutoUnicoFragment context) {
         this.context = context;
@@ -37,11 +34,7 @@ public class PegaProdutoUnicoTask extends AsyncTask<Void, Void, String> {
 
     @Override
     protected void onPreExecute() {
-<<<<<<< HEAD
-        dialog = ProgressDialog.show(context.getContext(), "Aguarde", "Buscando cliente...", true, true);
-=======
         dialog = ProgressDialog.show(context.getContext(), "Aguarde", "Carregando Produto...", true, true);
->>>>>>> branchIgorv3
     }
 
     @Override
@@ -55,11 +48,9 @@ public class PegaProdutoUnicoTask extends AsyncTask<Void, Void, String> {
 
     @Override
     protected void onPostExecute(String resposta) {
-<<<<<<< HEAD
         dialog.dismiss();
-=======
         System.out.println(resposta);
->>>>>>> branchIgorv3
+
         if (!resposta.equals("null")) {
             Produto p = new Gson().fromJson(resposta, Produto.class);
 
@@ -67,12 +58,9 @@ public class PegaProdutoUnicoTask extends AsyncTask<Void, Void, String> {
             TextView codP = (TextView) context.getActivity().findViewById(R.id.codigoProduto);
             TextView precoP = (TextView) context.getActivity().findViewById(R.id.precoProduto);
             ImageView imgP = (ImageView) context.getActivity().findViewById(R.id.imgProduto);
-<<<<<<< HEAD
 
             context.produtoP = p;
-=======
             TextView descP = (TextView) context.getActivity().findViewById(R.id.descProduto);
->>>>>>> branchIgorv3
 
             nomeP.setText(p.getNomeProduto());
             codP.setText(p.getIdProduto());

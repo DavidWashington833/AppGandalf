@@ -28,14 +28,7 @@ import java.util.Arrays;
 public class PegaProdutosTask extends AsyncTask<Void, Void, String> {
     private String id;
     private ProdutoFragment context;
-<<<<<<< HEAD
-//    private ProdutoUnicoFragment teste;
 
-    public PegaProdutosTask(ProdutoFragment context) {
-        this.context = context;
-//        this.teste = teste;
-}
-=======
     private ProgressDialog dialog;
 
     public PegaProdutosTask(ProdutoFragment context) {
@@ -46,7 +39,6 @@ public class PegaProdutosTask extends AsyncTask<Void, Void, String> {
         this.context = context;
         this.id = id;
     }
->>>>>>> branchIgorv3
 
 
     @Override
@@ -70,24 +62,6 @@ public class PegaProdutosTask extends AsyncTask<Void, Void, String> {
             final ProdutoAdapter adapter = new ProdutoAdapter(context.getContext(), Arrays.asList(produtos));
             final ListView listView = (ListView) context.getActivity().findViewById(R.id.list_produto);
 
-<<<<<<< HEAD
-            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                @Override
-                public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-
-//                   TextView tx = (TextView) teste.getActivity().findViewById(R.id.codigoProduto);
-
-//                    EditText reclicado = (EditText) context.getActivity().findViewById(R.id.hiddenIdProd);
-//                    reclicado.setText("0");
-//                    Produto p = (Produto) adapter.getItem(i);
-
-//                    EditText id = (EditText) context.getActivity().findViewById(R.id.hiddenIdProd);
-//                    id.setText(p.getIdProduto().toString());
-                }
-            });
-
-=======
->>>>>>> branchIgorv3
             listView.setAdapter(adapter);
         }
     }

@@ -22,18 +22,7 @@ public class CategoriaFragment extends ListFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.list_categoria, container, false);
-<<<<<<< HEAD
-=======
-        reclicado = (EditText) view.findViewById(R.id.hiddenReclicado);
 
-//        if(reclicado.getText().equals(reclicado)){
-//            new PegaCategoriasTask(CategoriaFragment.this, container).execute();
-//        } else{
-//            new PegaProdutosCategoriaTask(CategoriaFragment.this, container).execute();
-//            reclicado.setText("0");
-//        }
-
->>>>>>> branchIgorv3
         new PegaCategoriasTask(CategoriaFragment.this, container).execute();
 
         return view;

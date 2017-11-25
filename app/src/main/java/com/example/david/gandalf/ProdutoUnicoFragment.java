@@ -17,13 +17,10 @@ import android.widget.Toast;
 import com.example.david.gandalf.helpers.CarrinhoSingletonHelper;
 import com.example.david.gandalf.models.Produto;
 import com.example.david.gandalf.tasks.PegaProdutoUnicoTask;
-<<<<<<< HEAD
 import com.example.david.gandalf.tasks.PegaProdutosTask;
 import com.google.gson.Gson;
-=======
 
 import static android.content.Intent.getIntent;
->>>>>>> branchIgorv3
 
 
 /**
@@ -33,13 +30,10 @@ public class ProdutoUnicoFragment extends Fragment {
 
     public ImageView imgP;
     public TextView nomeP, codP, precoP,descP;
-<<<<<<< HEAD
     public Button comprar;
     public Produto produtoP;
-=======
     EditText hiddenId;
     String id;
->>>>>>> branchIgorv3
 
     public ProdutoUnicoFragment() {
         // Required empty public constructor
@@ -61,10 +55,10 @@ public class ProdutoUnicoFragment extends Fragment {
         precoP = (TextView) view.findViewById(R.id.precoProduto);
         descP = (TextView) view.findViewById(R.id.descProduto);
         imgP = (ImageView) view.findViewById(R.id.imgProduto);
-<<<<<<< HEAD
-
-        new PegaProdutoUnicoTask(ProdutoUnicoFragment.this).execute();
         comprar = (Button) view.findViewById(R.id.btnComprar);
+
+
+//        new PegaProdutoUnicoTask(ProdutoUnicoFragment.this).execute();
 
 
         comprar.setOnClickListener(new View.OnClickListener() {
@@ -78,7 +72,6 @@ public class ProdutoUnicoFragment extends Fragment {
 
             }
         });
-=======
         hiddenId = (EditText) view.findViewById(R.id.hiddenIdProd);
 
         Intent intent = getActivity().getIntent();
@@ -89,8 +82,6 @@ public class ProdutoUnicoFragment extends Fragment {
         } else {
             new PegaProdutoUnicoTask(ProdutoUnicoFragment.this, id).execute();
         }
-
->>>>>>> branchIgorv3
 
         return view;
     }
