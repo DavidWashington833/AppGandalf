@@ -11,7 +11,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.david.gandalf.tasks.PegaProdutoUnicoTask;
-import com.example.david.gandalf.tasks.PegaProdutosTask;
 
 
 /**
