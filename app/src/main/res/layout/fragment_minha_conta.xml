@@ -40,7 +40,6 @@
                     android:text="Nome Completo" />
 
                 <TextView
-                    android:id="@+id/txtNomeCompleto"
                     style="@style/TextInfos"
                     android:text="Felipe A. Miconi" />
 
@@ -50,7 +49,6 @@
                     android:text="Data de Nascimento" />
 
                 <TextView
-                    android:id="@+id/txtDataNascimento"
                     style="@style/TextInfos"
                     android:text="15/01/1997" />
 
@@ -60,7 +58,6 @@
                     android:text="CPF" />
 
                 <TextView
-                    android:id="@+id/txtCPF"
                     style="@style/TextInfos"
                     android:text="466.854.508-27" />
             </LinearLayout>
@@ -82,7 +79,6 @@
                         style="@style/TextTitulo"
                         android:text="Informações de Contato" />
                     <Button
-                        android:id="@+id/btnEditarContato"
                         style="@style/ButtonsEdit"
                         android:text="Editar" />
                 </LinearLayout>
@@ -93,7 +89,6 @@
                     android:text="Celular" />
 
                 <TextView
-                    android:id="@+id/txtTelefoneCelular"
                     style="@style/TextInfos"
                     android:text="(11) 98271-8271" />
 
@@ -103,7 +98,6 @@
                     android:text="Telefone Residencial" />
 
                 <TextView
-                    android:id="@+id/txtTelefoneResidencial"
                     style="@style/TextInfos"
                     android:text="(11) 3683-3683" />
 
@@ -113,7 +107,6 @@
                     android:text="Telefone Comercial" />
 
                 <TextView
-                    android:id="@+id/txtTelefoneComercial"
                     style="@style/TextInfos"
                     android:text="(11) 3686-3686" />
             </LinearLayout>
@@ -144,94 +137,22 @@
                     android:layout_marginBottom="0dp"
                     android:text="Endereço" />
                 <TextView
-                    android:id="@+id/txtRua"
                     style="@style/TextInfos"
                     android:text="Rua de Exemplo, 00" />
-                    android:text="País/UF" />
-                <LinearLayout
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
 
-                    <TextView
-                        style="@style/TextInfos"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="0dp"
-                        android:paddingRight="0dp"
-                        android:text="Brasil" />
-
-                    <TextView
-                        style="@style/TextInfos"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="0dp"
-                        android:layout_marginRight="0dp"
-                        android:text="," />
-                    <TextView
-                        style="@style/TextInfos"
-                        android:text="SP"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-                </LinearLayout>
                 <TextView
                     style="@style/Label"
                     android:layout_marginBottom="0dp"
                     android:text="Bairro / Cidade" />
                 <TextView
-                    android:id="@+id/txtCidade"
                     style="@style/TextInfos"
                     android:text="Bairro, Cidade" />
-                    android:text="Endereço" />
-
-                <LinearLayout
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        style="@style/TextInfos"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="0dp"
-                        android:paddingRight="0dp"
-                        android:text="Rua das Batatas" />
-
-                    <TextView
-                        style="@style/TextInfos"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="0dp"
-                        android:layout_marginRight="0dp"
-                        android:text="," />
-
-                    <TextView
-                        style="@style/TextInfos"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="0dp"
-                        android:text="95" />
-
-                    <TextView
-                        style="@style/TextInfos"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="0dp"
-                        android:layout_marginRight="0dp"
-                        android:text="," />
-                    <TextView
-                        style="@style/TextInfos"
-                        android:text="Bloco C1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-                </LinearLayout>
 
                 <TextView
                     style="@style/Label"
                     android:layout_marginBottom="0dp"
                     android:text="CEP" />
                 <TextView
-                    android:id="@+id/txtCEP"
                     style="@style/TextInfos"
                     android:text="0621-210" />
             </LinearLayout>
@@ -260,80 +181,18 @@
                 <TextView
                     style="@style/Label"
                     android:layout_marginBottom="0dp"
-                    android:text="País/UF" />
-                <LinearLayout
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        style="@style/TextInfos"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="0dp"
-                        android:paddingRight="0dp"
-                        android:text="Brasil" />
-
-                    <TextView
-                        style="@style/TextInfos"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="0dp"
-                        android:layout_marginRight="0dp"
-                        android:text="," />
-                    <TextView
-                        style="@style/TextInfos"
-                        android:text="SP"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-                </LinearLayout>
+                    android:text="Endereço" />
+                <TextView
+                    style="@style/TextInfos"
+                    android:text="Rua de Exemplo, 00" />
 
                 <TextView
                     style="@style/Label"
                     android:layout_marginBottom="0dp"
-                    android:text="Endereço" />
-
-                <LinearLayout
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        style="@style/TextInfos"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="0dp"
-                        android:paddingRight="0dp"
-                        android:text="Rua das Batatas" />
-
-                    <TextView
-                        style="@style/TextInfos"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="0dp"
-                        android:layout_marginRight="0dp"
-                        android:text="," />
-
-                    <TextView
-                        style="@style/TextInfos"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="0dp"
-                        android:text="95" />
-
-                    <TextView
-                        style="@style/TextInfos"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="0dp"
-                        android:layout_marginRight="0dp"
-                        android:text="," />
-                    <TextView
-                        style="@style/TextInfos"
-                        android:text="Bloco C1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-                </LinearLayout>
+                    android:text="Bairro / Cidade" />
+                <TextView
+                    style="@style/TextInfos"
+                    android:text="Bairro, Cidade" />
 
                 <TextView
                     style="@style/Label"

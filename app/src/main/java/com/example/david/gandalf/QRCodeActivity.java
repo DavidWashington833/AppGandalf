@@ -11,8 +11,6 @@ import android.os.Bundle;
 import android.webkit.URLUtil;
 import android.widget.Toast;
 
-import com.example.david.gandalf.tasks.PegaProdutoUnicoTask;
-
 import javax.xml.transform.Result;
 
 import me.dm7.barcodescanner.zxing.ZXingScannerView;
@@ -50,17 +48,22 @@ public class QRCodeActivity extends AppCompatActivity {
         scannerView.setResultHandler(new ZXingScannerView.ResultHandler() {
             @Override
             public void handleResult(com.google.zxing.Result result) {
-
+                final ZXingScannerView.ResultHandler rh = this;
                 String resultado = result.getText();
-                resultado = resultado.replace("G", "");
-                Intent intent = new Intent(QRCodeActivity.this, MainActivity.class);
-                intent.putExtra("idProduto", resultado);
-                setResult(RESULT_OK,intent);
+
+                if (URLUtil.isValidUrl(String.valueOf(resultado))) {
+                    Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(resultado));
+                    startActivity(browserIntent);
+                } else {
+                }
+
+                Intent returnIntent = new Intent();
+                returnIntent.putExtra("qrcode", resultado);
+                setResult(RESULT_OK, returnIntent);
                 finish();
             }
 
         });
-
         scannerView.startCamera();
     }
 
