@@ -7,35 +7,35 @@ import java.io.Serializable;
  */
 
 public class Pedido implements Serializable {
-    private int idPedido;
-    private int idCliente;
-    private int idStatus;
+    private String idPedido;
+    private String idCliente;
+    private String idStatus;
     private String dataPedido;
-    private int idTipoPagto;
-    private int idEndereco;
-    private int idAplicacao;
+    private String idTipoPagto;
+    private String idEndereco;
+    private String idAplicacao;
 
-    public int getIdPedido() {
+    public String getIdPedido() {
         return idPedido;
     }
 
-    public void setIdPedido(int idPedido) {
+    public void setIdPedido(String idPedido) {
         this.idPedido = idPedido;
     }
 
-    public int getIdCliente() {
+    public String getIdCliente() {
         return idCliente;
     }
 
-    public void setIdCliente(int idCliente) {
+    public void setIdCliente(String idCliente) {
         this.idCliente = idCliente;
     }
 
-    public int getIdStatus() {
+    public String getIdStatus() {
         return idStatus;
     }
 
-    public void setIdStatus(int idStatus) {
+    public void setIdStatus(String idStatus) {
         this.idStatus = idStatus;
     }
 
@@ -47,27 +47,27 @@ public class Pedido implements Serializable {
         this.dataPedido = dataPedido;
     }
 
-    public int getIdTipoPagto() {
+    public String getIdTipoPagto() {
         return idTipoPagto;
     }
 
-    public void setIdTipoPagto(int idTipoPagto) {
+    public void setIdTipoPagto(String idTipoPagto) {
         this.idTipoPagto = idTipoPagto;
     }
 
-    public int getIdEndereco() {
+    public String getIdEndereco() {
         return idEndereco;
     }
 
-    public void setIdEndereco(int idEndereco) {
+    public void setIdEndereco(String idEndereco) {
         this.idEndereco = idEndereco;
     }
 
-    public int getIdAplicacao() {
+    public String getIdAplicacao() {
         return idAplicacao;
     }
 
-    public void setIdAplicacao(int idAplicacao) {
+    public void setIdAplicacao(String idAplicacao) {
         this.idAplicacao = idAplicacao;
     }
 }

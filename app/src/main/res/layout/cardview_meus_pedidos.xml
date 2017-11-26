@@ -67,12 +67,12 @@
                 <TextView
                     style="@style/Label"
                     android:layout_marginBottom="0dp"
-                    android:text="Número do Pedido" />
+                    android:text="Valor da Compra" />
 
                 <TextView
-                    android:id="@+id/txtNumeroPedido"
+                    android:id="@+id/txtValorCompra"
                     style="@style/TextInfos"
-                    android:text="Número do Pedido" />
+                    android:text="Valor da Compra" />
             </LinearLayout>
 
             <LinearLayout
@@ -83,9 +83,10 @@
                 <TextView
                     style="@style/Label"
                     android:layout_marginBottom="0dp"
-                    android:text="Qtd" />
+                    android:text="Pedido" />
 
                 <TextView
+                    android:id="@+id/txtNumeroPedido"
                     style="@style/TextInfos"
                     android:text="2" />
             </LinearLayout>

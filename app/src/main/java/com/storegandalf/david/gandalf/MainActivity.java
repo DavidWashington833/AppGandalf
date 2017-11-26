@@ -87,6 +87,17 @@ public class MainActivity extends AppCompatActivity {
                             return true;
                         }
 
+                        if (menuItem.getItemId() == R.id.menu_pedidos) {
+                            if (logado == 0){
+                                chamaFragment(new PermissaoFragment());
+
+                            } else {
+                                chamaFragment(new MeusPedidosFragment(logado));
+                            }
+
+                            return true;
+                        }
+
                         if (menuItem.getItemId() == R.id.menu_qrcode) {
                             Intent newAct = new Intent(MainActivity.this, QRCodeActivity.class);
                             startActivityForResult(newAct, 1);
@@ -95,10 +106,10 @@ public class MainActivity extends AppCompatActivity {
 
                         if (menuItem.getItemId() == R.id.menu_pedidos) {
                             if (logado == 0){
-                                chamaFragment(new PermissaoFragment());
+                                chamaFragmentAdd(new PermissaoFragment());
 
                             } else {
-                                chamaFragment(new MeusPedidosFragment());
+                                chamaFragmentAdd(new MeusPedidosFragment());
                             }
                         }
 
