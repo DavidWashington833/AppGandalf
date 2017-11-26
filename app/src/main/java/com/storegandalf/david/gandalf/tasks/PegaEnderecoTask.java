@@ -42,8 +42,6 @@ public class PegaEnderecoTask extends AsyncTask<Void, Void, String> {
         dialog.dismiss();
 
         if (!resposta.equals("null")) {
-            Endereco[] enderecos = new Gson().fromJson(resposta, Endereco[].class);
-            Endereco endereco = enderecos[0];
 
             EditText campCep = (EditText) context.getActivity().findViewById(R.id.minha_conta_cep);
             EditText campEndereco = (EditText) context.getActivity().findViewById(R.id.minha_conta_endereco);
@@ -54,14 +52,31 @@ public class PegaEnderecoTask extends AsyncTask<Void, Void, String> {
             EditText campPais = (EditText) context.getActivity().findViewById(R.id.minha_conta_pais);
             EditText campUF = (EditText) context.getActivity().findViewById(R.id.minha_conta_uf);
 
-            campCep.setText(endereco.getCEPEndereco());
-            campEndereco.setText(endereco.getNomeEndereco());
-            campNumero.setText(endereco.getNumeroEndereco());
-            campCidade.setText(endereco.getCidadeEndereco());
-            campLogradouro.setText(endereco.getLogradouroEndereco());
-            campComplemento.setText(endereco.getComplementoEndereco());
-            campPais.setText(endereco.getPaisEndereco());
-            campUF.setText(endereco.getUFEndereco());
+            Endereco[] enderecos = new Gson().fromJson(resposta, Endereco[].class);
+
+            if (resposta.equals("[]")){
+                campCep.setText("");
+                campEndereco.setText("");
+                campNumero.setText("");
+                campCidade.setText("");
+                campLogradouro.setText("");
+                campComplemento.setText("");
+                campPais.setText("");
+                campUF.setText("");
+            } else {
+
+                Endereco endereco = enderecos[0];
+
+                campCep.setText(endereco.getCEPEndereco());
+                campEndereco.setText(endereco.getNomeEndereco());
+                campNumero.setText(endereco.getNumeroEndereco());
+                campCidade.setText(endereco.getCidadeEndereco());
+                campLogradouro.setText(endereco.getLogradouroEndereco());
+                campComplemento.setText(endereco.getComplementoEndereco());
+                campPais.setText(endereco.getPaisEndereco());
+                campUF.setText(endereco.getUFEndereco());
+            }
+
         }
     }
 }
