@@ -44,7 +44,7 @@
                 android:orientation="vertical">
 
                 <Button
-                    android:id="@+id/button2"
+                    android:id="@+id/voltarLojaCarrinho"
                     style="@style/Buttons"
                     android:text="Voltar à Loja" />
             </LinearLayout>

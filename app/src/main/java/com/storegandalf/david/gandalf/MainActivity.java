@@ -17,6 +17,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
+import com.storegandalf.david.gandalf.helpers.CarrinhoSingletonHelper;
+
 import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
@@ -122,7 +124,11 @@ public class MainActivity extends AppCompatActivity {
                         }
 
                         if (menuItem.getItemId() == R.id.menu_carrinho) {
-                            chamaFragment(new CarrinhoFragment());
+                            if (CarrinhoSingletonHelper.getInstance().existeItem() != null && !CarrinhoSingletonHelper.getInstance().existeItem().equals("[]")){
+                                chamaFragment(new CarrinhoFragment());
+                            }else {
+                                chamaFragment(new CarrinhoVazioFragment());
+                            }
                         }
 
 
@@ -176,7 +182,12 @@ public class MainActivity extends AppCompatActivity {
         }
         else {
             if(item.getItemId() == R.id.action_carrinho) {
-                chamaFragment(new CarrinhoFragment());
+
+                if (CarrinhoSingletonHelper.getInstance().existeItem() != null && !CarrinhoSingletonHelper.getInstance().existeItem().equals("[]")){
+                    chamaFragment(new CarrinhoFragment());
+                }else {
+                    chamaFragment(new CarrinhoVazioFragment());
+                }
             }
 
             if(item.getItemId() == R.id.action_busca) {

@@ -1,5 +1,6 @@
 package com.storegandalf.david.gandalf.helpers;
 
+import com.google.gson.Gson;
 import com.storegandalf.david.gandalf.models.Produto;
 
 import java.util.ArrayList;
@@ -40,5 +41,11 @@ public class CarrinhoSingletonHelper {
                 break;
             }
         }
+    }
+
+    public String existeItem(){
+        String existeItem = new Gson().toJson(CarrinhoSingletonHelper.getInstance().getProduto());
+
+        return existeItem;
     }
 }
