@@ -39,7 +39,7 @@
             android:textColor="@color/colorPrimaryText" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/btnFazerLoginPermissao"
             style="@style/Buttons"
             android:layout_width="150dp"
             android:text="Fazer Login" />
