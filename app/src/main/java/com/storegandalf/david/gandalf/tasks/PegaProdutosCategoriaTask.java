@@ -4,6 +4,7 @@ import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.view.ViewGroup;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.storegandalf.david.gandalf.ProdutosCategoriaFragment;
 import com.storegandalf.david.gandalf.R;
@@ -58,6 +59,7 @@ public class PegaProdutosCategoriaTask extends AsyncTask<Void, Void, String> {
             final ListView listView = (ListView) context.getActivity().findViewById(R.id.list_produto_categoria);
 
             listView.setAdapter(adapter);
+
         }
 
     }

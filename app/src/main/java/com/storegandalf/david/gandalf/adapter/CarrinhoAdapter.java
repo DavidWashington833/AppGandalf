@@ -16,6 +16,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.storegandalf.david.gandalf.CarrinhoVazioFragment;
 import com.storegandalf.david.gandalf.MainActivity;
 import com.storegandalf.david.gandalf.ProdutoUnicoFragment;
 import com.storegandalf.david.gandalf.R;

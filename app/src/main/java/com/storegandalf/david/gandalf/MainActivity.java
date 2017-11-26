@@ -14,6 +14,10 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -30,7 +34,24 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
 
+        SharedPreferences prefs = getSharedPreferences("login", MODE_PRIVATE);
+        final Integer logado = prefs.getInt("idCliente", 0);
+        final String nomeCliente = prefs.getString("nomeCliente", null);
+
+
         navigationView = (NavigationView) findViewById(R.id.navigation_view);
+        View viewMenu = navigationView.getHeaderView(0);
+
+        TextView txtMenuCabecalho = (TextView) viewMenu.findViewById(R.id.txtMenuCabecalho);
+        TextView txtNomeUsuarioMenu = (TextView) viewMenu.findViewById(R.id.txtNomeUsuarioMenu);
+
+        if(logado == 0){
+            txtNomeUsuarioMenu.setText("Olá!");
+            txtMenuCabecalho.setText("Faça login para comprar.");
+        } else {
+            txtNomeUsuarioMenu.setText(nomeCliente + ",");
+            txtMenuCabecalho.setText("seja bem-vindo!");
+        }
 
         navigationView.setNavigationItemSelectedListener(
                 new NavigationView.OnNavigationItemSelectedListener() {
@@ -56,7 +77,13 @@ public class MainActivity extends AppCompatActivity {
                         }
 
                         if (menuItem.getItemId() == R.id.menu_minhaconta) {
-                            chamaFragment(new MinhaContaFragment());
+                            if (logado == 0){
+                                chamaFragment(new PermissaoFragment());
+
+                            } else {
+                                chamaFragment(new MinhaContaFragment());
+                            }
+
                             return true;
                         }
 
@@ -67,11 +94,16 @@ public class MainActivity extends AppCompatActivity {
                         }
 
                         if (menuItem.getItemId() == R.id.menu_pedidos) {
-                            chamaFragment(new MeusPedidosFragment());
+                            if (logado == 0){
+                                chamaFragment(new PermissaoFragment());
+
+                            } else {
+                                chamaFragment(new MeusPedidosFragment());
+                            }
                         }
 
                         if (menuItem.getItemId() == R.id.menu_contato) {
-                            chamaFragment(new ContatoFragment());
+                            chamaFragmentAdd(new ContatoFragment());
                         }
 
                         if (menuItem.getItemId() == R.id.menu_sobre) {
@@ -149,7 +181,6 @@ public class MainActivity extends AppCompatActivity {
             if(resultCode == RESULT_OK){
                 idProduto = data.getStringExtra("idProduto");
                 //chamaFragment(new ProdutoUnicoFragment(idProduto));
-
             }
         }
     }
@@ -173,6 +204,16 @@ public class MainActivity extends AppCompatActivity {
         manager.popBackStackImmediate(backStateName, FragmentManager.POP_BACK_STACK_INCLUSIVE);
         FragmentTransaction transaction = manager.beginTransaction();
         transaction.replace(R.id.frame_principal, fragment);
+        transaction.addToBackStack(backStateName);
+        transaction.commit();
+    }
+
+    public void chamaFragmentAdd(Fragment fragment){
+        String backStateName = fragment.getClass().getName();
+        FragmentManager manager = getSupportFragmentManager();
+        manager.popBackStackImmediate(backStateName, FragmentManager.POP_BACK_STACK_INCLUSIVE);
+        FragmentTransaction transaction = manager.beginTransaction();
+        transaction.add(R.id.frame_principal, fragment);
         transaction.addToBackStack(backStateName);
         transaction.commit();
     }

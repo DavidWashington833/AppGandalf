@@ -3,15 +3,21 @@ package com.storegandalf.david.gandalf;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.Toast;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class ContatoFragment extends Fragment {
+
+    public Button btnEnviarMensagem;
 
 
     public ContatoFragment() {
@@ -23,7 +29,31 @@ public class ContatoFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_contato, container, false);
+        View view = inflater.inflate(R.layout.fragment_contato, container, false);
+
+        btnEnviarMensagem = (Button) view.findViewById(R.id.btnEnviarMensagem);
+
+        btnEnviarMensagem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Toast.makeText(view.getContext(), "Mensagem enviada com sucesso!", Toast.LENGTH_SHORT).show();
+                chamaFragment(new PrincipalFragment());
+
+            }
+        });
+
+        return view;
+    }
+
+    public void chamaFragment(Fragment fragment){
+        String backStateName = fragment.getClass().getName();
+        FragmentManager manager = getActivity().getSupportFragmentManager();
+        manager.popBackStackImmediate(backStateName, FragmentManager.POP_BACK_STACK_INCLUSIVE);
+        FragmentTransaction transaction = manager.beginTransaction();
+        transaction.add(R.id.frame_principal, fragment);
+        transaction.addToBackStack(backStateName);
+        transaction.commit();
     }
 
 }

@@ -58,7 +58,7 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/btnEnviarMensagem"
                 style="@style/Buttons"
                 android:text="Enviar Mensagem" />
         </LinearLayout>

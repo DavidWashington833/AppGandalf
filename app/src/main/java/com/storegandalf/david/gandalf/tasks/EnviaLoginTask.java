@@ -39,7 +39,7 @@ public class EnviaLoginTask extends AsyncTask<Void, Void, String> {
     @Override
     protected void onPostExecute(String resposta) {
         dialog.dismiss();
-        String feadback = "Seu e-mail ou senha está errado. Confere aí!";
+        String feedback = "Seu e-mail ou senha está errado. Confere aí!";
 
         if (!resposta.equals("null")) {
             Cliente cliente = new Gson().fromJson(resposta, Cliente.class);
@@ -47,12 +47,13 @@ public class EnviaLoginTask extends AsyncTask<Void, Void, String> {
             SharedPreferences preferences = context.getSharedPreferences("login", 0);
             SharedPreferences.Editor editor = preferences.edit();
             editor.putInt("idCliente", cliente.getIdCliente());
+            editor.putString("nomeCliente", cliente.getNomeCompletoCliente().toString());
             editor.commit();
 
-            feadback = "Seja bem-vindo, " + cliente.getNomeCompletoCliente() + "! Boas compras! :)";
+            feedback = "Seja bem-vindo, " + cliente.getNomeCompletoCliente() + "! Boas compras! :)";
             context.finish();
         }
 
-        Toast.makeText(context, feadback, Toast.LENGTH_LONG).show();
+        Toast.makeText(context, feedback, Toast.LENGTH_LONG).show();
     }
 }

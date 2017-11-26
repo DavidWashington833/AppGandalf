@@ -59,9 +59,7 @@ public class PegaCategoriasTask extends AsyncTask<Void, Void, String> {
             listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-
                     Categoria c = adapter.getItem(i);
-
                     EditText id = (EditText) context.getActivity().findViewById(R.id.hiddenIdCat);
                     id.setText(c.getIdCategoria().toString());
 
@@ -82,7 +80,7 @@ public class PegaCategoriasTask extends AsyncTask<Void, Void, String> {
         FragmentManager manager = context.getActivity().getSupportFragmentManager();
         manager.popBackStackImmediate(backStateName, FragmentManager.POP_BACK_STACK_INCLUSIVE);
         FragmentTransaction transaction = manager.beginTransaction();
-        transaction.replace(R.id.frame_principal, fragment);
+        transaction.add(R.id.frame_principal, fragment);
         transaction.addToBackStack(backStateName);
         transaction.commit();
     }

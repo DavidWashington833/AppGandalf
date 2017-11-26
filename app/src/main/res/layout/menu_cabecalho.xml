@@ -31,23 +31,23 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/txtNomeUsuarioMenu"
                 style="@style/TextDestaque"
                 android:layout_margin="0dp"
                 android:layout_weight="1"
                 android:gravity="bottom"
-                android:text="Bem Vindo!"
+                android:text=""
                 android:textColor="@color/colorPrimaryText"
                 android:textSize="30sp" />
 
             <TextView
-                android:id="@+id/textViewTexto"
+                android:id="@+id/txtMenuCabecalho"
                 style="@style/TextApoio"
                 android:layout_width="wrap_content"
                 android:layout_margin="0dp"
                 android:layout_weight="1"
                 android:gravity="top"
-                android:text="Faça login para acessar suas informações."
+                android:text=""
                 android:textColor="@color/colorPrimaryText"
                 android:textSize="14sp" />
         </LinearLayout>
