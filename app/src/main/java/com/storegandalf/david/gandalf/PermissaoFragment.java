@@ -31,6 +31,8 @@ public class PermissaoFragment extends Fragment {
         // Inflate the layout for this fragment
         View v  =  inflater.inflate(R.layout.fragment_permissao, container, false);
 
+        btnFazerLoginPermissao = (Button) v.findViewById(R.id.btnFazerLoginPermissao);
+
         btnFazerLoginPermissao.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
