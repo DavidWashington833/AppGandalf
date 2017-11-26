@@ -67,11 +67,12 @@
                 <TextView
                     style="@style/Label"
                     android:layout_marginBottom="0dp"
-                    android:text="Nome" />
+                    android:text="Número do Pedido" />
 
                 <TextView
+                    android:id="@+id/txtNumeroPedido"
                     style="@style/TextInfos"
-                    android:text="Nome do Produto" />
+                    android:text="Número do Pedido" />
             </LinearLayout>
 
             <LinearLayout
