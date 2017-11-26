@@ -1,6 +1,7 @@
 package com.storegandalf.david.gandalf;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -38,22 +39,13 @@ public class ContatoFragment extends Fragment {
             public void onClick(View view) {
 
                 Toast.makeText(view.getContext(), "Mensagem enviada com sucesso!", Toast.LENGTH_SHORT).show();
-                chamaFragment(new PrincipalFragment());
+                Intent newAct = new Intent(getContext(), MainActivity.class);
+                startActivity(newAct);
 
             }
         });
 
         return view;
-    }
-
-    public void chamaFragment(Fragment fragment){
-        String backStateName = fragment.getClass().getName();
-        FragmentManager manager = getActivity().getSupportFragmentManager();
-        manager.popBackStackImmediate(backStateName, FragmentManager.POP_BACK_STACK_INCLUSIVE);
-        FragmentTransaction transaction = manager.beginTransaction();
-        transaction.add(R.id.frame_principal, fragment);
-        transaction.addToBackStack(backStateName);
-        transaction.commit();
     }
 
 }
