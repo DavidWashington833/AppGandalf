@@ -1,11 +1,15 @@
 package com.storegandalf.david.gandalf;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ListView;
 
 import com.storegandalf.david.gandalf.adapter.CarrinhoAdapter;
@@ -23,6 +27,9 @@ import java.util.List;
  */
 public class CarrinhoFragment extends Fragment {
 
+    Button btnContinuarComprando;
+    Button btnFacaCheckout;
+
 
     public CarrinhoFragment() {
         // Required empty public constructor
@@ -36,8 +43,7 @@ public class CarrinhoFragment extends Fragment {
         String result = new Gson().toJson(CarrinhoSingletonHelper.getInstance().getProduto());
 
         if (result != null && !result.equals("[null]")) {
-//                Toast t = Toast.makeText(getContext(), result, Toast.LENGTH_LONG);
-//                t.show();
+
             final Produto[] produtos = new Gson().fromJson(result, Produto[].class);
 
             List<Produto> plist = new ArrayList<Produto>();
@@ -47,26 +53,38 @@ public class CarrinhoFragment extends Fragment {
 
             listView.setAdapter(adapter);
 
+            btnContinuarComprando = (Button) view.findViewById(R.id.btnContinuarComprando);
+
+            btnFacaCheckout = (Button) view.findViewById(R.id.btnFacaCheckout);
+
+            btnContinuarComprando.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent newAct = new Intent(getContext(), MainActivity.class);
+                    startActivity(newAct);
+                }
+            });
+
+            btnFacaCheckout.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    chamaFragmentAdd(new CheckoutPrincipalFragment());
+                }
+            });
+
         }
 
         return view;
-        /*
-        * private Type listType = new TypeToken<List<Endereco>>(){}.getType();
-        *
-        * List<Endereco> lista = new Gson().fromJson(resposta, listType);
-        *
-        * cep.setText(lista.get(0).getCEPEndereco());
-        *
-        * Categoria[] categorias = new Gson().fromJson(resposta, Categoria[].class);
+    }
 
-        final ArrayAdapter<Categoria> adapter = new ArrayAdapter<Categoria>(context.getContext(), android.R.layout.simple_list_item_1, categorias);
-
-        final ListView listView = (ListView) context.getActivity().findViewById(android.R.id.list);
-        *
-        *
-        *
-        * */
-
+    public void chamaFragmentAdd(Fragment fragment){
+        String backStateName = fragment.getClass().getName();
+        FragmentManager manager = getActivity().getSupportFragmentManager();
+        manager.popBackStackImmediate(backStateName, FragmentManager.POP_BACK_STACK_INCLUSIVE);
+        FragmentTransaction transaction = manager.beginTransaction();
+        transaction.add(R.id.frame_principal, fragment);
+        transaction.addToBackStack(backStateName);
+        transaction.commit();
     }
 
 }

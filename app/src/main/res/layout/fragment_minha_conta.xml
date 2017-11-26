@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/backgroundpt3"
-    tools:context="com.example.david.gandalf.MinhaContaFragment">
+    tools:context="com.storegandalf.david.gandalf.MinhaContaFragment">
 
     <ScrollView
         android:layout_width="fill_parent"
@@ -25,57 +25,57 @@
                 style="@style/TextApoio"
                 android:layout_marginTop="0dp"
                 android:gravity="left"
-                android:text="Deseja se juntar a nós? Primeiro, conte-nos um pouco sobre você." />
+                android:text="Veja as informações que temos sobre você!" />
 
             <TextView
                 style="@style/Label"
                 android:text="Nome Completo" />
 
-            <EditText
+            <TextView
                 android:id="@+id/minha_conta_nome"
                 style="@style/TextView"
-                android:hint="Digite seu Nome Completo aqui"
+                android:hint=""
                 android:inputType="textPersonName" />
 
             <TextView
                 style="@style/Label"
                 android:text="Data de Nascimento" />
 
-            <EditText
+            <TextView
 
                 android:id="@+id/minha_conta_nascimento"
                 android:inputType="date"
                 style="@style/TextView"
-                android:hint="DD/MM/AA"/>
+                android:hint=""/>
 
             <TextView
                 style="@style/Label"
                 android:text="CPF" />
 
-            <EditText
+            <TextView
                 android:id="@+id/minha_conta_cpf"
                 android:inputType="number"
                 style="@style/TextView"
-                android:hint="000.000.000-00"/>
+                android:hint=""/>
 
             <TextView
                 style="@style/TextDestaque"
                 android:gravity="left"
-                android:text="Em qual planice você mora?" />
+                android:text="Informações de sua planície" />
 
             <TextView
                 style="@style/TextApoio"
                 android:layout_marginTop="0dp"
                 android:gravity="left"
-                android:text="Agora que sabemos quem você é,nos mostre no mapa qual é seu endereço" />
+                android:text="Confira as suas informações de endereço. São importantes para efetuar entregas!" />
 
             <TextView
                 android:text="CEP"
                 style="@style/Label" />
-            <EditText
+            <TextView
                 android:id="@+id/minha_conta_cep"
                 android:inputType="text"
-                android:hint="00000-000"
+                android:hint=""
                 style="@style/TextView" />
 
             <TextView
@@ -88,16 +88,16 @@
                 android:gravity="center|top"
                 android:orientation="horizontal">
 
-                <EditText
+                <TextView
                     android:id="@+id/minha_conta_endereco"
                     style="@style/TextView"
                     android:layout_width="255dp"
-                    android:hint="Rua de Exemplo"
+                    android:hint=""
                     android:inputType="text" />
-                <EditText
+                <TextView
                     android:id="@+id/minha_conta_numero"
                     android:inputType="text"
-                    android:hint="Nº"
+                    android:hint=""
                     style="@style/TextView"/>
             </LinearLayout>
 
@@ -105,36 +105,36 @@
             <TextView
                 android:text="Cidade"
                 style="@style/Label" />
-            <EditText
+            <TextView
                 android:id="@+id/minha_conta_cidade"
                 android:inputType="text"
-                android:hint="Cidade Nórdica"
+                android:hint=""
                 style="@style/TextView" />
 
 
             <TextView
                 android:text="Logradouro"
                 style="@style/Label" />
-            <EditText
+            <TextView
                 android:id="@+id/minha_conta_logradouro"
                 android:inputType="text"
-                android:hint="Logradouro"
+                android:hint=""
                 style="@style/TextView" />
 
 
             <TextView
-                android:text="Logradouro"
+                android:text="Complemento"
                 style="@style/Label" />
-            <EditText
+            <TextView
                 android:id="@+id/minha_conta_complemento"
                 android:inputType="text"
-                android:hint="Complemento"
+                android:hint=""
                 style="@style/TextView" />
 
             <TextView
                 android:text="Logradouro"
                 style="@style/Label" />
-            <EditText
+            <TextView
                 android:id="@+id/minha_conta_pais"
                 android:inputType="text"
                 android:hint="Pais"
@@ -144,7 +144,7 @@
             <TextView
                 android:text="UF"
                 style="@style/Label" />
-            <EditText
+            <TextView
                 android:id="@+id/minha_conta_uf"
                 android:inputType="text"
                 android:hint="Pais"
@@ -153,85 +153,41 @@
             <TextView
                 style="@style/TextDestaque"
                 android:gravity="left"
-                android:text="Precisamos do seu contato" />
+                android:text="Alô? Quem é?" />
 
             <TextView
                 style="@style/TextApoio"
                 android:layout_marginTop="0dp"
                 android:gravity="left"
-                android:text="Agora que sabemos um pouco sobre você, mostre-nos como entrar em contato" />
+                android:text="Triiiim! Suas informações de contato! :)" />
 
             <TextView
                 android:text="Celular"
                 style="@style/Label" />
-            <EditText
+            <TextView
                 android:id="@+id/minha_conta_celular"
                 android:inputType="number"
-                android:hint="(XX) 0000-0000"
+                android:hint=""
                 style="@style/TextView"/>
 
             <TextView
                 android:text="Telefone Residencial"
                 style="@style/Label" />
-            <EditText
+            <TextView
                 android:id="@+id/minha_conta_residencial"
                 android:inputType="number"
-                android:hint="(XX) 0000-0000"
+                android:hint=""
                 style="@style/TextView" />
 
             <TextView
                 android:text="Telefone Comercial"
                 style="@style/Label" />
-            <EditText
+            <TextView
                 android:id="@+id/minha_conta_comercial"
                 android:inputType="number"
-                android:hint="(XX) 0000-0000"
-                style="@style/TextView" />
-
-
-            <TextView
-                style="@style/TextDestaque"
-                android:gravity="left"
-                android:text="Etapa Final!" />
-
-            <TextView
-                style="@style/TextApoio"
-                android:layout_marginTop="0dp"
-                android:gravity="left"
-                android:text="Seja bem vindo à sociedade! Só falta você escolher seu usuário e senha para se juntar à nós!" />
-
-            <TextView
-                style="@style/Label"
-                android:text="E-mail" />
-
-            <EditText
-                android:id="@+id/minha_conta_email"
+                android:hint=""
                 style="@style/TextView"
-                android:hint="exemplo@dominioex.com.br"
-                android:inputType="textEmailAddress" />
-
-            <TextView
-                style="@style/Label"
-                android:text="Senha" />
-
-            <EditText
-                android:id="@+id/minha_conta_senha"
-                style="@style/TextView"
-                android:hint="Digite uma senha segura"
-                android:inputType="textPassword" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dip"
-                android:layout_weight="1"
-                android:gravity="center|bottom"
-                android:orientation="vertical">
-
-                <Button
-                    android:id="@+id/minha_conta_editar"
-                    style="@style/Buttons"
-                    android:text="Editar" />
-            </LinearLayout>
+                android:paddingBottom="50dp"/>
         </LinearLayout>
 
     </ScrollView>

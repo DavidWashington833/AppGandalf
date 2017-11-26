@@ -43,6 +43,14 @@ public class CarrinhoSingletonHelper {
         }
     }
 
+    public void somaProduto(List<Produto> produto){
+
+        for (int i = 0; i < this.produto.size(); i++){
+
+        }
+
+    }
+
     public String existeItem(){
         String existeItem = new Gson().toJson(CarrinhoSingletonHelper.getInstance().getProduto());
 

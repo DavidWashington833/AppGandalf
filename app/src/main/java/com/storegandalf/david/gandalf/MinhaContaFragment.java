@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.storegandalf.david.gandalf.helpers.MinhaContaHelper;
 import com.storegandalf.david.gandalf.models.Cliente;
@@ -27,22 +28,22 @@ public class MinhaContaFragment extends Fragment {
     private Cliente cliente;
     private Endereco endereco;
 
-    private EditText campNome;
-    private EditText campNascimento;
-    private EditText campCPF;
-    private EditText campCep;
-    private EditText campEndereco;
-    private EditText campNumero;
-    private EditText campCidade;
-    private EditText campLogradouro;
-    private EditText campComplemento;
-    private EditText campPais;
-    private EditText campUF;
-    private EditText campCelular;
-    private EditText campResidencial;
-    private EditText campComercial;
-    private EditText campEmail;
-    private EditText campSenha;
+    private TextView campNome;
+    private TextView campNascimento;
+    private TextView campCPF;
+    private TextView campCep;
+    private TextView campEndereco;
+    private TextView campNumero;
+    private TextView campCidade;
+    private TextView campLogradouro;
+    private TextView campComplemento;
+    private TextView campPais;
+    private TextView campUF;
+    private TextView campCelular;
+    private TextView campResidencial;
+    private TextView campComercial;
+    private TextView campEmail;
+    private TextView campSenha;
 
     public MinhaContaFragment() {
         // Required empty public constructor
@@ -66,51 +67,49 @@ public class MinhaContaFragment extends Fragment {
             new PegaClienteTask(this, idString).execute();
         }
 
-        Button btn = (Button) getActivity().findViewById(R.id.minha_conta_editar);
+        campNome = (TextView) getActivity().findViewById(R.id.minha_conta_nome);
+        campNascimento = (TextView) getActivity().findViewById(R.id.minha_conta_nascimento);
+        campCPF = (TextView) getActivity().findViewById(R.id.minha_conta_cpf);
+        campCep = (TextView) getActivity().findViewById(R.id.minha_conta_cep);
+        campEndereco = (TextView) getActivity().findViewById(R.id.minha_conta_endereco);
+        campNumero = (TextView) getActivity().findViewById(R.id.minha_conta_numero);
+        campCidade = (TextView) getActivity().findViewById(R.id.minha_conta_cidade);
+        campLogradouro = (TextView) getActivity().findViewById(R.id.minha_conta_logradouro);
+        campComplemento = (TextView) getActivity().findViewById(R.id.minha_conta_complemento);
+        campPais = (TextView) getActivity().findViewById(R.id.minha_conta_pais);
+        campUF = (TextView) getActivity().findViewById(R.id.minha_conta_uf);
+        campCelular = (TextView) getActivity().findViewById(R.id.minha_conta_celular);
+        campResidencial = (TextView) getActivity().findViewById(R.id.minha_conta_residencial);
+        campComercial = (TextView) getActivity().findViewById(R.id.minha_conta_comercial);
 
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                campNome = (EditText) getActivity().findViewById(R.id.minha_conta_nome);
-                campNascimento = (EditText) getActivity().findViewById(R.id.minha_conta_nascimento);
-                campCPF = (EditText) getActivity().findViewById(R.id.minha_conta_cpf);
-                campCep = (EditText) getActivity().findViewById(R.id.minha_conta_cep);
-                campEndereco = (EditText) getActivity().findViewById(R.id.minha_conta_endereco);
-                campNumero = (EditText) getActivity().findViewById(R.id.minha_conta_numero);
-                campCidade = (EditText) getActivity().findViewById(R.id.minha_conta_cidade);
-                campLogradouro = (EditText) getActivity().findViewById(R.id.minha_conta_logradouro);
-                campComplemento = (EditText) getActivity().findViewById(R.id.minha_conta_complemento);
-                campPais = (EditText) getActivity().findViewById(R.id.minha_conta_pais);
-                campUF = (EditText) getActivity().findViewById(R.id.minha_conta_uf);
-                campCelular = (EditText) getActivity().findViewById(R.id.minha_conta_celular);
-                campResidencial = (EditText) getActivity().findViewById(R.id.minha_conta_residencial);
-                campComercial = (EditText) getActivity().findViewById(R.id.minha_conta_comercial);
-                campEmail = (EditText) getActivity().findViewById(R.id.minha_conta_email);
-                campSenha = (EditText) getActivity().findViewById(R.id.minha_conta_senha);
-
-                Cliente cliente = new Cliente();
-                Endereco endereco = new Endereco();
-
-                cliente.setNomeCompletoCliente(campNome.getText().toString());
-                cliente.setDtNascCliente(campNascimento.getText().toString());
-                cliente.setCpfCliente(campCPF.getText().toString());
-                endereco.setCEPEndereco(campCep.getText().toString());
-                endereco.setNomeEndereco(campEndereco.getText().toString());
-                endereco.setNumeroEndereco(campNumero.getText().toString());
-                endereco.setCidadeEndereco(campCidade.getText().toString());
-                endereco.setLogradouroEndereco(campLogradouro.getText().toString());
-                endereco.setComplementoEndereco(campComplemento.getText().toString());
-                endereco.setPaisEndereco(campPais.getText().toString());
-                endereco.setUFEndereco(campUF.getText().toString());
-                cliente.setCelularCliente(campCelular.getText().toString());
-                cliente.setTelResidencialCliente(campResidencial.getText().toString());
-                cliente.setTelComercialCliente(campComercial.getText().toString());
-                cliente.setEmailCliente(campEmail.getText().toString());
-                cliente.setSenhaCliente(campSenha.getText().toString());
-
-            }
-        });
+//        btn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//
+//
+//                Cliente cliente = new Cliente();
+//                Endereco endereco = new Endereco();
+//
+//                cliente.setNomeCompletoCliente(campNome.getText().toString());
+//                cliente.setDtNascCliente(campNascimento.getText().toString());
+//                cliente.setCpfCliente(campCPF.getText().toString());
+//                endereco.setCEPEndereco(campCep.getText().toString());
+//                endereco.setNomeEndereco(campEndereco.getText().toString());
+//                endereco.setNumeroEndereco(campNumero.getText().toString());
+//                endereco.setCidadeEndereco(campCidade.getText().toString());
+//                endereco.setLogradouroEndereco(campLogradouro.getText().toString());
+//                endereco.setComplementoEndereco(campComplemento.getText().toString());
+//                endereco.setPaisEndereco(campPais.getText().toString());
+//                endereco.setUFEndereco(campUF.getText().toString());
+//                cliente.setCelularCliente(campCelular.getText().toString());
+//                cliente.setTelResidencialCliente(campResidencial.getText().toString());
+//                cliente.setTelComercialCliente(campComercial.getText().toString());
+//                cliente.setEmailCliente(campEmail.getText().toString());
+//                cliente.setSenhaCliente(campSenha.getText().toString());
+//
+//            }
+//        });
 
         super.onActivityCreated(savedInstanceState);
     }

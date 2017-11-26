@@ -3,6 +3,7 @@ package com.storegandalf.david.gandalf.tasks;
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.google.gson.Gson;
 import com.storegandalf.david.gandalf.MinhaContaFragment;
@@ -43,13 +44,13 @@ public class PegaClienteTask extends AsyncTask<Void, Void, String> {
         if (!resposta.equals("null")) {
             Cliente cliente = new Gson().fromJson(resposta, Cliente.class);
 
-            EditText campNome = (EditText) context.getActivity().findViewById(R.id.minha_conta_nome);
-            EditText campCPF = (EditText) context.getActivity().findViewById(R.id.minha_conta_cpf);
-            EditText campNascimento = (EditText) context.getActivity().findViewById(R.id.minha_conta_nascimento);
-            EditText campCelular = (EditText) context.getActivity().findViewById(R.id.minha_conta_celular);
-            EditText campResidencial = (EditText) context.getActivity().findViewById(R.id.minha_conta_residencial);
-            EditText campComercial = (EditText) context.getActivity().findViewById(R.id.minha_conta_comercial);
-            EditText campEmail = (EditText) context.getActivity().findViewById(R.id.minha_conta_email);
+            TextView campNome = (TextView) context.getActivity().findViewById(R.id.minha_conta_nome);
+            TextView campCPF = (TextView) context.getActivity().findViewById(R.id.minha_conta_cpf);
+            TextView campNascimento = (TextView) context.getActivity().findViewById(R.id.minha_conta_nascimento);
+            TextView campCelular = (TextView) context.getActivity().findViewById(R.id.minha_conta_celular);
+            TextView campResidencial = (TextView) context.getActivity().findViewById(R.id.minha_conta_residencial);
+            TextView campComercial = (TextView) context.getActivity().findViewById(R.id.minha_conta_comercial);
+            TextView campEmail = (TextView) context.getActivity().findViewById(R.id.minha_conta_email);
 
             campNome.setText(cliente.getNomeCompletoCliente());
             campCPF.setText(cliente.getCpfCliente());

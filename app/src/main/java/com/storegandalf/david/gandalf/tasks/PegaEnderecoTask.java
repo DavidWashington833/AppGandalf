@@ -3,6 +3,7 @@ package com.storegandalf.david.gandalf.tasks;
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.google.gson.Gson;
 import com.storegandalf.david.gandalf.MinhaContaFragment;
@@ -43,14 +44,14 @@ public class PegaEnderecoTask extends AsyncTask<Void, Void, String> {
 
         if (!resposta.equals("null")) {
 
-            EditText campCep = (EditText) context.getActivity().findViewById(R.id.minha_conta_cep);
-            EditText campEndereco = (EditText) context.getActivity().findViewById(R.id.minha_conta_endereco);
-            EditText campNumero = (EditText) context.getActivity().findViewById(R.id.minha_conta_numero);
-            EditText campCidade = (EditText) context.getActivity().findViewById(R.id.minha_conta_cidade);
-            EditText campLogradouro = (EditText) context.getActivity().findViewById(R.id.minha_conta_logradouro);
-            EditText campComplemento = (EditText) context.getActivity().findViewById(R.id.minha_conta_complemento);
-            EditText campPais = (EditText) context.getActivity().findViewById(R.id.minha_conta_pais);
-            EditText campUF = (EditText) context.getActivity().findViewById(R.id.minha_conta_uf);
+            TextView campCep = (TextView) context.getActivity().findViewById(R.id.minha_conta_cep);
+            TextView campEndereco = (TextView) context.getActivity().findViewById(R.id.minha_conta_endereco);
+            TextView campNumero = (TextView) context.getActivity().findViewById(R.id.minha_conta_numero);
+            TextView campCidade = (TextView) context.getActivity().findViewById(R.id.minha_conta_cidade);
+            TextView campLogradouro = (TextView) context.getActivity().findViewById(R.id.minha_conta_logradouro);
+            TextView campComplemento = (TextView) context.getActivity().findViewById(R.id.minha_conta_complemento);
+            TextView campPais = (TextView) context.getActivity().findViewById(R.id.minha_conta_pais);
+            TextView campUF = (TextView) context.getActivity().findViewById(R.id.minha_conta_uf);
 
             Endereco[] enderecos = new Gson().fromJson(resposta, Endereco[].class);
 

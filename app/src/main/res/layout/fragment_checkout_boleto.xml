@@ -51,6 +51,7 @@ android:background="@drawable/backgroundpt3"
             android:orientation="vertical">
 
             <Button
+                android:id="@+id/btnFinalizarCompraBoleto"
                 style="@style/Buttons"
                 android:text="Finalizar Compra" />
         </LinearLayout>
