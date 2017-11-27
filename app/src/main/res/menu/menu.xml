@@ -56,5 +56,10 @@
             android:checked="false"
             android:icon="@drawable/iconsobre"
             android:title="Sobre Nós" />
+        <item
+            android:id="@+id/menu_logout"
+            android:checked="false"
+            android:icon="@drawable/iconlogin"
+            android:title="Logout" />
     </group>
 </menu>

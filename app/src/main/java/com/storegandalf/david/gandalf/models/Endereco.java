@@ -12,11 +12,27 @@ public class Endereco implements Serializable {
     private String nomeEndereco;
     private String logradouroEndereco;
     private String numeroEndereco;
-    private String CEPEndereco;
+    private String cependereco;
     private String complementoEndereco;
     private String cidadeEndereco;
     private  String paisEndereco;
-    private String UFEndereco;
+    private String ufendereco;
+
+    public String getCependereco() {
+        return cependereco;
+    }
+
+    public void setCependereco(String cependereco) {
+        this.cependereco = cependereco;
+    }
+
+    public String getUfendereco() {
+        return ufendereco;
+    }
+
+    public void setUfendereco(String ufendereco) {
+        this.ufendereco = ufendereco;
+    }
 
     public int getIdEndereco() {
         return idEndereco;
@@ -58,14 +74,6 @@ public class Endereco implements Serializable {
         this.numeroEndereco = numeroEndereco;
     }
 
-    public String getCEPEndereco() {
-        return CEPEndereco;
-    }
-
-    public void setCEPEndereco(String CEPEndereco) {
-        this.CEPEndereco = CEPEndereco;
-    }
-
     public String getComplementoEndereco() {
         return complementoEndereco;
     }
@@ -90,11 +98,4 @@ public class Endereco implements Serializable {
         this.paisEndereco = paisEndereco;
     }
 
-    public String getUFEndereco() {
-        return UFEndereco;
-    }
-
-    public void setUFEndereco(String UFEndereco) {
-        this.UFEndereco = UFEndereco;
-    }
 }

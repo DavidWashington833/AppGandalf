@@ -50,15 +50,13 @@ public class PegaClienteTask extends AsyncTask<Void, Void, String> {
             TextView campCelular = (TextView) context.getActivity().findViewById(R.id.minha_conta_celular);
             TextView campResidencial = (TextView) context.getActivity().findViewById(R.id.minha_conta_residencial);
             TextView campComercial = (TextView) context.getActivity().findViewById(R.id.minha_conta_comercial);
-            TextView campEmail = (TextView) context.getActivity().findViewById(R.id.minha_conta_email);
 
             campNome.setText(cliente.getNomeCompletoCliente());
-            campCPF.setText(cliente.getCpfCliente());
+            campCPF.setText(cliente.getCpfcliente());
             campNascimento.setText(cliente.getDtNascCliente());
             campCelular.setText(cliente.getCelularCliente());
             campResidencial.setText(cliente.getTelResidencialCliente());
             campComercial.setText(cliente.getTelComercialCliente());
-            campEmail.setText(cliente.getEmailCliente());
 
             new PegaEnderecoTask(context, id).execute();
         }

@@ -11,12 +11,20 @@ public class Cliente implements Serializable {
     private String nomeCompletoCliente;
     private String emailCliente;
     private String senhaCliente;
-    private String cpfCliente;
+    private String cpfcliente;
     private String celularCliente;
     private String telComercialCliente;
     private String telResidencialCliente;
     private String dtNascCliente;
     private String recebeNewsLetter;
+
+    public String getCpfcliente() {
+        return cpfcliente;
+    }
+
+    public void setCpfcliente(String cpfcliente) {
+        this.cpfcliente = cpfcliente;
+    }
 
     public int getIdCliente() {
         return idCliente;
@@ -48,14 +56,6 @@ public class Cliente implements Serializable {
 
     public void setSenhaCliente(String senhaCliente) {
         this.senhaCliente = senhaCliente;
-    }
-
-    public String getCpfCliente() {
-        return cpfCliente;
-    }
-
-    public void setCpfCliente(String cpfCliente) {
-        this.cpfCliente = cpfCliente;
     }
 
     public String getCelularCliente() {

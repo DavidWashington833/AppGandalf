@@ -68,14 +68,14 @@ public class PegaEnderecoTask extends AsyncTask<Void, Void, String> {
 
                 Endereco endereco = enderecos[0];
 
-                campCep.setText(endereco.getCEPEndereco());
+                campCep.setText(endereco.getCependereco());
                 campEndereco.setText(endereco.getNomeEndereco());
                 campNumero.setText(endereco.getNumeroEndereco());
                 campCidade.setText(endereco.getCidadeEndereco());
                 campLogradouro.setText(endereco.getLogradouroEndereco());
                 campComplemento.setText(endereco.getComplementoEndereco());
                 campPais.setText(endereco.getPaisEndereco());
-                campUF.setText(endereco.getUFEndereco());
+                campUF.setText(endereco.getUfendereco());
             }
 
         }

@@ -132,12 +132,12 @@
                 style="@style/TextView" />
 
             <TextView
-                android:text="Logradouro"
+                android:text="País"
                 style="@style/Label" />
             <TextView
                 android:id="@+id/minha_conta_pais"
                 android:inputType="text"
-                android:hint="Pais"
+                android:hint=""
                 style="@style/TextView" />
 
 
@@ -147,7 +147,7 @@
             <TextView
                 android:id="@+id/minha_conta_uf"
                 android:inputType="text"
-                android:hint="Pais"
+                android:hint=""
                 style="@style/TextView" />
 
             <TextView

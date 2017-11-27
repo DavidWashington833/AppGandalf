@@ -1,11 +1,13 @@
 package com.storegandalf.david.gandalf.tasks;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.widget.Toast;
 
 import com.storegandalf.david.gandalf.LoginActivity;
+import com.storegandalf.david.gandalf.MainActivity;
 import com.storegandalf.david.gandalf.WebClient;
 import com.storegandalf.david.gandalf.models.Cliente;
 import com.storegandalf.david.gandalf.models.Login;
@@ -44,6 +46,7 @@ public class EnviaLoginTask extends AsyncTask<Void, Void, String> {
         if (!resposta.equals("null")) {
             Cliente cliente = new Gson().fromJson(resposta, Cliente.class);
 
+
             SharedPreferences preferences = context.getSharedPreferences("login", 0);
             SharedPreferences.Editor editor = preferences.edit();
             editor.putInt("idCliente", cliente.getIdCliente());
@@ -52,6 +55,7 @@ public class EnviaLoginTask extends AsyncTask<Void, Void, String> {
 
             feedback = "Seja bem-vindo, " + cliente.getNomeCompletoCliente() + "! Boas compras! :)";
             context.finish();
+            context.startActivity(new Intent(context, MainActivity.class));
         }
 
         Toast.makeText(context, feedback, Toast.LENGTH_LONG).show();

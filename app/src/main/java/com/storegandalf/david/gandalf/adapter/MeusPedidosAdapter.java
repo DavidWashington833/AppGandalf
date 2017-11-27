@@ -66,9 +66,6 @@ public class MeusPedidosAdapter extends BaseAdapter {
         final TextView dataPedido = (TextView) view.findViewById(R.id.txtDataPedido);
         dataPedido.setText(pedido.getDataPedido());
 
-        final TextView tipoPagamento = (TextView) view.findViewById(R.id.txtTipoPagamento);
-        tipoPagamento.setText(pedido.getIdTipoPagto());
-
 
         return view;
     }

@@ -56,7 +56,7 @@ public class CheckoutTask extends AsyncTask<Void, Void, String> {
 
                 Endereco endereco = enderecos[0];
 
-                campCep.setText(endereco.getCEPEndereco());
+                campCep.setText(endereco.getCependereco());
                 campCidade.setText(endereco.getCidadeEndereco());
                 campLogradouro.setText(endereco.getLogradouroEndereco());
             }

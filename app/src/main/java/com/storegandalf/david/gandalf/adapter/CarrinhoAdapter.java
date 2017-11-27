@@ -23,6 +23,7 @@ import com.storegandalf.david.gandalf.R;
 import com.storegandalf.david.gandalf.helpers.CarrinhoSingletonHelper;
 import com.storegandalf.david.gandalf.models.Produto;
 
+import java.text.DecimalFormat;
 import java.util.List;
 
 /**
@@ -67,11 +68,16 @@ public class CarrinhoAdapter  extends BaseAdapter {
 
         final ViewGroup parentView = parent;
 
+        DecimalFormat format = new DecimalFormat("###,###,###,###,##0.00");
+
         TextView campoNome = (TextView) view.findViewById(R.id.txtNomeProdCart);
         campoNome.setText(produto.getNomeProduto());
 
         TextView campoPreco = (TextView) view.findViewById(R.id.txtPrecoCart);
-        campoPreco.setText(produto.getPrecProduto());
+        String preco = produto.getPrecProduto();
+        Double preco2 = Double.parseDouble(preco);
+        format.format(preco2);
+        campoPreco.setText(preco2.toString() + "0");
 
         ImageView campoImg = (ImageView) view.findViewById(R.id.imagemProdCart);
         String imagem = produto.getImagem();

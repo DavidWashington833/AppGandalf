@@ -28,6 +28,21 @@ public class MainActivity extends AppCompatActivity {
     private ActionBarDrawerToggle actionBarDrawerToggle;
     private String idProduto;
 
+
+    public String getPrefUser(String campo){
+        SharedPreferences prefs = getSharedPreferences("login", MODE_PRIVATE);
+        Integer idCliente = prefs.getInt("idCliente", 0);
+        String nomeCliente = prefs.getString("nomeCliente", "");
+        String resultado = "";
+        if(campo.equals("idCliente")){
+            resultado = String.valueOf(idCliente);
+        }else if(campo.equals("nomeCliente")) {
+            resultado = nomeCliente;
+        }
+        return resultado;
+
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,10 +51,8 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
 
-        SharedPreferences prefs = getSharedPreferences("login", MODE_PRIVATE);
-        final Integer logado = prefs.getInt("idCliente", 0);
-        final String nomeCliente = prefs.getString("nomeCliente", null);
-
+        final Integer logado = Integer.parseInt(getPrefUser("idCliente"));
+        final String nomeCliente = getPrefUser("nomeCliente");
 
         navigationView = (NavigationView) findViewById(R.id.navigation_view);
         View viewMenu = navigationView.getHeaderView(0);
@@ -50,9 +63,18 @@ public class MainActivity extends AppCompatActivity {
         if(logado == 0){
             txtNomeUsuarioMenu.setText("Olá!");
             txtMenuCabecalho.setText("Faça login para comprar.");
+            navigationView.getMenu().findItem(R.id.menu_pedidos).setVisible(false);
+            navigationView.getMenu().findItem(R.id.menu_minhaconta).setVisible(false);
+            navigationView.getMenu().findItem(R.id.menu_logout).setVisible(false);
+            navigationView.getMenu().findItem(R.id.menu_login).setVisible(true);
         } else {
             txtNomeUsuarioMenu.setText(nomeCliente + ",");
             txtMenuCabecalho.setText("seja bem-vindo!");
+            navigationView.getMenu().findItem(R.id.menu_pedidos).setVisible(true);
+            navigationView.getMenu().findItem(R.id.menu_minhaconta).setVisible(true);
+            navigationView.getMenu().findItem(R.id.menu_logout).setVisible(true);
+            navigationView.getMenu().findItem(R.id.menu_login).setVisible(false);
+
         }
 
         navigationView.setNavigationItemSelectedListener(
@@ -94,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
                                 chamaFragment(new PermissaoFragment());
 
                             } else {
-                                chamaFragment(new MeusPedidosFragment(logado));
+                                chamaFragmentAdd(new MeusPedidosFragment(logado));
                             }
 
                             return true;
@@ -120,15 +142,23 @@ public class MainActivity extends AppCompatActivity {
                         }
 
                         if (menuItem.getItemId() == R.id.menu_sobre) {
-                            chamaFragment(new SobreNosFragment());
+                            chamaFragmentAdd(new SobreNosFragment());
                         }
 
                         if (menuItem.getItemId() == R.id.menu_carrinho) {
                             if (CarrinhoSingletonHelper.getInstance().existeItem() != null && !CarrinhoSingletonHelper.getInstance().existeItem().equals("[]")){
-                                chamaFragment(new CarrinhoFragment());
-                            }else {
-                                chamaFragment(new CarrinhoVazioFragment());
+                                chamaFragmentAdd(new CarrinhoFragment());
+                            } else {
+                                chamaFragmentAdd(new CarrinhoVazioFragment());
                             }
+                        }
+
+                        if (menuItem.getItemId() == R.id.menu_logout) {
+                            logoutUser();
+                            navigationView.getMenu().findItem(R.id.menu_minhaconta).setVisible(false);
+                            navigationView.getMenu().findItem(R.id.menu_pedidos).setVisible(false);
+                            navigationView.getMenu().findItem(R.id.menu_logout).setVisible(false);
+                            navigationView.getMenu().findItem(R.id.menu_login).setVisible(true);
                         }
 
 
@@ -184,9 +214,9 @@ public class MainActivity extends AppCompatActivity {
             if(item.getItemId() == R.id.action_carrinho) {
 
                 if (CarrinhoSingletonHelper.getInstance().existeItem() != null && !CarrinhoSingletonHelper.getInstance().existeItem().equals("[]")){
-                    chamaFragment(new CarrinhoFragment());
+                    chamaFragmentAdd(new CarrinhoFragment());
                 }else {
-                    chamaFragment(new CarrinhoVazioFragment());
+                    chamaFragmentAdd(new CarrinhoVazioFragment());
                 }
             }
 
@@ -244,6 +274,16 @@ public class MainActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu)  {
         getMenuInflater().inflate(R.menu.actionbar, menu);
         return super.onCreateOptionsMenu(menu);
+    }
+
+    public void logoutUser(){
+        SharedPreferences prefs = getSharedPreferences("login", MODE_PRIVATE);
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putInt("idCliente", 0);
+        editor.putString("nomeCliente", null);
+        editor.commit();
+        Intent newAct = new Intent(MainActivity.this, MainActivity.class);
+        startActivity(newAct);
     }
 
 }
