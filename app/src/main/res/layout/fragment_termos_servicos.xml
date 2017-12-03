@@ -133,20 +133,20 @@ b) pelos conteúdos ou atividades ilícitas praticadas através de seu aplicativ
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/btn_concordo"
-                    style="@style/Buttons"
-                    android:layout_width="wrap_content"
-                    android:layout_marginRight="12dp"
-                    android:text="Eu Concordo" />
-
-                <Button
                     android:id="@+id/btn_nao_concordo"
                     style="@style/ButtonsNullSecundario"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
                     android:padding="16dp"
                     android:text="Não Concordo" />
+
+                <Button
+                    android:id="@+id/btn_concordo"
+                    style="@style/Buttons"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:text="Eu Concordo" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

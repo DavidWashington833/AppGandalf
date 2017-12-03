@@ -8,52 +8,49 @@
     android:background="@drawable/backgroundcarrinhovazio"
     tools:context="com.storegandalf.david.gandalf.CarrinhoFragment">
 
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="12dp"
-        android:layout_marginRight="12dp"
-        android:orientation="horizontal">
+        android:layout_height="375dp"
+        android:layout_weight="0"
+        android:background="@color/backgroundMascara"
+        android:gravity="center|top"
+        android:orientation="vertical">
 
-        <Button
-            android:id="@+id/btnContinuarComprando"
-            style="@style/Buttons"
-            android:layout_width="205dp"
-            android:layout_marginRight="12dp"
-            android:text="CONTINUAR COMPRANDO" />
+        <LinearLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-        <Button
-            android:id="@+id/btnFacaCheckout"
-            style="@style/ButtonsNullSecundario"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="12dp"
-            android:padding="16dp"
-            android:text="FAÇA CHECKOUT" />
+            <ListView
+                android:id="@+id/list_produto_carrinho"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
     </LinearLayout>
 
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:gravity="center|bottom"
         android:background="@color/backgroundMascara"
         android:orientation="vertical">
 
+        <Button
+            android:id="@+id/btnFacaCheckout"
+            style="@style/Buttons"
+            android:text="Finalizar Compra" />
 
-            <LinearLayout
-                android:id="@+id/container"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <ListView
-                    android:id="@+id/list_produto_carrinho"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-
-
-            </LinearLayout>
-
+        <Button
+            android:id="@+id/btnContinuarComprando"
+            style="@style/ButtonsNullSecundario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:text="CONTINUAR COMPRANDO" />
     </LinearLayout>
 
 </LinearLayout>
