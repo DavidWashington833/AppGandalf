@@ -75,7 +75,7 @@ public class LojaFragment extends Fragment {
         TextView preco = (TextView) cardView.findViewById(R.id.txtPreco);
         preco.setText((CharSequence) precoP);
 
-        mensagens.addView(cardView);
+//        mensagens.addView(cardView);
 
     }
 

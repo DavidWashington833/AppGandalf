@@ -85,7 +85,7 @@ public class PegaProdutosTask extends AsyncTask<Void, Void, String> {
             imgP.setImageBitmap(BitmapFactory.decodeByteArray(imageAsBytes, 0, imageAsBytes.length));
 
 
-            listView.setAdapter(adapter);
+//            listView.setAdapter(adapter);
         }
     }
 }
