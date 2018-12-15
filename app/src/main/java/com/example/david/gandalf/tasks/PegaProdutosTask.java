@@ -46,7 +46,7 @@ public class PegaProdutosTask extends AsyncTask<Void, Void, String> {
     @Override
     protected String doInBackground(Void... params) {
         WebClient client = new WebClient();
-        String resposta = client.get("http://gandalf.azurewebsites.net/gandalf/rest/produto/");
+        String resposta = client.get("http://192.168.15.8:8084/Gandalf/rest/produto/");
         dialog.dismiss();
         return resposta;
     }
