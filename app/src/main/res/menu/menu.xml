@@ -40,6 +40,11 @@
         android:id="@+id/group_actions"
         android:checkableBehavior="single">
         <item
+            android:id="@+id/menu_buscar"
+            android:checked="false"
+            android:icon="@drawable/iconbuscainvert"
+            android:title="Buscar Produtos" />
+        <item
             android:id="@+id/menu_login"
             android:checked="false"
             android:icon="@drawable/iconlogin"
