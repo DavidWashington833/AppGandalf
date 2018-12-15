@@ -37,15 +37,11 @@ public class CarrinhoFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_carrinho, container, false);
 
         String result = new Gson().toJson(CarrinhoSingletonHelper.getInstance().getProduto());
-
-        if (result != null && !result.equals("[null]")) {
+        if (!result.equals("null")) {
 //                Toast t = Toast.makeText(getContext(), result, Toast.LENGTH_LONG);
 //                t.show();
             final Produto[] produtos = new Gson().fromJson(result, Produto[].class);
-
-            List<Produto> plist = new ArrayList<Produto>();
-            plist.addAll(Arrays.asList(produtos));
-            final CarrinhoAdapter adapter = new CarrinhoAdapter(this.getContext(), plist);
+            final CarrinhoAdapter adapter = new CarrinhoAdapter(this.getContext(), Arrays.asList(produtos));
             final ListView listView = (ListView) view.findViewById(R.id.list_produto_carrinho);
 
             listView.setAdapter(adapter);
