@@ -22,6 +22,7 @@ public class BuscaProdutoFragment extends Fragment {
 
     public BuscaProdutoFragment() {
         // Required empty public constructor
+
     }
 
 

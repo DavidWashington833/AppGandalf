@@ -22,7 +22,6 @@ public class PegaProdutoUnicoTask extends AsyncTask<Void, Void, String> {
     private ProgressDialog dialog;
     private String id;
 
-
     public PegaProdutoUnicoTask(ProdutoUnicoFragment context) {
         this.context = context;
     }
@@ -41,14 +40,16 @@ public class PegaProdutoUnicoTask extends AsyncTask<Void, Void, String> {
     protected String doInBackground(Void... params) {
 
         WebClient client = new WebClient();
-        String resposta = client.get("http://gandalf.azurewebsites.net/gandalf/rest/produto/" + id);
+        String resposta = client.get("http://192.168.15.8:8084/Gandalf/rest/produto/" + id);
         dialog.dismiss();
         return resposta;
     }
 
     @Override
     protected void onPostExecute(String resposta) {
+        dialog.dismiss();
         System.out.println(resposta);
+
         if (!resposta.equals("null")) {
             Produto p = new Gson().fromJson(resposta, Produto.class);
 
@@ -56,6 +57,8 @@ public class PegaProdutoUnicoTask extends AsyncTask<Void, Void, String> {
             TextView codP = (TextView) context.getActivity().findViewById(R.id.codigoProduto);
             TextView precoP = (TextView) context.getActivity().findViewById(R.id.precoProduto);
             ImageView imgP = (ImageView) context.getActivity().findViewById(R.id.imgProduto);
+
+            context.produtoP = p;
             TextView descP = (TextView) context.getActivity().findViewById(R.id.descProduto);
 
             context.produtoP = p;

@@ -25,14 +25,14 @@ public class EnviaLoginTask extends AsyncTask<Void, Void, String> {
 
     @Override
     protected void onPreExecute() {
-        dialog = ProgressDialog.show(context, "Aguarde", "Buscando cliente...", true, true);
+        dialog = ProgressDialog.show(context, "Aguarde", "Carregando dados...", true, true);
     }
 
     @Override
     protected String doInBackground(Void... params) {
         Login login = context.getHelper().getLogin();
         WebClient client = new WebClient();
-        String resposta = client.get("http://gandalf.azurewebsites.net/gandalf/rest/cliente/authentic/" + login.getEmail() + "/" + login.getSenha());
+        String resposta = client.get("http://192.168.15.8:8084/Gandalf/rest/cliente/authentic/" + login.getEmail() + "/" + login.getSenha());
         return resposta;
     }
 

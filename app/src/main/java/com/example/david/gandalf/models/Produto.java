@@ -1,5 +1,8 @@
 package com.example.david.gandalf.models;
 
+import android.widget.ImageView;
+import android.widget.TextView;
+
 /**
  * Created by fernando.hyamamoto on 16/11/2017.
  */
@@ -12,6 +15,16 @@ public class Produto {
     private String qtdMinEstoque;
     private String imagem;
     private String descProduto;
+
+    public Produto(String idProduto, String nomeProduto, String precProduto, String descontoPromocao, String qtdMinEstoque, String imagem, String descProduto) {
+        this.idProduto = idProduto;
+        this.nomeProduto = nomeProduto;
+        this.precProduto = precProduto;
+        this.descontoPromocao = descontoPromocao;
+        this.qtdMinEstoque = qtdMinEstoque;
+        this.imagem = imagem;
+        this.descProduto = descProduto;
+    }
 
     public String getDescProduto() {
         return descProduto;

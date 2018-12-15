@@ -48,7 +48,7 @@ public class EnviaEnderecoTask extends AsyncTask<Void, Void, String> {
         Gson gson = new Gson();
         String jsonInString = gson.toJson(enderecoDTO);
         WebClient client = new WebClient();
-        String resposta = client.post("http://gandalf.azurewebsites.net/gandalf/rest/endereco/", jsonInString);
+        String resposta = client.post("http://192.168.15.8:8084/Gandalf/rest/endereco/", jsonInString);
         return resposta;
     }
 

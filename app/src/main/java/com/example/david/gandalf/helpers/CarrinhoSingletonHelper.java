@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by felipe.amiconi on 25/11/2017.
+ * Created by gabriel.elmontibelle on 21/11/2017.
  */
 
 public class CarrinhoSingletonHelper {

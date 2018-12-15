@@ -6,10 +6,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <item android:id="@+id/action_busca"
+    <item
+        android:id="@+id/action_busca"
+        android:icon="@drawable/iconbuscainvert"
         android:title="Busca"
-        app:showAsAction="always"
-        android:icon="@drawable/iconbuscainvert" />
+        app:showAsAction="always" />
 
     <item android:id="@+id/action_carrinho"
         android:title="Carrinho"

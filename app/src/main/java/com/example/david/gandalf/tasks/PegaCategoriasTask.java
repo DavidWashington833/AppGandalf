@@ -37,7 +37,7 @@ public class PegaCategoriasTask extends AsyncTask<Void, Void, String> {
     @Override
     protected String doInBackground(Void... params) {
         WebClient client = new WebClient();
-        String resposta = client.get("http://gandalf.azurewebsites.net/gandalf/rest/categoria/");
+        String resposta = client.get("http://192.168.15.8:8084/Gandalf/rest/categoria/");
         dialog.dismiss();
         return resposta;
     }
@@ -55,15 +55,16 @@ public class PegaCategoriasTask extends AsyncTask<Void, Void, String> {
                 @Override
                 public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
-                    EditText reclicado = (EditText) context.getActivity().findViewById(R.id.hiddenReclicado);
-                    reclicado.setText("0");
+                    //Toast t = Toast.makeText(context.getActivity(), id.toString() , Toast.LENGTH_LONG);
+                   // t.show();
 
                     Categoria c = adapter.getItem(i);
 
                     EditText id = (EditText) context.getActivity().findViewById(R.id.hiddenIdCat);
                     id.setText(c.getIdCategoria().toString());
                     new PegaProdutosCategoriaTask(context, container).execute();
-                }
+            }
+
             });
         }
 
