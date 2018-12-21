@@ -40,7 +40,7 @@ public class PegaProdutoUnicoTask extends AsyncTask<Void, Void, String> {
     protected String doInBackground(Void... params) {
 
         WebClient client = new WebClient();
-        String resposta = client.get("http://192.168.15.8:8084/Gandalf/rest/produto/" + id);
+        String resposta = client.get("http://192.168.15.12:8084/Gandalf/rest/produto/" + id);
         dialog.dismiss();
         return resposta;
     }
