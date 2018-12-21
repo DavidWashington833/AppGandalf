@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/backgroundcarrinhovazio"
-    tools:context="com.example.david.gandalf.com.gandalf.ProdutoFragment">
+    tools:context="com.gandalf.com.gandalf.ProdutoFragment">
 
     <ScrollView
         android:layout_width="fill_parent"

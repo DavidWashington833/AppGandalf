@@ -5,7 +5,7 @@ android:layout_width="match_parent"
 android:layout_height="match_parent"
 android:orientation="vertical"
 android:background="@drawable/backgroundcarrinhovazio"
-tools:context="com.example.david.gandalf.com.gandalf.CehckoutPrincipalFragment">
+tools:context="com.gandalf.com.gandalf.CehckoutPrincipalFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
