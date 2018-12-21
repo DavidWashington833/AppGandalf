@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/backgroundcarrinhovazio"
-    tools:context="com.example.david.gandalf.BuscaProdutoFragment">
+    tools:context="com.example.david.gandalf.com.gandalf.BuscaProdutoFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
