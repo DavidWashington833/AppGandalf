@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.gandalf.Fragments.StoreFragment;
 import com.gandalf.models.Produto;
 
 import java.util.List;
@@ -16,10 +17,10 @@ import java.util.List;
  */
 
 public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder>{
-    private LojaFragment context;
+    private StoreFragment context;
     private List<Produto> produtos;
 
-    public CustomAdapter(LojaFragment context, List<Produto> produtos) {
+    public CustomAdapter(StoreFragment context, List<Produto> produtos) {
         this.context = context;
         this.produtos = produtos;
     }

@@ -1,4 +1,4 @@
-package com.gandalf;
+package com.gandalf.Fragments;
 
 
 import android.os.Bundle;
@@ -11,6 +11,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.gandalf.CustomAdapter;
+import com.gandalf.R;
 import com.gandalf.models.Produto;
 import com.gandalf.tasks.LojaTask;
 
@@ -21,7 +23,7 @@ import java.util.List;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class LojaFragment extends Fragment {
+public class StoreFragment extends Fragment {
 
     private ViewGroup mensagens;
 
@@ -33,7 +35,7 @@ public class LojaFragment extends Fragment {
     private List<Produto> data_list;
 
 
-    public LojaFragment() {
+    public StoreFragment() {
         // Required empty public constructor
     }
 
@@ -43,7 +45,7 @@ public class LojaFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_loja, container, false);
-        new LojaTask(LojaFragment.this).execute();
+        new LojaTask(StoreFragment.this).execute();
 
         recyclerView = (RecyclerView) view.findViewById(R.id.recyvler_view_produtos);
         data_list = new ArrayList<>();

@@ -9,7 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
 
-import com.gandalf.CategoriaFragment;
+import com.gandalf.Fragments.CategoryFragment;
 import com.gandalf.R;
 import com.gandalf.WebClient;
 import com.gandalf.models.Categoria;
@@ -20,11 +20,11 @@ import com.google.gson.Gson;
  */
 
 public class PegaCategoriasTask extends AsyncTask<Void, Void, String> {
-    private CategoriaFragment context;
+    private CategoryFragment context;
     private ViewGroup container;
     private ProgressDialog dialog;
 
-    public PegaCategoriasTask(CategoriaFragment context, ViewGroup container) {
+    public PegaCategoriasTask(CategoryFragment context, ViewGroup container) {
         this.context = context;
         this.container = container;
     }

@@ -6,7 +6,7 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ListView;
 
-import com.gandalf.CategoriaFragment;
+import com.gandalf.Fragments.CategoryFragment;
 import com.gandalf.R;
 import com.gandalf.WebClient;
 import com.gandalf.adapter.ProdutoAdapter;
@@ -21,11 +21,11 @@ import java.util.Arrays;
 
 
 public class PegaProdutosCategoriaTask extends AsyncTask<Void, Void, String> {
-    private CategoriaFragment context;
+    private CategoryFragment context;
     private ViewGroup container;
     private ProgressDialog dialog;
 
-    public PegaProdutosCategoriaTask(CategoriaFragment context, ViewGroup container) {
+    public PegaProdutosCategoriaTask(CategoryFragment context, ViewGroup container) {
         this.context = context;
         this.container = container;
     }

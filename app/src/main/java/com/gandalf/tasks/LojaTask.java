@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.gandalf.LojaFragment;
+import com.gandalf.Fragments.StoreFragment;
 import com.gandalf.R;
 import com.gandalf.WebClient;
 import com.gandalf.models.Produto;
@@ -20,10 +20,10 @@ import com.google.gson.Gson;
  */
 
 public class LojaTask extends AsyncTask<Void, Void, String> {
-    private LojaFragment context;
+    private StoreFragment context;
     private ViewGroup mensagens;
 
-    public LojaTask(LojaFragment context) {
+    public LojaTask(StoreFragment context) {
         this.context = context;
     }
 

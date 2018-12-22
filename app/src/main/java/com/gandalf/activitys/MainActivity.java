@@ -16,10 +16,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 import com.astuetz.PagerSlidingTabStrip;
 import com.gandalf.CartFragment;
-import com.gandalf.CategoriaFragment;
+import com.gandalf.Fragments.CategoryFragment;
 import com.gandalf.ContatoFragment;
 import com.gandalf.LoginActivity;
-import com.gandalf.LojaFragment;
+import com.gandalf.Fragments.StoreFragment;
 import com.gandalf.MinhaContaFragment;
 import com.gandalf.ProdutoUnicoFragment;
 import com.gandalf.QRCodeActivity;
@@ -186,27 +186,21 @@ public class MainActivity extends AppCompatActivity {
             if (position == 1) {
                 return "Loja";
             }
-            if (position == 2) {
-                return "Carrinho";
-            }
             return "";
         }
 
         @Override
         public int getCount() {
-            return 3;
+            return 2;
         }
 
         @Override
         public Fragment getItem(int position) {
             if (position == 0) {
-                return new CategoriaFragment();
+                return new CategoryFragment();
             }
             if (position == 1) {
-                return new LojaFragment();
-            }
-            if (position == 2) {
-                return new CartFragment();
+                return new StoreFragment();
             }
             return null;
         }

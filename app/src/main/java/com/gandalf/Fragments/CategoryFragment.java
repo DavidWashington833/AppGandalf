@@ -1,4 +1,4 @@
-package com.gandalf;
+package com.gandalf.Fragments;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -7,13 +7,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.gandalf.R;
 import com.gandalf.tasks.PegaCategoriasTask;
 
 /**
  * Created by igorr on 18/10/2017.
  */
 
-public class CategoriaFragment extends ListFragment {
+public class CategoryFragment extends ListFragment {
 
 
     @Override
@@ -21,7 +22,7 @@ public class CategoriaFragment extends ListFragment {
 
         View view = inflater.inflate(R.layout.list_categoria, container, false);
 
-        new PegaCategoriasTask(CategoriaFragment.this, container).execute();
+        new PegaCategoriasTask(CategoryFragment.this, container).execute();
 
         return view;
     }
