@@ -19,10 +19,9 @@ import com.astuetz.PagerSlidingTabStrip;
 
 public class MainActivity extends AppCompatActivity {
 
-    private NavigationView navigationView;
-    private DrawerLayout drawerLayout;
     private ActionBarDrawerToggle actionBarDrawerToggle;
-    private String idProduto;
+    private DrawerLayout drawerLayout;
+    private String idProduct;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,94 +30,135 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
 
-        navigationView = (NavigationView) findViewById(R.id.activity_main_navigation_view);
+        NavigationView navigationView = (NavigationView) findViewById(R.id.activity_main_navigation_view);
+        ViewPager viewpager = (ViewPager) findViewById(R.id.activity_main_viewpager);
+        PagerSlidingTabStrip tabs = (PagerSlidingTabStrip) findViewById(R.id.activity_main_tabs);
         drawerLayout = (DrawerLayout) findViewById(R.id.activity_main_drawer_layout);
-        navigationView.setNavigationItemSelectedListener(
-                new NavigationView.OnNavigationItemSelectedListener() {
-                    @Override
-                    public boolean onNavigationItemSelected(MenuItem menuItem) {
-                        if (menuItem.isChecked()) {
-                            menuItem.setChecked(false);
-                        }
-                        else {
-                            menuItem.setChecked(true);
-                        }
-                        drawerLayout.closeDrawers();
 
-                        if (menuItem.getItemId() == R.id.menu_store) {
-                            Intent newAct = new Intent(MainActivity.this, MainActivity.class);
-                            startActivity(newAct);
-                            return true;
-                        }
+        viewpager.setAdapter(new MyPagerAdapter(getSupportFragmentManager()));
+        tabs.setViewPager(viewpager);
+        viewpager.setCurrentItem(1);
 
-                        if (menuItem.getItemId() == R.id.menu_login) {
-                            Intent newAct = new Intent(MainActivity.this, LoginActivity.class);
-                            startActivity(newAct);
-                            return true;
-                        }
+        navigationView.setNavigationItemSelectedListener(getNavigationView());
 
-                        if (menuItem.getItemId() == R.id.menu_qrcode) {
-                            Intent newAct = new Intent(MainActivity.this, QRCodeActivity.class);
-                            startActivity(newAct);
-                            return true;
-                        }
-
-                        if (menuItem.getItemId() == R.id.menu_account) {
-                            chamaFragment(new MinhaContaFragment());
-                        }
-
-                        if (menuItem.getItemId() == R.id.menu_account) {
-                            chamaFragment(new MinhaContaFragment());
-                        }
-
-                        if (menuItem.getItemId() == R.id.menu_contact) {
-                            chamaFragment(new ContatoFragment());
-                        }
-
-                        if (menuItem.getItemId() == R.id.menu_about) {
-                            chamaFragment(new SobreNosFragment());
-                        }
-
-                        if (menuItem.getItemId() == R.id.menu_cart) {
-                            chamaFragment(new CarrinhoFragment());
-                        }
-
-                        if(menuItem.getItemId() == R.id.menu_search) {
-                           chamaFragment(new BuscaProdutoFragment());
-                        }
-
-                        if(menuItem.getItemId() == R.id.actionbar_search) {
-                            chamaFragment(new BuscaProdutoFragment());
-                        }
-                        return false;
-                    }
-                });
-
-        actionBarDrawerToggle =
-                new ActionBarDrawerToggle(this, drawerLayout,
-                        R.string.openDrawer, R.string.closeDrawer) {
-                };
-        drawerLayout.setDrawerListener(actionBarDrawerToggle);
-        actionBarDrawerToggle.syncState();
-
-
+//        TODO: refactoring
+//        actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.openDrawer, R.string.closeDrawer);
+//        drawerLayout.setDrawerListener(actionBarDrawerToggle);
+//        actionBarDrawerToggle.syncState();
 
 //        TabsFragment newFragment = new TabsFragment();
-        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+//        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 
 //        transaction.replace(R.id.activity_main_tabs, newFragment);
 //        transaction.addToBackStack(null);
 //        transaction.commit();
+    }
 
-        // Inflate the layout for this fragment
-        // Initialize the ViewPager and set an adapter
-        ViewPager pager = (ViewPager) findViewById(R.id.activity_main_viewpager);
-        pager.setAdapter(new MyPagerAdapter(getSupportFragmentManager()));
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (actionBarDrawerToggle.onOptionsItemSelected(item)) {
+            return true;
+        }
+        else {
+            if(item.getItemId() == R.id.actionbar_cart) {
+                chamaFragment(new CarrinhoFragment());
+            }
 
-        // Bind the tabs to the ViewPager
-        PagerSlidingTabStrip tabs = (PagerSlidingTabStrip) findViewById(R.id.activity_main_bar);
-        tabs.setViewPager(pager);
-        pager.setCurrentItem(1);
+            if(item.getItemId() == R.id.actionbar_search) {
+                chamaFragment(new BuscaProdutoFragment());
+            }
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if(requestCode == 1){
+            if(resultCode == RESULT_OK){
+                idProduct = data.getStringExtra("idProduct");
+            }
+        }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        if (idProduct != null) {
+            chamaFragment(new ProdutoUnicoFragment(idProduct));
+            idProduct = null;
+        }
+
+//        chamaFragment(new TabsFragment());
+
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu)  {
+        getMenuInflater().inflate(R.menu.actionbar, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    public NavigationView.OnNavigationItemSelectedListener getNavigationView() {
+        return new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(MenuItem menuItem) {
+                if (menuItem.isChecked()) {
+                    menuItem.setChecked(false);
+                }
+                else {
+                    menuItem.setChecked(true);
+                }
+                drawerLayout.closeDrawers();
+
+                if (menuItem.getItemId() == R.id.menu_store) {
+                    Intent newAct = new Intent(MainActivity.this, MainActivity.class);
+                    startActivity(newAct);
+                    return true;
+                }
+
+                if (menuItem.getItemId() == R.id.menu_login) {
+                    Intent newAct = new Intent(MainActivity.this, LoginActivity.class);
+                    startActivity(newAct);
+                    return true;
+                }
+
+                if (menuItem.getItemId() == R.id.menu_qrcode) {
+                    Intent newAct = new Intent(MainActivity.this, QRCodeActivity.class);
+                    startActivity(newAct);
+                    return true;
+                }
+
+                if (menuItem.getItemId() == R.id.menu_account) {
+                    chamaFragment(new MinhaContaFragment());
+                }
+
+                if (menuItem.getItemId() == R.id.menu_account) {
+                    chamaFragment(new MinhaContaFragment());
+                }
+
+                if (menuItem.getItemId() == R.id.menu_contact) {
+                    chamaFragment(new ContatoFragment());
+                }
+
+                if (menuItem.getItemId() == R.id.menu_about) {
+                    chamaFragment(new SobreNosFragment());
+                }
+
+                if (menuItem.getItemId() == R.id.menu_cart) {
+                    chamaFragment(new CarrinhoFragment());
+                }
+
+                if(menuItem.getItemId() == R.id.menu_search) {
+                    chamaFragment(new BuscaProdutoFragment());
+                }
+
+                if(menuItem.getItemId() == R.id.actionbar_search) {
+                    chamaFragment(new BuscaProdutoFragment());
+                }
+                return false;
+            }
+        };
     }
 
     public class MyPagerAdapter extends FragmentPagerAdapter {
@@ -161,45 +201,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if (actionBarDrawerToggle.onOptionsItemSelected(item)) {
-            return true;
-        }
-        else {
-            if(item.getItemId() == R.id.actionbar_cart) {
-                chamaFragment(new CarrinhoFragment());
-            }
-
-            if(item.getItemId() == R.id.actionbar_search) {
-                chamaFragment(new BuscaProdutoFragment());
-            }
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if(requestCode == 1){
-            if(resultCode == RESULT_OK){
-                idProduto = data.getStringExtra("idProduto");
-            }
-        }
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-
-        if (idProduto != null) {
-            chamaFragment(new ProdutoUnicoFragment(idProduto));
-            idProduto = null;
-        }
-
-//        chamaFragment(new TabsFragment());
-
-    }
-
     public void chamaFragment(Fragment fragment){
         String backStateName = fragment.getClass().getName();
         FragmentManager manager = getSupportFragmentManager();
@@ -208,12 +209,6 @@ public class MainActivity extends AppCompatActivity {
 //        transaction.replace(R.id.activity_main_tabs, fragment);
 //        transaction.addToBackStack(backStateName);
 //        transaction.commit();
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu)  {
-        getMenuInflater().inflate(R.menu.actionbar, menu);
-        return super.onCreateOptionsMenu(menu);
     }
 
 }

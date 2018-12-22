@@ -23,7 +23,7 @@
         android:orientation="vertical">
 
         <com.astuetz.PagerSlidingTabStrip
-            android:id="@+id/activity_main_bar"
+            android:id="@+id/activity_main_tabs"
             app:pstsIndicatorColor="@color/colorPrimaryText"
             app:pstsTabTextColor="@color/colorPrimaryText"
             android:background="@color/colorBlackOpacity0"
@@ -36,6 +36,5 @@
             android:layout_height="fill_parent" />
 
     </LinearLayout>
-
 
 </android.support.v4.widget.DrawerLayout>
