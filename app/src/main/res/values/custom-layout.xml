@@ -91,15 +91,14 @@
         <item name="android:textSize">14dp</item>
     </style>
 
-    <style name="TextDestaque" parent="@android:style/TextAppearance.Large">
+    <style name="FirstTitle" parent="@android:style/TextAppearance.Large">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_weight">0</item>
         <item name="android:layout_marginTop">12dp</item>
-        <item name="android:layout_marginBottom">0dp</item>
+        <item name="android:layout_marginBottom">12dp</item>
         <item name="android:layout_marginRight">12dp</item>
         <item name="android:layout_marginLeft">12dp</item>
-        <item name="android:gravity">center</item>
         <item name="android:textColor">#FFFFFF</item>
         <item name="android:textSize">23dp</item>
         <item name="android:typeface">sans</item>
@@ -113,9 +112,21 @@
         <item name="android:layout_marginBottom">24dp</item>
         <item name="android:layout_marginRight">12dp</item>
         <item name="android:layout_marginLeft">12dp</item>
-        <item name="android:gravity">center</item>
-        <item name="android:textColor">#CCCCCC</item>
+        <item name="android:textColor">#FFFFFF</item>
         <item name="android:textSize">18dp</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="SmallText" parent="@android:style/TextAppearance.Medium">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">0</item>
+        <item name="android:layout_marginTop">12dp</item>
+        <item name="android:layout_marginBottom">12dp</item>
+        <item name="android:layout_marginRight">12dp</item>
+        <item name="android:layout_marginLeft">12dp</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">14dp</item>
         <item name="android:typeface">sans</item>
     </style>
 

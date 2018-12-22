@@ -1,71 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <group
-        android:id="@+id/group_links"
+        android:id="@+id/menu_first_group"
         android:checkableBehavior="single">
+        <item
+            android:id="@+id/menu_store"
+            android:icon="@drawable/icon_store"
+            android:title="@string/menu_store" />
 
         <item
-            android:id="@+id/menu_loja"
-            android:checked="false"
-            android:icon="@drawable/iconloja"
-            android:title="Ir para a Loja" />
+            android:id="@+id/menu_cart"
+            android:icon="@drawable/icon_cart"
+            android:title="@string/menu_cart" />
 
         <item
-            android:id="@+id/menu_carrinho"
-            android:checked="false"
-            android:icon="@drawable/iconcarrinho"
-            android:title="Meu Carrinho" />
+            android:id="@+id/menu_account"
+            android:icon="@drawable/icon_requests"
+            android:title="@string/menu_account" />
 
         <item
-            android:id="@+id/minha_conta"
-            android:checked="false"
-            android:icon="@drawable/iconpedidos"
-            android:title="Minha conta" />
-
-        <item
-            android:id="@+id/menu_pedidos"
-            android:checked="false"
-            android:icon="@drawable/iconpedidos"
-            android:title="Meus Pedidos" />
-
-        <item
-            android:id="@+id/menu_minha_conta"
-            android:checked="false"
-            android:icon="@drawable/iconpedidos"
-            android:title="Minha Conta" />
-
+            android:id="@+id/menu_requests"
+            android:icon="@drawable/icon_requests"
+            android:title="@string/menu_requests" />
     </group>
 
     <group
-        android:id="@+id/group_actions"
+        android:id="@+id/menu_second_group"
         android:checkableBehavior="single">
         <item
-            android:id="@+id/menu_buscar"
-            android:checked="false"
-            android:icon="@drawable/iconbuscainvert"
-            android:title="Buscar Produtos" />
+            android:id="@+id/menu_search"
+            android:icon="@drawable/icon_search"
+            android:title="@string/menu_search" />
         <item
             android:id="@+id/menu_login"
-            android:checked="false"
-            android:icon="@drawable/iconlogin"
-            android:title="Fazer Login" />
+            android:icon="@drawable/icon_login"
+            android:title="@string/menu_login" />
 
         <item
             android:id="@+id/menu_qrcode"
-            android:checked="false"
-            android:icon="@drawable/iconleitorqr"
-            android:title="Leitor de QR Code" />
+            android:icon="@drawable/icon_qrcode"
+            android:title="@string/menu_qrcode" />
 
         <item
-            android:id="@+id/menu_contato"
-            android:checked="false"
-            android:icon="@drawable/iconcontato"
-            android:title="Contato" />
+            android:id="@+id/menu_contact"
+            android:icon="@drawable/icon_contact"
+            android:title="@string/menu_contact" />
 
         <item
-            android:id="@+id/menu_sobre"
-            android:checked="false"
-            android:icon="@drawable/iconsobre"
-            android:title="Sobre Nós" />
+            android:id="@+id/menu_about"
+            android:icon="@drawable/icon_about"
+            android:title="@string/menu_about" />
     </group>
 </menu>

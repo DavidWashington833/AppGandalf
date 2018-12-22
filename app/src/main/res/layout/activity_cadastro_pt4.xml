@@ -17,7 +17,7 @@ tools:context="com.gandalf.CadastroActivity">
     android:orientation="vertical">
 
     <TextView
-        style="@style/TextDestaque"
+        style="@style/FirstTitle"
         android:gravity="left"
         android:text="Etapa Final!" />
 

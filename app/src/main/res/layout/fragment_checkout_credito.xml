@@ -33,7 +33,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        style="@style/TextDestaque"
+                        style="@style/FirstTitle"
                         android:gravity="left"
                         android:text="Checkout com Cartão de Crédito" />
 

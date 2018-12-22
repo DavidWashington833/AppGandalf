@@ -21,7 +21,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    style="@style/TextDestaque"
+                    style="@style/FirstTitle"
                     android:gravity="left"
                     android:text="Olá jovem cavaleiro!" />
 
@@ -63,7 +63,7 @@
                     android:hint="000.000.000-00"/>
 
                 <TextView
-                    style="@style/TextDestaque"
+                    style="@style/FirstTitle"
                     android:gravity="left"
                     android:text="Em qual planice você mora?" />
 
@@ -165,7 +165,7 @@
                 style="@style/TextView" />
 
             <TextView
-                style="@style/TextDestaque"
+                style="@style/FirstTitle"
                 android:gravity="left"
                 android:text="Precisamos do seu contato" />
 
@@ -204,7 +204,7 @@
 
 
             <TextView
-                style="@style/TextDestaque"
+                style="@style/FirstTitle"
                 android:gravity="left"
                 android:text="Etapa Final!" />
 

@@ -13,28 +13,19 @@
         app:srcCompat="@drawable/icon_user" />
 
     <LinearLayout
-        android:layout_width="120dp"
+        android:layout_width="130dp"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-
         <TextView
-            style="@style/TextDestaque"
+            style="@style/FirstTitle"
+            android:text="@string/menu_header_first_title"
             android:layout_margin="0dp"
-            android:layout_weight="1"
-            android:gravity="bottom"
-            android:text="Bem Vindo!"
-            android:textColor="@color/colorPrimaryText"
             android:textSize="30sp" />
 
         <TextView
-            style="@style/TextApoio"
-            android:layout_width="wrap_content"
-            android:layout_margin="0dp"
-            android:layout_weight="1"
-            android:gravity="top"
-            android:text="Faça login para acessar suas informações."
-            android:textColor="@color/colorPrimaryText"
-            android:textSize="14sp" />
+            style="@style/SmallText"
+            android:text="@string/menu_header_second_title"
+            android:layout_margin="0dp"/>
     </LinearLayout>
 
 </LinearLayout>

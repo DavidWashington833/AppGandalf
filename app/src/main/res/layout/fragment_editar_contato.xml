@@ -16,7 +16,7 @@
             android:orientation="vertical">
 
             <TextView
-                style="@style/TextDestaque"
+                style="@style/FirstTitle"
                 android:gravity="left"
                 android:text="Informações de Contato" />
 

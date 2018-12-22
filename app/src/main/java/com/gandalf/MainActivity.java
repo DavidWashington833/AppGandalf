@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
                         }
                         drawerLayout.closeDrawers();
 
-                        if (menuItem.getItemId() == R.id.menu_loja) {
+                        if (menuItem.getItemId() == R.id.menu_store) {
                             Intent newAct = new Intent(MainActivity.this, MainActivity.class);
                             startActivity(newAct);
                             return true;
@@ -59,31 +59,31 @@ public class MainActivity extends AppCompatActivity {
                             return true;
                         }
 
-                        if (menuItem.getItemId() == R.id.menu_minha_conta) {
+                        if (menuItem.getItemId() == R.id.menu_account) {
                             chamaFragment(new MinhaContaFragment());
                         }
 
-                        if (menuItem.getItemId() == R.id.minha_conta) {
+                        if (menuItem.getItemId() == R.id.menu_account) {
                             chamaFragment(new MinhaContaFragment());
                         }
 
-                        if (menuItem.getItemId() == R.id.menu_contato) {
+                        if (menuItem.getItemId() == R.id.menu_contact) {
                             chamaFragment(new ContatoFragment());
                         }
 
-                        if (menuItem.getItemId() == R.id.menu_sobre) {
+                        if (menuItem.getItemId() == R.id.menu_about) {
                             chamaFragment(new SobreNosFragment());
                         }
 
-                        if (menuItem.getItemId() == R.id.menu_carrinho) {
+                        if (menuItem.getItemId() == R.id.menu_cart) {
                             chamaFragment(new CarrinhoFragment());
                         }
 
-                        if(menuItem.getItemId() == R.id.menu_buscar) {
+                        if(menuItem.getItemId() == R.id.menu_search) {
                            chamaFragment(new BuscaProdutoFragment());
                         }
 
-                        if(menuItem.getItemId() == R.id.action_busca) {
+                        if(menuItem.getItemId() == R.id.actionbar_search) {
                             chamaFragment(new BuscaProdutoFragment());
                         }
                         return false;
@@ -113,11 +113,11 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
         else {
-            if(item.getItemId() == R.id.action_carrinho) {
+            if(item.getItemId() == R.id.actionbar_cart) {
                 chamaFragment(new CarrinhoFragment());
             }
 
-            if(item.getItemId() == R.id.action_busca) {
+            if(item.getItemId() == R.id.actionbar_search) {
                 chamaFragment(new BuscaProdutoFragment());
             }
         }

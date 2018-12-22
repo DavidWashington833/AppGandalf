@@ -27,7 +27,7 @@ android:background="@drawable/backgroundtermos"
                 android:orientation="vertical">
 
                 <TextView
-                    style="@style/TextDestaque"
+                    style="@style/FirstTitle"
                     android:gravity="left"
                     android:text="Termos de Serviços" />
                 <TextView

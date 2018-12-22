@@ -23,7 +23,7 @@ android:background="@drawable/backgroundpt3"
             android:orientation="vertical">
 
             <TextView
-                style="@style/TextDestaque"
+                style="@style/FirstTitle"
                 android:gravity="left"
                 android:text="Checkout com Boleto" />
 
