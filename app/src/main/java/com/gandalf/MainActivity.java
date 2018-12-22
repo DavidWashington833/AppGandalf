@@ -6,12 +6,16 @@ import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.astuetz.PagerSlidingTabStrip;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -99,12 +103,62 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        TabsFragment newFragment = new TabsFragment();
+//        TabsFragment newFragment = new TabsFragment();
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 
-        transaction.replace(R.id.activity_main_tabs, newFragment);
-        transaction.addToBackStack(null);
-        transaction.commit();
+//        transaction.replace(R.id.activity_main_tabs, newFragment);
+//        transaction.addToBackStack(null);
+//        transaction.commit();
+
+        // Inflate the layout for this fragment
+        // Initialize the ViewPager and set an adapter
+        ViewPager pager = (ViewPager) findViewById(R.id.activity_main_viewpager);
+        pager.setAdapter(new MyPagerAdapter(getSupportFragmentManager()));
+
+        // Bind the tabs to the ViewPager
+        PagerSlidingTabStrip tabs = (PagerSlidingTabStrip) findViewById(R.id.activity_main_bar);
+        tabs.setViewPager(pager);
+        pager.setCurrentItem(1);
+    }
+
+    public class MyPagerAdapter extends FragmentPagerAdapter {
+
+        MyPagerAdapter(FragmentManager fm) {
+            super(fm);
+        }
+
+        @Override
+        public CharSequence getPageTitle(int position) {
+            if (position == 0) {
+                return "Categorias";
+            }
+            if (position == 1) {
+                return "Loja";
+            }
+            if (position == 2) {
+                return "Carrinho";
+            }
+            return "";
+        }
+
+        @Override
+        public int getCount() {
+            return 3;
+        }
+
+        @Override
+        public Fragment getItem(int position) {
+            if (position == 0) {
+                return new CategoriaFragment();
+            }
+            if (position == 1) {
+                return new LojaFragment();
+            }
+            if (position == 2) {
+                return new CarrinhoFragment();
+            }
+            return null;
+        }
     }
 
     @Override
@@ -142,7 +196,7 @@ public class MainActivity extends AppCompatActivity {
             idProduto = null;
         }
 
-        chamaFragment(new TabsFragment());
+//        chamaFragment(new TabsFragment());
 
     }
 
@@ -151,9 +205,9 @@ public class MainActivity extends AppCompatActivity {
         FragmentManager manager = getSupportFragmentManager();
         manager.popBackStackImmediate(backStateName, FragmentManager.POP_BACK_STACK_INCLUSIVE);
         FragmentTransaction transaction = manager.beginTransaction();
-        transaction.replace(R.id.activity_main_tabs, fragment);
-        transaction.addToBackStack(backStateName);
-        transaction.commit();
+//        transaction.replace(R.id.activity_main_tabs, fragment);
+//        transaction.addToBackStack(backStateName);
+//        transaction.commit();
     }
 
     @Override

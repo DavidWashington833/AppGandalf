@@ -16,9 +16,26 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent" />
 
-    <FrameLayout
-        android:id="@+id/activity_main_tabs"
+    <LinearLayout
+        android:background="@drawable/backgroundpt3"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.astuetz.PagerSlidingTabStrip
+            android:id="@+id/activity_main_bar"
+            app:pstsIndicatorColor="@color/colorPrimaryText"
+            app:pstsTabTextColor="@color/colorPrimaryText"
+            android:background="@color/colorBlackOpacity0"
+            android:layout_width="match_parent"
+            android:layout_height="70dp" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/activity_main_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent" />
+
+    </LinearLayout>
+
 
 </android.support.v4.widget.DrawerLayout>

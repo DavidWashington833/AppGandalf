@@ -118,8 +118,8 @@ public class CarrinhoAdapter  extends BaseAdapter {
         FragmentManager manager = ((MainActivity)context).getSupportFragmentManager();
         manager.popBackStackImmediate(backStateName, FragmentManager.POP_BACK_STACK_INCLUSIVE);
         FragmentTransaction transaction = manager.beginTransaction();
-        transaction.add(R.id.activity_main_tabs, fragment);
-        transaction.addToBackStack(backStateName);
-        transaction.commit();
+//        transaction.add(R.id.activity_main_tabs, fragment);
+//        transaction.addToBackStack(backStateName);
+//        transaction.commit();
     }
 }
