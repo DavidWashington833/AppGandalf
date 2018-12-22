@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/backgroundmapa"
-    tools:context="com.gandalf.com.gandalf.EditarEnderecoFragment">
+    tools:context="com.gandalf.EditarEnderecoFragment">
 
     <ScrollView
         android:layout_width="fill_parent"

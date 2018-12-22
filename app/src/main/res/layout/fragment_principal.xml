@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/backgroundpt3"
-    tools:context="com.gandalf.com.gandalf.PrincipalFragment">
+    tools:context="com.gandalf.PrincipalFragment">
 
     <com.astuetz.PagerSlidingTabStrip
         android:id="@+id/tabs"

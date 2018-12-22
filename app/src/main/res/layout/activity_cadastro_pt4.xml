@@ -7,7 +7,7 @@ android:layout_width="match_parent"
 android:layout_height="match_parent"
 android:orientation="vertical"
 android:background="@drawable/backgroundpt1"
-tools:context="com.gandalf.com.gandalf.CadastroActivity">
+tools:context="com.gandalf.CadastroActivity">
 
 <LinearLayout
     android:layout_width="fill_parent"

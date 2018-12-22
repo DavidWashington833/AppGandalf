@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/backgroundpt3"
-    tools:context="com.gandalf.com.gandalf.CheckoutCreditoFragment">
+    tools:context="com.gandalf.CheckoutCreditoFragment">
 
     <ScrollView
         android:layout_width="match_parent"
