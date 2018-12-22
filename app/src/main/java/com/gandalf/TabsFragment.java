@@ -16,9 +16,9 @@ import com.astuetz.PagerSlidingTabStrip;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class PrincipalFragment extends Fragment {
+public class TabsFragment extends Fragment {
 
-    public PrincipalFragment() {
+    public TabsFragment() {
         // Required empty public constructor
     }
 
@@ -26,15 +26,15 @@ public class PrincipalFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View v  =  inflater.inflate(R.layout.fragment_principal, container, false);
+        View v  =  inflater.inflate(R.layout.fragment_tabs, container, false);
 
         // Inflate the layout for this fragment
         // Initialize the ViewPager and set an adapter
-        ViewPager pager = (ViewPager) v.findViewById(R.id.viewpager);
+        ViewPager pager = (ViewPager) v.findViewById(R.id.fragment_tabs_viewpager);
         pager.setAdapter(new MyPagerAdapter(getActivity().getSupportFragmentManager()));
 
         // Bind the tabs to the ViewPager
-        PagerSlidingTabStrip tabs = (PagerSlidingTabStrip) v.findViewById(R.id.tabs);
+        PagerSlidingTabStrip tabs = (PagerSlidingTabStrip) v.findViewById(R.id.fragment_tabs_bar);
         tabs.setViewPager(pager);
         pager.setCurrentItem(1);
 

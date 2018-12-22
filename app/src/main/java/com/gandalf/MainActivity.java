@@ -99,10 +99,10 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        PrincipalFragment newFragment = new PrincipalFragment();
+        TabsFragment newFragment = new TabsFragment();
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 
-        transaction.replace(R.id.frame_principal, newFragment);
+        transaction.replace(R.id.activity_main_tabs, newFragment);
         transaction.addToBackStack(null);
         transaction.commit();
     }
@@ -142,7 +142,7 @@ public class MainActivity extends AppCompatActivity {
             idProduto = null;
         }
 
-        chamaFragment(new PrincipalFragment());
+        chamaFragment(new TabsFragment());
 
     }
 
@@ -151,7 +151,7 @@ public class MainActivity extends AppCompatActivity {
         FragmentManager manager = getSupportFragmentManager();
         manager.popBackStackImmediate(backStateName, FragmentManager.POP_BACK_STACK_INCLUSIVE);
         FragmentTransaction transaction = manager.beginTransaction();
-        transaction.replace(R.id.frame_principal, fragment);
+        transaction.replace(R.id.activity_main_tabs, fragment);
         transaction.addToBackStack(backStateName);
         transaction.commit();
     }

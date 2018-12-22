@@ -33,7 +33,7 @@ public class EnviarUsuarioTask extends AsyncTask<Void, Void, String> {
         Gson gson = new Gson();
         String jsonInString = gson.toJson(clienteDTO);
         WebClient client = new WebClient();
-        String resposta = client.post("http://192.168.15.12:8084/Gandalf/rest/cliente/", jsonInString);
+        String resposta = client.post("http://192.168.15.17:8084/Gandalf/rest/cliente/", jsonInString);
         return resposta;
     }
 
