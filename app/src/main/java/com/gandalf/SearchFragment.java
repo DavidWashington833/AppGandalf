@@ -15,12 +15,12 @@ import com.gandalf.tasks.BuscaProdutoTask;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class BuscaProdutoFragment extends Fragment {
+public class SearchFragment extends Fragment {
 
     EditText txtBusca;
     Button btnBusca;
 
-    public BuscaProdutoFragment() {
+    public SearchFragment() {
         // Required empty public constructor
 
     }
@@ -38,7 +38,7 @@ public class BuscaProdutoFragment extends Fragment {
         btnBusca.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                new BuscaProdutoTask(BuscaProdutoFragment.this).execute();
+                new BuscaProdutoTask(SearchFragment.this).execute();
             }
         });
 

@@ -15,7 +15,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.gandalf.MainActivity;
+import com.gandalf.activitys.MainActivity;
 import com.gandalf.ProdutoUnicoFragment;
 import com.gandalf.R;
 import com.gandalf.models.Produto;

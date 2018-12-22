@@ -1,4 +1,4 @@
-package com.gandalf;
+package com.gandalf.activitys;
 
 
 import android.content.Intent;
@@ -14,8 +14,18 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-
 import com.astuetz.PagerSlidingTabStrip;
+import com.gandalf.CartFragment;
+import com.gandalf.CategoriaFragment;
+import com.gandalf.ContatoFragment;
+import com.gandalf.LoginActivity;
+import com.gandalf.LojaFragment;
+import com.gandalf.MinhaContaFragment;
+import com.gandalf.ProdutoUnicoFragment;
+import com.gandalf.QRCodeActivity;
+import com.gandalf.R;
+import com.gandalf.SearchFragment;
+import com.gandalf.SobreNosFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -45,31 +55,32 @@ public class MainActivity extends AppCompatActivity {
 //        actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.openDrawer, R.string.closeDrawer);
 //        drawerLayout.setDrawerListener(actionBarDrawerToggle);
 //        actionBarDrawerToggle.syncState();
-
 //        TabsFragment newFragment = new TabsFragment();
 //        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-
 //        transaction.replace(R.id.activity_main_tabs, newFragment);
 //        transaction.addToBackStack(null);
 //        transaction.commit();
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if (actionBarDrawerToggle.onOptionsItemSelected(item)) {
-            return true;
-        }
-        else {
-            if(item.getItemId() == R.id.actionbar_cart) {
-                chamaFragment(new CarrinhoFragment());
-            }
-
-            if(item.getItemId() == R.id.actionbar_search) {
-                chamaFragment(new BuscaProdutoFragment());
-            }
-        }
-        return super.onOptionsItemSelected(item);
-    }
+//    TODO: refactoring
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+//        if (actionBarDrawerToggle.onOptionsItemSelected(item)) {
+//            return true;
+//        }
+//        else {
+//            if(item.getItemId() == R.id.actionbar_cart) {
+//                chamaFragment(new CartFragment());
+//                Intent newAct = new Intent(MainActivity.this, CartActivity.class);
+//                startActivity(newAct);
+//            }
+//
+//            if(item.getItemId() == R.id.actionbar_search) {
+//                chamaFragment(new SearchFragment());
+//            }
+//        }
+//        return super.onOptionsItemSelected(item);
+//    }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -146,15 +157,15 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 if (menuItem.getItemId() == R.id.menu_cart) {
-                    chamaFragment(new CarrinhoFragment());
+                    chamaFragment(new CartFragment());
                 }
 
                 if(menuItem.getItemId() == R.id.menu_search) {
-                    chamaFragment(new BuscaProdutoFragment());
+                    chamaFragment(new SearchFragment());
                 }
 
                 if(menuItem.getItemId() == R.id.actionbar_search) {
-                    chamaFragment(new BuscaProdutoFragment());
+                    chamaFragment(new SearchFragment());
                 }
                 return false;
             }
@@ -195,7 +206,7 @@ public class MainActivity extends AppCompatActivity {
                 return new LojaFragment();
             }
             if (position == 2) {
-                return new CarrinhoFragment();
+                return new CartFragment();
             }
             return null;
         }

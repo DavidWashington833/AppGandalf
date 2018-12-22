@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.gandalf">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -13,33 +12,33 @@
         android:roundIcon="@drawable/iconapp"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name="com.gandalf.MainActivity">
+        <activity android:name=".activitys.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
-            android:name="com.gandalf.CadastroActivity"
-            android:parentActivityName="com.gandalf.LoginActivity"
+            android:name=".CadastroActivity"
+            android:parentActivityName=".LoginActivity"
             android:screenOrientation="portrait" />
-
         <activity
-            android:name="com.gandalf.LoginActivity"
-            android:parentActivityName="com.gandalf.MainActivity"
+            android:name=".LoginActivity"
+            android:parentActivityName=".activitys.MainActivity"
             android:screenOrientation="portrait" />
-
         <activity
-            android:name="com.gandalf.QRCodeActivity"
-            android:parentActivityName="com.gandalf.MainActivity"
+            android:name=".QRCodeActivity"
+            android:parentActivityName=".activitys.MainActivity"
             android:screenOrientation="portrait" />
-
-
-        <activity android:name="com.gandalf.RecuperarSenhaActivity"
-            android:parentActivityName="com.gandalf.LoginActivity"
+        <activity
+            android:name=".RecuperarSenhaActivity"
+            android:parentActivityName=".LoginActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".activitys.CartActivity"
+            android:label="@string/title_activity_cart"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

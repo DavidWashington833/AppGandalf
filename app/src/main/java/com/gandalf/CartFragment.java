@@ -19,10 +19,10 @@ import java.util.Arrays;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class CarrinhoFragment extends Fragment {
+public class CartFragment extends Fragment {
 
 
-    public CarrinhoFragment() {
+    public CartFragment() {
         // Required empty public constructor
     }
 

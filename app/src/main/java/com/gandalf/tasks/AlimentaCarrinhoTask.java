@@ -3,7 +3,7 @@ package com.gandalf.tasks;
 import android.os.AsyncTask;
 import android.widget.ListView;
 
-import com.gandalf.CarrinhoFragment;
+import com.gandalf.CartFragment;
 import com.gandalf.R;
 import com.gandalf.adapter.CarrinhoAdapter;
 import com.gandalf.helpers.CarrinhoSingletonHelper;
@@ -17,9 +17,9 @@ import java.util.Arrays;
  */
 
 public class AlimentaCarrinhoTask extends AsyncTask<Void, Void, String> {
-    private CarrinhoFragment context;
+    private CartFragment context;
 
-    public AlimentaCarrinhoTask(CarrinhoFragment context) {
+    public AlimentaCarrinhoTask(CartFragment context) {
         this.context = context;
     }
 

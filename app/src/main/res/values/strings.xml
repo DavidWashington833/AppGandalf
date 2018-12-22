@@ -17,4 +17,5 @@
     <string name="menu_qrcode">Leitor de QR Code</string>
     <string name="menu_contact">Contato</string>
     <string name="menu_about">Sobre Nós</string>
+    <string name="title_activity_cart">CartActivity</string>
 </resources>

@@ -5,7 +5,7 @@ import android.os.AsyncTask;
 import android.widget.EditText;
 import android.widget.ListView;
 
-import com.gandalf.BuscaProdutoFragment;
+import com.gandalf.SearchFragment;
 import com.gandalf.R;
 import com.gandalf.WebClient;
 import com.gandalf.adapter.ProdutoAdapter;
@@ -20,10 +20,10 @@ import java.util.Arrays;
 
 public class BuscaProdutoTask extends AsyncTask<Void, Void, String> {
 
-    private BuscaProdutoFragment context;
+    private SearchFragment context;
     private ProgressDialog dialog;
 
-    public BuscaProdutoTask(BuscaProdutoFragment context) {
+    public BuscaProdutoTask(SearchFragment context) {
         this.context = context;
     }
 
