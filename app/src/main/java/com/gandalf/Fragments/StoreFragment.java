@@ -32,25 +32,19 @@ public class StoreFragment extends Fragment {
 
     private RecyclerView recyclerView;
     private CustomAdapter adapter;
-    private List<Produto> data_list;
-
-
-    public StoreFragment() {
-        // Required empty public constructor
-    }
-
+    private List<Produto> products;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fragment_loja, container, false);
+        View view = inflater.inflate(R.layout.fragment_store, container, false);
         new LojaTask(StoreFragment.this).execute();
 
         recyclerView = (RecyclerView) view.findViewById(R.id.recyvler_view_produtos);
-        data_list = new ArrayList<>();
+        products = new ArrayList<>();
 
-        adapter = new CustomAdapter(this, data_list);
+        adapter = new CustomAdapter(this, products);
         recyclerView.setAdapter(adapter);
 
 

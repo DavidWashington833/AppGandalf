@@ -47,7 +47,7 @@ public class ProdutoAdapter extends BaseAdapter {
     public View getView(int i, View view, ViewGroup viewGroup) {
 
         if(view == null){
-            view = View.inflate(context, R.layout.fragment_loja, null);
+            view = View.inflate(context, R.layout.fragment_store, null);
 
         }
 
