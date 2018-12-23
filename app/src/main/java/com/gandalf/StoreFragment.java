@@ -1,4 +1,4 @@
-package com.gandalf.Fragments;
+package com.gandalf;
 
 
 import android.os.Bundle;
@@ -11,8 +11,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.gandalf.CustomAdapter;
-import com.gandalf.R;
 import com.gandalf.models.Produto;
 import com.gandalf.tasks.LojaTask;
 

@@ -19,8 +19,8 @@ import com.gandalf.CartFragment;
 import com.gandalf.Fragments.CategoryFragment;
 import com.gandalf.ContatoFragment;
 import com.gandalf.LoginActivity;
-import com.gandalf.Fragments.StoreFragment;
 import com.gandalf.MinhaContaFragment;
+import com.gandalf.Fragments.ProductsFragment;
 import com.gandalf.ProdutoUnicoFragment;
 import com.gandalf.QRCodeActivity;
 import com.gandalf.R;
@@ -200,7 +200,7 @@ public class MainActivity extends AppCompatActivity {
                 return new CategoryFragment();
             }
             if (position == 1) {
-                return new StoreFragment();
+                return new ProductsFragment();
             }
             return null;
         }

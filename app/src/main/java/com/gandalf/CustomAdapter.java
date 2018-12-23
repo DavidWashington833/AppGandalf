@@ -7,7 +7,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.gandalf.Fragments.StoreFragment;
 import com.gandalf.models.Produto;
 
 import java.util.List;

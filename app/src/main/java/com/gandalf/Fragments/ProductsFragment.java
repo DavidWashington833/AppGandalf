@@ -1,4 +1,4 @@
-package com.gandalf;
+package com.gandalf.Fragments;
 
 
 import android.os.Bundle;
@@ -8,17 +8,18 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 
+import com.gandalf.R;
 import com.gandalf.tasks.PegaProdutosTask;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class ProdutoFragment extends Fragment {
+public class ProductsFragment extends Fragment {
 
     EditText hiddenId;
 
-    public ProdutoFragment() {
+    public ProductsFragment() {
         // Required empty public constructor
     }
 
@@ -28,7 +29,7 @@ public class ProdutoFragment extends Fragment {
 
         hiddenId = (EditText) view.findViewById(R.id.hiddenIdProd);
 
-        new PegaProdutosTask(ProdutoFragment.this).execute();
+        new PegaProdutosTask(ProductsFragment.this).execute();
 
         return view;
     }

@@ -2,18 +2,17 @@ package com.gandalf.tasks;
 
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
-import android.widget.TextView;
+import android.widget.ListView;
 
-import com.gandalf.ProdutoFragment;
+import com.gandalf.Fragments.ProductsFragment;
 import com.gandalf.R;
 import com.gandalf.WebClient;
 
-import android.graphics.BitmapFactory;
-import android.util.Base64;
-import android.widget.ImageView;
-
+import com.gandalf.adapter.ProdutoAdapter;
 import com.gandalf.models.Produto;
 import com.google.gson.Gson;
+
+import java.util.Arrays;
 
 /**
  * Created by fernando.hyamamoto on 16/11/2017.
@@ -21,15 +20,15 @@ import com.google.gson.Gson;
 
 public class PegaProdutosTask extends AsyncTask<Void, Void, String> {
     private String id;
-    private ProdutoFragment context;
+    private ProductsFragment context;
 
     private ProgressDialog dialog;
 
-    public PegaProdutosTask(ProdutoFragment context) {
+    public PegaProdutosTask(ProductsFragment context) {
         this.context = context;
     }
 
-    public PegaProdutosTask(ProdutoFragment context, String id) {
+    public PegaProdutosTask(ProductsFragment context, String id) {
         this.context = context;
         this.id = id;
     }
@@ -51,30 +50,12 @@ public class PegaProdutosTask extends AsyncTask<Void, Void, String> {
 
     @Override
     protected void onPostExecute(String resposta) {
-
         if (!resposta.equals("null")) {
-            Produto c = new Gson().fromJson(resposta, Produto.class);
-//            Toast t = Toast.makeText(context.getActivity(), c.getNomeProduto(), Toast.LENGTH_SHORT);
-//            t.show();
+            Produto[] produtos = new Gson().fromJson(resposta, Produto[].class);
+            final ProdutoAdapter adapter = new ProdutoAdapter(context.getContext(), Arrays.asList(produtos));
+            final ListView listView = (ListView) context.getActivity().findViewById(R.id.list_produto);
 
-            TextView nomeP = (TextView) context.getActivity().findViewById(R.id.nomeProduto);
-            TextView codP = (TextView) context.getActivity().findViewById(R.id.codigoProduto);
-            TextView precoP = (TextView) context.getActivity().findViewById(R.id.precoProduto);
-            TextView descP = (TextView) context.getActivity().findViewById(R.id.descProduto);
-
-            ImageView imgP = (ImageView) context.getActivity().findViewById(R.id.imgProduto);
-
-
-            nomeP.setText(c.getNomeProduto());
-            codP.setText(c.getIdProduto());
-            precoP.setText(c.getPrecProduto());
-            descP.setText(c.getDescProduto());
-            byte[] imageAsBytes = Base64.decode(c.getImagem().getBytes(), Base64.DEFAULT);
-
-            imgP.setImageBitmap(BitmapFactory.decodeByteArray(imageAsBytes, 0, imageAsBytes.length));
-
-
-//            listView.setAdapter(adapter);
+            listView.setAdapter(adapter);
         }
     }
 }

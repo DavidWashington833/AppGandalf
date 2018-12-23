@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.gandalf.Fragments.StoreFragment;
+import com.gandalf.StoreFragment;
 import com.gandalf.R;
 import com.gandalf.WebClient;
 import com.gandalf.models.Produto;
