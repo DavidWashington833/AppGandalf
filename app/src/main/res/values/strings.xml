@@ -18,4 +18,6 @@
     <string name="menu_contact">Contato</string>
     <string name="menu_about">Sobre Nós</string>
     <string name="title_activity_cart">CartActivity</string>
+    <string name="activity_main_tab_title_one">Categorias</string>
+    <string name="activity_main_tab_title_two">Loja</string>
 </resources>

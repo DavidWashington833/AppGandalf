@@ -6,30 +6,28 @@ import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import com.astuetz.PagerSlidingTabStrip;
 import com.gandalf.CartFragment;
-import com.gandalf.Fragments.CategoryFragment;
 import com.gandalf.ContatoFragment;
 import com.gandalf.LoginActivity;
 import com.gandalf.MinhaContaFragment;
-import com.gandalf.Fragments.ProductsFragment;
 import com.gandalf.ProdutoUnicoFragment;
 import com.gandalf.QRCodeActivity;
 import com.gandalf.R;
 import com.gandalf.SearchFragment;
 import com.gandalf.SobreNosFragment;
+import com.gandalf.adapter.TabsAdapter;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ActionBarDrawerToggle actionBarDrawerToggle;
+//    TODO: refactoring
+//    private ActionBarDrawerToggle actionBarDrawerToggle;
     private DrawerLayout drawerLayout;
     private String idProduct;
 
@@ -45,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         PagerSlidingTabStrip tabs = (PagerSlidingTabStrip) findViewById(R.id.activity_main_tabs);
         drawerLayout = (DrawerLayout) findViewById(R.id.activity_main_drawer_layout);
 
-        viewpager.setAdapter(new MyPagerAdapter(getSupportFragmentManager()));
+        viewpager.setAdapter(new TabsAdapter(getSupportFragmentManager(), getResources()));
         tabs.setViewPager(viewpager);
         viewpager.setCurrentItem(1);
 
@@ -170,40 +168,6 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             }
         };
-    }
-
-    public class MyPagerAdapter extends FragmentPagerAdapter {
-
-        MyPagerAdapter(FragmentManager fm) {
-            super(fm);
-        }
-
-        @Override
-        public CharSequence getPageTitle(int position) {
-            if (position == 0) {
-                return "Categorias";
-            }
-            if (position == 1) {
-                return "Loja";
-            }
-            return "";
-        }
-
-        @Override
-        public int getCount() {
-            return 2;
-        }
-
-        @Override
-        public Fragment getItem(int position) {
-            if (position == 0) {
-                return new CategoryFragment();
-            }
-            if (position == 1) {
-                return new ProductsFragment();
-            }
-            return null;
-        }
     }
 
     public void chamaFragment(Fragment fragment){
