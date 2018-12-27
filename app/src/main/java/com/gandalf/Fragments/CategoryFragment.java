@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.gandalf.R;
-import com.gandalf.tasks.PegaCategoriasTask;
+import com.gandalf.tasks.getCategoriesTask;
 
 /**
  * Created by igorr on 18/10/2017.
@@ -16,14 +16,10 @@ import com.gandalf.tasks.PegaCategoriasTask;
 
 public class CategoryFragment extends ListFragment {
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-
-        View view = inflater.inflate(R.layout.list_categoria, container, false);
-
-        new PegaCategoriasTask(CategoryFragment.this, container).execute();
-
+        View view = inflater.inflate(R.layout.fragment_category, container, false);
+        new getCategoriesTask(CategoryFragment.this, container).execute();
         return view;
     }
 

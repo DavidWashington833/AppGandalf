@@ -23,10 +23,15 @@
         android:text="0" />
 
     <ListView
+        android:id="@+id/fragment_category_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#AA000000" />
+
+
+    <ListView
         android:id="@android:id/list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#AA000000">
-
-    </ListView>
+        android:background="#AA000000" />
 </LinearLayout>

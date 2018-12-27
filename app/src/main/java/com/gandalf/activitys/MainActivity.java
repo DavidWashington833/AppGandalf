@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
 
         viewpager.setAdapter(new TabsAdapter(getSupportFragmentManager(), getResources()));
         tabs.setViewPager(viewpager);
-        viewpager.setCurrentItem(1);
+        viewpager.setCurrentItem(0);
 
         navigationView.setNavigationItemSelectedListener(getNavigationView());
 
