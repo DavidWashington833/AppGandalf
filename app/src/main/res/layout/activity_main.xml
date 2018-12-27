@@ -27,6 +27,7 @@
             app:pstsIndicatorColor="@color/colorPrimaryText"
             app:pstsTabTextColor="@color/colorPrimaryText"
             android:background="@color/colorBlackOpacity0"
+            app:pstsShouldExpand="true"
             android:layout_width="match_parent"
             android:layout_height="70dp" />
 

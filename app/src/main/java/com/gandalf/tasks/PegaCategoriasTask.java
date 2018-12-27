@@ -37,7 +37,7 @@ public class PegaCategoriasTask extends AsyncTask<Void, Void, String> {
     @Override
     protected String doInBackground(Void... params) {
         WebClient client = new WebClient();
-        String resposta = client.get("http://192.168.15.12:8084/Gandalf/rest/categoria/");
+        String resposta = client.get("http://192.168.15.10:8084/Gandalf/rest/categoria/");
         dialog.dismiss();
         return resposta;
     }

@@ -9,10 +9,12 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import com.astuetz.PagerSlidingTabStrip;
+import com.gandalf.CadastroActivity;
 import com.gandalf.CartFragment;
 import com.gandalf.ContatoFragment;
 import com.gandalf.LoginActivity;
@@ -28,8 +30,8 @@ public class MainActivity extends AppCompatActivity {
 
 //    TODO: refactoring
 //    private ActionBarDrawerToggle actionBarDrawerToggle;
+//    private String idProduct;
     private DrawerLayout drawerLayout;
-    private String idProduct;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
 //        else {
 //            if(item.getItemId() == R.id.actionbar_cart) {
 //                chamaFragment(new CartFragment());
-//                Intent newAct = new Intent(MainActivity.this, CartActivity.class);
+//                Intent newAct = new Intent(MainActivity.this, CadastroActivity.class);
 //                startActivity(newAct);
 //            }
 //
@@ -80,27 +82,15 @@ public class MainActivity extends AppCompatActivity {
 //        return super.onOptionsItemSelected(item);
 //    }
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if(requestCode == 1){
-            if(resultCode == RESULT_OK){
-                idProduct = data.getStringExtra("idProduct");
-            }
-        }
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-
-        if (idProduct != null) {
-            chamaFragment(new ProdutoUnicoFragment(idProduct));
-            idProduct = null;
-        }
-
-//        chamaFragment(new TabsFragment());
-
-    }
+//    TODO: refactoring
+//    @Override
+//    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+//        if(requestCode == 1){
+//            if(resultCode == RESULT_OK){
+//                idProduct = data.getStringExtra("idProduct");
+//            }
+//        }
+//    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu)  {

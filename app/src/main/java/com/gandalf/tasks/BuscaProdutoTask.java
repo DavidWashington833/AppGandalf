@@ -38,7 +38,7 @@ public class BuscaProdutoTask extends AsyncTask<Void, Void, String> {
         String resposta;
         WebClient client = new WebClient();
         EditText editText = (EditText) context.getActivity().findViewById(R.id.txtBuscaProduto);
-        resposta = client.get("http://192.168.15.12:8084/Gandalf/rest/produto/like/" + recebendoValor(editText));
+        resposta = client.get("http://192.168.15.10:8084/Gandalf/rest/produto/like/" + recebendoValor(editText));
         dialog.dismiss();
         return resposta;
     }
