@@ -32,11 +32,11 @@ public class MainHelper {
     private void addItem(String nomeProduto,
                          String precoProduto) {
         CardView cardView = (CardView) LayoutInflater.from(context)
-                .inflate(R.layout.cardview_produtos, mensagens, false);
+                .inflate(R.layout.cardview_product, mensagens, false);
         TextView titulo = (TextView)
-                cardView.findViewById(R.id.txtNomeProd);
+                cardView.findViewById(R.id.cardview_product_name);
         TextView mensagem = (TextView)
-                cardView.findViewById(R.id.txtPreco);
+                cardView.findViewById(R.id.cardview_product_price);
         titulo.setText(nomeProduto);
         mensagem.setText(precoProduto);
         mensagens.addView(cardView);

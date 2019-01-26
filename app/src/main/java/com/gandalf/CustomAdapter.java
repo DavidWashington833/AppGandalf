@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.gandalf.models.Produto;
+import com.gandalf.models.Product;
 
 import java.util.List;
 
@@ -17,9 +17,9 @@ import java.util.List;
 
 public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder>{
     private StoreFragment context;
-    private List<Produto> produtos;
+    private List<Product> produtos;
 
-    public CustomAdapter(StoreFragment context, List<Produto> produtos) {
+    public CustomAdapter(StoreFragment context, List<Product> produtos) {
         this.context = context;
         this.produtos = produtos;
     }
@@ -58,8 +58,8 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
         public ViewHolder(View itemView) {
             super(itemView);
 
-            nomeProduto = (TextView) itemView.findViewById(R.id.txtNomeProd);
-            precoProduto = (TextView) itemView.findViewById(R.id.txtPreco);
+            nomeProduto = (TextView) itemView.findViewById(R.id.cardview_product_name);
+            precoProduto = (TextView) itemView.findViewById(R.id.cardview_product_price);
             //imagemProduto = (ImageView) itemView.findViewById(R.id.imagemProd);
         }
     }

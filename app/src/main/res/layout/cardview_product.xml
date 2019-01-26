@@ -16,7 +16,7 @@
         android:padding="5dp">
 
         <EditText
-            android:id="@+id/hiddenIdProd"
+            android:id="@+id/cardview_product_id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -25,7 +25,7 @@
             android:visibility="gone" />
 
         <ImageView
-            android:id="@+id/imagemProd"
+            android:id="@+id/cardview_product_image"
             android:layout_width="160dp"
             android:layout_height="match_parent"
             android:background="#FFFFFF" />
@@ -38,7 +38,7 @@
             android:paddingRight="7dp">
 
             <TextView
-                android:id="@+id/txtNomeProd"
+                android:id="@+id/cardview_product_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Nome do Produto"
@@ -59,7 +59,7 @@
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
                     android:textColor="#00bcd4" />
                 <TextView
-                    android:id="@+id/txtPreco"
+                    android:id="@+id/cardview_product_price"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingBottom="12dp"

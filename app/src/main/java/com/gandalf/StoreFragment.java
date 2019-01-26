@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.gandalf.models.Produto;
+import com.gandalf.models.Product;
 import com.gandalf.tasks.LojaTask;
 
 import java.util.ArrayList;
@@ -30,7 +30,7 @@ public class StoreFragment extends Fragment {
 
     private RecyclerView recyclerView;
     private CustomAdapter adapter;
-    private List<Produto> products;
+    private List<Product> products;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -47,9 +47,9 @@ public class StoreFragment extends Fragment {
 
 
 
-        nomeP = (TextView) view.findViewById(R.id.txtNomeProd);
-        precoP = (TextView) view.findViewById(R.id.txtPreco);
-        imgP = (ImageView) view.findViewById(R.id.imagemProd);
+        nomeP = (TextView) view.findViewById(R.id.cardview_product_name);
+        precoP = (TextView) view.findViewById(R.id.cardview_product_price);
+        imgP = (ImageView) view.findViewById(R.id.cardview_product_image);
 
 
         mensagens = (ViewGroup) view.findViewById(R.id.container);
@@ -63,10 +63,10 @@ public class StoreFragment extends Fragment {
 
         CardView cardView = (CardView) LayoutInflater.from(getActivity()).inflate(R.layout.cardview_pagina_carrinho, mensagens, false);
 
-        TextView nome = (TextView) cardView.findViewById(R.id.txtNomeProd);
+        TextView nome = (TextView) cardView.findViewById(R.id.cardview_product_name);
         nome.setText((CharSequence) nomeProd);
 
-        TextView preco = (TextView) cardView.findViewById(R.id.txtPreco);
+        TextView preco = (TextView) cardView.findViewById(R.id.cardview_product_price);
         preco.setText((CharSequence) precoP);
 
 //        mensagens.addView(cardView);

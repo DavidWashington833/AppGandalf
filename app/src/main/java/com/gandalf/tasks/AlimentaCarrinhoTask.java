@@ -7,7 +7,7 @@ import com.gandalf.CartFragment;
 import com.gandalf.R;
 import com.gandalf.adapter.CarrinhoAdapter;
 import com.gandalf.helpers.CarrinhoSingletonHelper;
-import com.gandalf.models.Produto;
+import com.gandalf.models.Product;
 import com.google.gson.Gson;
 
 import java.util.Arrays;
@@ -38,10 +38,10 @@ public class AlimentaCarrinhoTask extends AsyncTask<Void, Void, String> {
     @Override
     protected void onPostExecute(String resposta) {
 
-          String result = new Gson().toJson(CarrinhoSingletonHelper.getInstance().getProduto());
+          String result = new Gson().toJson(CarrinhoSingletonHelper.getInstance().getProduct());
         if (!result.equals("null")) {
 
-            Produto[] produtos = new Gson().fromJson(result, Produto[].class);
+            Product[] produtos = new Gson().fromJson(result, Product[].class);
             final CarrinhoAdapter adapter = new CarrinhoAdapter(context.getContext(), Arrays.asList(produtos));
             final ListView listView = (ListView) context.getActivity().findViewById(R.id.list_produto_carrinho);
 

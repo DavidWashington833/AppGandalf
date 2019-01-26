@@ -1,6 +1,6 @@
 package com.gandalf.helpers;
 
-import com.gandalf.models.Produto;
+import com.gandalf.models.Product;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.List;
 public class CarrinhoSingletonHelper {
 
     private static final CarrinhoSingletonHelper INSTANCE = new CarrinhoSingletonHelper();
-    private List<Produto> produto = new ArrayList<>();
+    private List<Product> product = new ArrayList<>();
 
     private CarrinhoSingletonHelper(){
     }
@@ -21,22 +21,22 @@ public class CarrinhoSingletonHelper {
         return INSTANCE;
     }
 
-    public List<Produto> getProduto() {
-        return produto;
+    public List<Product> getProduct() {
+        return product;
     }
 
-    public void clearProduto(List<Produto> produto) {
-        this.produto = produto;
+    public void clearProduto(List<Product> product) {
+        this.product = product;
     }
 
-    public void pushProduto(Produto produto) {
-        this.produto.add(produto);
+    public void pushProduto(Product product) {
+        this.product.add(product);
     }
 
-    public void removeProduto(Produto produto) {
-        for (int i = 0; i < this.produto.size(); i++){
-            if(produto.getIdProduto().equals(this.produto.get(i).getIdProduto())){
-                this.produto.remove(i);
+    public void removeProduto(Product product) {
+        for (int i = 0; i < this.product.size(); i++){
+            if(product.getIdProduto().equals(this.product.get(i).getIdProduto())){
+                this.product.remove(i);
                 break;
             }
         }

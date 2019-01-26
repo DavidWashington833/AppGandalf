@@ -12,7 +12,7 @@ import android.widget.TextView;
 import com.gandalf.StoreFragment;
 import com.gandalf.R;
 import com.gandalf.WebClient;
-import com.gandalf.models.Produto;
+import com.gandalf.models.Product;
 import com.google.gson.Gson;
 
 /**
@@ -53,12 +53,12 @@ public class LojaTask extends AsyncTask<Void, Void, String> {
 
         CardView cardView = (CardView) LayoutInflater.from(context.getActivity()).inflate(R.layout.cardview_pagina_carrinho, mensagens, false);
 
-        Produto p = new Gson().fromJson(resposta, Produto.class);
+        Product p = new Gson().fromJson(resposta, Product.class);
 
 
-        TextView nomeP = (TextView) context.getActivity().findViewById(R.id.txtNomeProd);
-        TextView precoP = (TextView) context.getActivity().findViewById(R.id.txtPreco);
-        ImageView imgP = (ImageView) context.getActivity().findViewById(R.id.imagemProd);
+        TextView nomeP = (TextView) context.getActivity().findViewById(R.id.cardview_product_name);
+        TextView precoP = (TextView) context.getActivity().findViewById(R.id.cardview_product_price);
+        ImageView imgP = (ImageView) context.getActivity().findViewById(R.id.cardview_product_image);
 
         mensagens = (ViewGroup) context.getActivity().findViewById(R.id.container);
 

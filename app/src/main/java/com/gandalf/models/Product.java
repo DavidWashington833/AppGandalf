@@ -4,7 +4,7 @@ package com.gandalf.models;
  * Created by fernando.hyamamoto on 16/11/2017.
  */
 
-public class Produto {
+public class Product {
     private String idProduto;
     private String nomeProduto;
     private String precProduto;
@@ -13,7 +13,7 @@ public class Produto {
     private String imagem;
     private String descProduto;
 
-    public Produto(String idProduto, String nomeProduto, String precProduto, String descontoPromocao, String qtdMinEstoque, String imagem, String descProduto) {
+    public Product(String idProduto, String nomeProduto, String precProduto, String descontoPromocao, String qtdMinEstoque, String imagem, String descProduto) {
         this.idProduto = idProduto;
         this.nomeProduto = nomeProduto;
         this.precProduto = precProduto;

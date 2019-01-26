@@ -15,7 +15,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.gandalf.helpers.CarrinhoSingletonHelper;
-import com.gandalf.models.Produto;
+import com.gandalf.models.Product;
 import com.gandalf.tasks.PegaProdutoUnicoTask;
 
 
@@ -27,7 +27,7 @@ public class ProdutoUnicoFragment extends Fragment {
     public ImageView imgP;
     public TextView nomeP, codP, precoP,descP;
     public Button comprar;
-    public Produto produtoP;
+    public Product produtoP;
     EditText hiddenId;
     String id;
 
@@ -68,7 +68,7 @@ public class ProdutoUnicoFragment extends Fragment {
 
             }
         });
-        hiddenId = (EditText) view.findViewById(R.id.hiddenIdProd);
+        hiddenId = (EditText) view.findViewById(R.id.cardview_product_id);
 
         Intent intent = getActivity().getIntent();
         String t = intent.getStringExtra("idProduto");

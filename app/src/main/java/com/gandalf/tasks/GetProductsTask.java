@@ -8,8 +8,8 @@ import com.gandalf.Fragments.ProductsFragment;
 import com.gandalf.R;
 import com.gandalf.WebClient;
 
-import com.gandalf.adapter.ProdutoAdapter;
-import com.gandalf.models.Produto;
+import com.gandalf.adapter.ProductAdapter;
+import com.gandalf.models.Product;
 import com.google.gson.Gson;
 
 import java.util.Arrays;
@@ -44,8 +44,8 @@ public class GetProductsTask extends AsyncTask<Void, Void, String> {
 
     @Override
     protected void onPostExecute(String resposta) {
-        Produto[] produtos = new Gson().fromJson(resposta, Produto[].class);
-        ProdutoAdapter adapter = new ProdutoAdapter(context.getContext(), Arrays.asList(produtos));
+        Product[] products = new Gson().fromJson(resposta, Product[].class);
+        ProductAdapter adapter = new ProductAdapter(context.getContext(), Arrays.asList(products));
         ListView listView = (ListView) context.getActivity().findViewById(R.id.fragment_product_listlist);
         listView.setAdapter(adapter);
     }

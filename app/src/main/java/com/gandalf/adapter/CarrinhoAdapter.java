@@ -20,7 +20,7 @@ import com.gandalf.activitys.MainActivity;
 import com.gandalf.ProdutoUnicoFragment;
 import com.gandalf.R;
 import com.gandalf.helpers.CarrinhoSingletonHelper;
-import com.gandalf.models.Produto;
+import com.gandalf.models.Product;
 
 import java.util.List;
 
@@ -29,10 +29,10 @@ import java.util.List;
  */
 
 public class CarrinhoAdapter  extends BaseAdapter {
-    private final List<Produto> produtos;
+    private final List<Product> produtos;
     private final Context context;
 
-    public CarrinhoAdapter(Context context, List<Produto> produtos) {
+    public CarrinhoAdapter(Context context, List<Product> produtos) {
         this.context = context;
         this.produtos = produtos;
     }
@@ -55,7 +55,7 @@ public class CarrinhoAdapter  extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        final Produto produto = produtos.get(position);
+        final Product product = produtos.get(position);
 
         LayoutInflater inflater = LayoutInflater.from(context);
 
@@ -67,20 +67,20 @@ public class CarrinhoAdapter  extends BaseAdapter {
         final ViewGroup parentView = parent;
 
         TextView campoNome = (TextView) view.findViewById(R.id.txtNomeProdCart);
-        campoNome.setText(produto.getNomeProduto());
+        campoNome.setText(product.getNomeProduto());
 
         TextView campoPreco = (TextView) view.findViewById(R.id.txtPrecoCart);
-        campoPreco.setText(produto.getPrecProduto());
+        campoPreco.setText(product.getPrecProduto());
 
         ImageView campoImg = (ImageView) view.findViewById(R.id.imagemProdCart);
-        String imagem = produto.getImagem();
+        String imagem = product.getImagem();
         if (imagem != null) {
             byte[] imageAsBytes = Base64.decode(imagem.getBytes(), Base64.DEFAULT);
             campoImg.setImageBitmap(BitmapFactory.decodeByteArray(imageAsBytes, 0, imageAsBytes.length));
         }
 
         final EditText campoId = (EditText) view.findViewById(R.id.hiddenIdProdCarrinho);
-        campoId.setText(produto.getIdProduto());
+        campoId.setText(product.getIdProduto());
 
         Button botaoDetalhes = (Button) view.findViewById(R.id.btnVisualizarCarrinho);
 
@@ -98,9 +98,9 @@ public class CarrinhoAdapter  extends BaseAdapter {
         botaoRemover.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                CarrinhoSingletonHelper.getInstance().removeProduto(produto);
+                CarrinhoSingletonHelper.getInstance().removeProduto(product);
                 for (int i = 0; i < produtos.size(); i++){
-                    if(produto.getIdProduto().equals(produtos.get(i).getIdProduto())){
+                    if(product.getIdProduto().equals(produtos.get(i).getIdProduto())){
                         produtos.remove(i);
                         break;
                     }

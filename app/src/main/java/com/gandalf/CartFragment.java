@@ -10,7 +10,7 @@ import android.widget.ListView;
 
 import com.gandalf.adapter.CarrinhoAdapter;
 import com.gandalf.helpers.CarrinhoSingletonHelper;
-import com.gandalf.models.Produto;
+import com.gandalf.models.Product;
 import com.google.gson.Gson;
 
 import java.util.Arrays;
@@ -31,11 +31,11 @@ public class CartFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_carrinho, container, false);
 
-        String result = new Gson().toJson(CarrinhoSingletonHelper.getInstance().getProduto());
+        String result = new Gson().toJson(CarrinhoSingletonHelper.getInstance().getProduct());
         if (!result.equals("null")) {
 //                Toast t = Toast.makeText(getContext(), result, Toast.LENGTH_LONG);
 //                t.show();
-            final Produto[] produtos = new Gson().fromJson(result, Produto[].class);
+            final Product[] produtos = new Gson().fromJson(result, Product[].class);
             final CarrinhoAdapter adapter = new CarrinhoAdapter(this.getContext(), Arrays.asList(produtos));
             final ListView listView = (ListView) view.findViewById(R.id.list_produto_carrinho);
 

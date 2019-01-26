@@ -10,7 +10,7 @@ import android.widget.TextView;
 import com.gandalf.ProdutoUnicoFragment;
 import com.gandalf.R;
 import com.gandalf.WebClient;
-import com.gandalf.models.Produto;
+import com.gandalf.models.Product;
 import com.google.gson.Gson;
 
 
@@ -48,7 +48,7 @@ public class PegaProdutoUnicoTask extends AsyncTask<Void, Void, String> {
         System.out.println(resposta);
 
         if (!resposta.equals("null")) {
-            Produto p = new Gson().fromJson(resposta, Produto.class);
+            Product p = new Gson().fromJson(resposta, Product.class);
 
             TextView nomeP = (TextView) context.getActivity().findViewById(R.id.nomeProduto);
             TextView codP = (TextView) context.getActivity().findViewById(R.id.codigoProduto);

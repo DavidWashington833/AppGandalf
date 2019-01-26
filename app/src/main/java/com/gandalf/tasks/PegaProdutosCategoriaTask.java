@@ -9,8 +9,8 @@ import android.widget.ListView;
 import com.gandalf.Fragments.CategoryFragment;
 import com.gandalf.R;
 import com.gandalf.WebClient;
-import com.gandalf.adapter.ProdutoAdapter;
-import com.gandalf.models.Produto;
+import com.gandalf.adapter.ProductAdapter;
+import com.gandalf.models.Product;
 import com.google.gson.Gson;
 
 import java.util.Arrays;
@@ -48,8 +48,8 @@ public class PegaProdutosCategoriaTask extends AsyncTask<Void, Void, String> {
     protected void onPostExecute(String resposta) {
 
         if (!resposta.equals("null")) {
-            Produto[] produtos = new Gson().fromJson(resposta, Produto[].class);
-            ProdutoAdapter adapter = new ProdutoAdapter(context.getContext(), Arrays.asList(produtos));
+            Product[] produtos = new Gson().fromJson(resposta, Product[].class);
+            ProductAdapter adapter = new ProductAdapter(context.getContext(), Arrays.asList(produtos));
             final ListView listView = (ListView) context.getActivity().findViewById(android.R.id.list);
 
             listView.setAdapter(adapter);

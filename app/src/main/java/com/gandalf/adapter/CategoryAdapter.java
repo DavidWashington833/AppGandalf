@@ -1,25 +1,18 @@
 package com.gandalf.adapter;
 
 import android.content.Context;
-import android.graphics.BitmapFactory;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.util.Base64;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.gandalf.ProdutoUnicoFragment;
 import com.gandalf.R;
 import com.gandalf.activitys.MainActivity;
 import com.gandalf.models.Categoria;
-import com.gandalf.models.Produto;
 
 import java.util.List;
 
