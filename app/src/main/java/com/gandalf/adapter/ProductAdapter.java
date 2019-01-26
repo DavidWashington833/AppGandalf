@@ -52,7 +52,7 @@ public class ProductAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        final Product product = (Product) this.getItem(position);
+        Product product = (Product) this.getItem(position);
         LayoutInflater inflater = LayoutInflater.from(context);
         View view = inflater.inflate(R.layout.cardview_product, parent, false);
         byte[] imageAsBytes = Base64.decode(product.getImagem(), Base64.DEFAULT);

@@ -49,7 +49,7 @@ public class BuscaProdutoTask extends AsyncTask<Void, Void, String> {
         if (!resposta.equals("null")) {
             Product[] produtos = new Gson().fromJson(resposta, Product[].class);
             ProductAdapter adapter = new ProductAdapter(context.getContext(), Arrays.asList(produtos));
-            final ListView listView = (ListView) context.getActivity().findViewById(R.id.fragment_product_listlist);
+            final ListView listView = (ListView) context.getActivity().findViewById(R.id.fragment_product_list);
             listView.setAdapter(adapter);
         }
     }

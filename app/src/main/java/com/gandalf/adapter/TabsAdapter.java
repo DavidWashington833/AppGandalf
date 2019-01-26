@@ -5,7 +5,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import com.gandalf.Fragments.CategoryFragment;
+import com.gandalf.Fragments.CategoriesFragment;
 import com.gandalf.Fragments.ProductsFragment;
 import com.gandalf.R;
 
@@ -24,7 +24,7 @@ public class TabsAdapter extends FragmentPagerAdapter {
             resources.getString(R.string.activity_main_tab_title_two)
         );
         fragments = Arrays.asList(
-            new CategoryFragment(),
+            new CategoriesFragment(),
             new ProductsFragment()
         );
     }

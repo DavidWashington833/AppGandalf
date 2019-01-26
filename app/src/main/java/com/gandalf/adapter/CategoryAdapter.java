@@ -17,6 +17,7 @@ import com.gandalf.models.Categoria;
 import java.util.List;
 
 public class CategoryAdapter extends BaseAdapter {
+
     private final List<Categoria> categories;
     private final Context context;
 
@@ -42,29 +43,10 @@ public class CategoryAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-
-        final Categoria category = categories.get(position);
-
+        Categoria category = (Categoria) this.getItem(position);
         LayoutInflater inflater = LayoutInflater.from(context);
-
-        View view = convertView;
-        if (view == null) {
-            view = inflater.inflate(R.layout.cardview_category, parent, false);
-        }
-
-        final TextView nameCategory = (TextView) view.findViewById(R.id.cardview_category_name);
-        nameCategory.setText(category.getNomeCategoria());
-
+        View view = inflater.inflate(R.layout.cardview_category, parent, false);
+        ((TextView) view.findViewById(R.id.cardview_category_name)).setText(category.getNomeCategoria());
         return view;
-    }
-
-    public void chamaFragment(Fragment fragment){
-        String backStateName = fragment.getClass().getName();
-        FragmentManager manager = ((MainActivity)context).getSupportFragmentManager();
-        manager.popBackStackImmediate(backStateName, FragmentManager.POP_BACK_STACK_INCLUSIVE);
-        FragmentTransaction transaction = manager.beginTransaction();
-//        transaction.add(R.id.activity_main_tabs, fragment);
-//        transaction.addToBackStack(backStateName);
-//        transaction.commit();
     }
 }

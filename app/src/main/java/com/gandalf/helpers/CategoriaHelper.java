@@ -1,6 +1,6 @@
 package com.gandalf.helpers;
 
-import com.gandalf.Fragments.CategoryFragment;
+import com.gandalf.Fragments.CategoriesFragment;
 
 /**
  * Created by Gabriel_Montibeller on 15/11/2017.
@@ -8,9 +8,9 @@ import com.gandalf.Fragments.CategoryFragment;
 
 public class CategoriaHelper {
    /* private final EditText catName;*/
-    private CategoryFragment activity;
+    private CategoriesFragment activity;
 
-    public CategoriaHelper(CategoryFragment activity) {
+    public CategoriaHelper(CategoriesFragment activity) {
         this.activity = activity;
           /* catName = (EditText) activity.findViewById(R.id.);*/
 

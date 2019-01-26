@@ -14,7 +14,6 @@ import com.google.gson.Gson;
 
 import java.util.Arrays;
 
-
 public class GetProductsTask extends AsyncTask<Void, Void, String> {
 
     private ProductsFragment context;
@@ -46,7 +45,7 @@ public class GetProductsTask extends AsyncTask<Void, Void, String> {
     protected void onPostExecute(String resposta) {
         Product[] products = new Gson().fromJson(resposta, Product[].class);
         ProductAdapter adapter = new ProductAdapter(context.getContext(), Arrays.asList(products));
-        ListView listView = (ListView) context.getActivity().findViewById(R.id.fragment_product_listlist);
+        ListView listView = (ListView) context.getActivity().findViewById(R.id.fragment_product_list);
         listView.setAdapter(adapter);
     }
 }

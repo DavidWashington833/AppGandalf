@@ -29,6 +29,7 @@ import java.util.List;
  */
 
 public class CarrinhoAdapter  extends BaseAdapter {
+
     private final List<Product> produtos;
     private final Context context;
 
