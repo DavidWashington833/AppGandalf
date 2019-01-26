@@ -59,7 +59,7 @@ public class ProductAdapter extends BaseAdapter {
 
         ((EditText) view.findViewById(R.id.cardview_product_id)).setText(product.getIdProduto());
         ((TextView) view.findViewById(R.id.cardview_product_name)).setText(product.getNomeProduto());
-        ((TextView) view.findViewById(R.id.cardview_product_price)).setText(product.getPrecProduto());
+        ((TextView) view.findViewById(R.id.cardview_product_price)).setText("R$" + product.getPrecProduto());
         ((ImageView) view.findViewById(R.id.cardview_product_image)).setImageBitmap(BitmapFactory.decodeByteArray(imageAsBytes, 0, imageAsBytes.length));
 
         view.setOnClickListener(new View.OnClickListener() {

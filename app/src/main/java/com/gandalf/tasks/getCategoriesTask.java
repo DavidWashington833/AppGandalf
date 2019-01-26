@@ -48,18 +48,18 @@ public class getCategoriesTask extends AsyncTask<Void, Void, String> {
 
     @Override
     protected void onPostExecute(String response) {
-        if (!response.equals("null")) {
-            Categoria[] categories = new Gson().fromJson(response, Categoria[].class);
-            final CategoryAdapter adapter = new CategoryAdapter(context.getContext(), Arrays.asList(categories));
-            final ListView listView = (ListView) context.getActivity().findViewById(R.id.fragment_product_listlist);
-
-            listView.setAdapter(adapter);
-        }
+//        TODO: refactoring
+//        if (!response.equals("null")) {
+//            Categoria[] categories = new Gson().fromJson(response, Categoria[].class);
+//            final CategoryAdapter adapter = new CategoryAdapter(context.getContext(), Arrays.asList(categories));
+//            final ListView listView = (ListView) context.getActivity().findViewById(R.id.fragment_product_listlist);
+//
+//            listView.setAdapter(adapter);
+//        }
 //        Categoria[] categories = new Gson().fromJson(response, Categoria[].class);
 //        final CategoryAdapter adapter = new CategoryAdapter(context.getContext(), Arrays.asList(categories));
 //        final ListView listView = (ListView) context.getActivity().findViewById(R.id.fragment_category_list);
 
-//        TODO: refactoring
 //        if (listView != null) {
 //            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 //                @Override
