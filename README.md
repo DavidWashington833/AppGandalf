@@ -14,9 +14,9 @@ In Gandalf App change baseURL to the domain that the API is running in WebClient
 
 ## Authors
 
-* [David Washington](https://github.com/DavidWashington833)
+* [Bruno Nunes](https://github.com/BrunoN919)
 
-* [Igor Ramos](https://github.com/iramosg)
+* [David Washington](https://github.com/DavidWashington833)
 
 * [Felipe Miconi](https://github.com/FelipeMiconi)
 
@@ -24,4 +24,4 @@ In Gandalf App change baseURL to the domain that the API is running in WebClient
 
 * [Hideki Yamamoto](https://github.com/yama159)
 
-* [Bruno Nunes](https://github.com/BrunoN919)
+* [Igor Ramos](https://github.com/iramosg)
