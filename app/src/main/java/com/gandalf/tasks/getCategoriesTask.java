@@ -47,7 +47,7 @@ public class getCategoriesTask extends AsyncTask<Void, Void, String> {
     @Override
     protected String doInBackground(Void... params) {
         WebClient client = new WebClient();
-        String response = client.get("http://192.168.15.10:8084/Gandalf/rest/categoria/");
+        String response = client.get("http://192.168.15.14:8080/gandalf/rest/categoria/");
         dialog.dismiss();
         return response;
     }

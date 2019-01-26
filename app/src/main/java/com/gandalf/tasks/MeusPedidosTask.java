@@ -25,7 +25,7 @@ public class MeusPedidosTask extends AsyncTask<Void, Void, String> {
     @Override
     protected String doInBackground(Void... voids) {
         WebClient client = new WebClient();
-        String resposta = client.get("http://192.168.15.10:8084/Gandalf/rest/pedido/cliente/43");
+        String resposta = client.get("http://192.168.15.14:8080/gandalf/rest/pedido/cliente/43");
 
         return resposta;
     }

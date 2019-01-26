@@ -38,7 +38,7 @@ public class PegaProdutosCategoriaTask extends AsyncTask<Void, Void, String> {
     protected String doInBackground(Void... params) {
         WebClient client = new WebClient();
         EditText id = (EditText) context.getActivity().findViewById(R.id.hiddenIdCat);
-        String resposta = client.get("http://192.168.15.10:8084/Gandalf/rest/produto/categoria/" + id.getText().toString());
+        String resposta = client.get("http://192.168.15.14:8080/gandalf/rest/produto/categoria/" + id.getText().toString());
         dialog.dismiss();
 
         return resposta;
