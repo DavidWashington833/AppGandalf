@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/backgroundmapa"
-    tools:context="com.example.david.gandalf.EditarEnderecoFragment">
+    tools:context="com.gandalf.EditarEnderecoFragment">
 
     <ScrollView
         android:layout_width="fill_parent"
@@ -25,7 +25,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    style="@style/TextDestaque"
+                    style="@style/FirstTitle"
                     android:gravity="left"
                     android:text="Informações de Contato" />
 

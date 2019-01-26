@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/backgroundcarrinhovazio"
-    tools:context="com.example.david.gandalf.BuscaProdutoFragment">
+    tools:context="com.gandalf.SearchFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -39,15 +39,10 @@
             android:layout_height="match_parent">
 
             <ListView
-                android:id="@+id/list_produto"
+                android:id="@+id/fragment_product_list"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <ListView
-                    android:id="@+id/list_produto"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-            </LinearLayout>
+                android:orientation="vertical"/>
         </ScrollView>
 
     </LinearLayout>

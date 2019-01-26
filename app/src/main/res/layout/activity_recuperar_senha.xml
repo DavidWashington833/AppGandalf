@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/backgroundpermissao"
-    tools:context="com.example.david.gandalf.RecuperarSenhaActivity">
+    tools:context="com.gandalf.RecuperarSenhaActivity">
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -17,7 +17,7 @@
         android:orientation="vertical">
 
         <TextView
-            style="@style/TextDestaque"
+            style="@style/FirstTitle"
             android:gravity="left"
             android:text="Redefinir Senha" />
 

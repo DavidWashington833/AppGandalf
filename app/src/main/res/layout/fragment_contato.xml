@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/backgroundpt1"
-    tools:context="com.example.david.gandalf.ContatoFragment">
+    tools:context="com.gandalf.ContatoFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,7 +15,7 @@
 
         <TextView
             android:text="Contato"
-            style="@style/TextDestaque"
+            style="@style/FirstTitle"
             android:gravity="left" />
         <TextView
             android:text="Entre em contato com nossa equipe preenchendo os campos abaixo"

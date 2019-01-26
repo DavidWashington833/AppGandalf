@@ -7,7 +7,7 @@ android:layout_width="match_parent"
 android:layout_height="match_parent"
 android:orientation="vertical"
 android:background="@drawable/backgroundtermos"
-    tools:context="com.example.david.gandalf.TermosServicosFragment">
+    tools:context="com.gandalf.TermosServicosFragment">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -27,7 +27,7 @@ android:background="@drawable/backgroundtermos"
                 android:orientation="vertical">
 
                 <TextView
-                    style="@style/TextDestaque"
+                    style="@style/FirstTitle"
                     android:gravity="left"
                     android:text="Termos de Serviços" />
                 <TextView

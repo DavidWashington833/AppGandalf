@@ -2,19 +2,19 @@
 <menu
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <item
-        android:id="@+id/action_busca"
-        android:icon="@drawable/iconbuscainvert"
-        android:title="Busca"
+        android:id="@+id/actionbar_search"
+        android:icon="@drawable/icon_search"
+        android:title="@string/actionbar_first_title"
         app:showAsAction="always" />
 
-    <item android:id="@+id/action_carrinho"
-        android:title="Carrinho"
-        app:showAsAction="always"
-        android:icon="@drawable/iconcarrinhoinvert" />
+    <item
+        android:id="@+id/actionbar_cart"
+        android:icon="@drawable/icon_cart"
+        android:title="@string/actionbar_second_title"
+        app:showAsAction="always" />
 
 </menu>

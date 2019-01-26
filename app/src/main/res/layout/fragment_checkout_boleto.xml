@@ -7,7 +7,7 @@ android:layout_width="match_parent"
 android:layout_height="match_parent"
 android:orientation="vertical"
 android:background="@drawable/backgroundpt3"
-    tools:context="com.example.david.gandalf.CheckoutBoletoFragment">
+    tools:context="com.gandalf.CheckoutBoletoFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -23,7 +23,7 @@ android:background="@drawable/backgroundpt3"
             android:orientation="vertical">
 
             <TextView
-                style="@style/TextDestaque"
+                style="@style/FirstTitle"
                 android:gravity="left"
                 android:text="Checkout com Boleto" />
 
