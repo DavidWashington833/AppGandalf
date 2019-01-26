@@ -38,7 +38,7 @@ public class BuscaProdutoTask extends AsyncTask<Void, Void, String> {
         String resposta;
         WebClient client = new WebClient();
         EditText editText = (EditText) context.getActivity().findViewById(R.id.txtBuscaProduto);
-        resposta = client.get("http://192.168.15.14:8080/gandalf/rest/produto/like/" + recebendoValor(editText));
+        resposta = client.get("/gandalf/rest/produto/like/" + recebendoValor(editText));
         dialog.dismiss();
         return resposta;
     }
@@ -49,7 +49,7 @@ public class BuscaProdutoTask extends AsyncTask<Void, Void, String> {
         if (!resposta.equals("null")) {
             Produto[] produtos = new Gson().fromJson(resposta, Produto[].class);
             ProdutoAdapter adapter = new ProdutoAdapter(context.getContext(), Arrays.asList(produtos));
-            final ListView listView = (ListView) context.getActivity().findViewById(R.id.list_produto);
+            final ListView listView = (ListView) context.getActivity().findViewById(R.id.fragment_product_listlist);
             listView.setAdapter(adapter);
         }
     }

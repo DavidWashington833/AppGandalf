@@ -3,20 +3,14 @@ package com.gandalf.tasks;
 import android.app.ProgressDialog;
 import android.content.res.Resources;
 import android.os.AsyncTask;
-import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.EditText;
 import android.widget.ListView;
 
 import com.gandalf.Fragments.CategoryFragment;
 import com.gandalf.R;
 import com.gandalf.WebClient;
 import com.gandalf.adapter.CategoryAdapter;
-import com.gandalf.adapter.ProdutoAdapter;
 import com.gandalf.models.Categoria;
-import com.gandalf.models.Produto;
 import com.google.gson.Gson;
 
 import java.util.Arrays;
@@ -47,7 +41,7 @@ public class getCategoriesTask extends AsyncTask<Void, Void, String> {
     @Override
     protected String doInBackground(Void... params) {
         WebClient client = new WebClient();
-        String response = client.get("http://192.168.15.14:8080/gandalf/rest/categoria/");
+        String response = client.get("/gandalf/rest/categoria/");
         dialog.dismiss();
         return response;
     }
@@ -57,7 +51,7 @@ public class getCategoriesTask extends AsyncTask<Void, Void, String> {
         if (!response.equals("null")) {
             Categoria[] categories = new Gson().fromJson(response, Categoria[].class);
             final CategoryAdapter adapter = new CategoryAdapter(context.getContext(), Arrays.asList(categories));
-            final ListView listView = (ListView) context.getActivity().findViewById(R.id.list_produto);
+            final ListView listView = (ListView) context.getActivity().findViewById(R.id.fragment_product_listlist);
 
             listView.setAdapter(adapter);
         }

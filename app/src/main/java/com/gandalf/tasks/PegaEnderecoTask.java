@@ -36,7 +36,7 @@ public class PegaEnderecoTask extends AsyncTask<Void, Void, String> {
     @Override
     protected String doInBackground(Void... params) {
         WebClient client = new WebClient();
-        String resposta = client.get("http://192.168.15.14:8080/gandalf/rest/endereco/cliente/" + id);
+        String resposta = client.get("/gandalf/rest/endereco/cliente/" + id);
         return resposta;
     }
 

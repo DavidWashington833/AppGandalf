@@ -4,27 +4,15 @@ package com.gandalf.activitys;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import com.astuetz.PagerSlidingTabStrip;
 import com.gandalf.CadastroActivity;
-import com.gandalf.CartFragment;
-import com.gandalf.ContatoFragment;
-import com.gandalf.LoginActivity;
-import com.gandalf.MinhaContaFragment;
-import com.gandalf.ProdutoUnicoFragment;
-import com.gandalf.QRCodeActivity;
 import com.gandalf.R;
-import com.gandalf.SearchFragment;
-import com.gandalf.SobreNosFragment;
 import com.gandalf.adapter.TabsAdapter;
 
 public class MainActivity extends AppCompatActivity {
@@ -39,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.activity_main_navigation_view);
+        NavigationView navigationView = (NavigationView) findViewById(R.id.activity_main_navigationview);
         ViewPager viewpager = (ViewPager) findViewById(R.id.activity_main_viewpager);
         PagerSlidingTabStrip tabs = (PagerSlidingTabStrip) findViewById(R.id.activity_main_tabs);
         drawerLayout = (DrawerLayout) findViewById(R.id.activity_main_drawer_layout);
@@ -61,11 +49,11 @@ public class MainActivity extends AppCompatActivity {
             return super.onOptionsItemSelected(item);
         }
         if(item.getItemId() == R.id.actionbar_cart) {
-            Intent intent = new Intent(MainActivity.this, CadastroActivity.class);
+            Intent intent = new Intent(MainActivity.this, MainActivity.class);
             startActivity(intent);
         }
         if(item.getItemId() == R.id.actionbar_search) {
-            Intent intent = new Intent(MainActivity.this, CadastroActivity.class);
+            Intent intent = new Intent(MainActivity.this, MainActivity.class);
             startActivity(intent);
         }
         return super.onOptionsItemSelected(item);
@@ -82,11 +70,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(MenuItem menuItem) {
                 drawerLayout.closeDrawers();
-//                if (menuItem.getItemId() == R.id.menu_store) {
-//                    Intent newAct = new Intent(MainActivity.this, MainActivity.class);
-//                    startActivity(newAct);
-//                    return true;
-//                }
+                if (menuItem.getItemId() == R.id.menu_store) {
+                    Intent intent = new Intent(MainActivity.this, MainActivity.class);
+                    startActivity(intent);
+                    return true;
+                }
                 return false;
             }
         };

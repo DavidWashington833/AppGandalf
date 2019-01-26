@@ -22,4 +22,6 @@
     <string name="activity_main_tab_title_two">Loja</string>
     <string name="get_categories_task_progress_title">Tenha calma, cavaleiro...</string>
     <string name="get_categories_task_progress_message">Carregando Categorias...</string>
+    <string name="get_products_task_progress_title">Aguarde</string>
+    <string name="get_products_task_progress_message">Carregando Produtos...</string>
 </resources>

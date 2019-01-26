@@ -32,7 +32,7 @@ public class EnviaLoginTask extends AsyncTask<Void, Void, String> {
     protected String doInBackground(Void... params) {
         Login login = context.getHelper().getLogin();
         WebClient client = new WebClient();
-        String resposta = client.get("http://192.168.15.14:8080/gandalf/rest/cliente/authentic/" + login.getEmail() + "/" + login.getSenha());
+        String resposta = client.get("/gandalf/rest/cliente/authentic/" + login.getEmail() + "/" + login.getSenha());
         return resposta;
     }
 

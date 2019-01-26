@@ -12,14 +12,14 @@ import java.util.Scanner;
 import static java.lang.System.in;
 import static java.lang.System.out;
 
-/**
- * Created by Silva on 04/11/2017.
- */
 
 public class WebClient {
+
+    private String baseURL = "http://192.168.15.14:8080";
+
     public String get(String paramUrl) {
         try {
-            URL url = new URL(paramUrl);
+            URL url = new URL(baseURL + paramUrl);
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             connection.setRequestMethod("GET");
 
@@ -42,7 +42,7 @@ public class WebClient {
 
     public String post(String paramUrl, String json) {
         try {
-            URL url = new URL(paramUrl);
+            URL url = new URL(baseURL + paramUrl);
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             connection.setRequestProperty("Content-type", "application/json");
             connection.setRequestProperty("Accept", "application/json");
