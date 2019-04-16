@@ -11,7 +11,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import com.astuetz.PagerSlidingTabStrip;
-import com.gandalf.CadastroActivity;
 import com.gandalf.R;
 import com.gandalf.adapter.TabsAdapter;
 
