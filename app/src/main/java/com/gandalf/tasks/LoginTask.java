@@ -14,11 +14,11 @@ import com.google.gson.Gson;
  * Created by Silva on 04/11/2017.
  */
 
-public class SendLoginTask extends AsyncTask<Void, Void, String> {
+public class LoginTask extends AsyncTask<Void, Void, String> {
     private LoginActivity context;
     private ProgressDialog dialog;
 
-    public SendLoginTask(LoginActivity context) {
+    public LoginTask(LoginActivity context) {
         this.context = context;
     }
 

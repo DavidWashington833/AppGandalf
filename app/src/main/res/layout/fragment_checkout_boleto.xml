@@ -23,12 +23,12 @@ android:background="@drawable/backgroundpt3"
             android:orientation="vertical">
 
             <TextView
-                style="@style/FirstTitle"
+                style="@style/register_activity_title"
                 android:gravity="left"
                 android:text="Checkout com Boleto" />
 
             <TextView
-                style="@style/TextApoio"
+                style="@style/register_activity_sub_title"
                 android:layout_marginTop="0dp"
                 android:gravity="left"
                 android:text="Para finalizar sua compra, por favor, digite o CPF que deseja colocar no boleto" />

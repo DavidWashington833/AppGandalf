@@ -5,7 +5,7 @@ import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.widget.Toast;
 
-import com.gandalf.CadastroActivity;
+import com.gandalf.activitys.RegisterActivity;
 import com.gandalf.WebClient;
 import com.gandalf.models.EnderecoDTO;
 import com.google.gson.Gson;
@@ -15,11 +15,11 @@ import com.google.gson.Gson;
  */
 
 public class EnviaEnderecoTask extends AsyncTask<Void, Void, String> {
-    private CadastroActivity context;
+    private RegisterActivity context;
     private ProgressDialog dialog;
     private int idCliente;
 
-    public EnviaEnderecoTask(CadastroActivity context, int idCliente) {
+    public EnviaEnderecoTask(RegisterActivity context, int idCliente) {
         this.idCliente = idCliente;
         this.context = context;
     }
@@ -41,14 +41,15 @@ public class EnviaEnderecoTask extends AsyncTask<Void, Void, String> {
 //        enderecoDTO.setPaisEndereco("sadfadsf");
 //        enderecoDTO.setUFEndereco("sa");
 
-        SharedPreferences preferences = context.getSharedPreferences("login", 0);
-        EnderecoDTO enderecoDTO = new EnderecoDTO(context.getEndereco());
-        enderecoDTO.setIdCliente(String.valueOf(idCliente));
-        Gson gson = new Gson();
-        String jsonInString = gson.toJson(enderecoDTO);
-        WebClient client = new WebClient();
-        String resposta = client.post("/gandalf/rest/endereco/", jsonInString);
-        return resposta;
+//        SharedPreferences preferences = context.getSharedPreferences("login", 0);
+//        EnderecoDTO enderecoDTO = new EnderecoDTO(context.getEndereco());
+//        enderecoDTO.setIdCliente(String.valueOf(idCliente));
+//        Gson gson = new Gson();
+//        String jsonInString = gson.toJson(enderecoDTO);
+//        WebClient client = new WebClient();
+//        String resposta = client.post("/gandalf/rest/endereco/", jsonInString);
+//        return resposta;
+        return "";
     }
 
     @Override

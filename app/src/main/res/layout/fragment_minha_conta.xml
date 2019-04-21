@@ -21,12 +21,12 @@
                 android:orientation="vertical">
 
                 <TextView
-                    style="@style/FirstTitle"
+                    style="@style/register_activity_title"
                     android:gravity="left"
                     android:text="Olá jovem cavaleiro!" />
 
                 <TextView
-                    style="@style/TextApoio"
+                    style="@style/register_activity_sub_title"
                     android:layout_marginTop="0dp"
                     android:gravity="left"
                     android:text="Deseja se juntar a nós? Primeiro, conte-nos um pouco sobre você." />
@@ -63,12 +63,12 @@
                     android:hint="000.000.000-00"/>
 
                 <TextView
-                    style="@style/FirstTitle"
+                    style="@style/register_activity_title"
                     android:gravity="left"
                     android:text="Em qual planice você mora?" />
 
                 <TextView
-                    style="@style/TextApoio"
+                    style="@style/register_activity_sub_title"
                     android:layout_marginTop="0dp"
                     android:gravity="left"
                     android:text="Agora que sabemos quem você é,nos mostre no mapa qual é seu endereço" />
@@ -165,12 +165,12 @@
                 style="@style/TextView" />
 
             <TextView
-                style="@style/FirstTitle"
+                style="@style/register_activity_title"
                 android:gravity="left"
                 android:text="Precisamos do seu contato" />
 
             <TextView
-                style="@style/TextApoio"
+                style="@style/register_activity_sub_title"
                 android:layout_marginTop="0dp"
                 android:gravity="left"
                 android:text="Agora que sabemos um pouco sobre você, mostre-nos como entrar em contato" />
@@ -204,12 +204,12 @@
 
 
             <TextView
-                style="@style/FirstTitle"
+                style="@style/register_activity_title"
                 android:gravity="left"
                 android:text="Etapa Final!" />
 
             <TextView
-                style="@style/TextApoio"
+                style="@style/register_activity_sub_title"
                 android:layout_marginTop="0dp"
                 android:gravity="left"
                 android:text="Seja bem vindo à sociedade 8Nome! Só falta você escolher seu usuário e senha para se juntar à nós!" />

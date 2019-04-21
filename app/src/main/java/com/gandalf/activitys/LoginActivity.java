@@ -12,10 +12,9 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.gandalf.CadastroActivity;
 import com.gandalf.R;
 import com.gandalf.models.Login;
-import com.gandalf.tasks.SendLoginTask;
+import com.gandalf.tasks.LoginTask;
 
 public class LoginActivity extends AppCompatActivity {
     private ImageView showPassword;
@@ -46,14 +45,14 @@ public class LoginActivity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                new SendLoginTask(LoginActivity.this).execute();
+                new LoginTask(LoginActivity.this).execute();
             }
         });
 
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(LoginActivity.this, CadastroActivity.class));
+                startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
             }
         });
     }

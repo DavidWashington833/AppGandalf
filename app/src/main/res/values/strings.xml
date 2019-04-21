@@ -32,4 +32,6 @@
     <string name="send_login_task_authentication">Email ou senha inválida!</string>
     <string name="send_login_task_title">Aguarde</string>
     <string name="send_login_task_message">Carregando dados...</string>
+    <string name="register_activity_title">Olá jovem cavaleiro!</string>
+    <string name="register_activity_sub_title">Deseja se juntar a nós? Primeiro, conte-nos um pouco sobre você.</string>
 </resources>

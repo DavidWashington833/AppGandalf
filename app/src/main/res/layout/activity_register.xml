@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundpt3"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp"
+    tools:context="com.gandalf.activitys.RegisterActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/register_activity_title"
+            android:gravity="left"
+            android:text="@string/register_activity_title" />
+            
+        <TextView
+            style="@style/register_activity_sub_title"
+            android:layout_marginTop="0dp"
+            android:gravity="left"
+            android:text="@string/register_activity_sub_title" />
+
+        <EditText
+            android:id="@+id/register_activity_name"
+            android:inputType="textPersonName"
+            style="@style/TextView"
+            android:hint="Digite seu Nome Completo aqui" />
+
+        <EditText
+            android:id="@+id/register_activity_phone"
+            android:inputType="number"
+            android:hint="(XX) 0000-0000"
+            style="@style/TextView"/>
+
+        <EditText
+            android:id="@+id/register_activity_birth_day"
+            android:inputType="date"
+            style="@style/TextView"
+            android:hint="DD/MM/AA"/>
+
+        <EditText
+            android:id="@+id/register_activity_cpf"
+            android:inputType="number"
+            style="@style/TextView"
+            android:hint="000.000.000-00" />
+
+        <EditText
+            android:id="@+id/register_activity_email"
+            style="@style/TextView"
+            android:hint="exemplo@dominioex.com.br"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/register_activity_password"
+            style="@style/TextView"
+            android:hint="Digite uma senha segura"
+            android:inputType="textPassword" />
+
+        <EditText
+            android:id="@+id/register_activity_password_check"
+            style="@style/TextView"
+            android:hint="Repita a senha para não ter erro"
+            android:inputType="textPassword" />
+
+        <Button
+            android:id="@+id/register_activity_register"
+            style="@style/Buttons"
+            android:text="Próxima Etapa" />
+
+    </LinearLayout>
+
+</ScrollView>

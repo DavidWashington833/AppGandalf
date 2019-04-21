@@ -27,12 +27,12 @@ android:background="@drawable/backgroundtermos"
                 android:orientation="vertical">
 
                 <TextView
-                    style="@style/FirstTitle"
+                    style="@style/register_activity_title"
                     android:gravity="left"
                     android:text="Termos de Serviços" />
                 <TextView
                     android:text="Olá Jovem cavaleiro! Para embarcar em nossa jornada e utilizar nosso app, é necessário concordar com nossos termos de serviços. Leia-o abaixo e clique no botão de sua escolha!"
-                    style="@style/TextApoio"
+                    style="@style/register_activity_sub_title"
                     android:gravity="left"
                     android:layout_marginTop="0dp" />
             </LinearLayout>
@@ -43,7 +43,7 @@ android:background="@drawable/backgroundtermos"
                 android:orientation="vertical">
 
                 <TextView
-                    style="@style/TextApoio"
+                    style="@style/register_activity_sub_title"
                     android:layout_marginBottom="0dp"
                     android:gravity="left"
                     android:text="Estes termos e condições gerais de uso e de compra e venda aplicam-se aos serviços prestados pela pessoa jurídica GANDALF STORE S/A, devidamente registrada sob o CNPJ n. 12.345.678/0001-44, com sede em:
@@ -52,7 +52,7 @@ Avenida Engenheiro Eusébio Stevaux, 823 - Santo Amaro, São Paulo - SP CEP: 046
                     android:textSize="16dp" />
 
                 <TextView
-                    style="@style/TextApoio"
+                    style="@style/register_activity_sub_title"
                     android:layout_marginBottom="0dp"
                     android:layout_marginTop="0dp"
                     android:gravity="left"
@@ -61,7 +61,7 @@ disponibilização de ferramenta de busca para localização de produtos na loja
                     android:textSize="16dp" />
 
                 <TextView
-                    style="@style/TextApoio"
+                    style="@style/register_activity_sub_title"
                     android:gravity="left"
                     android:text="2. DA ACEITAÇÃO DOS TERMOS E CONDIÇÕES GERAIS DE USO E DE COMPRA E VENDA
 Todos aqueles que desejarem ter acesso aos serviços ofertados através do aplicativo GANDALF STORE deverão, primeiramente, se informar sobre as regras que compõem o presente instrumento, as quais ficarão disponíveis para pronta e ampla consulta, em link direto no próprio aplicativo.
@@ -70,7 +70,7 @@ Caso não concorde com quaisquer das regras aqui descritas, o usuário deve, ime
                     android:textSize="16dp" />
 
                 <TextView
-                    style="@style/TextApoio"
+                    style="@style/register_activity_sub_title"
                     android:layout_marginTop="0dp"
                     android:gravity="left"
                     android:text="3. DA NAVEGAÇÃO
@@ -79,7 +79,7 @@ Os presentes termos e condições gerais de uso e de compra e venda se aplicam a
                     android:textSize="16dp" />
 
                 <TextView
-                    style="@style/TextApoio"
+                    style="@style/register_activity_sub_title"
                     android:layout_marginTop="0dp"
                     android:gravity="left"
                     android:text="4. DA GESTÃO DO APLICATIVO
@@ -90,7 +90,7 @@ c) suspender o aplicativo, a fim de realizar atualizações e modificações."
                     android:textSize="16dp" />
 
                 <TextView
-                    style="@style/TextApoio"
+                    style="@style/register_activity_sub_title"
                     android:layout_marginBottom="0dp"
                     android:layout_marginTop="0dp"
                     android:gravity="left"
@@ -107,7 +107,7 @@ O usuário poderá, a qualquer tempo e sem necessidade de justificação, requer
                     android:textSize="16dp" />
 
                 <TextView
-                    style="@style/TextApoio"
+                    style="@style/register_activity_sub_title"
                     android:layout_marginTop="0dp"
                     android:gravity="left"
                     android:text="6. DAS RESPONSABILIDADES

@@ -20,7 +20,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".CadastroActivity"
+            android:name=".activitys.RegisterActivity"
             android:parentActivityName=".activitys.LoginActivity"
             android:screenOrientation="portrait" />
         <activity
