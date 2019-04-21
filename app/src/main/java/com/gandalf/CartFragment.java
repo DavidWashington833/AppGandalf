@@ -8,7 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
-import com.gandalf.adapter.CarrinhoAdapter;
 import com.gandalf.helpers.CarrinhoSingletonHelper;
 import com.gandalf.models.Product;
 import com.google.gson.Gson;

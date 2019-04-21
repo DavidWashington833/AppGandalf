@@ -26,7 +26,7 @@ tools:context="com.gandalf.CehckoutPrincipalFragment">
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
                 <ImageView
-                    android:id="@+id/login_visualizar_senha"
+                    android:id="@+id/activity_login_show_password"
                     android:layout_width="10dp"
                     android:layout_height="25dp"
                     android:layout_marginRight="5dp"

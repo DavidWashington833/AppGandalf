@@ -4,10 +4,13 @@
         android:id="@+id/menu_first_group"
         android:checkableBehavior="single">
         <item
+            android:id="@+id/menu_login"
+            android:icon="@drawable/icon_login"
+            android:title="@string/menu_login" />
+        <item
             android:id="@+id/menu_store"
             android:icon="@drawable/icon_store"
             android:title="@string/menu_store" />
-
         <item
             android:id="@+id/menu_cart"
             android:icon="@drawable/icon_cart"
@@ -31,11 +34,6 @@
             android:id="@+id/menu_search"
             android:icon="@drawable/icon_search"
             android:title="@string/menu_search" />
-        <item
-            android:id="@+id/menu_login"
-            android:icon="@drawable/icon_login"
-            android:title="@string/menu_login" />
-
         <item
             android:id="@+id/menu_qrcode"
             android:icon="@drawable/icon_qrcode"

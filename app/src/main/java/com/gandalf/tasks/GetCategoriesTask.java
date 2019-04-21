@@ -35,13 +35,12 @@ public class GetCategoriesTask extends AsyncTask<Void, Void, String> {
 
     @Override
     protected String doInBackground(Void... params) {
-        String response = new WebClient().get("/gandalf/rest/categoria/");
-        dialog.dismiss();
-        return response;
+        return new WebClient().get("/gandalf/rest/categoria/");
     }
 
     @Override
     protected void onPostExecute(String response) {
+        dialog.dismiss();
         Categoria[] categories = new Gson().fromJson(response, Categoria[].class);
         CategoryAdapter adapter = new CategoryAdapter(context.getContext(), Arrays.asList(categories));
         ListView listView = (ListView) context.getActivity().findViewById(R.id.fragment_category_list);

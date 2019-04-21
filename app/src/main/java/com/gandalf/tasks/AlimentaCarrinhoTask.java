@@ -5,7 +5,7 @@ import android.widget.ListView;
 
 import com.gandalf.CartFragment;
 import com.gandalf.R;
-import com.gandalf.adapter.CarrinhoAdapter;
+import com.gandalf.CarrinhoAdapter;
 import com.gandalf.helpers.CarrinhoSingletonHelper;
 import com.gandalf.models.Product;
 import com.google.gson.Gson;

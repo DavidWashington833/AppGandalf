@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import com.gandalf.R;
 import com.gandalf.tasks.GetCategoriesTask;
 
+
 public class CategoriesFragment extends Fragment {
 
     public CategoriesFragment() {
