@@ -2,11 +2,9 @@
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    xmlns:mask="http://schemas.android.com/apk/res-auto"
+    style="@style/container"
     android:background="@drawable/backgroundpt3"
-    android:paddingLeft="12dp"
-    android:paddingRight="12dp"
     tools:context="com.gandalf.activitys.RegisterActivity">
 
     <LinearLayout
@@ -16,54 +14,59 @@
 
         <TextView
             style="@style/register_activity_title"
-            android:gravity="left"
-            android:text="@string/register_activity_title" />
+            android:text="@string/register_activity_title"
+            android:gravity="left" />
             
         <TextView
             style="@style/register_activity_sub_title"
+            android:text="@string/register_activity_sub_title"
             android:layout_marginTop="0dp"
-            android:gravity="left"
-            android:text="@string/register_activity_sub_title" />
+            android:gravity="left" />
 
         <EditText
-            android:id="@+id/register_activity_name"
-            android:inputType="textPersonName"
             style="@style/TextView"
-            android:hint="Digite seu Nome Completo aqui" />
+            android:id="@+id/register_activity_name"
+            android:hint="@string/register_activity_name"
+            android:inputType="textPersonName"
+            android:maxLength="50" />
 
-        <EditText
+        <br.com.sapereaude.maskedEditText.MaskedEditText
+            style="@style/TextView"
             android:id="@+id/register_activity_phone"
-            android:inputType="number"
-            android:hint="(XX) 0000-0000"
-            style="@style/TextView"/>
+            android:inputType="phone"
+            mask:allowed_chars="1234567890"
+            mask:mask="(##) #####-####"
+            android:hint="(00) 00000-0000"/>
 
         <EditText
+            style="@style/TextView"
             android:id="@+id/register_activity_birth_day"
             android:inputType="date"
-            style="@style/TextView"
             android:hint="DD/MM/AA"/>
 
-        <EditText
+        <br.com.sapereaude.maskedEditText.MaskedEditText
+            style="@style/TextView"
             android:id="@+id/register_activity_cpf"
             android:inputType="number"
-            style="@style/TextView"
+            mask:allowed_chars="1234567890"
+            mask:mask="###.###.###-##"
             android:hint="000.000.000-00" />
 
         <EditText
-            android:id="@+id/register_activity_email"
             style="@style/TextView"
+            android:id="@+id/register_activity_email"
             android:hint="exemplo@dominioex.com.br"
             android:inputType="textEmailAddress" />
 
         <EditText
-            android:id="@+id/register_activity_password"
             style="@style/TextView"
+            android:id="@+id/register_activity_password"
             android:hint="Digite uma senha segura"
             android:inputType="textPassword" />
 
         <EditText
-            android:id="@+id/register_activity_password_check"
             style="@style/TextView"
+            android:id="@+id/register_activity_password_check"
             android:hint="Repita a senha para não ter erro"
             android:inputType="textPassword" />
 
