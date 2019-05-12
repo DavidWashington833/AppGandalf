@@ -1,4 +1,4 @@
-package com.gandalf.adapter;
+package com.gandalf;
 
 import android.content.Context;
 import android.graphics.BitmapFactory;

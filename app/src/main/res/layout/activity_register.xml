@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:mask="http://schemas.android.com/apk/res-auto"
+    style="@style/container"
+    android:background="@drawable/backgroundpt3"
+    tools:context="com.gandalf.activitys.RegisterActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/register_activity_title"
+            android:text="@string/register_activity_title"
+            android:gravity="left" />
+            
+        <TextView
+            style="@style/register_activity_sub_title"
+            android:text="@string/register_activity_sub_title"
+            android:layout_marginTop="0dp"
+            android:gravity="left" />
+
+        <EditText
+            style="@style/TextView"
+            android:id="@+id/register_activity_name"
+            android:hint="@string/register_activity_name"
+            android:inputType="textPersonName"
+            android:maxLength="50" />
+
+        <br.com.sapereaude.maskedEditText.MaskedEditText
+            style="@style/TextView"
+            android:id="@+id/register_activity_phone"
+            android:inputType="phone"
+            mask:allowed_chars="1234567890"
+            mask:mask="(##) #####-####"
+            android:hint="(00) 00000-0000"/>
+
+        <EditText
+            style="@style/TextView"
+            android:id="@+id/register_activity_birth_day"
+            android:inputType="date"
+            android:hint="DD/MM/AA"/>
+
+        <br.com.sapereaude.maskedEditText.MaskedEditText
+            style="@style/TextView"
+            android:id="@+id/register_activity_cpf"
+            android:inputType="number"
+            mask:allowed_chars="1234567890"
+            mask:mask="###.###.###-##"
+            android:hint="000.000.000-00" />
+
+        <EditText
+            style="@style/TextView"
+            android:id="@+id/register_activity_email"
+            android:hint="exemplo@dominioex.com.br"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            style="@style/TextView"
+            android:id="@+id/register_activity_password"
+            android:hint="Digite uma senha segura"
+            android:inputType="textPassword" />
+
+        <EditText
+            style="@style/TextView"
+            android:id="@+id/register_activity_password_check"
+            android:hint="Repita a senha para não ter erro"
+            android:inputType="textPassword" />
+
+        <Button
+            android:id="@+id/register_activity_register"
+            style="@style/Buttons"
+            android:text="Próxima Etapa" />
+
+    </LinearLayout>
+
+</ScrollView>

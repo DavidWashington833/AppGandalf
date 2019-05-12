@@ -8,10 +8,10 @@ import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import com.astuetz.PagerSlidingTabStrip;
-import com.gandalf.CadastroActivity;
 import com.gandalf.R;
 import com.gandalf.adapter.TabsAdapter;
 
@@ -70,8 +70,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(MenuItem menuItem) {
                 drawerLayout.closeDrawers();
-                if (menuItem.getItemId() == R.id.menu_store) {
-                    Intent intent = new Intent(MainActivity.this, MainActivity.class);
+                if (menuItem.getItemId() == R.id.menu_login) {
+                    Intent intent = new Intent(MainActivity.this, LoginActivity.class);
                     startActivity(intent);
                     return true;
                 }

@@ -15,11 +15,11 @@
 
         <TextView
             android:text="Contato"
-            style="@style/FirstTitle"
+            style="@style/register_activity_title"
             android:gravity="left" />
         <TextView
             android:text="Entre em contato com nossa equipe preenchendo os campos abaixo"
-            style="@style/TextApoio"
+            style="@style/register_activity_sub_title"
             android:gravity="left"
             android:layout_marginTop="0dp" />
 

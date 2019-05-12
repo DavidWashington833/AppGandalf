@@ -24,4 +24,15 @@
     <string name="get_categories_task_progress_message">Carregando Categorias...</string>
     <string name="get_products_task_progress_title">Aguarde</string>
     <string name="get_products_task_progress_message">Carregando Produtos...</string>
+    <string name="activity_login_email">E-mail</string>
+    <string name="activity_login_password">Senha</string>
+    <string name="activity_login_enter">Entrar</string>
+    <string name="activity_login_register">Criar conta</string>
+    <string name="send_login_task_welcome">Olá</string>
+    <string name="send_login_task_authentication">Email ou senha inválida!</string>
+    <string name="send_login_task_title">Aguarde</string>
+    <string name="send_login_task_message">Carregando dados...</string>
+    <string name="register_activity_title">Olá jovem cavaleiro!</string>
+    <string name="register_activity_sub_title">Deseja se juntar a nós? Primeiro, conte-nos um pouco sobre você.</string>
+    <string name="register_activity_name">Digite seu nome completo aqui</string>
 </resources>

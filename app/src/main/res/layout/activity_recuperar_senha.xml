@@ -17,12 +17,12 @@
         android:orientation="vertical">
 
         <TextView
-            style="@style/FirstTitle"
+            style="@style/register_activity_title"
             android:gravity="left"
             android:text="Redefinir Senha" />
 
         <TextView
-            style="@style/TextApoio"
+            style="@style/register_activity_sub_title"
             android:layout_marginTop="0dp"
             android:gravity="left"
             android:text="Opa! Parece que você se esqueceu da senha de acesso. Digite seu e-mail abaixo para que possamos reenviar sua senha." />

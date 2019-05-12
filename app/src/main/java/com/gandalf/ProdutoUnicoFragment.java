@@ -68,7 +68,7 @@ public class ProdutoUnicoFragment extends Fragment {
 
             }
         });
-        hiddenId = (EditText) view.findViewById(R.id.cardview_product_id);
+//        hiddenId = (EditText) view.findViewById(R.id.cardview_product_id);
 
         Intent intent = getActivity().getIntent();
         String t = intent.getStringExtra("idProduto");

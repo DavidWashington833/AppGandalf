@@ -17,11 +17,13 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.gandalf.Utils;
 import com.gandalf.activitys.MainActivity;
 import com.gandalf.ProdutoUnicoFragment;
 import com.gandalf.R;
 import com.gandalf.models.Product;
 
+import java.text.DecimalFormat;
 import java.util.List;
 
 
@@ -52,21 +54,19 @@ public class ProductAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        Product product = (Product) this.getItem(position);
+        final Product product = (Product) this.getItem(position);
         LayoutInflater inflater = LayoutInflater.from(context);
         View view = inflater.inflate(R.layout.cardview_product, parent, false);
         byte[] imageAsBytes = Base64.decode(product.getImagem(), Base64.DEFAULT);
 
-        ((EditText) view.findViewById(R.id.cardview_product_id)).setText(product.getIdProduto());
         ((TextView) view.findViewById(R.id.cardview_product_name)).setText(product.getNomeProduto());
-        ((TextView) view.findViewById(R.id.cardview_product_price)).setText("R$" + product.getPrecProduto());
+        ((TextView) view.findViewById(R.id.cardview_product_price)).setText("R$" + Utils.formatPrice(product.getPrecProduto()));
         ((ImageView) view.findViewById(R.id.cardview_product_image)).setImageBitmap(BitmapFactory.decodeByteArray(imageAsBytes, 0, imageAsBytes.length));
 
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, MainActivity.class);
-                context.startActivity(intent);
+                Log.d("ProductAdapter", product.getIdProduto());
             }
         });
 
