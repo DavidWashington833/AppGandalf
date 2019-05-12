@@ -4,6 +4,7 @@ import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -43,10 +44,18 @@ public class CategoryAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        Categoria category = (Categoria) this.getItem(position);
+        final Categoria category = (Categoria) this.getItem(position);
         LayoutInflater inflater = LayoutInflater.from(context);
         View view = inflater.inflate(R.layout.cardview_category, parent, false);
         ((TextView) view.findViewById(R.id.cardview_category_name)).setText(category.getNomeCategoria());
+
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d("CategoryAdapter", category.getIdCategoria());
+            }
+        });
+
         return view;
     }
 }
